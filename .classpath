@@ -3,5 +3,24 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/prefuse.jar"/>
+	<classpathentry kind="lib" path="lib/OWL2Prefuse.jar"/>
+	<classpathentry kind="lib" path="lib/jena/antlr-2.7.5.jar"/>
+	<classpathentry kind="lib" path="lib/jena/arq-extra.jar"/>
+	<classpathentry kind="lib" path="lib/jena/arq.jar"/>
+	<classpathentry kind="lib" path="lib/jena/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/jena/concurrent.jar"/>
+	<classpathentry kind="lib" path="lib/jena/icu4j_3_4.jar"/>
+	<classpathentry kind="lib" path="lib/jena/iri.jar"/>
+	<classpathentry kind="lib" path="lib/jena/jena.jar"/>
+	<classpathentry kind="lib" path="lib/jena/jenatest.jar"/>
+	<classpathentry kind="lib" path="lib/jena/json.jar"/>
+	<classpathentry kind="lib" path="lib/jena/junit.jar"/>
+	<classpathentry kind="lib" path="lib/jena/log4j-1.2.12.jar"/>
+	<classpathentry kind="lib" path="lib/jena/lucene-core-2.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/jena/prefuse.jar"/>
+	<classpathentry kind="lib" path="lib/jena/stax-api-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/jena/wstx-asl-3.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/jena/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="lib/jena/xml-apis.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
