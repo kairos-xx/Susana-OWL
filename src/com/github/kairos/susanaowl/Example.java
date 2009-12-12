@@ -31,7 +31,7 @@ public class Example {
         // found at the root of the java classpath
         Graph graph = null;
         try {
-            graph = new GraphMLReader().readGraph("/sweetAll.xml");
+            graph = new GraphMLReader().readGraph("/prueba.xml");
         } catch ( DataIOException e ) {
             e.printStackTrace();
             System.err.println("Error loading graph. Exiting...");
