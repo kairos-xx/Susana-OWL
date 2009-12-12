@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY biol "http://sweet.jpl.nasa.gov/2.0/biol.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY biopr "http://sweet.jpl.nasa.gov/2.0/biolProcess.owl" >
+    <!ENTITY biolProcess "http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&biopr;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/biolProcess.owl"
+     xmlns:biol="http://sweet.jpl.nasa.gov/2.0/biol.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:biolProcess="&biopr;#"
+     xmlns:biopr="http://sweet.jpl.nasa.gov/2.0/biolProcess.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biol.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Biogenic -->
+
+    <owl:Class rdf:about="#Biogenic">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#BiologicalActivity -->
+
+    <owl:Class rdf:about="#BiologicalActivity">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#BiologicalProcess -->
+
+    <owl:Class rdf:about="#BiologicalProcess">
+        <rdfs:subClassOf rdf:resource="&sci;#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Birth -->
+
+    <owl:Class rdf:about="#Birth">
+        <rdfs:subClassOf rdf:resource="#VitalActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Chemosynthesis -->
+
+    <owl:Class rdf:about="#Chemosynthesis">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Consumption -->
+
+    <owl:Class rdf:about="#Consumption">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Death -->
+
+    <owl:Class rdf:about="#Death">
+        <rdfs:subClassOf rdf:resource="#VitalActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Decomposition -->
+
+    <owl:Class rdf:about="#Decomposition">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Denitrification -->
+
+    <owl:Class rdf:about="#Denitrification">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Evapotranspiration -->
+
+    <owl:Class rdf:about="#Evapotranspiration">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Excretion -->
+
+    <owl:Class rdf:about="#Excretion">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Feeding -->
+
+    <owl:Class rdf:about="#Feeding">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Hearing -->
+
+    <owl:Class rdf:about="#Hearing">
+        <rdfs:subClassOf rdf:resource="#Sense"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Inhalation -->
+
+    <owl:Class rdf:about="#Inhalation">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Photosynthesis -->
+
+    <owl:Class rdf:about="#Photosynthesis">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Pollination -->
+
+    <owl:Class rdf:about="#Pollination">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+        <rdfs:comment
+            >Pollination is an important step in the reproduction of seed plants: the transfer of pollen grains (male gametes) to the plant carpel, the structure that contains the ovule (female gamete). The receptive part of the carpel is called a stigma in the flowers of angiosperms and a micropyle in gymnosperms. The study of pollination brings together many disciplines, such as botany, horticulture, entomology, and ecology. Pollination is important in horticulture because most plant fruits will not develop if the ovules are not fertilized. The pollination process as interaction between flower and vector was first addressed in the 18th century by Christian Konrad Sprengel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#PopulationDynamics -->
+
+    <owl:Class rdf:about="#PopulationDynamics">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Respiration -->
+
+    <owl:Class rdf:about="#Respiration">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Sense -->
+
+    <owl:Class rdf:about="#Sense">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Survival -->
+
+    <owl:Class rdf:about="#Survival">
+        <rdfs:subClassOf rdf:resource="#VitalActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Transpiration -->
+
+    <owl:Class rdf:about="#Transpiration">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Vision -->
+
+    <owl:Class rdf:about="#Vision">
+        <rdfs:subClassOf rdf:resource="#Sense"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#VitalActivity -->
+
+    <owl:Class rdf:about="#VitalActivity">
+        <rdfs:subClassOf rdf:resource="#BiologicalActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Waste -->
+
+    <owl:Class rdf:about="#Waste">
+        <rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Process -->
+
+    <owl:Class rdf:about="&sci;#Process"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,579 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY space2 "http://sweet.jpl.nasa.gov/2.0/space.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY static "http://sweet.jpl.nasa.gov/2.0/physFluid.owl" >
+    <!ENTITY sciUnits "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY waves "http://sweet.jpl.nasa.gov/2.0/physWaves.owl" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY system "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY physFluid "http://sweet.jpl.nasa.gov/2.0/physFluid.owl#" >
+    <!ENTITY chemState "http://sweet.jpl.nasa.gov/2.0/chemState.owl#" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY dynam "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl" >
+    <!ENTITY trans "http://sweet.jpl.nasa.gov/2.0/physTransport.owl" >
+    <!ENTITY physDynamics "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#" >
+    <!ENTITY physTransport "http://sweet.jpl.nasa.gov/2.0/physTransport.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&static;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/physFluid.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:physFluid="&static;#"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:phys2="&phys;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sciUnits="&units;#"
+     xmlns:dynam="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"
+     xmlns:physDynamics="&dynam;#"
+     xmlns:space2="&space;#"
+     xmlns:sciSystem="&system;#"
+     xmlns:static="http://sweet.jpl.nasa.gov/2.0/physFluid.owl"
+     xmlns:physTransport="&trans;#"
+     xmlns:waves="http://sweet.jpl.nasa.gov/2.0/physWaves.owl"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"
+     xmlns:trans="http://sweet.jpl.nasa.gov/2.0/physTransport.owl"
+     xmlns:system="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:chemState="&state;#"
+     xmlns:sciResearch="&res;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physTransport.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physWaves.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#hasStateOfMatter -->
+
+    <owl:ObjectProperty rdf:about="&state;#hasStateOfMatter"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProcess -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProperty -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#measureOf -->
+
+    <owl:ObjectProperty rdf:about="&res;#measureOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasDefaultUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;#hasDefaultUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Fluid -->
+
+    <owl:Class rdf:about="&state;#Fluid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Gas -->
+
+    <owl:Class rdf:about="&state;#Gas"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Liquid -->
+
+    <owl:Class rdf:about="&state;#Liquid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Force -->
+
+    <owl:Class rdf:about="&phys;#Force"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalProcess -->
+
+    <owl:Class rdf:about="&phys;#PhysicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalProperty -->
+
+    <owl:Class rdf:about="&phys;#PhysicalProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalState -->
+
+    <owl:Class rdf:about="&phys;#PhysicalState"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PotentialEnergy -->
+
+    <owl:Class rdf:about="&phys;#PotentialEnergy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Pressure -->
+
+    <owl:Class rdf:about="&phys;#Pressure"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Velocity -->
+
+    <owl:Class rdf:about="&dynam;#Velocity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#AvailablePotentialEnergy -->
+
+    <owl:Class rdf:about="#AvailablePotentialEnergy">
+        <rdfs:subClassOf rdf:resource="&phys;#PotentialEnergy"/>
+        <rdfs:comment xml:lang="en"
+            >That portion of the total potential energy that may be converted to kinetic energy in an adiabatically enclosed system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#Baroclinic -->
+
+    <owl:Class rdf:about="#Baroclinic">
+        <rdfs:subClassOf rdf:resource="#FluidState"/>
+        <owl:disjointWith rdf:resource="#Barotropic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#Barotropic -->
+
+    <owl:Class rdf:about="#Barotropic">
+        <rdfs:subClassOf rdf:resource="#FluidState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#ConvectiveAvailablePotentialEnergy -->
+
+    <owl:Class rdf:about="#ConvectiveAvailablePotentialEnergy">
+        <rdfs:subClassOf rdf:resource="#AvailablePotentialEnergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Fluid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="&trans;#Convection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The maximum energy available to an ascending parcel, according to parcel theory.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#ConvectiveInstability -->
+
+    <owl:Class rdf:about="#ConvectiveInstability">
+        <rdfs:subClassOf rdf:resource="&system;#Stability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Fluid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >An instability due to the buoyancy force of heavy fluid over light fluid overcoming the stabilizing influence of viscous forces.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#DifferentialPressure -->
+
+    <owl:Class rdf:about="#DifferentialPressure">
+        <rdfs:subClassOf rdf:resource="&phys;#Pressure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#DynamicViscosity -->
+
+    <owl:Class rdf:about="#DynamicViscosity">
+        <rdfs:subClassOf rdf:resource="#Viscosity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#EquilibriumVaporPressure -->
+
+    <owl:Class rdf:about="#EquilibriumVaporPressure">
+        <rdfs:subClassOf rdf:resource="#VaporPressure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&system;#Equilibrium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The pressure of a vapor in equilibrium with its condensed phase (liquid or solid).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#FluidHead -->
+
+    <owl:Class rdf:about="#FluidHead">
+        <rdfs:subClassOf rdf:resource="#FluidProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#FluidPressure -->
+
+    <owl:Class rdf:about="#FluidPressure">
+        <rdfs:subClassOf rdf:resource="&phys;#Pressure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Fluid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#FluidProperty -->
+
+    <owl:Class rdf:about="#FluidProperty">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#GasProperty"/>
+                    <rdf:Description rdf:about="#LiquidProperty"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#FluidState -->
+
+    <owl:Class rdf:about="#FluidState">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalState"/>
+        <rdfs:subClassOf rdf:resource="#FluidProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#GasProperty -->
+
+    <owl:Class rdf:about="#GasProperty">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Gas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#Halosteric -->
+
+    <owl:Class rdf:about="#Halosteric">
+        <rdfs:subClassOf rdf:resource="#Steric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#HydraulicHead -->
+
+    <owl:Class rdf:about="#HydraulicHead">
+        <rdfs:subClassOf rdf:resource="#FluidHead"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#HydrostaticPressure -->
+
+    <owl:Class rdf:about="#HydrostaticPressure">
+        <rdfs:subClassOf rdf:resource="#FluidPressure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#KinematicViscosity -->
+
+    <owl:Class rdf:about="#KinematicViscosity">
+        <rdfs:subClassOf rdf:resource="#Viscosity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#LiquidProperty -->
+
+    <owl:Class rdf:about="#LiquidProperty">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#QuasiHydrostaticApproximation -->
+
+    <owl:Class rdf:about="#QuasiHydrostaticApproximation">
+        <rdfs:subClassOf rdf:resource="&res;#PhysicalApproximation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&dynam;#Velocity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Fluid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The use of the hydrostatic equation as the vertical equation of motion, thus implying that the vertical accelerations are small without constraining them to be zero.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#SaturationVaporPressure -->
+
+    <owl:Class rdf:about="#SaturationVaporPressure">
+        <rdfs:subClassOf rdf:resource="#VaporPressure"/>
+        <rdfs:comment xml:lang="en"
+            >The vapor pressure of a system, at a given temperature, for which the vapor of a substance is in equilibrium with a plane surface of that substance&#39;s pure liquid or solid phase; that is, the vapor pressure of a system that has attained saturation but not supersaturation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#ScaleHeight -->
+
+    <owl:Class rdf:about="#ScaleHeight">
+        <rdfs:subClassOf rdf:resource="#FluidProperty"/>
+        <rdfs:subClassOf rdf:resource="&space;#Height"/>
+        <rdfs:comment xml:lang="en"
+            >The height within which some parameter, such as pressure or density, decreases by a factor 1/e.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#StaticHead -->
+
+    <owl:Class rdf:about="#StaticHead">
+        <rdfs:subClassOf rdf:resource="#FluidHead"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#StaticPressure -->
+
+    <owl:Class rdf:about="#StaticPressure">
+        <rdfs:subClassOf rdf:resource="&phys;#Pressure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#StaticStability -->
+
+    <owl:Class rdf:about="#StaticStability">
+        <rdfs:subClassOf rdf:resource="&system;#Stability"/>
+        <rdfs:comment xml:lang="en"
+            >The ability of a fluid at rest to become turbulent or laminar due to the effects of buoyancy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#Steric -->
+
+    <owl:Class rdf:about="#Steric">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#Suction -->
+
+    <owl:Class rdf:about="#Suction">
+        <rdfs:subClassOf rdf:resource="&phys;#Pressure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#Thermosteric -->
+
+    <owl:Class rdf:about="#Thermosteric">
+        <rdfs:subClassOf rdf:resource="#Steric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#TotalHead -->
+
+    <owl:Class rdf:about="#TotalHead">
+        <rdfs:subClassOf rdf:resource="#FluidHead"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#VaporPressure -->
+
+    <owl:Class rdf:about="#VaporPressure">
+        <rdfs:subClassOf rdf:resource="&phys;#Pressure"/>
+        <rdfs:subClassOf rdf:resource="#GasProperty"/>
+        <rdfs:comment xml:lang="en"
+            >The pressure exerted by the molecules of a given vapor.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#Viscosity -->
+
+    <owl:Class rdf:about="#Viscosity">
+        <rdfs:subClassOf rdf:resource="#FluidProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#meterSquared_perSecond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#measureOf"/>
+                <owl:allValuesFrom rdf:resource="#ViscousForce"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#ViscousForce -->
+
+    <owl:Class rdf:about="#ViscousForce">
+        <rdfs:subClassOf rdf:resource="&phys;#Force"/>
+        <rdfs:comment xml:lang="en"
+            >The transport of mass motion momentum solely by the random motions of individual molecules not moving together in coherent groups.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physTransport.owl#Convection -->
+
+    <owl:Class rdf:about="&trans;#Convection"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#PhysicalApproximation -->
+
+    <owl:Class rdf:about="&res;#PhysicalApproximation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Equilibrium -->
+
+    <owl:Class rdf:about="&system;#Equilibrium"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Stability -->
+
+    <owl:Class rdf:about="&system;#Stability"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Height -->
+
+    <owl:Class rdf:about="&space;#Height"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#meterSquared_perSecond -->
+
+    <owl:Thing rdf:about="&units;#meterSquared_perSecond"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

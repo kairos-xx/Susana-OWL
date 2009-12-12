@@ -1,0 +1,817 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY math2 "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY func "http://sweet.jpl.nasa.gov/2.0/mathFunction.owl" >
+    <!ENTITY mathFunction "http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#" >
+    <!ENTITY stat "http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:sciSystem="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#"
+     xmlns:math2="&math;#"
+     xmlns:stat="http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mathFunction="&func;#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:func="http://sweet.jpl.nasa.gov/2.0/mathFunction.owl"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/mathFunction.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="&func;#hasFunction"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#approximates -->
+
+    <owl:ObjectProperty rdf:about="#approximates"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#from -->
+
+    <owl:ObjectProperty rdf:about="#from">
+        <rdfs:range rdf:resource="#SystemState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="#hasComponent">
+        <rdfs:range rdf:resource="#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#hasRole -->
+
+    <owl:ObjectProperty rdf:about="#hasRole">
+        <rdfs:range rdf:resource="#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#to -->
+
+    <owl:ObjectProperty rdf:about="#to">
+        <rdfs:range rdf:resource="#SystemState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Equation -->
+
+    <owl:Class rdf:about="&math;#Equation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Nonlinear -->
+
+    <owl:Class rdf:about="&func;#Nonlinear"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Dimension -->
+
+    <owl:Class rdf:about="&res;#Dimension"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Accumulation -->
+
+    <owl:Class rdf:about="#Accumulation">
+        <rdfs:label>Accumulation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&sci;#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Active -->
+
+    <owl:Class rdf:about="#Active">
+        <rdfs:subClassOf rdf:resource="#ActivityLevel"/>
+        <owl:disjointWith rdf:resource="#Inactive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#ActivityLevel -->
+
+    <owl:Class rdf:about="#ActivityLevel">
+        <rdfs:subClassOf rdf:resource="#Level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Ambient -->
+
+    <owl:Class rdf:about="#Ambient">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Anomaly -->
+
+    <owl:Class rdf:about="#Anomaly">
+        <rdfs:subClassOf rdf:resource="#Variation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Artificial -->
+
+    <owl:Class rdf:about="#Artificial">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+        <owl:disjointWith rdf:resource="#Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Balance -->
+
+    <owl:Class rdf:about="#Balance">
+        <owl:equivalentClass rdf:resource="#Budget"/>
+        <rdfs:subClassOf rdf:resource="#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#BalanceEquation -->
+
+    <owl:Class rdf:about="#BalanceEquation">
+        <owl:equivalentClass rdf:resource="#BudgetEquation"/>
+        <rdfs:subClassOf rdf:resource="&math;#Equation"/>
+        <rdfs:comment xml:lang="en"
+            >In general, an equation expressing a balance of quantities in the sense that the local or individual rates of change are zero.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Broken -->
+
+    <owl:Class rdf:about="#Broken">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Budget -->
+
+    <owl:Class rdf:about="#Budget"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#BudgetEquation -->
+
+    <owl:Class rdf:about="#BudgetEquation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Change -->
+
+    <owl:Class rdf:about="#Change">
+        <rdfs:subClassOf rdf:resource="&sci;#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Closed -->
+
+    <owl:Class rdf:about="#Closed">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+        <owl:disjointWith rdf:resource="#Open"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Collapse -->
+
+    <owl:Class rdf:about="#Collapse">
+        <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#ComplexSystem -->
+
+    <owl:Class rdf:about="#ComplexSystem">
+        <rdfs:subClassOf rdf:resource="#System"/>
+        <rdfs:comment
+            >A complex system is a system composed of interconnected parts that as a whole exhibit one or more properties (behavior among the possible properties) not obvious from the properties</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Component -->
+
+    <owl:Class rdf:about="#Component">
+        <owl:equivalentClass rdf:resource="#SystemComponent"/>
+        <rdfs:subClassOf rdf:resource="&res;#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#CriticalPoint -->
+
+    <owl:Class rdf:about="#CriticalPoint">
+        <rdfs:subClassOf rdf:resource="#Threshold"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Cycle -->
+
+    <owl:Class rdf:about="#Cycle">
+        <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Decline -->
+
+    <owl:Class rdf:about="#Decline">
+        <rdfs:subClassOf rdf:resource="#Variation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Deficit -->
+
+    <owl:Class rdf:about="#Deficit">
+        <rdfs:subClassOf rdf:resource="#Variation"/>
+        <owl:disjointWith rdf:resource="#Excess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Demand -->
+
+    <owl:Class rdf:about="#Demand">
+        <rdfs:subClassOf rdf:resource="&sci;#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Deposit -->
+
+    <owl:Class rdf:about="#Deposit">
+        <rdfs:subClassOf rdf:resource="#Accumulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Development -->
+
+    <owl:Class rdf:about="#Development">
+        <rdfs:subClassOf rdf:resource="#Variation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Discharge -->
+
+    <owl:Class rdf:about="#Discharge">
+        <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Disturbance -->
+
+    <owl:Class rdf:about="#Disturbance">
+        <rdfs:label>Disturbance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Variation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Environment -->
+
+    <owl:Class rdf:about="#Environment">
+        <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Equilibrium -->
+
+    <owl:Class rdf:about="#Equilibrium">
+        <rdfs:label>Equilibrium</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#State"/>
+        <owl:disjointWith rdf:resource="#NonEquilibrium"/>
+        <rdfs:comment
+            >In mechanics, a state in which the vector sum of all forces, that is, the acceleration vector, is zero. 
+In hydrodynamics, it is usually further required that a steady state exist throughout the atmospheric or fluid model. The equilibrium may be stable or unstable with respect to displacements therefrom. See also hydrostatic equilibrium, geostrophic equilibrium, instability. 2. In thermodynamics, any state of a system that would not undergo change if the system were to be isolated.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Evolution -->
+
+    <owl:Class rdf:about="#Evolution">
+        <owl:equivalentClass rdf:resource="#Evolve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Evolve -->
+
+    <owl:Class rdf:about="#Evolve">
+        <owl:equivalentClass rdf:resource="#Evolving"/>
+        <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Evolving -->
+
+    <owl:Class rdf:about="#Evolving"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Excess -->
+
+    <owl:Class rdf:about="#Excess">
+        <rdfs:subClassOf rdf:resource="#Variation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Exchange -->
+
+    <owl:Class rdf:about="#Exchange">
+        <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#External -->
+
+    <owl:Class rdf:about="#External">
+        <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+        <owl:disjointWith rdf:resource="#Internal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Fluctuation -->
+
+    <owl:Class rdf:about="#Fluctuation">
+        <rdfs:subClassOf rdf:resource="#Variation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Gross -->
+
+    <owl:Class rdf:about="#Gross">
+        <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Heterogeneous -->
+
+    <owl:Class rdf:about="#Heterogeneous">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+        <owl:disjointWith rdf:resource="#Homogeneous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Homogeneous -->
+
+    <owl:Class rdf:about="#Homogeneous">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Inactive -->
+
+    <owl:Class rdf:about="#Inactive">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Instability -->
+
+    <owl:Class rdf:about="#Instability">
+        <rdfs:label>Instability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+        <owl:disjointWith rdf:resource="#Stability"/>
+        <rdfs:comment
+            >property describing unstable conditions, such as in the atmosphere</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Interaction -->
+
+    <owl:Class rdf:about="#Interaction">
+        <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+        <rdfs:comment
+            >process that multiple substances are in contact and have some consequence</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Intermittent -->
+
+    <owl:Class rdf:about="#Intermittent">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Internal -->
+
+    <owl:Class rdf:about="#Internal">
+        <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Inundation -->
+
+    <owl:Class rdf:about="#Inundation">
+        <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Level -->
+
+    <owl:Class rdf:about="#Level">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Natural -->
+
+    <owl:Class rdf:about="#Natural">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Net -->
+
+    <owl:Class rdf:about="#Net">
+        <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#NonEquilibrium -->
+
+    <owl:Class rdf:about="#NonEquilibrium">
+        <rdfs:subClassOf rdf:resource="#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Nonlinear -->
+
+    <owl:Class rdf:about="#Nonlinear">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&func;#hasFunction"/>
+                <owl:allValuesFrom rdf:resource="&func;#Nonlinear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Open -->
+
+    <owl:Class rdf:about="#Open">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Oscillate -->
+
+    <owl:Class rdf:about="#Oscillate">
+        <owl:equivalentClass rdf:resource="#Oscillation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Oscillation -->
+
+    <owl:Class rdf:about="#Oscillation">
+        <rdfs:subClassOf rdf:resource="#Variation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Pattern -->
+
+    <owl:Class rdf:about="#Pattern">
+        <rdfs:subClassOf rdf:resource="#Trend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Perturb -->
+
+    <owl:Class rdf:about="#Perturb">
+        <owl:equivalentClass rdf:resource="#Perturbation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Perturbation -->
+
+    <owl:Class rdf:about="#Perturbation">
+        <rdfs:subClassOf rdf:resource="#Variation"/>
+        <rdfs:comment xml:lang="en"
+            >Any departure introduced into an assumed steady state of a system.   The magnitude is often assumed to be small so that product terms in the dependent variables may be neglected.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Reduce -->
+
+    <owl:Class rdf:about="#Reduce">
+        <owl:equivalentClass rdf:resource="#Reduction"/>
+        <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Reduction -->
+
+    <owl:Class rdf:about="#Reduction"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Removal -->
+
+    <owl:Class rdf:about="#Removal">
+        <rdfs:label>Removal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Resource -->
+
+    <owl:Class rdf:about="#Resource">
+        <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Role -->
+
+    <owl:Class rdf:about="#Role">
+        <rdfs:subClassOf rdf:resource="#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Saturate -->
+
+    <owl:Class rdf:about="#Saturate">
+        <owl:equivalentClass rdf:resource="#Saturated"/>
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Saturated -->
+
+    <owl:Class rdf:about="#Saturated">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+        <owl:disjointWith rdf:resource="#Unsaturated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Saturation -->
+
+    <owl:Class rdf:about="#Saturation">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Shift -->
+
+    <owl:Class rdf:about="#Shift">
+        <rdfs:subClassOf rdf:resource="#Variation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Stability -->
+
+    <owl:Class rdf:about="#Stability">
+        <owl:equivalentClass rdf:resource="#Stable"/>
+        <rdfs:subClassOf rdf:resource="#State"/>
+        <rdfs:comment xml:lang="en"
+            >The characteristic of a system if sufficiently small disturbances have only small effects, either decreasing in amplitude or oscillating periodically; it is asymptotically stable if the effect of small disturbances vanishes for long time periods.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Stable -->
+
+    <owl:Class rdf:about="#Stable">
+        <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+        <owl:disjointWith rdf:resource="#Unstable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#State -->
+
+    <owl:Class rdf:about="#State">
+        <owl:equivalentClass rdf:resource="#SystemState"/>
+        <rdfs:subClassOf rdf:resource="&sci;#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Storage -->
+
+    <owl:Class rdf:about="#Storage">
+        <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#System -->
+
+    <owl:Class rdf:about="#System">
+        <rdfs:subClassOf rdf:resource="&sci;#Knowledge"/>
+        <rdfs:comment
+            >System is a set of interacting or interdependent entities, real or abstract, forming an integrated whole.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#SystemComponent -->
+
+    <owl:Class rdf:about="#SystemComponent"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#SystemDynamics -->
+
+    <owl:Class rdf:about="#SystemDynamics">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+        <rdfs:comment
+            >System dynamics is an approach to understanding the behaviour of complex systems over time. It deals with internal feedback loops and time delays that affect the behaviour of the entire system. What makes using system dynamics different from other approaches to studying complex systems is the use of feedback loops and stocks and flows. These elements help describe how even seemingly simple systems display baffling nonlinearity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#SystemState -->
+
+    <owl:Class rdf:about="#SystemState"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#SystemStateChange -->
+
+    <owl:Class rdf:about="#SystemStateChange">
+        <rdfs:subClassOf rdf:resource="#Change"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Threshold -->
+
+    <owl:Class rdf:about="#Threshold">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Trend -->
+
+    <owl:Class rdf:about="#Trend">
+        <rdfs:subClassOf rdf:resource="#Variation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Unsaturated -->
+
+    <owl:Class rdf:about="#Unsaturated">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Unstable -->
+
+    <owl:Class rdf:about="#Unstable">
+        <rdfs:subClassOf rdf:resource="#SystemState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Vacillation -->
+
+    <owl:Class rdf:about="#Vacillation">
+        <rdfs:subClassOf rdf:resource="#Oscillation"/>
+        <rdfs:comment xml:lang="en"
+            >Oscillation, usually of a small amplitude, about a reference state.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Variation -->
+
+    <owl:Class rdf:about="#Variation">
+        <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Knowledge -->
+
+    <owl:Class rdf:about="&sci;#Knowledge"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Process -->
+
+    <owl:Class rdf:about="&sci;#Process"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Property -->
+
+    <owl:Class rdf:about="&sci;#Property"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

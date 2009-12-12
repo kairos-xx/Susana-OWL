@@ -1,0 +1,573 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl" >
+    <!ENTITY math2 "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vect "http://sweet.jpl.nasa.gov/2.0/mathVector.owl" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY mathVector "http://sweet.jpl.nasa.gov/2.0/mathVector.owl#" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY func "http://sweet.jpl.nasa.gov/2.0/mathFunction.owl" >
+    <!ENTITY mathFunction "http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#" >
+    <!ENTITY mathStatistics "http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl"
+     xmlns:vect="http://sweet.jpl.nasa.gov/2.0/mathVector.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:math2="&math;#"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mathFunction="&func;#"
+     xmlns:mathStatistics="http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:func="http://sweet.jpl.nasa.gov/2.0/mathFunction.owl"
+     xmlns:mathVector="&vect;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/mathFunction.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/mathVector.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasInput -->
+
+    <owl:ObjectProperty rdf:about="&math;#hasInput"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="&math;#hasOutput"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#estimateOf -->
+
+    <owl:ObjectProperty rdf:about="#estimateOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#hasMaximum -->
+
+    <owl:ObjectProperty rdf:about="#hasMaximum">
+        <rdfs:range rdf:resource="#Maximum"/>
+        <rdfs:domain rdf:resource="&vect;#Seq"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#hasMinimum -->
+
+    <owl:ObjectProperty rdf:about="#hasMinimum">
+        <rdfs:range rdf:resource="#Minimum"/>
+        <rdfs:domain rdf:resource="&vect;#Seq"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#hasStatisticalDistribution -->
+
+    <owl:ObjectProperty rdf:about="#hasStatisticalDistribution">
+        <rdfs:range rdf:resource="#StatisticalDistribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#hasTest -->
+
+    <owl:ObjectProperty rdf:about="#hasTest">
+        <rdfs:range rdf:resource="#HypothesisTest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#NumericalEntity -->
+
+    <owl:Class rdf:about="&math;#NumericalEntity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Operation -->
+
+    <owl:Class rdf:about="&math;#Operation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Scalar -->
+
+    <owl:Class rdf:about="&math;#Scalar"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#ChiSquare -->
+
+    <owl:Class rdf:about="&func;#ChiSquare"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#DistributionFunction -->
+
+    <owl:Class rdf:about="&func;#DistributionFunction">
+        <owl:equivalentClass rdf:resource="#StatisticalDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Normal -->
+
+    <owl:Class rdf:about="&func;#Normal"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#NormalizedFunction -->
+
+    <owl:Class rdf:about="&func;#NormalizedFunction"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Average -->
+
+    <owl:Class rdf:about="#Average">
+        <owl:equivalentClass rdf:resource="#Mean"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#BivariateStatisticalSummary -->
+
+    <owl:Class rdf:about="#BivariateStatisticalSummary">
+        <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#BrownianMotion -->
+
+    <owl:Class rdf:about="#BrownianMotion">
+        <rdfs:subClassOf rdf:resource="#StochasticProcess"/>
+        <rdfs:comment xml:lang="en"
+            >A stochastic process that describes (among other things) the rapid and chaotic motion of particles suspended in a fluid at rest as a consequence of fluctuations in the rate at which fluid molecules collide with the particles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#ChiSquareTest -->
+
+    <owl:Class rdf:about="#ChiSquareTest">
+        <rdfs:subClassOf rdf:resource="#HypothesisTest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasStatisticalDistribution"/>
+                <owl:allValuesFrom rdf:resource="&func;#ChiSquare"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Coherence -->
+
+    <owl:Class rdf:about="#Coherence">
+        <rdfs:subClassOf rdf:resource="#BivariateStatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Correlation -->
+
+    <owl:Class rdf:about="#Correlation">
+        <rdfs:subClassOf rdf:resource="#BivariateStatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Covariance -->
+
+    <owl:Class rdf:about="#Covariance">
+        <rdfs:subClassOf rdf:resource="#BivariateStatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#CrossCorrelation -->
+
+    <owl:Class rdf:about="#CrossCorrelation">
+        <rdfs:subClassOf rdf:resource="#Correlation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Estimate -->
+
+    <owl:Class rdf:about="#Estimate">
+        <rdfs:subClassOf rdf:resource="&res;#Prediction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#GoodnessOfFit -->
+
+    <owl:Class rdf:about="#GoodnessOfFit">
+        <rdfs:subClassOf rdf:resource="#Statistics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#HypothesisTest -->
+
+    <owl:Class rdf:about="#HypothesisTest">
+        <rdfs:subClassOf rdf:resource="#StatisticalInference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Maximum -->
+
+    <owl:Class rdf:about="#Maximum">
+        <rdfs:subClassOf rdf:resource="&math;#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Mean -->
+
+    <owl:Class rdf:about="#Mean">
+        <rdfs:subClassOf rdf:resource="#StatisticalMoment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Median -->
+
+    <owl:Class rdf:about="#Median">
+        <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#MidRange -->
+
+    <owl:Class rdf:about="#MidRange">
+        <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Minimum -->
+
+    <owl:Class rdf:about="#Minimum">
+        <rdfs:subClassOf rdf:resource="&math;#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Mode -->
+
+    <owl:Class rdf:about="#Mode">
+        <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#NumberOfSamples -->
+
+    <owl:Class rdf:about="#NumberOfSamples">
+        <rdfs:subClassOf rdf:resource="#Statistics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Peak -->
+
+    <owl:Class rdf:about="#Peak">
+        <rdfs:subClassOf rdf:resource="#Maximum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Percentile -->
+
+    <owl:Class rdf:about="#Percentile">
+        <rdfs:subClassOf rdf:resource="#StatisticalOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#ProbabilityDensityFunction -->
+
+    <owl:Class rdf:about="#ProbabilityDensityFunction">
+        <owl:equivalentClass rdf:resource="#pdf"/>
+        <rdfs:subClassOf rdf:resource="&func;#NormalizedFunction"/>
+        <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#ProbabilityDistributionFunction -->
+
+    <owl:Class rdf:about="#ProbabilityDistributionFunction">
+        <owl:equivalentClass rdf:resource="#cdf"/>
+        <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#ReducedChiSquare -->
+
+    <owl:Class rdf:about="#ReducedChiSquare">
+        <rdfs:subClassOf rdf:resource="&func;#ChiSquare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Sampling -->
+
+    <owl:Class rdf:about="#Sampling">
+        <rdfs:subClassOf rdf:resource="#StatisticalOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Skewness -->
+
+    <owl:Class rdf:about="#Skewness">
+        <rdfs:subClassOf rdf:resource="#StatisticalMoment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#StandardDeviation -->
+
+    <owl:Class rdf:about="#StandardDeviation">
+        <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#StandardError -->
+
+    <owl:Class rdf:about="#StandardError">
+        <rdfs:subClassOf rdf:resource="#Estimate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#estimateOf"/>
+                <owl:allValuesFrom rdf:resource="#StandardDeviation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#StatisticalDistribution -->
+
+    <owl:Class rdf:about="#StatisticalDistribution"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#StatisticalInference -->
+
+    <owl:Class rdf:about="#StatisticalInference">
+        <rdfs:subClassOf rdf:resource="#Estimate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#StatisticalMoment -->
+
+    <owl:Class rdf:about="#StatisticalMoment">
+        <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#StatisticalOperation -->
+
+    <owl:Class rdf:about="#StatisticalOperation">
+        <rdfs:subClassOf rdf:resource="&math;#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#StatisticalScore -->
+
+    <owl:Class rdf:about="#StatisticalScore">
+        <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#StatisticalSummary -->
+
+    <owl:Class rdf:about="#StatisticalSummary">
+        <rdfs:subClassOf rdf:resource="#StatisticalOperation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasOutput"/>
+                <owl:allValuesFrom rdf:resource="&math;#Scalar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasInput"/>
+                <owl:someValuesFrom rdf:resource="&vect;#Seq"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Statistics -->
+
+    <owl:Class rdf:about="#Statistics">
+        <rdfs:subClassOf rdf:resource="&math;#NumericalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#StochasticProcess -->
+
+    <owl:Class rdf:about="#StochasticProcess">
+        <rdfs:subClassOf rdf:resource="#StatisticalOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Uncertainty -->
+
+    <owl:Class rdf:about="#Uncertainty">
+        <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#Variance -->
+
+    <owl:Class rdf:about="#Variance">
+        <rdfs:subClassOf rdf:resource="#StatisticalMoment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#ZScore -->
+
+    <owl:Class rdf:about="#ZScore">
+        <rdfs:subClassOf rdf:resource="#StatisticalScore"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTest"/>
+                <owl:allValuesFrom rdf:resource="#ZTest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#ZTest -->
+
+    <owl:Class rdf:about="#ZTest">
+        <rdfs:subClassOf rdf:resource="#HypothesisTest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasStatisticalDistribution"/>
+                <owl:allValuesFrom rdf:resource="&func;#Normal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#cdf -->
+
+    <owl:Class rdf:about="#cdf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#pValue -->
+
+    <owl:Class rdf:about="#pValue">
+        <rdfs:subClassOf rdf:resource="#StatisticalScore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#pdf -->
+
+    <owl:Class rdf:about="#pdf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#tScore -->
+
+    <owl:Class rdf:about="#tScore">
+        <rdfs:subClassOf rdf:resource="#StatisticalScore"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTest"/>
+                <owl:allValuesFrom rdf:resource="#tTest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathStatistics.owl#tTest -->
+
+    <owl:Class rdf:about="#tTest">
+        <rdfs:subClassOf rdf:resource="#HypothesisTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathVector.owl#Seq -->
+
+    <owl:Class rdf:about="&vect;#Seq"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Prediction -->
+
+    <owl:Class rdf:about="&res;#Prediction"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

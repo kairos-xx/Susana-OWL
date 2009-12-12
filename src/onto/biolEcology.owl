@@ -1,0 +1,470 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY biol "http://sweet.jpl.nasa.gov/2.0/biol.owl" >
+    <!ENTITY biol2 "http://sweet.jpl.nasa.gov/2.0/biol.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY sys "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY biolEcology "http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/biolEcology.owl"
+     xmlns:biol="http://sweet.jpl.nasa.gov/2.0/biol.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:sciSystem="&sys;#"
+     xmlns:biol2="&biol;#"
+     xmlns:sys="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:biolEcology="http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biol.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#hasOrganism -->
+
+    <owl:ObjectProperty rdf:about="#hasOrganism">
+        <rdfs:range rdf:resource="&biol;#Organism"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#kills -->
+
+    <owl:ObjectProperty rdf:about="#kills">
+        <rdfs:range rdf:resource="&biol;#Organism"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#hasPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&sci;#hasPhenomena"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Biology -->
+
+    <owl:Class rdf:about="&biol;#Biology"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Organism -->
+
+    <owl:Class rdf:about="&biol;#Organism"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Adaptation -->
+
+    <owl:Class rdf:about="#Adaptation">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Bioaccumulation -->
+
+    <owl:Class rdf:about="#Bioaccumulation">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Biodiversity -->
+
+    <owl:Class rdf:about="#Biodiversity">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+        <rdfs:comment xml:lang="en"
+            >Biodiversity is the variation of life forms within a given ecosystem, biome or for the entire Earth. Biodiversity is often used as a measure of the health of biological systems.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#BiogeochemicalCycle -->
+
+    <owl:Class rdf:about="#BiogeochemicalCycle">
+        <rdfs:subClassOf rdf:resource="&sys;#Cycle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#hasPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#EcologicalPhenomena"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#CommunityStructure -->
+
+    <owl:Class rdf:about="#CommunityStructure">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Competition -->
+
+    <owl:Class rdf:about="#Competition">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#DiurnalMovement -->
+
+    <owl:Class rdf:about="#DiurnalMovement">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Dominance -->
+
+    <owl:Class rdf:about="#Dominance">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#EcologicalPhenomena -->
+
+    <owl:Class rdf:about="#EcologicalPhenomena">
+        <rdfs:subClassOf rdf:resource="&sci;#Phenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Ecology -->
+
+    <owl:Class rdf:about="#Ecology">
+        <rdfs:subClassOf rdf:resource="&biol;#Biology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#EndangeredSpecies -->
+
+    <owl:Class rdf:about="#EndangeredSpecies">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Evolution -->
+
+    <owl:Class rdf:about="#Evolution">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Extinct -->
+
+    <owl:Class rdf:about="#Extinct">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#FeedingHabitat -->
+
+    <owl:Class rdf:about="#FeedingHabitat">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#FoodWebDynamics -->
+
+    <owl:Class rdf:about="#FoodWebDynamics">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#HabitatConversion -->
+
+    <owl:Class rdf:about="#HabitatConversion">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#HabitatFragmentation -->
+
+    <owl:Class rdf:about="#HabitatFragmentation">
+        <rdfs:subClassOf rdf:resource="#HabitatConversion"/>
+        <rdfs:comment xml:lang="en"
+            >Habitat fragmentation is a process of environmental change important in evolution and conservation biology. As the name implies, it describes the emergence of discontinuities (fragmentation) in an organism&#39;s preferred environment (habitat). Habitat fragmentation can be caused by geological processes that slowly alter the layout of the physical environment or by human activity such as land conversion, which can alter the environment on a much faster time scale. The former is suspected of being one of the major causes of speciation. The latter is causative in extinctions of many species. Habitat fragmentation is frequently caused by humans when native vegetation is cleared for human activities such as agriculture, rural development or urbanization. Habitats which were once continuous become divided into separate fragments. After intensive clearing, the separate fragments tend to be very small islands isolated from each other by crop land, pasture, pavement, or even barren land. The latter is often the result of slash and burn farming in tropical forests. The term habitat fragmentation can be considered to include six discrete processes: Reduction in the total area of the habitat, increase in the amount of edge, decrease in the amount of interior habitat, isolation of one habitat fragment from other areas of habitat, breaking up of one patch of habitat into several smaller patches, and Decrease in the average size of each patch of habitat.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Herbivory -->
+
+    <owl:Class rdf:about="#Herbivory">
+        <rdfs:subClassOf rdf:resource="#Predation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#InvasiveSpecies -->
+
+    <owl:Class rdf:about="#InvasiveSpecies">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#LandscapeEcology -->
+
+    <owl:Class rdf:about="#LandscapeEcology">
+        <rdfs:subClassOf rdf:resource="#Ecology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Migration -->
+
+    <owl:Class rdf:about="#Migration">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Mutation -->
+
+    <owl:Class rdf:about="#Mutation">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Mutualism -->
+
+    <owl:Class rdf:about="#Mutualism">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#NaturalSelection -->
+
+    <owl:Class rdf:about="#NaturalSelection">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#NutrientCycling -->
+
+    <owl:Class rdf:about="#NutrientCycling">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Parasitism -->
+
+    <owl:Class rdf:about="#Parasitism">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Population -->
+
+    <owl:Class rdf:about="#Population">
+        <rdfs:subClassOf rdf:resource="&res;#Count"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#PopulationDynamics -->
+
+    <owl:Class rdf:about="#PopulationDynamics">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Postbreeding -->
+
+    <owl:Class rdf:about="#Postbreeding">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Predation -->
+
+    <owl:Class rdf:about="#Predation">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#PrimaryProduction -->
+
+    <owl:Class rdf:about="#PrimaryProduction">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#RangeChange -->
+
+    <owl:Class rdf:about="#RangeChange">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Scavenging -->
+
+    <owl:Class rdf:about="#Scavenging">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#SecondaryProduction -->
+
+    <owl:Class rdf:about="#SecondaryProduction">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Selection -->
+
+    <owl:Class rdf:about="#Selection">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#SpeciesExtinction -->
+
+    <owl:Class rdf:about="#SpeciesExtinction">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#SpeciesInteraction -->
+
+    <owl:Class rdf:about="#SpeciesInteraction">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#SpeciesRecruitment -->
+
+    <owl:Class rdf:about="#SpeciesRecruitment">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Succession -->
+
+    <owl:Class rdf:about="#Succession">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Symbiosis -->
+
+    <owl:Class rdf:about="#Symbiosis">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#Toxicity -->
+
+    <owl:Class rdf:about="#Toxicity">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#TrophicDynamics -->
+
+    <owl:Class rdf:about="#TrophicDynamics">
+        <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Count -->
+
+    <owl:Class rdf:about="&res;#Count"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Cycle -->
+
+    <owl:Class rdf:about="&sys;#Cycle"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Phenomena -->
+
+    <owl:Class rdf:about="&sci;#Phenomena"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

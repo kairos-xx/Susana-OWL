@@ -1,0 +1,512 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl" >
+    <!ENTITY time "http://sweet.jpl.nasa.gov/2.0/time.owl" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY time2 "http://sweet.jpl.nasa.gov/2.0/time.owl#" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY math2 "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY sciUnits "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY system "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY atherm "http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl" >
+    <!ENTITY thermo "http://sweet.jpl.nasa.gov/2.0/physThermo.owl" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY physThermo "http://sweet.jpl.nasa.gov/2.0/physThermo.owl#" >
+    <!ENTITY atmoThermo "http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#" >
+    <!ENTITY rad "http://sweet.jpl.nasa.gov/2.0/physRadiation.owl" >
+    <!ENTITY physRadiation "http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#" >
+    <!ENTITY spec "http://sweet.jpl.nasa.gov/2.0/physSpectralRange.owl" >
+    <!ENTITY physSpectralRange "http://sweet.jpl.nasa.gov/2.0/physSpectralRange.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&atherm;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl"
+     xmlns:spec="http://sweet.jpl.nasa.gov/2.0/physSpectralRange.owl"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:physThermo="&thermo;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time2="&time;#"
+     xmlns:time="http://sweet.jpl.nasa.gov/2.0/time.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:phys2="&phys;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sciUnits="&units;#"
+     xmlns:physSpectralRange="&spec;#"
+     xmlns:sciSystem="&system;#"
+     xmlns:atmoThermo="&atherm;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:math2="&math;#"
+     xmlns:atherm="http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl"
+     xmlns:thermo="http://sweet.jpl.nasa.gov/2.0/physThermo.owl"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl"
+     xmlns:system="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:physRadiation="&rad;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rad="http://sweet.jpl.nasa.gov/2.0/physRadiation.owl">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physRadiation.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physSpectralRange.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physThermo.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/time.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasFirstOperand -->
+
+    <owl:ObjectProperty rdf:about="&math;#hasFirstOperand"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasSecondOperand -->
+
+    <owl:ObjectProperty rdf:about="&math;#hasSecondOperand"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProperty -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#approximates -->
+
+    <owl:ObjectProperty rdf:about="&system;#approximates"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasDefaultUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;#hasDefaultUnit"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hasTime -->
+
+    <owl:ObjectProperty rdf:about="&time;#hasTime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#AbsorbedSolarRadiation -->
+
+    <owl:Class rdf:about="#AbsorbedSolarRadiation">
+        <rdfs:label
+            >Absorbed Solar Radiation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SolarRadiation"/>
+        <rdfs:comment
+            >Solar radiation absorbed by the atmosphere&#39;s constituent gases, suspended material, clouds, or by the earth&#39;s surface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#BowenRatio -->
+
+    <owl:Class rdf:about="#BowenRatio">
+        <rdfs:subClassOf rdf:resource="&math;#Ratio"/>
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalLaw"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasSecondOperand"/>
+                <owl:allValuesFrom rdf:resource="&thermo;#LatentHeat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#dimensionlessUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasFirstOperand"/>
+                <owl:allValuesFrom rdf:resource="&thermo;#SensibleHeat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#DeicedTemperature -->
+
+    <owl:Class rdf:about="#DeicedTemperature">
+        <rdfs:subClassOf rdf:resource="&thermo;#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#DewPoint -->
+
+    <owl:Class rdf:about="#DewPoint">
+        <owl:equivalentClass rdf:resource="#DewPointTemperature"/>
+        <rdfs:subClassOf rdf:resource="&thermo;#Temperature"/>
+        <rdfs:comment xml:lang="en"
+            >The temperature to which a given air parcel must be cooled at constant pressure and constant water vapor content in order for saturation to occur.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#DewPointDepression -->
+
+    <owl:Class rdf:about="#DewPointDepression">
+        <rdfs:subClassOf rdf:resource="&math;#Subtraction"/>
+        <rdfs:subClassOf rdf:resource="&thermo;#Temperature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasFirstOperand"/>
+                <owl:allValuesFrom rdf:resource="#DryBulbTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasSecondOperand"/>
+                <owl:allValuesFrom rdf:resource="#DewPointTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#DewPointTemperature -->
+
+    <owl:Class rdf:about="#DewPointTemperature"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#DryBulbTemperature -->
+
+    <owl:Class rdf:about="#DryBulbTemperature">
+        <rdfs:subClassOf rdf:resource="&thermo;#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#EffectiveTemperature -->
+
+    <owl:Class rdf:about="#EffectiveTemperature">
+        <rdfs:subClassOf rdf:resource="&thermo;#Temperature"/>
+        <rdfs:comment xml:lang="en"
+            >The temperature at which motionless saturated air would induce, in a sedentary worker wearing ordinary indoor clothing, the same sensation of comfort as that induced by the actual conditions of temperature, humidity, and air movement. Effective temperature is used as a guide in air-conditioning practice, and, on the comfort chart (American Society of Heating and Air Conditioning Engineers), it appears as a family of curves that serves as one coordinate in defining comfort zones.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#EquivalentTemperature -->
+
+    <owl:Class rdf:about="#EquivalentTemperature">
+        <rdfs:subClassOf rdf:resource="&thermo;#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#HeatBudget -->
+
+    <owl:Class rdf:about="#HeatBudget">
+        <rdfs:subClassOf rdf:resource="&system;#Budget"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&thermo;#Heat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#Insolation -->
+
+    <owl:Class rdf:about="#Insolation">
+        <owl:equivalentClass rdf:resource="#SolarFlux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#NocturnalCooling -->
+
+    <owl:Class rdf:about="#NocturnalCooling">
+        <rdfs:subClassOf rdf:resource="#RadiationalCooling"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;#hasTime"/>
+                <owl:allValuesFrom rdf:resource="&time;#Nighttime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The lowering of temperature during night time, due to a net loss of radiant energy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#PseudoEquivalentTemperature -->
+
+    <owl:Class rdf:about="#PseudoEquivalentTemperature">
+        <rdfs:subClassOf rdf:resource="&thermo;#Temperature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&system;#approximates"/>
+                <owl:allValuesFrom rdf:resource="#EquivalentTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#RadiationalCooling -->
+
+    <owl:Class rdf:about="#RadiationalCooling">
+        <owl:equivalentClass rdf:resource="#RadiativeCooling"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#RadiationalHeating -->
+
+    <owl:Class rdf:about="#RadiationalHeating">
+        <owl:equivalentClass rdf:resource="#RadiativeHeating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#RadiativeCooling -->
+
+    <owl:Class rdf:about="#RadiativeCooling">
+        <rdfs:subClassOf rdf:resource="&rad;#RadiativeForcing"/>
+        <rdfs:subClassOf rdf:resource="&thermo;#Cooling"/>
+        <owl:disjointWith rdf:resource="#RadiativeHeating"/>
+        <rdfs:comment xml:lang="en"
+            >In meteorology, the result of radiative cooling of the earth&#39;s surface and adjacent air.  Radiational cooling occurs, as is typical on calm, clear nights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#RadiativeHeating -->
+
+    <owl:Class rdf:about="#RadiativeHeating">
+        <rdfs:subClassOf rdf:resource="&rad;#RadiativeForcing"/>
+        <rdfs:subClassOf rdf:resource="&thermo;#Heating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#SolarFlux -->
+
+    <owl:Class rdf:about="#SolarFlux">
+        <rdfs:subClassOf rdf:resource="&rad;#RadiativeFlux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#SolarForcing -->
+
+    <owl:Class rdf:about="#SolarForcing">
+        <rdfs:subClassOf rdf:resource="&rad;#RadiativeForcing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#SolarRadiation -->
+
+    <owl:Class rdf:about="#SolarRadiation">
+        <owl:equivalentClass rdf:resource="&spec;#ShortWave"/>
+        <rdfs:comment xml:lang="en"
+            >The total electromagnetic radiation emitted by the sun.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#Sunlight -->
+
+    <owl:Class rdf:about="#Sunlight">
+        <rdfs:subClassOf rdf:resource="#SolarRadiation"/>
+        <rdfs:comment xml:lang="en"
+            >Sunlight, in the broad sense, is the total spectrum of the electromagnetic radiation given off by the Sun. On Earth, sunlight is filtered through the atmosphere, and the solar radiation is obvious as daylight when the Sun is above the horizon. This is usually during the hours known as day. Near the poles in summer, sunlight also occurs during the hours known as night and in the winter at the poles sunlight may not occur at any time. When the direct radiation is not blocked by clouds, it is experienced as sunshine, a combination of bright light and heat. Radiant heat directly produced by the radiation of the sun is different from the increase in atmospheric temperature due to the radiative heating of the atmosphere by the sun&#39;s radiation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#Sunshine -->
+
+    <owl:Class rdf:about="#Sunshine">
+        <rdfs:subClassOf rdf:resource="#SolarRadiation"/>
+        <rdfs:comment xml:lang="en"
+            >When the direct radiation is not blocked by clouds, it is experienced as sunshine, a combination of bright light and heat.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#SurfaceTemperature -->
+
+    <owl:Class rdf:about="#SurfaceTemperature">
+        <rdfs:subClassOf rdf:resource="&thermo;#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#TerrestrialRadiation -->
+
+    <owl:Class rdf:about="#TerrestrialRadiation">
+        <rdfs:subClassOf rdf:resource="&spec;#LongWave"/>
+        <rdfs:comment xml:lang="en"
+            >Longwave radiation originating by thermal emission from the earth&#39;s surface and/or its atmosphere</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#WetBulbTemperature -->
+
+    <owl:Class rdf:about="#WetBulbTemperature">
+        <rdfs:subClassOf rdf:resource="&thermo;#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Ratio -->
+
+    <owl:Class rdf:about="&math;#Ratio"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Subtraction -->
+
+    <owl:Class rdf:about="&math;#Subtraction"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalLaw -->
+
+    <owl:Class rdf:about="&phys;#PhysicalLaw"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#RadiativeFlux -->
+
+    <owl:Class rdf:about="&rad;#RadiativeFlux"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#RadiativeForcing -->
+
+    <owl:Class rdf:about="&rad;#RadiativeForcing"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSpectralRange.owl#LongWave -->
+
+    <owl:Class rdf:about="&spec;#LongWave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSpectralRange.owl#ShortWave -->
+
+    <owl:Class rdf:about="&spec;#ShortWave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Cooling -->
+
+    <owl:Class rdf:about="&thermo;#Cooling"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Heat -->
+
+    <owl:Class rdf:about="&thermo;#Heat"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Heating -->
+
+    <owl:Class rdf:about="&thermo;#Heating"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#LatentHeat -->
+
+    <owl:Class rdf:about="&thermo;#LatentHeat"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#SensibleHeat -->
+
+    <owl:Class rdf:about="&thermo;#SensibleHeat"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Temperature -->
+
+    <owl:Class rdf:about="&thermo;#Temperature"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Budget -->
+
+    <owl:Class rdf:about="&system;#Budget"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Nighttime -->
+
+    <owl:Class rdf:about="&time;#Nighttime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#dimensionlessUnit -->
+
+    <owl:Thing rdf:about="&units;#dimensionlessUnit"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

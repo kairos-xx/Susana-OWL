@@ -1,0 +1,724 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY data "http://sweet.jpl.nasa.gov/2.0/data.owl" >
+    <!ENTITY time "http://sweet.jpl.nasa.gov/2.0/time.owl" >
+    <!ENTITY time2 "http://sweet.jpl.nasa.gov/2.0/time.owl#" >
+    <!ENTITY data2 "http://sweet.jpl.nasa.gov/2.0/data.owl#" >
+    <!ENTITY spacei "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY obj "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY spaceObject "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/data.owl"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/data.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:data="http://sweet.jpl.nasa.gov/2.0/data.owl"
+     xmlns:data2="&data;#"
+     xmlns:space="&spacei;#"
+     xmlns:spaceObject="&obj;#"
+     xmlns:spacei="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time2="&time;#"
+     xmlns:time="http://sweet.jpl.nasa.gov/2.0/time.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:obj="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/time.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#bgcolor -->
+
+    <owl:ObjectProperty rdf:about="#bgcolor"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#hasData -->
+
+    <owl:ObjectProperty rdf:about="#hasData">
+        <rdfs:range rdf:resource="#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#hasDataModel -->
+
+    <owl:ObjectProperty rdf:about="#hasDataModel">
+        <rdfs:range rdf:resource="#DataModel"/>
+        <rdfs:subPropertyOf rdf:resource="&res;#representationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#hasDataType -->
+
+    <owl:ObjectProperty rdf:about="#hasDataType">
+        <owl:equivalentProperty rdf:resource="#hasDatatype"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#hasDatatype -->
+
+    <owl:ObjectProperty rdf:about="#hasDatatype">
+        <rdfs:subPropertyOf rdf:resource="#hasDataModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#hasFillValue -->
+
+    <owl:ObjectProperty rdf:about="#hasFillValue">
+        <rdfs:domain rdf:resource="#Dataset"/>
+        <rdfs:range rdf:resource="#FillValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#hasProcessingLevel -->
+
+    <owl:ObjectProperty rdf:about="#hasProcessingLevel">
+        <rdfs:domain rdf:resource="#Dataset"/>
+        <rdfs:range rdf:resource="#ProcessingLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#hasProfile -->
+
+    <owl:ObjectProperty rdf:about="#hasProfile">
+        <rdfs:range rdf:resource="#Profile"/>
+        <rdfs:subPropertyOf rdf:resource="#hasDataModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#hasResolution -->
+
+    <owl:ObjectProperty rdf:about="#hasResolution">
+        <rdfs:domain rdf:resource="#Dimension"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#hasSpatialProjection -->
+
+    <owl:ObjectProperty rdf:about="#hasSpatialProjection">
+        <rdfs:domain rdf:resource="#DataModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#hasVersion -->
+
+    <owl:ObjectProperty rdf:about="#hasVersion">
+        <rdfs:domain rdf:resource="#Dataset"/>
+        <rdfs:range rdf:resource="#Version"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#transparent -->
+
+    <owl:ObjectProperty rdf:about="#transparent"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#representationOf -->
+
+    <owl:ObjectProperty rdf:about="&res;#representationOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#hasGeometricalObject -->
+
+    <owl:ObjectProperty rdf:about="&obj;#hasGeometricalObject"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Array -->
+
+    <owl:Class rdf:about="#Array">
+        <rdfs:subClassOf rdf:resource="#DataStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Cell -->
+
+    <owl:Class rdf:about="#Cell">
+        <rdfs:subClassOf rdf:resource="#DataModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Collection -->
+
+    <owl:Class rdf:about="#Collection">
+        <rdfs:subClassOf rdf:resource="#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Column -->
+
+    <owl:Class rdf:about="#Column">
+        <rdfs:subClassOf rdf:resource="#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Data -->
+
+    <owl:Class rdf:about="#Data">
+        <rdfs:subClassOf rdf:resource="&res;#Realization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#DataModel -->
+
+    <owl:Class rdf:about="#DataModel">
+        <rdfs:subClassOf rdf:resource="&res;#Model"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#representationOf"/>
+                <owl:allValuesFrom rdf:resource="#Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#DataProduct -->
+
+    <owl:Class rdf:about="#DataProduct">
+        <rdfs:subClassOf rdf:resource="#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#DataStructure -->
+
+    <owl:Class rdf:about="#DataStructure">
+        <rdfs:subClassOf rdf:resource="&res;#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Dataset -->
+
+    <owl:Class rdf:about="#Dataset">
+        <rdfs:subClassOf rdf:resource="#DataProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Dimension -->
+
+    <owl:Class rdf:about="#Dimension">
+        <rdfs:subClassOf rdf:resource="&res;#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Ensemble -->
+
+    <owl:Class rdf:about="#Ensemble">
+        <rdfs:subClassOf rdf:resource="#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Field -->
+
+    <owl:Class rdf:about="#Field">
+        <rdfs:subClassOf rdf:resource="#DataModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#FillValue -->
+
+    <owl:Class rdf:about="#FillValue">
+        <rdfs:subClassOf rdf:resource="#Value"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Grid -->
+
+    <owl:Class rdf:about="#Grid">
+        <rdfs:subClassOf rdf:resource="#DataModel"/>
+        <rdfs:subClassOf rdf:resource="#Raster"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obj;#hasGeometricalObject"/>
+                <owl:allValuesFrom rdf:resource="&obj;#Rectangle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Increment -->
+
+    <owl:Class rdf:about="#Increment">
+        <rdfs:subClassOf rdf:resource="&res;#Scale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#L1 -->
+
+    <owl:Class rdf:about="#L1">
+        <owl:equivalentClass rdf:resource="#Level1"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#L2 -->
+
+    <owl:Class rdf:about="#L2">
+        <owl:equivalentClass rdf:resource="#Level2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#L3 -->
+
+    <owl:Class rdf:about="#L3">
+        <owl:equivalentClass rdf:resource="#Level3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#L4 -->
+
+    <owl:Class rdf:about="#L4">
+        <owl:equivalentClass rdf:resource="#Level4"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Layer -->
+
+    <owl:Class rdf:about="#Layer">
+        <owl:equivalentClass rdf:resource="#Variable"/>
+        <rdfs:subClassOf rdf:resource="#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Level1 -->
+
+    <owl:Class rdf:about="#Level1">
+        <rdfs:subClassOf rdf:resource="#ProcessingLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Level2 -->
+
+    <owl:Class rdf:about="#Level2">
+        <rdfs:subClassOf rdf:resource="#ProcessingLevel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDataModel"/>
+                <owl:allValuesFrom rdf:resource="#Swath"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Level3 -->
+
+    <owl:Class rdf:about="#Level3">
+        <rdfs:subClassOf rdf:resource="#ProcessingLevel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDataModel"/>
+                <owl:allValuesFrom rdf:resource="#Grid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Level4 -->
+
+    <owl:Class rdf:about="#Level4">
+        <rdfs:subClassOf rdf:resource="#ProcessingLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#MaximumValid -->
+
+    <owl:Class rdf:about="#MaximumValid">
+        <rdfs:subClassOf rdf:resource="#Value"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Metadata -->
+
+    <owl:Class rdf:about="#Metadata">
+        <rdfs:subClassOf rdf:resource="&res;#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#MinimumValid -->
+
+    <owl:Class rdf:about="#MinimumValid">
+        <rdfs:subClassOf rdf:resource="#Value"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#MissingValue -->
+
+    <owl:Class rdf:about="#MissingValue">
+        <rdfs:subClassOf rdf:resource="#Value"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Offset -->
+
+    <owl:Class rdf:about="#Offset">
+        <rdfs:subClassOf rdf:resource="#Value"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Point -->
+
+    <owl:Class rdf:about="#Point">
+        <rdfs:subClassOf rdf:resource="#DataModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obj;#hasGeometricalObject"/>
+                <owl:allValuesFrom rdf:resource="&obj;#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#ProcessingLevel -->
+
+    <owl:Class rdf:about="#ProcessingLevel">
+        <rdfs:subClassOf rdf:resource="&res;#Model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Profile -->
+
+    <owl:Class rdf:about="#Profile">
+        <rdfs:subClassOf rdf:resource="#DataProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Provenance -->
+
+    <owl:Class rdf:about="#Provenance">
+        <rdfs:subClassOf rdf:resource="#Metadata"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Raster -->
+
+    <owl:Class rdf:about="#Raster">
+        <rdfs:subClassOf rdf:resource="#DataModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#ReducedGrid -->
+
+    <owl:Class rdf:about="#ReducedGrid">
+        <rdfs:subClassOf rdf:resource="#Grid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Resolution -->
+
+    <owl:Class rdf:about="#Resolution">
+        <rdfs:subClassOf rdf:resource="#Increment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Row -->
+
+    <owl:Class rdf:about="#Row">
+        <rdfs:subClassOf rdf:resource="#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#ScaleFactor -->
+
+    <owl:Class rdf:about="#ScaleFactor">
+        <rdfs:subClassOf rdf:resource="#Value"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Series -->
+
+    <owl:Class rdf:about="#Series">
+        <rdfs:subClassOf rdf:resource="#DataModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#SpatialRepresentation -->
+
+    <owl:Class rdf:about="#SpatialRepresentation">
+        <rdfs:subClassOf rdf:resource="&res;#Representation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#representationOf"/>
+                <owl:allValuesFrom rdf:resource="&spacei;#Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#StratigraphicSequence -->
+
+    <owl:Class rdf:about="#StratigraphicSequence">
+        <rdfs:subClassOf rdf:resource="#DataProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Structure -->
+
+    <owl:Class rdf:about="#Structure">
+        <rdfs:subClassOf rdf:resource="#DataStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Survey -->
+
+    <owl:Class rdf:about="#Survey">
+        <rdfs:subClassOf rdf:resource="#DataProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Swath -->
+
+    <owl:Class rdf:about="#Swath">
+        <rdfs:subClassOf rdf:resource="#DataModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Swath_2D -->
+
+    <owl:Class rdf:about="#Swath_2D">
+        <rdfs:subClassOf rdf:resource="#Swath"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obj;#hasGeometricalObject"/>
+                <owl:allValuesFrom rdf:resource="&obj;#GeometricalObject_2D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Swath_3D -->
+
+    <owl:Class rdf:about="#Swath_3D">
+        <rdfs:subClassOf rdf:resource="#Swath"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obj;#hasGeometricalObject"/>
+                <owl:allValuesFrom rdf:resource="&obj;#GeometricalObject_3D"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#TemporalRepresentation -->
+
+    <owl:Class rdf:about="#TemporalRepresentation">
+        <rdfs:subClassOf rdf:resource="&res;#Representation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#representationOf"/>
+                <owl:allValuesFrom rdf:resource="&time;#Time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#TimeSeries -->
+
+    <owl:Class rdf:about="#TimeSeries">
+        <rdfs:subClassOf rdf:resource="#Series"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Trajectory -->
+
+    <owl:Class rdf:about="#Trajectory">
+        <rdfs:subClassOf rdf:resource="#DataModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Value -->
+
+    <owl:Class rdf:about="#Value">
+        <rdfs:subClassOf rdf:resource="#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Variable -->
+
+    <owl:Class rdf:about="#Variable"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Vector -->
+
+    <owl:Class rdf:about="#Vector">
+        <rdfs:subClassOf rdf:resource="#DataModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Version -->
+
+    <owl:Class rdf:about="#Version">
+        <rdfs:subClassOf rdf:resource="&res;#Realization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Model -->
+
+    <owl:Class rdf:about="&res;#Model"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Realization -->
+
+    <owl:Class rdf:about="&res;#Realization"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Representation -->
+
+    <owl:Class rdf:about="&res;#Representation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Scale -->
+
+    <owl:Class rdf:about="&res;#Scale"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Space -->
+
+    <owl:Class rdf:about="&spacei;#Space"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#GeometricalObject_2D -->
+
+    <owl:Class rdf:about="&obj;#GeometricalObject_2D"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#GeometricalObject_3D -->
+
+    <owl:Class rdf:about="&obj;#GeometricalObject_3D"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Point -->
+
+    <owl:Class rdf:about="&obj;#Point"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Rectangle -->
+
+    <owl:Class rdf:about="&obj;#Rectangle"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Time -->
+
+    <owl:Class rdf:about="&time;#Time"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

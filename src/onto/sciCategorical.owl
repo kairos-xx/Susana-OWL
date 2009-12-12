@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY qual "http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl" >
+    <!ENTITY sciCategorical "http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&qual;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:sciCategorical="&qual;#"
+     xmlns:sciResearch="&res;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:qual="http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Big -->
+
+    <owl:Class rdf:about="#Big">
+        <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#CategoricalScale -->
+
+    <owl:Class rdf:about="#CategoricalScale">
+        <rdfs:subClassOf rdf:resource="&res;#MeasurementScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Category -->
+
+    <owl:Class rdf:about="#Category">
+        <owl:equivalentClass rdf:resource="#Classification"/>
+        <rdfs:subClassOf rdf:resource="&sci;#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Characteristics -->
+
+    <owl:Class rdf:about="#Characteristics">
+        <owl:equivalentClass rdf:resource="#Description"/>
+        <rdfs:subClassOf rdf:resource="&sci;#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Classification -->
+
+    <owl:Class rdf:about="#Classification"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Coarse -->
+
+    <owl:Class rdf:about="#Coarse">
+        <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Condition -->
+
+    <owl:Class rdf:about="#Condition">
+        <rdfs:subClassOf rdf:resource="#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Considerable -->
+
+    <owl:Class rdf:about="#Considerable">
+        <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Description -->
+
+    <owl:Class rdf:about="#Description"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Devastating -->
+
+    <owl:Class rdf:about="#Devastating">
+        <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Dominant -->
+
+    <owl:Class rdf:about="#Dominant">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Exotic -->
+
+    <owl:Class rdf:about="#Exotic">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Fine -->
+
+    <owl:Class rdf:about="#Fine">
+        <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Gentle -->
+
+    <owl:Class rdf:about="#Gentle">
+        <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Group -->
+
+    <owl:Class rdf:about="#Group">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#High -->
+
+    <owl:Class rdf:about="#High">
+        <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#ImpactCategory -->
+
+    <owl:Class rdf:about="#ImpactCategory">
+        <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Light -->
+
+    <owl:Class rdf:about="#Light">
+        <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Low -->
+
+    <owl:Class rdf:about="#Low">
+        <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Macro -->
+
+    <owl:Class rdf:about="#Macro">
+        <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Major -->
+
+    <owl:Class rdf:about="#Major">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Micro -->
+
+    <owl:Class rdf:about="#Micro">
+        <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Minor -->
+
+    <owl:Class rdf:about="#Minor">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Moderate -->
+
+    <owl:Class rdf:about="#Moderate">
+        <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#OrdinalScale -->
+
+    <owl:Class rdf:about="#OrdinalScale">
+        <rdfs:subClassOf rdf:resource="&res;#MeasurementScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Past -->
+
+    <owl:Class rdf:about="#Past">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Present -->
+
+    <owl:Class rdf:about="#Present">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Primary -->
+
+    <owl:Class rdf:about="#Primary">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Qualitative -->
+
+    <owl:Class rdf:about="#Qualitative">
+        <rdfs:subClassOf rdf:resource="&sci;#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Quality -->
+
+    <owl:Class rdf:about="#Quality">
+        <rdfs:subClassOf rdf:resource="&sci;#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Rare -->
+
+    <owl:Class rdf:about="#Rare">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Secondary -->
+
+    <owl:Class rdf:about="#Secondary">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Severe -->
+
+    <owl:Class rdf:about="#Severe">
+        <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Size -->
+
+    <owl:Class rdf:about="#Size">
+        <rdfs:subClassOf rdf:resource="&sci;#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#SizeCategory -->
+
+    <owl:Class rdf:about="#SizeCategory">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Small -->
+
+    <owl:Class rdf:about="#Small">
+        <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Strong -->
+
+    <owl:Class rdf:about="#Strong">
+        <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Subordinate -->
+
+    <owl:Class rdf:about="#Subordinate">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Total -->
+
+    <owl:Class rdf:about="#Total">
+        <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Trace -->
+
+    <owl:Class rdf:about="#Trace">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Type -->
+
+    <owl:Class rdf:about="#Type">
+        <rdfs:subClassOf rdf:resource="#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Typical -->
+
+    <owl:Class rdf:about="#Typical">
+        <rdfs:subClassOf rdf:resource="#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Violent -->
+
+    <owl:Class rdf:about="#Violent">
+        <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#MeasurementScale -->
+
+    <owl:Class rdf:about="&res;#MeasurementScale"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Property -->
+
+    <owl:Class rdf:about="&sci;#Property"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

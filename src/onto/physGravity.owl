@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY space2 "http://sweet.jpl.nasa.gov/2.0/space.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl" >
+    <!ENTITY sciUnits "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vect "http://sweet.jpl.nasa.gov/2.0/mathVector.owl" >
+    <!ENTITY mathVector "http://sweet.jpl.nasa.gov/2.0/mathVector.owl#" >
+    <!ENTITY physGravity "http://sweet.jpl.nasa.gov/2.0/physGravity.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/physGravity.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/physGravity.owl"
+     xmlns:vect="http://sweet.jpl.nasa.gov/2.0/mathVector.owl"
+     xmlns:space2="&space;#"
+     xmlns:physGravity="http://sweet.jpl.nasa.gov/2.0/physGravity.owl#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:phys2="&phys;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:mathVector="&vect;#"
+     xmlns:sciUnits="&units;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/mathVector.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasForce -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasForce"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasDefaultUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;#hasDefaultUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathVector.owl#VectorField -->
+
+    <owl:Class rdf:about="&vect;#VectorField"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Force -->
+
+    <owl:Class rdf:about="&phys;#Force"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Potential -->
+
+    <owl:Class rdf:about="&phys;#Potential"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PotentialEnergy -->
+
+    <owl:Class rdf:about="&phys;#PotentialEnergy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physGravity.owl#Geopotential -->
+
+    <owl:Class rdf:about="#Geopotential">
+        <rdfs:subClassOf rdf:resource="&phys;#Potential"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#meterSquared_perSecondSquared"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasForce"/>
+                <owl:allValuesFrom rdf:resource="#Gravity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physGravity.owl#GeopotentialHeight -->
+
+    <owl:Class rdf:about="#GeopotentialHeight">
+        <rdfs:subClassOf rdf:resource="&space;#Height"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasForce"/>
+                <owl:allValuesFrom rdf:resource="#Gravity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physGravity.owl#GravitationalPotentialEnergy -->
+
+    <owl:Class rdf:about="#GravitationalPotentialEnergy">
+        <rdfs:subClassOf rdf:resource="&phys;#PotentialEnergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasForce"/>
+                <owl:allValuesFrom rdf:resource="#Gravity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physGravity.owl#Gravity -->
+
+    <owl:Class rdf:about="#Gravity">
+        <owl:equivalentClass rdf:resource="#GravityForce"/>
+        <rdfs:subClassOf rdf:resource="&phys;#Force"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physGravity.owl#GravityField -->
+
+    <owl:Class rdf:about="#GravityField">
+        <rdfs:subClassOf rdf:resource="&vect;#VectorField"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasForce"/>
+                <owl:allValuesFrom rdf:resource="#Gravity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physGravity.owl#GravityForce -->
+
+    <owl:Class rdf:about="#GravityForce"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Height -->
+
+    <owl:Class rdf:about="&space;#Height"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#meterSquared_perSecondSquared -->
+
+    <owl:Thing rdf:about="&units;#meterSquared_perSecondSquared"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

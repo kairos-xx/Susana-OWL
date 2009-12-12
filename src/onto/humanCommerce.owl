@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY human "http://sweet.jpl.nasa.gov/2.0/human.owl" >
+    <!ENTITY human2 "http://sweet.jpl.nasa.gov/2.0/human.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY humanCommerce "http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#" >
+    <!ENTITY qual "http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl" >
+    <!ENTITY sciCategorical "http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl"
+     xmlns:sciCategorical="&qual;#"
+     xmlns:human2="&human;#"
+     xmlns:human="http://sweet.jpl.nasa.gov/2.0/human.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:qual="http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl"
+     xmlns:humanCommerce="http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/human.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="&human;#hasActivity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#HumanActivity -->
+
+    <owl:Class rdf:about="&human;#HumanActivity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#EngineeringActivity -->
+
+    <owl:Class rdf:about="#EngineeringActivity">
+        <rdfs:subClassOf rdf:resource="#Production"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#ForestProduct -->
+
+    <owl:Class rdf:about="#ForestProduct">
+        <rdfs:subClassOf rdf:resource="#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Industrialization -->
+
+    <owl:Class rdf:about="#Industrialization">
+        <rdfs:subClassOf rdf:resource="&human;#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#LandTenure -->
+
+    <owl:Class rdf:about="#LandTenure">
+        <rdfs:subClassOf rdf:resource="#Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#LandUse -->
+
+    <owl:Class rdf:about="#LandUse">
+        <rdfs:subClassOf rdf:resource="&human;#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Management -->
+
+    <owl:Class rdf:about="#Management">
+        <rdfs:subClassOf rdf:resource="&human;#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#ManagementSystem -->
+
+    <owl:Class rdf:about="#ManagementSystem">
+        <rdfs:subClassOf rdf:resource="&human;#HumanActivity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&human;#hasActivity"/>
+                <owl:allValuesFrom rdf:resource="#Management"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Packaging -->
+
+    <owl:Class rdf:about="#Packaging">
+        <rdfs:subClassOf rdf:resource="#Production"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Permit -->
+
+    <owl:Class rdf:about="#Permit">
+        <rdfs:subClassOf rdf:resource="&human;#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Processing -->
+
+    <owl:Class rdf:about="#Processing">
+        <rdfs:subClassOf rdf:resource="#Production"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Product -->
+
+    <owl:Class rdf:about="#Product">
+        <rdfs:subClassOf rdf:resource="&sci;#MaterialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Production -->
+
+    <owl:Class rdf:about="#Production">
+        <rdfs:subClassOf rdf:resource="&human;#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Productivity -->
+
+    <owl:Class rdf:about="#Productivity">
+        <rdfs:subClassOf rdf:resource="&human;#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#StandarIndustrialClassification -->
+
+    <owl:Class rdf:about="#StandarIndustrialClassification">
+        <rdfs:subClassOf rdf:resource="&qual;#Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Supply -->
+
+    <owl:Class rdf:about="#Supply">
+        <rdfs:subClassOf rdf:resource="#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Yield -->
+
+    <owl:Class rdf:about="#Yield">
+        <rdfs:subClassOf rdf:resource="#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Classification -->
+
+    <owl:Class rdf:about="&qual;#Classification"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#MaterialThing -->
+
+    <owl:Class rdf:about="&sci;#MaterialThing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

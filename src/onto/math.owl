@@ -1,0 +1,703 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl" >
+    <!ENTITY math2 "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="&math;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/math.owl"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:math2="&math;#"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#decreaseIn -->
+
+    <owl:ObjectProperty rdf:about="#decreaseIn"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#equals -->
+
+    <owl:ObjectProperty rdf:about="#equals">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="#numericalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#fuzzyGreaterThan -->
+
+    <owl:ObjectProperty rdf:about="#fuzzyGreaterThan">
+        <rdfs:subPropertyOf rdf:resource="#numericalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#fuzzyLessThan -->
+
+    <owl:ObjectProperty rdf:about="#fuzzyLessThan">
+        <rdfs:subPropertyOf rdf:resource="#numericalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#greaterThan -->
+
+    <owl:ObjectProperty rdf:about="#greaterThan">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <owl:inverseOf rdf:resource="#lessThanOrEqual"/>
+        <rdfs:subPropertyOf rdf:resource="#numericalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#greaterThanOrEqual -->
+
+    <owl:ObjectProperty rdf:about="#greaterThanOrEqual">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <owl:inverseOf rdf:resource="#lessThan"/>
+        <rdfs:subPropertyOf rdf:resource="#numericalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasCenter -->
+
+    <owl:ObjectProperty rdf:about="#hasCenter">
+        <rdfs:range rdf:resource="#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasFirstOperand -->
+
+    <owl:ObjectProperty rdf:about="#hasFirstOperand">
+        <rdfs:range rdf:resource="#NumericalEntity"/>
+        <rdfs:domain rdf:resource="#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasInput -->
+
+    <owl:ObjectProperty rdf:about="#hasInput">
+        <rdfs:range rdf:resource="#NumericalEntity"/>
+        <rdfs:domain rdf:resource="#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasInterval -->
+
+    <owl:ObjectProperty rdf:about="#hasInterval">
+        <rdfs:range rdf:resource="#Interval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasLowerLimit -->
+
+    <owl:ObjectProperty rdf:about="#hasLowerLimit">
+        <rdfs:domain rdf:resource="#Interval"/>
+        <rdfs:range rdf:resource="#Scalar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="#hasOutput">
+        <rdfs:range rdf:resource="#NumericalEntity"/>
+        <rdfs:domain rdf:resource="#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasSecondOperand -->
+
+    <owl:ObjectProperty rdf:about="#hasSecondOperand">
+        <rdfs:range rdf:resource="#NumericalEntity"/>
+        <rdfs:domain rdf:resource="#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasUpperLimit -->
+
+    <owl:ObjectProperty rdf:about="#hasUpperLimit">
+        <rdfs:domain rdf:resource="#Interval"/>
+        <rdfs:range rdf:resource="#Scalar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#increaseIn -->
+
+    <owl:ObjectProperty rdf:about="#increaseIn"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#lessThan -->
+
+    <owl:ObjectProperty rdf:about="#lessThan">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="#numericalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#lessThanOrEqual -->
+
+    <owl:ObjectProperty rdf:about="#lessThanOrEqual">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="#numericalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#numericalRelation -->
+
+    <owl:ObjectProperty rdf:about="#numericalRelation">
+        <rdfs:domain rdf:resource="#NumericalEntity"/>
+        <rdfs:range rdf:resource="#NumericalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#productOf -->
+
+    <owl:ObjectProperty rdf:about="#productOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#subsetOf -->
+
+    <owl:ObjectProperty rdf:about="#subsetOf">
+        <rdfs:domain rdf:resource="#Set"/>
+        <rdfs:range rdf:resource="#Set"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#eachElementUnique -->
+
+    <owl:DatatypeProperty rdf:about="#eachElementUnique">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasArity -->
+
+    <owl:DatatypeProperty rdf:about="#hasArity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasDimension -->
+
+    <owl:DatatypeProperty rdf:about="#hasDimension">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasError -->
+
+    <owl:DatatypeProperty rdf:about="#hasError">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasLowerBound -->
+
+    <owl:DatatypeProperty rdf:about="#hasLowerBound">
+        <owl:equivalentProperty rdf:resource="#lowerBound"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasNumericValue -->
+
+    <owl:DatatypeProperty rdf:about="#hasNumericValue">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasPower -->
+
+    <owl:DatatypeProperty rdf:about="#hasPower">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasTolerance -->
+
+    <owl:DatatypeProperty rdf:about="#hasTolerance">
+        <owl:equivalentProperty rdf:resource="#tolerance"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasUpperBound -->
+
+    <owl:DatatypeProperty rdf:about="#hasUpperBound">
+        <owl:equivalentProperty rdf:resource="#upperBound"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#lowerBound -->
+
+    <owl:DatatypeProperty rdf:about="#lowerBound"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#tolerance -->
+
+    <owl:DatatypeProperty rdf:about="#tolerance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#upperBound -->
+
+    <owl:DatatypeProperty rdf:about="#upperBound"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#BinaryOperation -->
+
+    <owl:Class rdf:about="#BinaryOperation">
+        <rdfs:subClassOf rdf:resource="#Operation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSecondOperand"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFirstOperand"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Constant -->
+
+    <owl:Class rdf:about="#Constant">
+        <rdfs:subClassOf rdf:resource="#NumericalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Continuity -->
+
+    <owl:Class rdf:about="#Continuity">
+        <owl:equivalentClass rdf:resource="#Continuous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Continuous -->
+
+    <owl:Class rdf:about="#Continuous">
+        <rdfs:subClassOf rdf:resource="#MathematicalProperty"/>
+        <owl:disjointWith rdf:resource="#Discontinuous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Discontinuity -->
+
+    <owl:Class rdf:about="#Discontinuity">
+        <owl:equivalentClass rdf:resource="#Discontinuous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Discontinuous -->
+
+    <owl:Class rdf:about="#Discontinuous">
+        <rdfs:subClassOf rdf:resource="#MathematicalProperty"/>
+        <rdfs:comment xml:lang="en"
+            >A point in the range of a function at which it is undefined or not continuous [Wiktionary]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Division -->
+
+    <owl:Class rdf:about="#Division">
+        <rdfs:subClassOf rdf:resource="#BinaryOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Equation -->
+
+    <owl:Class rdf:about="#Equation">
+        <rdfs:subClassOf rdf:resource="#Relation"/>
+        <rdfs:comment xml:lang="en"
+            >An equation is a mathematical statement, in symbols, that two things are exactly the same (or equivalent). [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Fraction -->
+
+    <owl:Class rdf:about="#Fraction">
+        <rdfs:subClassOf rdf:resource="#Division"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Half -->
+
+    <owl:Class rdf:about="#Half">
+        <rdfs:subClassOf rdf:resource="#UnaryOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Interval -->
+
+    <owl:Class rdf:about="#Interval">
+        <rdfs:subClassOf rdf:resource="#NumericalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDimension"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#MathematicalProperty -->
+
+    <owl:Class rdf:about="#MathematicalProperty">
+        <rdfs:subClassOf rdf:resource="&sci;#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Measure -->
+
+    <owl:Class rdf:about="#Measure">
+        <rdfs:subClassOf rdf:resource="#NumericalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Multiplication -->
+
+    <owl:Class rdf:about="#Multiplication">
+        <rdfs:subClassOf rdf:resource="#BinaryOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Normalization -->
+
+    <owl:Class rdf:about="#Normalization">
+        <rdfs:subClassOf rdf:resource="#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#NumericalEntity -->
+
+    <owl:Class rdf:about="#NumericalEntity">
+        <rdfs:subClassOf rdf:resource="&sci;#Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Operation -->
+
+    <owl:Class rdf:about="#Operation">
+        <rdfs:subClassOf rdf:resource="&sci;#Process"/>
+        <rdfs:comment xml:lang="en"
+            >An operation is an action or procedure which produces a new value from one or more input values.  [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Point -->
+
+    <owl:Class rdf:about="#Point">
+        <rdfs:subClassOf rdf:resource="#NumericalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDimension"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Ratio -->
+
+    <owl:Class rdf:about="#Ratio">
+        <rdfs:subClassOf rdf:resource="#Division"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#ReferenceSystem -->
+
+    <owl:Class rdf:about="#ReferenceSystem">
+        <rdfs:subClassOf rdf:resource="&sci;#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Relation -->
+
+    <owl:Class rdf:about="#Relation">
+        <rdfs:subClassOf rdf:resource="#NumericalEntity"/>
+        <rdfs:comment xml:lang="en"
+            >In mathematics, the concept of a relation is a generalization of 2-place relations, such as the relation of equality, less than, greater than, etc.. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Scalar -->
+
+    <owl:Class rdf:about="#Scalar">
+        <rdfs:subClassOf rdf:resource="#NumericalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Set -->
+
+    <owl:Class rdf:about="#Set">
+        <rdfs:subClassOf rdf:resource="#NumericalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#eachElementUnique"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#SetOperation -->
+
+    <owl:Class rdf:about="#SetOperation">
+        <rdfs:subClassOf rdf:resource="#Operation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasOutput"/>
+                <owl:allValuesFrom rdf:resource="#Set"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasInput"/>
+                <owl:allValuesFrom rdf:resource="#Set"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Square -->
+
+    <owl:Class rdf:about="#Square">
+        <rdfs:subClassOf rdf:resource="#UnaryOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#SquareRoot -->
+
+    <owl:Class rdf:about="#SquareRoot">
+        <rdfs:subClassOf rdf:resource="#UnaryOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Subset -->
+
+    <owl:Class rdf:about="#Subset">
+        <rdfs:subClassOf rdf:resource="#SetOperation"/>
+        <owl:disjointWith rdf:resource="#Superset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Subtraction -->
+
+    <owl:Class rdf:about="#Subtraction">
+        <rdfs:subClassOf rdf:resource="#BinaryOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Sum -->
+
+    <owl:Class rdf:about="#Sum">
+        <owl:equivalentClass rdf:resource="#Summation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Summation -->
+
+    <owl:Class rdf:about="#Summation">
+        <rdfs:subClassOf rdf:resource="#BinaryOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Superset -->
+
+    <owl:Class rdf:about="#Superset">
+        <rdfs:subClassOf rdf:resource="#SetOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Theorem -->
+
+    <owl:Class rdf:about="#Theorem">
+        <rdfs:subClassOf rdf:resource="&sci;#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#UnaryOperation -->
+
+    <owl:Class rdf:about="#UnaryOperation">
+        <rdfs:subClassOf rdf:resource="#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Variable -->
+
+    <owl:Class rdf:about="#Variable">
+        <rdfs:subClassOf rdf:resource="#NumericalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Knowledge -->
+
+    <owl:Class rdf:about="&sci;#Knowledge"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Measurement -->
+
+    <owl:Class rdf:about="&sci;#Measurement"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Process -->
+
+    <owl:Class rdf:about="&sci;#Process"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Property -->
+
+    <owl:Class rdf:about="&sci;#Property"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,543 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl" >
+    <!ENTITY math2 "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY obj "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl" >
+    <!ENTITY spaceObject "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&obj;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:obj="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"
+     xmlns:math2="&math;#"
+     xmlns:spaceObject="&obj;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#diameter -->
+
+    <owl:ObjectProperty rdf:about="#diameter">
+        <rdfs:range rdf:resource="&math;#Scalar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#hasBoundary -->
+
+    <owl:ObjectProperty rdf:about="#hasBoundary">
+        <rdfs:range rdf:resource="#Boundary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#hasGeometricalObject -->
+
+    <owl:ObjectProperty rdf:about="#hasGeometricalObject">
+        <rdfs:range rdf:resource="#GeometricalObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#hasVertices -->
+
+    <owl:ObjectProperty rdf:about="#hasVertices">
+        <rdfs:domain rdf:resource="#Polygon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#overlaps -->
+
+    <owl:ObjectProperty rdf:about="#overlaps">
+        <rdfs:domain rdf:resource="#GeometricalObject"/>
+        <rdfs:range rdf:resource="#GeometricalObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#radius -->
+
+    <owl:ObjectProperty rdf:about="#radius">
+        <rdfs:range rdf:resource="&math;#Scalar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasDimension -->
+
+    <owl:DatatypeProperty rdf:about="&math;#hasDimension"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#NumericalEntity -->
+
+    <owl:Class rdf:about="&math;#NumericalEntity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Scalar -->
+
+    <owl:Class rdf:about="&math;#Scalar"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Arc -->
+
+    <owl:Class rdf:about="#Arc">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_1D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Barrier -->
+
+    <owl:Class rdf:about="#Barrier">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Body -->
+
+    <owl:Class rdf:about="#Body">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Boundary -->
+
+    <owl:Class rdf:about="#Boundary">
+        <owl:equivalentClass rdf:resource="#Edge"/>
+        <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Cavity -->
+
+    <owl:Class rdf:about="#Cavity">
+        <rdfs:subClassOf rdf:resource="#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Center -->
+
+    <owl:Class rdf:about="#Center">
+        <rdfs:subClassOf rdf:resource="#Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Circle -->
+
+    <owl:Class rdf:about="#Circle">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Cone -->
+
+    <owl:Class rdf:about="#Cone">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#ConicSection -->
+
+    <owl:Class rdf:about="#ConicSection">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Contour -->
+
+    <owl:Class rdf:about="#Contour">
+        <rdfs:subClassOf rdf:resource="#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Curve -->
+
+    <owl:Class rdf:about="#Curve">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_1D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Cylinder -->
+
+    <owl:Class rdf:about="#Cylinder">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Depression -->
+
+    <owl:Class rdf:about="#Depression">
+        <rdfs:subClassOf rdf:resource="#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Edge -->
+
+    <owl:Class rdf:about="#Edge"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Ellipse -->
+
+    <owl:Class rdf:about="#Ellipse">
+        <rdfs:subClassOf rdf:resource="#ConicSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Ellipsoid -->
+
+    <owl:Class rdf:about="#Ellipsoid">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#FuzzyPoint -->
+
+    <owl:Class rdf:about="#FuzzyPoint">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#GeometricalObject -->
+
+    <owl:Class rdf:about="#GeometricalObject">
+        <rdfs:subClassOf rdf:resource="&math;#NumericalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#GeometricalObject_0D -->
+
+    <owl:Class rdf:about="#GeometricalObject_0D">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasDimension"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#GeometricalObject_1D -->
+
+    <owl:Class rdf:about="#GeometricalObject_1D">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasDimension"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#GeometricalObject_2D -->
+
+    <owl:Class rdf:about="#GeometricalObject_2D">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasDimension"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#GeometricalObject_3D -->
+
+    <owl:Class rdf:about="#GeometricalObject_3D">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasDimension"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Hemisphere -->
+
+    <owl:Class rdf:about="#Hemisphere">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Horizon -->
+
+    <owl:Class rdf:about="#Horizon">
+        <owl:equivalentClass rdf:resource="#Profile"/>
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Hyperbola -->
+
+    <owl:Class rdf:about="#Hyperbola">
+        <rdfs:subClassOf rdf:resource="#ConicSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Hyperplane -->
+
+    <owl:Class rdf:about="#Hyperplane">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Layer -->
+
+    <owl:Class rdf:about="#Layer">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Line -->
+
+    <owl:Class rdf:about="#Line">
+        <rdfs:subClassOf rdf:resource="#Curve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Margin -->
+
+    <owl:Class rdf:about="#Margin">
+        <rdfs:subClassOf rdf:resource="#Boundary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Obstruction -->
+
+    <owl:Class rdf:about="#Obstruction">
+        <rdfs:subClassOf rdf:resource="#Barrier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Orbit -->
+
+    <owl:Class rdf:about="#Orbit">
+        <rdfs:subClassOf rdf:resource="#Path"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Parabola -->
+
+    <owl:Class rdf:about="#Parabola">
+        <rdfs:subClassOf rdf:resource="#ConicSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Path -->
+
+    <owl:Class rdf:about="#Path">
+        <owl:equivalentClass rdf:resource="#Trajectory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Plane -->
+
+    <owl:Class rdf:about="#Plane">
+        <rdfs:subClassOf rdf:resource="#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Point -->
+
+    <owl:Class rdf:about="#Point">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_0D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Polygon -->
+
+    <owl:Class rdf:about="#Polygon">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_2D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasVertices"/>
+                <owl:allValuesFrom rdf:resource="#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Polyhedron -->
+
+    <owl:Class rdf:about="#Polyhedron">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Profile -->
+
+    <owl:Class rdf:about="#Profile"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Rectangle -->
+
+    <owl:Class rdf:about="#Rectangle">
+        <rdfs:subClassOf rdf:resource="#Polygon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Region -->
+
+    <owl:Class rdf:about="#Region">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Ring -->
+
+    <owl:Class rdf:about="#Ring">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Separation -->
+
+    <owl:Class rdf:about="#Separation">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Sphere -->
+
+    <owl:Class rdf:about="#Sphere">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Square -->
+
+    <owl:Class rdf:about="#Square">
+        <rdfs:subClassOf rdf:resource="#Rectangle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Surface -->
+
+    <owl:Class rdf:about="#Surface">
+        <rdfs:subClassOf rdf:resource="#GeometricalObject_2D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Trajectory -->
+
+    <owl:Class rdf:about="#Trajectory">
+        <rdfs:subClassOf rdf:resource="#Curve"/>
+        <rdfs:comment xml:lang="en"
+            >Curve in space tracing the points successivley occupied by a particle in motion</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#VerticalProfile -->
+
+    <owl:Class rdf:about="#VerticalProfile">
+        <rdfs:subClassOf rdf:resource="#Profile"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

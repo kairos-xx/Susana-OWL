@@ -1,0 +1,967 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY atmo "http://sweet.jpl.nasa.gov/2.0/atmo.owl" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY atmo2 "http://sweet.jpl.nasa.gov/2.0/atmo.owl#" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl#" >
+    <!ENTITY hydro "http://sweet.jpl.nasa.gov/2.0/hydro.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY solid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl" >
+    <!ENTITY cloud "http://sweet.jpl.nasa.gov/2.0/atmoCloud.owl" >
+    <!ENTITY physSolid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl#" >
+    <!ENTITY atmoCloud "http://sweet.jpl.nasa.gov/2.0/atmoCloud.owl#" >
+    <!ENTITY proc "http://sweet.jpl.nasa.gov/2.0/chemProcess.owl" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY atmoPrecip "http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY bound "http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl" >
+    <!ENTITY land "http://sweet.jpl.nasa.gov/2.0/geogLandform.owl" >
+    <!ENTITY chemProcess "http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#" >
+    <!ENTITY press "http://sweet.jpl.nasa.gov/2.0/atmoPressure.owl" >
+    <!ENTITY atmoPressure "http://sweet.jpl.nasa.gov/2.0/atmoPressure.owl#" >
+    <!ENTITY trans "http://sweet.jpl.nasa.gov/2.0/physTransport.owl" >
+    <!ENTITY geogLandform "http://sweet.jpl.nasa.gov/2.0/geogLandform.owl#" >
+    <!ENTITY physTransport "http://sweet.jpl.nasa.gov/2.0/physTransport.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl"
+     xmlns:atmo2="&atmo;#"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:atmo="http://sweet.jpl.nasa.gov/2.0/atmo.owl"
+     xmlns:press="http://sweet.jpl.nasa.gov/2.0/atmoPressure.owl"
+     xmlns:land="http://sweet.jpl.nasa.gov/2.0/geogLandform.owl"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl#"
+     xmlns:hydro="http://sweet.jpl.nasa.gov/2.0/hydro.owl#"
+     xmlns:atmoCloud="&cloud;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:phys2="&phys;#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:atmoPressure="&press;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:proc="http://sweet.jpl.nasa.gov/2.0/chemProcess.owl"
+     xmlns:chem2="&chem;#"
+     xmlns:physSolid="&solid;#"
+     xmlns:geogLandform="&land;#"
+     xmlns:physTransport="&trans;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:chemProcess="&proc;#"
+     xmlns:solid="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"
+     xmlns:atmoPrecip="http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#"
+     xmlns:trans="http://sweet.jpl.nasa.gov/2.0/physTransport.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cloud="http://sweet.jpl.nasa.gov/2.0/atmoCloud.owl"
+     xmlns:astroPlanet="&planet;#"
+     xmlns:bound="http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmo.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmoCloud.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmoPressure.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemProcess.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geogLandform.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physTransport.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#hasMeteorologicalPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&atmo;#hasMeteorologicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#hasStorm -->
+
+    <owl:ObjectProperty rdf:about="#hasStorm">
+        <rdfs:range rdf:resource="#Storm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasSubstance -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasSubstance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#hasChemicalProcess -->
+
+    <owl:ObjectProperty rdf:about="&proc;#hasChemicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProcess -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#measureOf -->
+
+    <owl:ObjectProperty rdf:about="&res;#measureOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#AtmosphereLandExchange -->
+
+    <owl:Class rdf:about="&planet;#AtmosphereLandExchange"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetaryLayer -->
+
+    <owl:Class rdf:about="&planet;#PlanetaryLayer"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#MeteorologicalPhenomena -->
+
+    <owl:Class rdf:about="&atmo;#MeteorologicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoCloud.owl#Cloud -->
+
+    <owl:Class rdf:about="&cloud;#Cloud"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#AcidRain -->
+
+    <owl:Class rdf:about="#AcidRain">
+        <rdfs:subClassOf rdf:resource="#WetDeposition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&chem;#Acid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A popular expression for the deposition by rainfall of various airborne pollutants (especially SO2 and NO2) that have harmful effects on vegetation, soils, buildings and other external structures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Blizzard -->
+
+    <owl:Class rdf:about="#Blizzard">
+        <rdfs:subClassOf rdf:resource="#Snowfall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#CloudBurst -->
+
+    <owl:Class rdf:about="#CloudBurst">
+        <rdfs:subClassOf rdf:resource="#HeavyRainfall"/>
+        <rdfs:comment xml:lang="en"
+            >In popular terminology, any sudden and heavy fall of rain, almost always of the shower type.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#ConvectiveStorm -->
+
+    <owl:Class rdf:about="#ConvectiveStorm">
+        <rdfs:subClassOf rdf:resource="#Storm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:someValuesFrom rdf:resource="&trans;#Convection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Drizzle -->
+
+    <owl:Class rdf:about="#Drizzle">
+        <rdfs:subClassOf rdf:resource="#Precipitation"/>
+        <rdfs:comment xml:lang="en"
+            >Very small, numerous, and uniformly distributed water drops that may appear to float while following air currents.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Ecnephias -->
+
+    <owl:Class rdf:about="#Ecnephias">
+        <rdfs:subClassOf rdf:resource="#Thunderstorm"/>
+        <rdfs:comment xml:lang="en"
+            >A squall or thunderstorm in the Mediterranean.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#EffectivePrecipitation -->
+
+    <owl:Class rdf:about="#EffectivePrecipitation">
+        <rdfs:subClassOf rdf:resource="#Precipitation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#FamilyOfTornadoes -->
+
+    <owl:Class rdf:about="#FamilyOfTornadoes">
+        <rdfs:subClassOf rdf:resource="#Tornado"/>
+        <rdfs:comment xml:lang="en"
+            >A sequence of long-lived tornadoes produced by a cyclic supercell storm. Tornadoes touch down at quasi-regular intervals (typically 45 min). Usually a new tornado develops in a new mesocyclone just after an old tornado has decayed in an old, occluded neighboring mesocyclone. Sometimes, two successive tornadoes may overlap in time for a few minutes. The two mesocyclones may rotate partially around each other. If the damage tracks of the tornadoes appear to form a wavy broken line, the family is classified as a series mode. In the more common parallel-mode family, the damage tracks are parallel arcs with each new tornado forming on the right side of its predecessor. The parallel mode is subcategorized into left turn and right turn, according to the direction in which the paths curve.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#FreezingLevel -->
+
+    <owl:Class rdf:about="#FreezingLevel">
+        <rdfs:subClassOf rdf:resource="&atmo;#MeteorologicalPhenomena"/>
+        <rdfs:subClassOf rdf:resource="&space;Level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#FreezingRain -->
+
+    <owl:Class rdf:about="#FreezingRain">
+        <rdfs:subClassOf rdf:resource="#Precipitation"/>
+        <rdfs:comment
+            >Rain that falls in liquid form but freezes upon impact to form a coating of glaze upon the ground and on exposed objects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#GoslingBlast -->
+
+    <owl:Class rdf:about="#GoslingBlast">
+        <rdfs:label>Gosling blast</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Precipitation"/>
+        <rdfs:comment
+            >A sudden squall of rain or sleet in England.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#GowkStorm -->
+
+    <owl:Class rdf:about="#GowkStorm">
+        <rdfs:subClassOf rdf:resource="#Storm"/>
+        <rdfs:comment xml:lang="en"
+            >Any disturbed state of the atmosphere, especially as affecting the earth&#39;s surface, implying inclement and possibly destructive weather.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Graupel -->
+
+    <owl:Class rdf:about="#Graupel">
+        <rdfs:subClassOf rdf:resource="&hydro;Ice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#GreenThunderstorm -->
+
+    <owl:Class rdf:about="#GreenThunderstorm">
+        <rdfs:subClassOf rdf:resource="#Thunderstorm"/>
+        <rdfs:comment xml:lang="en"
+            >Any thunderstorm that is perceived by observers to be green. The perceptually dominant wavelength of light from green thunderstorms ranges from blue- green to yellow-green. The purity of the color is generally low and the physical mechanism that causes the green appearance is not understood. Although green clouds often occur in conjunction with severe weather, there is no evidence to support anecdotal attributions of the cause of this green to specific characteristics of severe storms, such as hail or tornadoes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Hail -->
+
+    <owl:Class rdf:about="#Hail">
+        <rdfs:subClassOf rdf:resource="#Precipitation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&hydro;Ice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Precipitation in the form of balls or irregular lumps of ice, always produced by convective clouds, nearly always cumulonimbus. An individual unit of hail is called a hailstone. By convention, hail has a diameter of 5 mm or more, while smaller particles of similar origin, formerly called small hail, may be classed as either ice pellets or snow pellets. Thunderstorms that are characterized by strong updrafts, large liquid water contents, large cloud-drop sizes, and great vertical height are favorable to hail formation. The destructive effects of hailstorms upon plant and animal life, buildings and property, and aircraft in flight render them a prime object of weather modification studies. In aviation weather observations, hail is encoded A.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#HailStorm -->
+
+    <owl:Class rdf:about="#HailStorm">
+        <rdfs:subClassOf rdf:resource="#Storm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;#hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#Hail"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Any storm that produces hailstones that fall to the ground; usually used when the amount or size of the hail is considered significant.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#HeatThunderstorm -->
+
+    <owl:Class rdf:about="#HeatThunderstorm">
+        <rdfs:subClassOf rdf:resource="#Thunderstorm"/>
+        <rdfs:comment xml:lang="en"
+            >In popular terminology, a thunderstorm of the air mass type that develops near the end of a hot, humid summer day; this term has no precise technical meaning.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#HeavyRainfall -->
+
+    <owl:Class rdf:about="#HeavyRainfall">
+        <rdfs:subClassOf rdf:resource="#Rainfall"/>
+        <rdfs:comment xml:lang="en"
+            >Rain with a rate of accumulation exceeding a specific value that is geographically dependent.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#HeavySnowfall -->
+
+    <owl:Class rdf:about="#HeavySnowfall">
+        <rdfs:subClassOf rdf:resource="#Snowfall"/>
+        <rdfs:comment xml:lang="en"
+            >Snow with a rate of accumulation exceeding a specific value that is geographically dependent.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#HighLevelThunderstorm -->
+
+    <owl:Class rdf:about="#HighLevelThunderstorm">
+        <rdfs:subClassOf rdf:resource="#Thunderstorm"/>
+        <rdfs:comment xml:lang="en"
+            >Generally, a thunderstorm based at a comparatively high altitude in the atmosphere, roughly 2400 m or higher. These storms form most strikingly over arid regions, and frequently their precipitation is evaporated before reaching the earth&#39;s surface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Hurricane -->
+
+    <owl:Class rdf:about="#Hurricane">
+        <rdfs:subClassOf rdf:resource="&press;#Cyclone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#HurricaneBand -->
+
+    <owl:Class rdf:about="#HurricaneBand">
+        <rdfs:subClassOf rdf:resource="#Hurricane"/>
+        <rdfs:comment xml:lang="en"
+            >A hurricane radar band of circular or spiral shape associated with a tropical cyclone (hurricane or typhoon). Made evident by radar observations, hurricane bands typically curve cyclonically inward toward the center of the storm. The bands may be classified as primary if they merge into the eyewall encircling the eye of the storm, or secondary if they are disconnected from the eyewall. Hurricane bands generally move slowly around the center of the storm in the direction of the hurricane circulation. See banded structure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#IcePellet -->
+
+    <owl:Class rdf:about="#IcePellet">
+        <owl:equivalentClass rdf:resource="#Sleet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#IceStorm -->
+
+    <owl:Class rdf:about="#IceStorm">
+        <rdfs:subClassOf rdf:resource="#Storm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&hydro;Ice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A storm characterized by a fall of freezing liquid precipitation. The attendant formation of glaze on terrestrial objects creates many hazards.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Kaavie -->
+
+    <owl:Class rdf:about="#Kaavie">
+        <rdfs:subClassOf rdf:resource="#HeavySnowfall"/>
+        <rdfs:comment xml:lang="en"
+            >In Scotland, a heavy fall of snow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Kelsher -->
+
+    <owl:Class rdf:about="#Kelsher">
+        <rdfs:subClassOf rdf:resource="#HeavyRainfall"/>
+        <rdfs:comment xml:lang="en"
+            >In England, a heavy fall of rain.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#LakeEffect -->
+
+    <owl:Class rdf:about="#LakeEffect">
+        <rdfs:subClassOf rdf:resource="&atmo;#MeteorologicalPhenomena"/>
+        <rdfs:comment xml:lang="en"
+            >Generally, the effect of any lake in modifying the weather about its shore and for some distance downwind. In the United States, this term is applied specifically to the region about the Great Lakes or the Great Salt Lake. More specifically, lake effect often refers to the generation of sometimes spectacular snowfall amounts to the lee of the Great Lakes as cold air passes over the lake surface, extracting heat and moisture, resulting in cloud formation and snowfall downwind of the lake shore.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#LakeEffectSnow -->
+
+    <owl:Class rdf:about="#LakeEffectSnow">
+        <owl:equivalentClass rdf:resource="#LakeEffectSnowstorm"/>
+        <rdfs:subClassOf rdf:resource="#LakeEffect"/>
+        <rdfs:subClassOf rdf:resource="#Snowfall"/>
+        <rdfs:comment xml:lang="en"
+            >Localized, convective snow bands that occur in the lee of lakes when relatively cold airflows over warm water. In the United States this phenomenon is most noted along the south and east shores of the Great Lakes during arctic cold-air outbreaks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#LakeEffectSnowstorm -->
+
+    <owl:Class rdf:about="#LakeEffectSnowstorm">
+        <rdfs:comment xml:lang="en"
+            >Snowstorm occurring near or downwind from the shore of a lake resulting from the warming (destabilization) and moistening of relatively cold air during passage over a warm body of water.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#LambingStorm -->
+
+    <owl:Class rdf:about="#LambingStorm">
+        <rdfs:subClassOf rdf:resource="#Snowfall"/>
+        <rdfs:comment xml:lang="en"
+            >(Also called lamb-blasts, lamb-showers, lamb storm.) A slight fall of snow in the spring in England.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#LandLash -->
+
+    <owl:Class rdf:about="#LandLash">
+        <rdfs:subClassOf rdf:resource="#Rainfall"/>
+        <rdfs:comment xml:lang="en"
+            >In England, a heavy fall of rain, accompanied by a high wind.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Landspout -->
+
+    <owl:Class rdf:about="#Landspout">
+        <rdfs:subClassOf rdf:resource="#Tornado"/>
+        <rdfs:comment xml:lang="en"
+            >(Rare.) A tornado. 2. Colloquial expression describing tornadoes occurring with a parent cloud in its growth stage and with its vorticity originating in the boundary layer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#LocalStorm -->
+
+    <owl:Class rdf:about="#LocalStorm">
+        <rdfs:subClassOf rdf:resource="#Storm"/>
+        <rdfs:comment xml:lang="en"
+            >A storm of mesometeorological scale; thus, thunderstorms, squalls, and tornadoes are often put in this category.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#MeltingLayer -->
+
+    <owl:Class rdf:about="#MeltingLayer">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryLayer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&proc;#hasChemicalProcess"/>
+                <owl:allValuesFrom rdf:resource="&proc;#Melting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The altitude interval throughout which ice-phase precipitation melts as it descends. The top of the melting layer is the melting level. The melting layer may be several hundred meters deep, reflecting the time it takes for all the hydrometeors to undergo the transition from solid to liquid phase. The temperature of the melting layer is typically 0?C or slightly warmer. See bright band.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#MeltingLevel -->
+
+    <owl:Class rdf:about="#MeltingLevel">
+        <rdfs:subClassOf rdf:resource="&space;Level"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&proc;#hasChemicalProcess"/>
+                <owl:allValuesFrom rdf:resource="&proc;#Melting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The altitude at which ice crystals and snowflakes begin to melt as they descend through the atmosphere. In cloud physics and in radar meteorology, this is the accepted term for the 0?C constant-temperature surface (see bright band). It is physically more apt than the corresponding operational term, freezing level, for melting of pure ice must begin very near 0?C, but freezing of liquid water can occur over a broad range of temperatures (between 0? and -40?C; see supercooling). See also freezing point, ice point, melting point.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#MesocycloneSignature -->
+
+    <owl:Class rdf:about="#MesocycloneSignature">
+        <rdfs:subClassOf rdf:resource="&atmo;#MeteorologicalPhenomena"/>
+        <rdfs:comment xml:lang="en"
+            >The Doppler velocity pattern of a mesocyclone within a severe thunderstorm. In a storm-relative reference frame, the idealized signature is symmetric about the radar viewing direction with marked azimuthal shear across the core region between peak Doppler velocity values of opposite sign. Typical signatures consist of Doppler velocity differences of 25? 75 m s-1 across core diameters of 2?8 km, with resulting azimuthal shear values of 5 ? 10-3 s-1 to 2 ? 10-2 s-1.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Monsoon -->
+
+    <owl:Class rdf:about="#Monsoon">
+        <rdfs:subClassOf rdf:resource="#Storm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#MulticellConvectiveStorm -->
+
+    <owl:Class rdf:about="#MulticellConvectiveStorm">
+        <rdfs:subClassOf rdf:resource="#SplittingConvectiveStorm"/>
+        <rdfs:comment xml:lang="en"
+            >A convective storm system usually composed of a cluster of ordinary convective cells at various stages of their life cycle. New cells within the convective system are generated primarily by either low-level convergence along a preexisting boundary, or by lifting at the leading edge of the system-scale cold pool that was produced by the previous cells. A multicell storm may have a lifetime of several hours, and may also have supercells incorporated as a part of the system as well. See also cell, ordinary cell, supercell, thunderstorm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#NonSupercellTornado -->
+
+    <owl:Class rdf:about="#NonSupercellTornado">
+        <rdfs:subClassOf rdf:resource="#Tornado"/>
+        <rdfs:comment xml:lang="en"
+            >A tornado that occurs with a parent cloud in its growth stage and with its vorticity originating in the boundary layer. The parent cloud does not contain a preexisting midlevel mesocyclone. Landspouts and gustnadoes are examples of the nonsupercell tornado.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#NortheastStorm -->
+
+    <owl:Class rdf:about="#NortheastStorm">
+        <rdfs:subClassOf rdf:resource="#Storm"/>
+        <rdfs:comment xml:lang="en"
+            >A cyclonic storm off the east coast of North America, so called because the winds over the coastal area are from the northeast.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#PopUpThunderstorm -->
+
+    <owl:Class rdf:about="#PopUpThunderstorm">
+        <rdfs:subClassOf rdf:resource="#Thunderstorm"/>
+        <rdfs:comment xml:lang="en"
+            >An airmass thunderstorm that forms rapidly in an otherwise rain-free environment.   This most often occurs on warm, humid days, in unstable meteorological conditions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Precipitation -->
+
+    <owl:Class rdf:about="#Precipitation">
+        <rdfs:subClassOf rdf:resource="&atmo;#MeteorologicalPhenomena"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;#hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="&cloud;#Cloud"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#PrecipitationIndex -->
+
+    <owl:Class rdf:about="#PrecipitationIndex">
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#measureOf"/>
+                <owl:allValuesFrom rdf:resource="#Precipitation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#PrefrontalSquallLine -->
+
+    <owl:Class rdf:about="#PrefrontalSquallLine">
+        <rdfs:subClassOf rdf:resource="#SquallLine"/>
+        <rdfs:comment xml:lang="en"
+            >A squall line less than about 100 km ahead of a cold front, in the warm sector, having an orientation more or less parallel to the cold front.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Rain -->
+
+    <owl:Class rdf:about="#Rain">
+        <owl:equivalentClass rdf:resource="#Rainfall"/>
+        <rdfs:subClassOf rdf:resource="#Precipitation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&hydro;LiquidWater"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Rainband -->
+
+    <owl:Class rdf:about="#Rainband">
+        <rdfs:subClassOf rdf:resource="#Rainfall"/>
+        <rdfs:comment xml:lang="en"
+            >The complete cloud and precipitation structure associated with an area of rainfall sufficiently elongated that an orientation can be assigned.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Rainfall -->
+
+    <owl:Class rdf:about="#Rainfall"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Rainout -->
+
+    <owl:Class rdf:about="#Rainout">
+        <rdfs:subClassOf rdf:resource="#ScavengingByPrecipitation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#ScavengingByPrecipitation -->
+
+    <owl:Class rdf:about="#ScavengingByPrecipitation">
+        <rdfs:subClassOf rdf:resource="#WetDeposition"/>
+        <rdfs:comment xml:lang="en"
+            >Removal of pollutants from the air by either rain or snow.  Rainout (or snowout), which is the in-cloud capture of particulates as condensation nuclei, is one form of scavenging.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Shower -->
+
+    <owl:Class rdf:about="#Shower">
+        <rdfs:subClassOf rdf:resource="#Rainfall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Sleet -->
+
+    <owl:Class rdf:about="#Sleet">
+        <rdfs:subClassOf rdf:resource="#Precipitation"/>
+        <rdfs:subClassOf rdf:resource="&hydro;Ice"/>
+        <rdfs:subClassOf rdf:resource="&solid;#Grain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#SnowGeneratingLevel -->
+
+    <owl:Class rdf:about="#SnowGeneratingLevel">
+        <rdfs:subClassOf rdf:resource="&space;Level"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;#hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#Precipitation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A layer in the middle or upper troposphere in widespread precipitation in which ice crystals form in small convective cells and fall to lower altitudes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Snowfall -->
+
+    <owl:Class rdf:about="#Snowfall">
+        <rdfs:subClassOf rdf:resource="#Precipitation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&hydro;Snow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#SplittingConvectiveStorm -->
+
+    <owl:Class rdf:about="#SplittingConvectiveStorm">
+        <rdfs:subClassOf rdf:resource="#Storm"/>
+        <rdfs:comment xml:lang="en"
+            >The process by which a single convective cell splits into two supercells, one dominated by cyclonic rotation and the other by anticyclonic rotation, their paths then deviating substantially from each other and other nearby convective cells.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#SquallLine -->
+
+    <owl:Class rdf:about="#SquallLine">
+        <rdfs:subClassOf rdf:resource="#Thunderstorm"/>
+        <rdfs:comment xml:lang="en"
+            >A line of active thunderstorms, either continuous or with breaks, including contiguous precipitation areas resulting from the existence of the thunderstorms.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#StandardizedPrecipitationIndex -->
+
+    <owl:Class rdf:about="#StandardizedPrecipitationIndex">
+        <rdfs:subClassOf rdf:resource="#PrecipitationIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Storm -->
+
+    <owl:Class rdf:about="#Storm">
+        <rdfs:subClassOf rdf:resource="#Precipitation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#SupercellConvectiveStorm -->
+
+    <owl:Class rdf:about="#SupercellConvectiveStorm">
+        <rdfs:subClassOf rdf:resource="#ConvectiveStorm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Thunderstorm -->
+
+    <owl:Class rdf:about="#Thunderstorm">
+        <rdfs:subClassOf rdf:resource="#Storm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Tornado -->
+
+    <owl:Class rdf:about="#Tornado">
+        <rdfs:subClassOf rdf:resource="#Storm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Typhoon -->
+
+    <owl:Class rdf:about="#Typhoon">
+        <rdfs:subClassOf rdf:resource="&press;#Cyclone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#WaterSpout -->
+
+    <owl:Class rdf:about="#WaterSpout">
+        <rdfs:subClassOf rdf:resource="#Tornado"/>
+        <rdfs:comment xml:lang="en"
+            >1. In general, any tornado over a body of water. 2. In its most common form, a nonsupercell tornado over water.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#WetDeposition -->
+
+    <owl:Class rdf:about="#WetDeposition">
+        <rdfs:subClassOf rdf:resource="&planet;#AtmosphereLandExchange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;#hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#Precipitation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The removal of atmospheric gases or particles through their incorporation into hydrometeors, which are then lost by precipitation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#Z_RRelation -->
+
+    <owl:Class rdf:about="#Z_RRelation">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalLaw"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;#hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#Precipitation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A relationship between radar reflectivity factor Z (mm6 m-3) and rain rate R (mm h-1).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPrecip.owl#ZoneOfMaximumPrecipitation -->
+
+    <owl:Class rdf:about="#ZoneOfMaximumPrecipitation">
+        <rdfs:subClassOf rdf:resource="&space;Elevation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="&land;#Mountain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;#hasMeteorologicalPhenomena"/>
+                <owl:someValuesFrom rdf:resource="#Precipitation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The elevation band on a mountain or orographic barrier that receives the greatest precipitation for a seasonal or annual average.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoPressure.owl#Cyclone -->
+
+    <owl:Class rdf:about="&press;#Cyclone"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Acid -->
+
+    <owl:Class rdf:about="&chem;#Acid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Melting -->
+
+    <owl:Class rdf:about="&proc;#Melting"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogLandform.owl#Mountain -->
+
+    <owl:Class rdf:about="&land;#Mountain"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#Ice -->
+
+    <owl:Class rdf:about="&hydro;Ice"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#LiquidWater -->
+
+    <owl:Class rdf:about="&hydro;LiquidWater"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#Snow -->
+
+    <owl:Class rdf:about="&hydro;Snow"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalLaw -->
+
+    <owl:Class rdf:about="&phys;#PhysicalLaw"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSolid.owl#Grain -->
+
+    <owl:Class rdf:about="&solid;#Grain"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physTransport.owl#Convection -->
+
+    <owl:Class rdf:about="&trans;#Convection"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Index -->
+
+    <owl:Class rdf:about="&res;#Index"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Elevation -->
+
+    <owl:Class rdf:about="&space;Elevation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Level -->
+
+    <owl:Class rdf:about="&space;Level"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

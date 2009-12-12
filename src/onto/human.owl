@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY human "http://sweet.jpl.nasa.gov/2.0/human.owl" >
+    <!ENTITY human2 "http://sweet.jpl.nasa.gov/2.0/human.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY qual "http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl" >
+    <!ENTITY sciCategorical "http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&human;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/human.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:sciCategorical="&qual;#"
+     xmlns:human2="&human;#"
+     xmlns:human="http://sweet.jpl.nasa.gov/2.0/human.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:qual="http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="#hasActivity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#studyOf -->
+
+    <owl:ObjectProperty rdf:about="&res;#studyOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Anthropogenic -->
+
+    <owl:Class rdf:about="#Anthropogenic">
+        <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Behavior -->
+
+    <owl:Class rdf:about="#Behavior">
+        <rdfs:subClassOf rdf:resource="#PsychologicalParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#BehavioralScience -->
+
+    <owl:Class rdf:about="#BehavioralScience">
+        <rdfs:subClassOf rdf:resource="&res;#KnowledgeDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Census -->
+
+    <owl:Class rdf:about="#Census">
+        <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#CivilDisturbance -->
+
+    <owl:Class rdf:about="#CivilDisturbance">
+        <rdfs:subClassOf rdf:resource="#SocialActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#ConsumerBehavior -->
+
+    <owl:Class rdf:about="#ConsumerBehavior">
+        <rdfs:subClassOf rdf:resource="#SocialBehavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#ControlStrategy -->
+
+    <owl:Class rdf:about="#ControlStrategy">
+        <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Economics -->
+
+    <owl:Class rdf:about="#Economics">
+        <rdfs:subClassOf rdf:resource="#BehavioralScience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#EducationalLevel -->
+
+    <owl:Class rdf:about="#EducationalLevel">
+        <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+        <rdfs:subClassOf rdf:resource="&qual;#CategoricalScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Engineering -->
+
+    <owl:Class rdf:about="#Engineering">
+        <rdfs:subClassOf rdf:resource="&res;#KnowledgeDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#HumanActivity -->
+
+    <owl:Class rdf:about="#HumanActivity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#HumanDimension -->
+
+    <owl:Class rdf:about="#HumanDimension">
+        <rdfs:subClassOf rdf:resource="&res;#KnowledgeDomain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#studyOf"/>
+                <owl:allValuesFrom rdf:resource="#HumanActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Law -->
+
+    <owl:Class rdf:about="#Law">
+        <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Mapping -->
+
+    <owl:Class rdf:about="#Mapping">
+        <rdfs:subClassOf rdf:resource="&res;#KnowledgeDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Name -->
+
+    <owl:Class rdf:about="#Name">
+        <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Preference -->
+
+    <owl:Class rdf:about="#Preference">
+        <rdfs:subClassOf rdf:resource="#SocialBehavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Profession -->
+
+    <owl:Class rdf:about="#Profession">
+        <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#PsychologicalParameter -->
+
+    <owl:Class rdf:about="#PsychologicalParameter">
+        <rdfs:subClassOf rdf:resource="#SocialActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Psychology -->
+
+    <owl:Class rdf:about="#Psychology">
+        <rdfs:subClassOf rdf:resource="#SocialActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Recreation -->
+
+    <owl:Class rdf:about="#Recreation">
+        <rdfs:subClassOf rdf:resource="#SocialActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Risk -->
+
+    <owl:Class rdf:about="#Risk">
+        <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Service -->
+
+    <owl:Class rdf:about="#Service">
+        <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#SocialActivity -->
+
+    <owl:Class rdf:about="#SocialActivity">
+        <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#SocialBehavior -->
+
+    <owl:Class rdf:about="#SocialBehavior">
+        <rdfs:subClassOf rdf:resource="#SocialActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Sociology -->
+
+    <owl:Class rdf:about="#Sociology">
+        <rdfs:subClassOf rdf:resource="#BehavioralScience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Work -->
+
+    <owl:Class rdf:about="#Work">
+        <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#CategoricalScale -->
+
+    <owl:Class rdf:about="&qual;#CategoricalScale"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#KnowledgeDomain -->
+
+    <owl:Class rdf:about="&res;#KnowledgeDomain"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

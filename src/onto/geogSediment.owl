@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY biome "http://sweet.jpl.nasa.gov/2.0/biolBiome.owl" >
+    <!ENTITY solid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl" >
+    <!ENTITY physSolid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl#" >
+    <!ENTITY biolBiome "http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY sed "http://sweet.jpl.nasa.gov/2.0/geogSediment.owl" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY geogSediment "http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&sed;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/geogSediment.owl"
+     xmlns:physSolid="&solid;#"
+     xmlns:geogSediment="&sed;#"
+     xmlns:biome="http://sweet.jpl.nasa.gov/2.0/biolBiome.owl"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:solid="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:phys2="&phys;#"
+     xmlns:sed="http://sweet.jpl.nasa.gov/2.0/geogSediment.owl"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:biolBiome="&biome;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:astroPlanet="&planet;#"
+     xmlns:chem2="&chem;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biolBiome.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalPhenomena"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#TerrestrialEcosystem -->
+
+    <owl:Class rdf:about="&biome;#TerrestrialEcosystem"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Mixture -->
+
+    <owl:Class rdf:about="&chem;#Mixture"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Alluvium -->
+
+    <owl:Class rdf:about="#Alluvium">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Boulder -->
+
+    <owl:Class rdf:about="#Boulder">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Clay -->
+
+    <owl:Class rdf:about="#Clay">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Cobble -->
+
+    <owl:Class rdf:about="#Cobble">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Colloid -->
+
+    <owl:Class rdf:about="#Colloid">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Granule -->
+
+    <owl:Class rdf:about="#Granule">
+        <rdfs:subClassOf rdf:resource="#Gravel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Gravel -->
+
+    <owl:Class rdf:about="#Gravel">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#HydrogenousSediment -->
+
+    <owl:Class rdf:about="#HydrogenousSediment">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Loam -->
+
+    <owl:Class rdf:about="#Loam">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Loess -->
+
+    <owl:Class rdf:about="#Loess">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#MarineSediment -->
+
+    <owl:Class rdf:about="#MarineSediment">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Mud -->
+
+    <owl:Class rdf:about="#Mud">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Peat -->
+
+    <owl:Class rdf:about="#Peat">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+        <rdfs:comment xml:lang="en"
+            >Peat is an accumulation of partially decayed vegetation matter. Peat forms in wetlands or peatlands.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Pebble -->
+
+    <owl:Class rdf:about="#Pebble">
+        <rdfs:subClassOf rdf:resource="#Gravel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Sand -->
+
+    <owl:Class rdf:about="#Sand">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Sediment -->
+
+    <owl:Class rdf:about="#Sediment">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Silt -->
+
+    <owl:Class rdf:about="#Silt">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#TerrigenousSediment -->
+
+    <owl:Class rdf:about="#TerrigenousSediment">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="&biome;#TerrestrialEcosystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="&solid;#Erosion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >In oceanography, terrigenous sediments are those derived from the erosion of rocks on land; that is, that are derived from terrestrial environments. Consisting of sand, mud, and silt carried to sea by rivers, their composition is usually related to their source rocks; deposition of these sediments is largely limited to the continental shelf.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Varve -->
+
+    <owl:Class rdf:about="#Varve">
+        <rdfs:subClassOf rdf:resource="#Sediment"/>
+        <rdfs:comment xml:lang="en"
+            >A varve is an annual layer of sediment or sedimentary rock.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSolid.owl#Erosion -->
+
+    <owl:Class rdf:about="&solid;#Erosion"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

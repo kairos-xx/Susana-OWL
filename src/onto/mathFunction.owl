@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl" >
+    <!ENTITY math2 "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY func "http://sweet.jpl.nasa.gov/2.0/mathFunction.owl" >
+    <!ENTITY mathFunction "http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&func;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/mathFunction.owl"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mathFunction="&func;#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:func="http://sweet.jpl.nasa.gov/2.0/mathFunction.owl"
+     xmlns:math2="&math;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasInput -->
+
+    <owl:ObjectProperty rdf:about="&math;#hasInput"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="&math;#hasOutput"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#hasBase -->
+
+    <owl:ObjectProperty rdf:about="#hasBase">
+        <rdfs:range rdf:resource="&math;#Scalar"/>
+        <rdfs:domain rdf:resource="#Logarithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="#hasFunction">
+        <rdfs:range rdf:resource="#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#hasDegree -->
+
+    <owl:DatatypeProperty rdf:about="#hasDegree"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Operation -->
+
+    <owl:Class rdf:about="&math;#Operation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Scalar -->
+
+    <owl:Class rdf:about="&math;#Scalar"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Variable -->
+
+    <owl:Class rdf:about="&math;#Variable"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Affine -->
+
+    <owl:Class rdf:about="#Affine">
+        <owl:equivalentClass rdf:resource="#Linear"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#AlgebraicFunction -->
+
+    <owl:Class rdf:about="#AlgebraicFunction">
+        <rdfs:subClassOf rdf:resource="#Function"/>
+        <owl:disjointWith rdf:resource="#TranscendentalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#BSpline -->
+
+    <owl:Class rdf:about="#BSpline">
+        <rdfs:subClassOf rdf:resource="#CubicSpline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Bivariate -->
+
+    <owl:Class rdf:about="#Bivariate">
+        <rdfs:subClassOf rdf:resource="#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#ChiSquare -->
+
+    <owl:Class rdf:about="#ChiSquare">
+        <owl:equivalentClass rdf:resource="#ChiSquareDistribution"/>
+        <rdfs:subClassOf rdf:resource="#DistributionFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#ChiSquareDistribution -->
+
+    <owl:Class rdf:about="#ChiSquareDistribution"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Cosine -->
+
+    <owl:Class rdf:about="#Cosine">
+        <rdfs:subClassOf rdf:resource="#TrigonometricFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Cubic -->
+
+    <owl:Class rdf:about="#Cubic">
+        <rdfs:subClassOf rdf:resource="#Polynomial"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDegree"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#CubicSpline -->
+
+    <owl:Class rdf:about="#CubicSpline">
+        <rdfs:subClassOf rdf:resource="#Cubic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#DependentVariable -->
+
+    <owl:Class rdf:about="#DependentVariable">
+        <rdfs:subClassOf rdf:resource="&math;#Variable"/>
+        <rdfs:comment xml:lang="en"
+            >Any variable considered as a function of other variables, the latter being called independent.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#DistributionFunction -->
+
+    <owl:Class rdf:about="#DistributionFunction">
+        <rdfs:subClassOf rdf:resource="#NormalizedFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Exponential -->
+
+    <owl:Class rdf:about="#Exponential">
+        <rdfs:subClassOf rdf:resource="#TranscendentalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Field -->
+
+    <owl:Class rdf:about="#Field">
+        <rdfs:subClassOf rdf:resource="#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#FourierTransform -->
+
+    <owl:Class rdf:about="#FourierTransform">
+        <rdfs:subClassOf rdf:resource="#OperationOnFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Function -->
+
+    <owl:Class rdf:about="#Function">
+        <rdfs:subClassOf rdf:resource="&math;#Operation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasInput"/>
+                <owl:allValuesFrom rdf:resource="#IndependentVariable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasOutput"/>
+                <owl:allValuesFrom rdf:resource="#DependentVariable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#IndependentVariable -->
+
+    <owl:Class rdf:about="#IndependentVariable">
+        <rdfs:subClassOf rdf:resource="&math;#Variable"/>
+        <rdfs:comment xml:lang="en"
+            >Any variable considered as a function of other variables, the latter being called independent.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Isopleth -->
+
+    <owl:Class rdf:about="#Isopleth">
+        <rdfs:subClassOf rdf:resource="#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Linear -->
+
+    <owl:Class rdf:about="#Linear">
+        <rdfs:subClassOf rdf:resource="#Polynomial"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDegree"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Nonlinear"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Logarithm -->
+
+    <owl:Class rdf:about="#Logarithm">
+        <rdfs:subClassOf rdf:resource="#TranscendentalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Nonlinear -->
+
+    <owl:Class rdf:about="#Nonlinear">
+        <rdfs:subClassOf rdf:resource="#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Normal -->
+
+    <owl:Class rdf:about="#Normal">
+        <owl:equivalentClass rdf:resource="#NormalDistribution"/>
+        <rdfs:subClassOf rdf:resource="#DistributionFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#NormalDistribution -->
+
+    <owl:Class rdf:about="#NormalDistribution"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#NormalizedFunction -->
+
+    <owl:Class rdf:about="#NormalizedFunction">
+        <rdfs:subClassOf rdf:resource="#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#OperationOnFunction -->
+
+    <owl:Class rdf:about="#OperationOnFunction">
+        <rdfs:subClassOf rdf:resource="&math;#Operation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasInput"/>
+                <owl:allValuesFrom rdf:resource="#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Polynomial -->
+
+    <owl:Class rdf:about="#Polynomial">
+        <rdfs:subClassOf rdf:resource="#AlgebraicFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Quadratic -->
+
+    <owl:Class rdf:about="#Quadratic">
+        <rdfs:subClassOf rdf:resource="#Polynomial"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDegree"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Quartic -->
+
+    <owl:Class rdf:about="#Quartic">
+        <rdfs:subClassOf rdf:resource="#Polynomial"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDegree"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">4</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#ScalarField -->
+
+    <owl:Class rdf:about="#ScalarField">
+        <rdfs:subClassOf rdf:resource="#ScalarFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#ScalarFunction -->
+
+    <owl:Class rdf:about="#ScalarFunction">
+        <rdfs:subClassOf rdf:resource="#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;#hasOutput"/>
+                <owl:allValuesFrom rdf:resource="&math;#Scalar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#Sin -->
+
+    <owl:Class rdf:about="#Sin">
+        <rdfs:subClassOf rdf:resource="#TrigonometricFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#TranscendentalFunction -->
+
+    <owl:Class rdf:about="#TranscendentalFunction">
+        <rdfs:subClassOf rdf:resource="#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#TrigonometricFunction -->
+
+    <owl:Class rdf:about="#TrigonometricFunction">
+        <rdfs:subClassOf rdf:resource="#TranscendentalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#WaveletTransform -->
+
+    <owl:Class rdf:about="#WaveletTransform">
+        <rdfs:subClassOf rdf:resource="#OperationOnFunction"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

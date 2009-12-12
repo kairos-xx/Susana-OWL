@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY plant "http://sweet.jpl.nasa.gov/2.0/biolPlant.owl" >
+    <!ENTITY biolPlant "http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#" >
+    <!ENTITY micro "http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl" >
+    <!ENTITY biolMicrobiota "http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&micro;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl"
+     xmlns:biolMicrobiota="&micro;#"
+     xmlns:plant="http://sweet.jpl.nasa.gov/2.0/biolPlant.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:micro="http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl"
+     xmlns:biolPlant="&plant;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biolPlant.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Algae -->
+
+    <owl:Class rdf:about="#Algae">
+        <rdfs:subClassOf rdf:resource="&plant;#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Amoebae -->
+
+    <owl:Class rdf:about="#Amoebae">
+        <rdfs:subClassOf rdf:resource="#MicrobiotaTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Bacteria -->
+
+    <owl:Class rdf:about="#Bacteria">
+        <rdfs:subClassOf rdf:resource="#MicrobiotaTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#BlueGreenAlgae -->
+
+    <owl:Class rdf:about="#BlueGreenAlgae">
+        <rdfs:subClassOf rdf:resource="#Algae"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Ciliate -->
+
+    <owl:Class rdf:about="#Ciliate">
+        <rdfs:subClassOf rdf:resource="#MicrobiotaTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#ClostridiumPerfringen -->
+
+    <owl:Class rdf:about="#ClostridiumPerfringen">
+        <rdfs:subClassOf rdf:resource="#Bacteria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Coccolithophore -->
+
+    <owl:Class rdf:about="#Coccolithophore">
+        <rdfs:subClassOf rdf:resource="#MicrobiotaTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Coliform -->
+
+    <owl:Class rdf:about="#Coliform">
+        <rdfs:subClassOf rdf:resource="#Bacteria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Diatom -->
+
+    <owl:Class rdf:about="#Diatom">
+        <rdfs:subClassOf rdf:resource="#MicrobiotaTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Enterococci -->
+
+    <owl:Class rdf:about="#Enterococci">
+        <rdfs:subClassOf rdf:resource="#Bacteria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#EscherichiaColi -->
+
+    <owl:Class rdf:about="#EscherichiaColi">
+        <rdfs:subClassOf rdf:resource="#Bacteria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#FecalColiform -->
+
+    <owl:Class rdf:about="#FecalColiform">
+        <rdfs:subClassOf rdf:resource="#Coliform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#FecalStreptococci -->
+
+    <owl:Class rdf:about="#FecalStreptococci">
+        <rdfs:subClassOf rdf:resource="#Bacteria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Flagellate -->
+
+    <owl:Class rdf:about="#Flagellate">
+        <rdfs:subClassOf rdf:resource="#MicrobiotaTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Foraminifer -->
+
+    <owl:Class rdf:about="#Foraminifer">
+        <rdfs:subClassOf rdf:resource="#MicrobiotaTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#MarineMicrobiota -->
+
+    <owl:Class rdf:about="#MarineMicrobiota">
+        <rdfs:subClassOf rdf:resource="#Microbiota"/>
+        <rdfs:subClassOf rdf:resource="&plant;#MarinePlant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Microalgae -->
+
+    <owl:Class rdf:about="#Microalgae">
+        <rdfs:subClassOf rdf:resource="#MicrobiotaTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Microbiota -->
+
+    <owl:Class rdf:about="#Microbiota">
+        <rdfs:subClassOf rdf:resource="&plant;#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#MicrobiotaTaxonomy -->
+
+    <owl:Class rdf:about="#MicrobiotaTaxonomy">
+        <rdfs:subClassOf rdf:resource="#Microbiota"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Microphyte -->
+
+    <owl:Class rdf:about="#Microphyte">
+        <rdfs:subClassOf rdf:resource="&plant;#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Mold -->
+
+    <owl:Class rdf:about="#Mold">
+        <rdfs:subClassOf rdf:resource="&plant;#FungiTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Phytoplankton -->
+
+    <owl:Class rdf:about="#Phytoplankton">
+        <rdfs:subClassOf rdf:resource="#MicrobiotaTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Plankton -->
+
+    <owl:Class rdf:about="#Plankton">
+        <rdfs:subClassOf rdf:resource="#MicrobiotaTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Protist -->
+
+    <owl:Class rdf:about="#Protist">
+        <rdfs:subClassOf rdf:resource="#MicrobiotaTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Radiolarian -->
+
+    <owl:Class rdf:about="#Radiolarian">
+        <rdfs:subClassOf rdf:resource="#MicrobiotaTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#SlimeMold -->
+
+    <owl:Class rdf:about="#SlimeMold">
+        <rdfs:subClassOf rdf:resource="#Mold"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Sporozoan -->
+
+    <owl:Class rdf:about="#Sporozoan">
+        <rdfs:subClassOf rdf:resource="&plant;#FungiTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolMicrobiota.owl#Yeast -->
+
+    <owl:Class rdf:about="#Yeast">
+        <rdfs:subClassOf rdf:resource="&plant;#FungiTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#FungiTaxonomy -->
+
+    <owl:Class rdf:about="&plant;#FungiTaxonomy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#MarinePlant -->
+
+    <owl:Class rdf:about="&plant;#MarinePlant"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Plant -->
+
+    <owl:Class rdf:about="&plant;#Plant"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

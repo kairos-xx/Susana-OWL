@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY space2 "http://sweet.jpl.nasa.gov/2.0/space.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY scale "http://sweet.jpl.nasa.gov/2.0/spaceScale.owl" >
+    <!ENTITY spaceScale "http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY qual "http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl" >
+    <!ENTITY sciCategorical "http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&scale;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/spaceScale.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:scale="http://sweet.jpl.nasa.gov/2.0/spaceScale.owl"
+     xmlns:space2="&space;#"
+     xmlns:sciCategorical="&qual;#"
+     xmlns:spaceScale="&scale;#"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:qual="http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#hasSpatialScale -->
+
+    <owl:ObjectProperty rdf:about="#hasSpatialScale">
+        <rdfs:range rdf:resource="#SpatialScale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#hasQuantity -->
+
+    <owl:ObjectProperty rdf:about="&sci;#hasQuantity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Category -->
+
+    <owl:Class rdf:about="&qual;#Category"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Scale -->
+
+    <owl:Class rdf:about="&res;#Scale"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Depth -->
+
+    <owl:Class rdf:about="&space;#Depth"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Distance -->
+
+    <owl:Class rdf:about="&space;#Distance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#SpatialExtent -->
+
+    <owl:Class rdf:about="&space;#SpatialExtent"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#SpatialMeasure -->
+
+    <owl:Class rdf:about="&space;#SpatialMeasure"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#AtomicScale -->
+
+    <owl:Class rdf:about="#AtomicScale">
+        <rdfs:subClassOf rdf:resource="#SpatialScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#Deep -->
+
+    <owl:Class rdf:about="#Deep">
+        <rdfs:subClassOf rdf:resource="#DepthCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#DepthCategory -->
+
+    <owl:Class rdf:about="#DepthCategory">
+        <rdfs:subClassOf rdf:resource="#SpatialExtentCategory"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#hasQuantity"/>
+                <owl:allValuesFrom rdf:resource="&space;#Depth"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#DepthRange -->
+
+    <owl:Class rdf:about="#DepthRange">
+        <rdfs:subClassOf rdf:resource="&sci;#IntervalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#DistanceCategory -->
+
+    <owl:Class rdf:about="#DistanceCategory">
+        <rdfs:subClassOf rdf:resource="#SpatialExtentCategory"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#hasQuantity"/>
+                <owl:allValuesFrom rdf:resource="&space;#Distance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#GlobalScale -->
+
+    <owl:Class rdf:about="#GlobalScale">
+        <rdfs:subClassOf rdf:resource="#SpatialScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#HeightRange -->
+
+    <owl:Class rdf:about="#HeightRange">
+        <rdfs:subClassOf rdf:resource="&sci;#IntervalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#LargeScale -->
+
+    <owl:Class rdf:about="#LargeScale">
+        <rdfs:subClassOf rdf:resource="#SpatialScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#Mesoscale -->
+
+    <owl:Class rdf:about="#Mesoscale">
+        <rdfs:subClassOf rdf:resource="#SpatialScale"/>
+        <rdfs:comment xml:lang="en"
+            >Pertaining to atmospheric phenomena having horizontal scales ranging from a few to several hundred kilometers, including thunderstorms, squall lines, fronts, precipitation bands in tropical and extratropical cyclones, and topographically generated weather systems such as mountain waves and sea and land breezes. From a dynamical perspective, this term pertains to processes with timescales ranging from the inverse of the Brunt?V?is?l? frequency to a pendulum day, encompassing deep moist convection and the full spectrum of inertio-gravity waves but stopping short of synoptic-scale phenomena, which have Rossby numbers less than 1.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#Microscale -->
+
+    <owl:Class rdf:about="#Microscale">
+        <rdfs:subClassOf rdf:resource="#SpatialScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#PlanetaryScale -->
+
+    <owl:Class rdf:about="#PlanetaryScale">
+        <rdfs:subClassOf rdf:resource="#SpatialScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#Shallow -->
+
+    <owl:Class rdf:about="#Shallow">
+        <rdfs:subClassOf rdf:resource="#DepthCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#SpatialExtentCategory -->
+
+    <owl:Class rdf:about="#SpatialExtentCategory">
+        <rdfs:subClassOf rdf:resource="&qual;#Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#hasQuantity"/>
+                <owl:allValuesFrom rdf:resource="&space;#SpatialExtent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#SpatialRange -->
+
+    <owl:Class rdf:about="#SpatialRange">
+        <rdfs:subClassOf rdf:resource="&space;#SpatialMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#SpatialScale -->
+
+    <owl:Class rdf:about="#SpatialScale">
+        <rdfs:subClassOf rdf:resource="&res;#Scale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#SubatomicScale -->
+
+    <owl:Class rdf:about="#SubatomicScale">
+        <rdfs:subClassOf rdf:resource="#SpatialScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#Vicinity -->
+
+    <owl:Class rdf:about="#Vicinity">
+        <rdfs:subClassOf rdf:resource="#DistanceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#IntervalQuantity -->
+
+    <owl:Class rdf:about="&sci;#IntervalQuantity"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

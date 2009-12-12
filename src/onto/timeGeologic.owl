@@ -1,0 +1,3553 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY time "http://sweet.jpl.nasa.gov/2.0/time.owl#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY scale "http://sweet.jpl.nasa.gov/2.0/timeScale.owl#" >
+    <!ENTITY gtime "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#" >
+    <!ENTITY timeGeologic106 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#0" >
+    <!ENTITY timeGeologic50 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#499" >
+    <!ENTITY timeGeologic72 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#510" >
+    <!ENTITY timeGeologic14 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#496" >
+    <!ENTITY timeGeologic67 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#515" >
+    <!ENTITY timeGeologic25 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#492" >
+    <!ENTITY timeGeologic42 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#521" >
+    <!ENTITY timeGeologic111 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#528" >
+    <!ENTITY timeGeologic23 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#542" >
+    <!ENTITY timeGeologic91 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#850" >
+    <!ENTITY timeGeologic18 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#503" >
+    <!ENTITY timeGeologic37 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#635" >
+    <!ENTITY timeGeologic114 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#37.2" >
+    <!ENTITY timeGeologic26 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#48.6" >
+    <!ENTITY timeGeologic22 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#1200" >
+    <!ENTITY timeGeologic99 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#1400" >
+    <!ENTITY timeGeologic44 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#2300" >
+    <!ENTITY timeGeologic109 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#33.9" >
+    <!ENTITY timeGeologic41 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#85.8" >
+    <!ENTITY timeGeologic76 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#4000" >
+    <!ENTITY timeGeologic96 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#83.5" >
+    <!ENTITY timeGeologic48 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#28.4" >
+    <!ENTITY timeGeologic85 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#4600" >
+    <!ENTITY timeGeologic64 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#40.4" >
+    <!ENTITY timeGeologic56 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#88.6" >
+    <!ENTITY timeGeologic12 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#61.1" >
+    <!ENTITY timeGeologic82 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#3200" >
+    <!ENTITY timeGeologic92 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#58.7" >
+    <!ENTITY timeGeologic98 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#65.5" >
+    <!ENTITY timeGeologic81 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#3600" >
+    <!ENTITY timeGeologic95 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#2800" >
+    <!ENTITY timeGeologic8 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#2050" >
+    <!ENTITY timeGeologic36 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#1000" >
+    <!ENTITY timeGeologic101 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#93.6" >
+    <!ENTITY timeGeologic57 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#1600" >
+    <!ENTITY timeGeologic78 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#2500" >
+    <!ENTITY timeGeologic43 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#99.6" >
+    <!ENTITY timeGeologic113 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#70.6" >
+    <!ENTITY timeGeologic16 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#55.8" >
+    <!ENTITY timeGeologic10 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#1800" >
+    <!ENTITY timeGeologic7 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#251.0" >
+    <!ENTITY timeGeologic77 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#203.6" >
+    <!ENTITY timeGeologic29 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#418.7" >
+    <!ENTITY timeGeologic5 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#411.2" >
+    <!ENTITY timeGeologic24 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#284.4" >
+    <!ENTITY timeGeologic110 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#112.0" >
+    <!ENTITY timeGeologic30 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#311.7" >
+    <!ENTITY timeGeologic58 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#307.2" >
+    <!ENTITY timeGeologic38 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#23.03" >
+    <!ENTITY timeGeologic28 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#183.0" >
+    <!ENTITY timeGeologic100 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#171.6" >
+    <!ENTITY timeGeologic87 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#303.4" >
+    <!ENTITY timeGeologic40 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#270.6" >
+    <!ENTITY timeGeologic35 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#145.5" >
+    <!ENTITY timeGeologic115 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#275.6" >
+    <!ENTITY timeGeologic11 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#13.82" >
+    <!ENTITY timeGeologic66 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#374.5" >
+    <!ENTITY timeGeologic59 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#345.3" >
+    <!ENTITY timeGeologic84 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#150.8" >
+    <!ENTITY timeGeologic60 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#2.588" >
+    <!ENTITY timeGeologic88 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#3.600" >
+    <!ENTITY timeGeologic54 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#0.781" >
+    <!ENTITY timeGeologic93 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#471.8" >
+    <!ENTITY timeGeologic69 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#265.8" >
+    <!ENTITY timeGeologic33 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#436.0" >
+    <!ENTITY timeGeologic17 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#175.6" >
+    <!ENTITY timeGeologic89 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#468.1" >
+    <!ENTITY timeGeologic2 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#253.8" >
+    <!ENTITY timeGeologic55 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#421.3" >
+    <!ENTITY timeGeologic53 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#260.4" >
+    <!ENTITY timeGeologic31 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#249.5" >
+    <!ENTITY timeGeologic116 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#1.806" >
+    <!ENTITY timeGeologic80 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#130.0" >
+    <!ENTITY timeGeologic46 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#478.6" >
+    <!ENTITY timeGeologic32 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#391.8" >
+    <!ENTITY timeGeologic3 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#245.9" >
+    <!ENTITY timeGeologic9 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#167.7" >
+    <!ENTITY timeGeologic108 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#506.5" >
+    <!ENTITY timeGeologic6 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#439.0" >
+    <!ENTITY timeGeologic "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#428.2" >
+    <!ENTITY timeGeologic49 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#189.6" >
+    <!ENTITY timeGeologic79 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#5.332" >
+    <!ENTITY timeGeologic13 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#164.7" >
+    <!ENTITY timeGeologic39 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#426.2" >
+    <!ENTITY timeGeologic70 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#155.6" >
+    <!ENTITY timeGeologic63 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#140.2" >
+    <!ENTITY timeGeologic71 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#385.3" >
+    <!ENTITY timeGeologic27 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#460.9" >
+    <!ENTITY timeGeologic73 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#422.9" >
+    <!ENTITY timeGeologic86 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#125.0" >
+    <!ENTITY timeGeologic62 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#199.6" >
+    <!ENTITY timeGeologic15 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#445.6" >
+    <!ENTITY timeGeologic90 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#161.2" >
+    <!ENTITY timeGeologic51 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#416.0" >
+    <!ENTITY timeGeologic52 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#294.6" >
+    <!ENTITY timeGeologic112 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#0.126" >
+    <!ENTITY timeGeologic107 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#133.9" >
+    <!ENTITY timeGeologic105 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#443.7" >
+    <!ENTITY timeGeologic102 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#196.5" >
+    <!ENTITY timeGeologic47 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#407.0" >
+    <!ENTITY timeGeologic34 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#7.246" >
+    <!ENTITY timeGeologic61 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#318.1" >
+    <!ENTITY timeGeologic74 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#488.3" >
+    <!ENTITY timeGeologic94 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#15.97" >
+    <!ENTITY timeGeologic21 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#228.7" >
+    <!ENTITY timeGeologic75 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#237.0" >
+    <!ENTITY timeGeologic4 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#455.8" >
+    <!ENTITY timeGeologic19 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#299.0" >
+    <!ENTITY timeGeologic65 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#328.3" >
+    <!ENTITY timeGeologic104 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#216.5" >
+    <!ENTITY timeGeologic68 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#359.2" >
+    <!ENTITY timeGeologic83 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#20.43" >
+    <!ENTITY timeGeologic45 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#268.0" >
+    <!ENTITY timeGeologic103 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#397.5" >
+    <!ENTITY timeGeologic20 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#11.608" >
+    <!ENTITY timeGeologic97 "http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#0.0117" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl"
+     xmlns:timeGeologic50="&gtime;499"
+     xmlns:timeGeologic52="&gtime;294.6"
+     xmlns:timeGeologic51="&gtime;416.0"
+     xmlns:timeGeologic58="&gtime;307.2"
+     xmlns:timeGeologic57="&gtime;1600"
+     xmlns:timeGeologic59="&gtime;345.3"
+     xmlns:timeGeologic54="&gtime;0.781"
+     xmlns:timeGeologic53="&gtime;260.4"
+     xmlns:timeGeologic56="&gtime;88.6"
+     xmlns:timeGeologic55="&gtime;421.3"
+     xmlns:time="http://sweet.jpl.nasa.gov/2.0/time.owl#"
+     xmlns:timeGeologic="&gtime;428.2"
+     xmlns:timeGeologic41="&gtime;85.8"
+     xmlns:timeGeologic40="&gtime;270.6"
+     xmlns:timeGeologic49="&gtime;189.6"
+     xmlns:timeGeologic48="&gtime;28.4"
+     xmlns:timeGeologic47="&gtime;407.0"
+     xmlns:timeGeologic46="&gtime;478.6"
+     xmlns:timeGeologic45="&gtime;268.0"
+     xmlns:timeGeologic44="&gtime;2300"
+     xmlns:timeGeologic43="&gtime;99.6"
+     xmlns:timeGeologic42="&gtime;521"
+     xmlns:timeGeologic39="&gtime;426.2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:timeGeologic70="&gtime;155.6"
+     xmlns:timeGeologic72="&gtime;510"
+     xmlns:timeGeologic71="&gtime;385.3"
+     xmlns:timeGeologic74="&gtime;488.3"
+     xmlns:timeGeologic73="&gtime;422.9"
+     xmlns:timeGeologic76="&gtime;4000"
+     xmlns:timeGeologic75="&gtime;237.0"
+     xmlns:timeGeologic78="&gtime;2500"
+     xmlns:timeGeologic77="&gtime;203.6"
+     xmlns:timeGeologic79="&gtime;5.332"
+     xmlns:gtime="http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#"
+     xmlns:timeGeologic63="&gtime;140.2"
+     xmlns:timeGeologic62="&gtime;199.6"
+     xmlns:timeGeologic61="&gtime;318.1"
+     xmlns:timeGeologic60="&gtime;2.588"
+     xmlns:timeGeologic67="&gtime;515"
+     xmlns:timeGeologic66="&gtime;374.5"
+     xmlns:timeGeologic65="&gtime;328.3"
+     xmlns:timeGeologic64="&gtime;40.4"
+     xmlns:timeGeologic69="&gtime;265.8"
+     xmlns:timeGeologic68="&gtime;359.2"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:timeGeologic13="&gtime;164.7"
+     xmlns:timeGeologic116="&gtime;1.806"
+     xmlns:timeGeologic14="&gtime;496"
+     xmlns:timeGeologic15="&gtime;445.6"
+     xmlns:timeGeologic16="&gtime;55.8"
+     xmlns:timeGeologic112="&gtime;0.126"
+     xmlns:timeGeologic113="&gtime;70.6"
+     xmlns:timeGeologic10="&gtime;1800"
+     xmlns:timeGeologic11="&gtime;13.82"
+     xmlns:timeGeologic114="&gtime;37.2"
+     xmlns:timeGeologic12="&gtime;61.1"
+     xmlns:timeGeologic115="&gtime;275.6"
+     xmlns:timeGeologic110="&gtime;112.0"
+     xmlns:timeGeologic111="&gtime;528"
+     xmlns:timeGeologic99="&gtime;1400"
+     xmlns:timeGeologic97="&gtime;0.0117"
+     xmlns:timeGeologic98="&gtime;65.5"
+     xmlns:timeGeologic95="&gtime;2800"
+     xmlns:timeGeologic96="&gtime;83.5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:timeGeologic93="&gtime;471.8"
+     xmlns:timeGeologic94="&gtime;15.97"
+     xmlns:timeGeologic91="&gtime;850"
+     xmlns:timeGeologic92="&gtime;58.7"
+     xmlns:timeGeologic109="&gtime;33.9"
+     xmlns:timeGeologic90="&gtime;161.2"
+     xmlns:timeGeologic107="&gtime;133.9"
+     xmlns:timeGeologic108="&gtime;506.5"
+     xmlns:timeGeologic105="&gtime;443.7"
+     xmlns:timeGeologic106="&gtime;0"
+     xmlns:timeGeologic103="&gtime;397.5"
+     xmlns:timeGeologic104="&gtime;216.5"
+     xmlns:timeGeologic101="&gtime;93.6"
+     xmlns:timeGeologic102="&gtime;196.5"
+     xmlns:timeGeologic100="&gtime;171.6"
+     xmlns:timeGeologic6="&gtime;439.0"
+     xmlns:timeGeologic7="&gtime;251.0"
+     xmlns:timeGeologic8="&gtime;2050"
+     xmlns:timeGeologic9="&gtime;167.7"
+     xmlns:timeGeologic86="&gtime;125.0"
+     xmlns:timeGeologic2="&gtime;253.8"
+     xmlns:timeGeologic3="&gtime;245.9"
+     xmlns:timeGeologic87="&gtime;303.4"
+     xmlns:timeGeologic88="&gtime;3.600"
+     xmlns:timeGeologic4="&gtime;455.8"
+     xmlns:timeGeologic5="&gtime;411.2"
+     xmlns:timeGeologic89="&gtime;468.1"
+     xmlns:timeGeologic82="&gtime;3200"
+     xmlns:timeGeologic83="&gtime;20.43"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl#"
+     xmlns:timeGeologic84="&gtime;150.8"
+     xmlns:timeGeologic85="&gtime;4600"
+     xmlns:timeGeologic80="&gtime;130.0"
+     xmlns:timeGeologic81="&gtime;3600"
+     xmlns:timeGeologic31="&gtime;249.5"
+     xmlns:timeGeologic32="&gtime;391.8"
+     xmlns:scale="http://sweet.jpl.nasa.gov/2.0/timeScale.owl#"
+     xmlns:timeGeologic33="&gtime;436.0"
+     xmlns:timeGeologic34="&gtime;7.246"
+     xmlns:timeGeologic35="&gtime;145.5"
+     xmlns:timeGeologic36="&gtime;1000"
+     xmlns:timeGeologic37="&gtime;635"
+     xmlns:timeGeologic38="&gtime;23.03"
+     xmlns:timeGeologic30="&gtime;311.7"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:timeGeologic29="&gtime;418.7"
+     xmlns:timeGeologic28="&gtime;183.0"
+     xmlns:timeGeologic22="&gtime;1200"
+     xmlns:timeGeologic23="&gtime;542"
+     xmlns:timeGeologic20="&gtime;11.608"
+     xmlns:timeGeologic21="&gtime;228.7"
+     xmlns:timeGeologic26="&gtime;48.6"
+     xmlns:timeGeologic27="&gtime;460.9"
+     xmlns:timeGeologic24="&gtime;284.4"
+     xmlns:timeGeologic25="&gtime;492"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#"
+     xmlns:timeGeologic19="&gtime;299.0"
+     xmlns:timeGeologic18="&gtime;503"
+     xmlns:timeGeologic17="&gtime;175.6">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/time.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/timeScale.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#subsetOf -->
+
+    <owl:ObjectProperty rdf:about="&math;subsetOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#derivedFromUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;derivedFromUnit"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;hasUnit"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hasEndTime -->
+
+    <owl:ObjectProperty rdf:about="&time;hasEndTime"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hasStartTime -->
+
+    <owl:ObjectProperty rdf:about="&time;hasStartTime"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#hasGeologicTime -->
+
+    <owl:ObjectProperty rdf:about="#hasGeologicTime">
+        <rdfs:range rdf:resource="#GeologicTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasError -->
+
+    <owl:DatatypeProperty rdf:about="&math;hasError"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasNumericValue -->
+
+    <owl:DatatypeProperty rdf:about="&math;hasNumericValue"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasScalingNumber -->
+
+    <owl:DatatypeProperty rdf:about="&units;hasScalingNumber"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#UnitDerivedByScaling -->
+
+    <owl:Class rdf:about="&units;UnitDerivedByScaling"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Period -->
+
+    <owl:Class rdf:about="&time;Period"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Time -->
+
+    <owl:Class rdf:about="&time;Time"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#GeologicTime -->
+
+    <owl:Class rdf:about="#GeologicTime">
+        <rdfs:subClassOf rdf:resource="&time;Time"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;hasUnit"/>
+                <owl:hasValue rdf:resource="#MYA"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The geologic time scale is a chronologic schema (or idealized model) relating stratigraphy to time that is used by geologists, paleontologists and other earth scientists to describe the timing and relationships between events that have occurred during the history of the Earth.  [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#NeotectonicPeriod -->
+
+    <owl:Class rdf:about="#NeotectonicPeriod">
+        <rdfs:subClassOf rdf:resource="&time;Period"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Prehistoric -->
+
+    <owl:Class rdf:about="#Prehistoric">
+        <rdfs:subClassOf rdf:resource="&time;Period"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Age -->
+
+    <owl:Class rdf:about="&scale;Age"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Eon -->
+
+    <owl:Class rdf:about="&scale;Eon"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Epoch -->
+
+    <owl:Class rdf:about="&scale;Epoch"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Era -->
+
+    <owl:Class rdf:about="&scale;Era"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Period -->
+
+    <owl:Class rdf:about="&scale;Period"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Supereon -->
+
+    <owl:Class rdf:about="&scale;Supereon"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#year -->
+
+    <owl:Thing rdf:about="&time;year"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#0.0117MYA -->
+
+    <GeologicTime rdf:about="#0.0117MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">0.0117</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#0.126MYA -->
+
+    <GeologicTime rdf:about="#0.126MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">0.126</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#0.781MYA -->
+
+    <GeologicTime rdf:about="#0.781MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">0.781</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#0MYA -->
+
+    <owl:Thing rdf:about="#0MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">0</math:hasNumericValue>
+        <math:hasError rdf:datatype="&xsd;double">0</math:hasError>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#1.806MYA -->
+
+    <owl:Thing rdf:about="#1.806MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">1.806</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#1000MYA -->
+
+    <owl:Thing rdf:about="#1000MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">1000</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#11.608MYA -->
+
+    <GeologicTime rdf:about="#11.608MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">11.608</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#112.0MYA -->
+
+    <owl:Thing rdf:about="#112.0MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.0</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">112.0</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#1200MYA -->
+
+    <owl:Thing rdf:about="#1200MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">1200</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#125.0MYA -->
+
+    <owl:Thing rdf:about="#125.0MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.0</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">125.0</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#13.82MYA -->
+
+    <GeologicTime rdf:about="#13.82MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">13.82</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#130.0MYA -->
+
+    <owl:Thing rdf:about="#130.0MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.6</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">130.0</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#133.9MYA -->
+
+    <GeologicTime rdf:about="#133.9MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">133.9</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#140.2MYA -->
+
+    <owl:Thing rdf:about="#140.2MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">140.2</math:hasNumericValue>
+        <math:hasError rdf:datatype="&xsd;double">3.0</math:hasError>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#1400MYA -->
+
+    <owl:Thing rdf:about="#1400MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">1400</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#145.5MYA -->
+
+    <GeologicTime rdf:about="#145.5MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">145.5</math:hasNumericValue>
+        <math:hasError rdf:datatype="&xsd;double">4.0</math:hasError>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#15.97MYA -->
+
+    <GeologicTime rdf:about="#15.97MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">15.97</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#150.8MYA -->
+
+    <GeologicTime rdf:about="#150.8MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">150.8</math:hasNumericValue>
+        <math:hasError rdf:datatype="&xsd;double">4.0</math:hasError>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#155.6MYA -->
+
+    <owl:Thing rdf:about="#155.6MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">155.6</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#1600MYA -->
+
+    <owl:Thing rdf:about="#1600MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">1600</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#161.2MYA -->
+
+    <owl:Thing rdf:about="#161.2MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">161.2</math:hasNumericValue>
+        <math:hasError rdf:datatype="&xsd;double">4.0</math:hasError>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#164.7MYA -->
+
+    <owl:Thing rdf:about="#164.7MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">164.7</math:hasNumericValue>
+        <math:hasError rdf:datatype="&xsd;double">4.0</math:hasError>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#167.7MYA -->
+
+    <GeologicTime rdf:about="#167.7MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">167.7</math:hasNumericValue>
+        <math:hasError rdf:datatype="&xsd;double">3.5</math:hasError>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#171.6MYA -->
+
+    <GeologicTime rdf:about="#171.6MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">171.6</math:hasNumericValue>
+        <math:hasError rdf:datatype="&xsd;double">3.0</math:hasError>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#175.6MYA -->
+
+    <GeologicTime rdf:about="#175.6MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">175.6</math:hasNumericValue>
+        <math:hasError rdf:datatype="&xsd;double">2.0</math:hasError>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#1800MYA -->
+
+    <owl:Thing rdf:about="#1800MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">1800</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#183.0MYA -->
+
+    <owl:Thing rdf:about="#183.0MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.5</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">183.0</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#189.6MYA -->
+
+    <GeologicTime rdf:about="#189.6MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">1.5</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">189.6</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#196.5MYA -->
+
+    <GeologicTime rdf:about="#196.5MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">1.0</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">196.5</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#199.6MYA -->
+
+    <owl:Thing rdf:about="#199.6MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.6</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">199.6</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#2.588MYA -->
+
+    <GeologicTime rdf:about="#2.588MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">2.588</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#20.43MYA -->
+
+    <owl:Thing rdf:about="#20.43MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">20.43</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#203.6MYA -->
+
+    <owl:Thing rdf:about="#203.6MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.5</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">203.6</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#2050MYA -->
+
+    <owl:Thing rdf:about="#2050MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">2050</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#216.5MYA -->
+
+    <owl:Thing rdf:about="#216.5MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">2.0</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">216.5</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#228.7MYA -->
+
+    <owl:Thing rdf:about="#228.7MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">228.7</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#23.03MYA -->
+
+    <owl:Thing rdf:about="#23.03MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">23.03</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#2300MYA -->
+
+    <GeologicTime rdf:about="#2300MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">2300</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#237.0MYA -->
+
+    <GeologicTime rdf:about="#237.0MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">2.0</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">237.0</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#245.9MYA -->
+
+    <GeologicTime rdf:about="#245.9MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">245.9</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#249.5MYA -->
+
+    <owl:Thing rdf:about="#249.5MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">249.5</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#2500MYA -->
+
+    <owl:Thing rdf:about="#2500MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">2500</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#251.0MYA -->
+
+    <owl:Thing rdf:about="#251.0MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.4</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">251.0</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#253.8MYA -->
+
+    <GeologicTime rdf:about="#253.8MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">0.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">253.8</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#260.4MYA -->
+
+    <owl:Thing rdf:about="#260.4MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">260.4</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#265.8MYA -->
+
+    <owl:Thing rdf:about="#265.8MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">265.8</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#268.0MYA -->
+
+    <GeologicTime rdf:about="#268.0MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">0.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">268.0</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#270.6MYA -->
+
+    <GeologicTime rdf:about="#270.6MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">0.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">270.6</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#275.6MYA -->
+
+    <owl:Thing rdf:about="#275.6MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">275.6</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#28.4MYA -->
+
+    <owl:Thing rdf:about="#28.4MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.1</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">28.4</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#2800MYA -->
+
+    <owl:Thing rdf:about="#2800MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">2800</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#284.4MYA -->
+
+    <owl:Thing rdf:about="#284.4MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">284.4</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#294.6MYA -->
+
+    <owl:Thing rdf:about="#294.6MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.8</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">294.6</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#299.0MYA -->
+
+    <owl:Thing rdf:about="#299.0MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.8</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">299.0</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#3.600MYA -->
+
+    <GeologicTime rdf:about="#3.600MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">3.600</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#303.4MYA -->
+
+    <GeologicTime rdf:about="#303.4MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">0.9</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">303.4</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#307.2MYA -->
+
+    <owl:Thing rdf:about="#307.2MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.0</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">307.2</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#311.7MYA -->
+
+    <owl:Thing rdf:about="#311.7MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.1</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">311.7</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#318.1MYA -->
+
+    <owl:Thing rdf:about="#318.1MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.3</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">318.1</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#3200MYA -->
+
+    <GeologicTime rdf:about="#3200MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">3200</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#328.3MYA -->
+
+    <owl:Thing rdf:about="#328.3MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.6</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">328.3</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#33.9MYA -->
+
+    <owl:Thing rdf:about="#33.9MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.1</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">33.9</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#345.3MYA -->
+
+    <GeologicTime rdf:about="#345.3MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">2.1</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">345.3</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#359.2MYA -->
+
+    <GeologicTime rdf:about="#359.2MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">2.5</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">359.2</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#3600MYA -->
+
+    <owl:Thing rdf:about="#3600MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">3600</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#37.2MYA -->
+
+    <owl:Thing rdf:about="#37.2MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.1</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">37.2</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#374.5MYA -->
+
+    <owl:Thing rdf:about="#374.5MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">2.6</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">374.5</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#385.3MYA -->
+
+    <owl:Thing rdf:about="#385.3MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">2.6</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">385.3</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#391.8MYA -->
+
+    <owl:Thing rdf:about="#391.8MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">2.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">391.8</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#397.5MYA -->
+
+    <owl:Thing rdf:about="#397.5MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">2.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">397.5</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#40.4MYA -->
+
+    <GeologicTime rdf:about="#40.4MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">0.2</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">40.4</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#4000MYA -->
+
+    <GeologicTime rdf:about="#4000MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">4000</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#407.0MYA -->
+
+    <owl:Thing rdf:about="#407.0MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">2.8</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">407.0</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#411.2MYA -->
+
+    <owl:Thing rdf:about="#411.2MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">2.8</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">411.2</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#416.0MYA -->
+
+    <owl:Thing rdf:about="#416.0MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">2.8</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">416.0</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#418.7MYA -->
+
+    <GeologicTime rdf:about="#418.7MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">2.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">418.7</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#421.3MYA -->
+
+    <GeologicTime rdf:about="#421.3MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">2.6</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">421.3</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#422.9MYA -->
+
+    <GeologicTime rdf:about="#422.9MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">2.5</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">422.9</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#426.2MYA -->
+
+    <owl:Thing rdf:about="#426.2MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">2.4</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">426.2</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#428.2MYA -->
+
+    <owl:Thing rdf:about="#428.2MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">2.3</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">428.2</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#436.0MYA -->
+
+    <GeologicTime rdf:about="#436.0MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">1.9</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">436.0</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#439.0MYA -->
+
+    <owl:Thing rdf:about="#439.0MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.8</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">439.0</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#443.7MYA -->
+
+    <GeologicTime rdf:about="#443.7MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">1.5</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">443.7</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#445.6MYA -->
+
+    <owl:Thing rdf:about="#445.6MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.5</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">445.6</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#455.8MYA -->
+
+    <GeologicTime rdf:about="#455.8MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">1.6</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">455.8</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#460.9MYA -->
+
+    <GeologicTime rdf:about="#460.9MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">1.6</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">460.9</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#4600MYA -->
+
+    <GeologicTime rdf:about="#4600MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">4600</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#468.1MYA -->
+
+    <owl:Thing rdf:about="#468.1MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.6</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">468.1</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#471.8MYA -->
+
+    <GeologicTime rdf:about="#471.8MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">1.6</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">471.8</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#478.6MYA -->
+
+    <GeologicTime rdf:about="#478.6MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">1.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">478.6</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#48.6MYA -->
+
+    <GeologicTime rdf:about="#48.6MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">0.2</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">48.6</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#488.3MYA -->
+
+    <owl:Thing rdf:about="#488.3MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">1.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">488.3</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#492MYA -->
+
+    <GeologicTime rdf:about="#492MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">492</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#496MYA -->
+
+    <GeologicTime rdf:about="#496MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">496</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#499MYA -->
+
+    <GeologicTime rdf:about="#499MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">499</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#5.332MYA -->
+
+    <owl:Thing rdf:about="#5.332MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">5.332</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#503MYA -->
+
+    <owl:Thing rdf:about="#503MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">503</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#506.5MYA -->
+
+    <owl:Thing rdf:about="#506.5MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">506.5</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#510MYA -->
+
+    <owl:Thing rdf:about="#510MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">510</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#515MYA -->
+
+    <GeologicTime rdf:about="#515MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">515</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#521MYA -->
+
+    <owl:Thing rdf:about="#521MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">521</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#528MYA -->
+
+    <GeologicTime rdf:about="#528MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">528</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#542MYA -->
+
+    <GeologicTime rdf:about="#542MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">1.0</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">542</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#55.8MYA -->
+
+    <GeologicTime rdf:about="#55.8MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">0.2</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">55.8</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#58.7MYA -->
+
+    <owl:Thing rdf:about="#58.7MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.2</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">58.7</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#61.1MYA -->
+
+    <owl:Thing rdf:about="#61.1MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">61.1</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#635MYA -->
+
+    <GeologicTime rdf:about="#635MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">635</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#65.5MYA -->
+
+    <owl:Thing rdf:about="#65.5MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.3</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">65.5</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#7.246MYA -->
+
+    <owl:Thing rdf:about="#7.246MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">7.246</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#70.6MYA -->
+
+    <GeologicTime rdf:about="#70.6MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">0.6</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">70.6</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#83.5MYA -->
+
+    <GeologicTime rdf:about="#83.5MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">0.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">83.5</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#85.8MYA -->
+
+    <GeologicTime rdf:about="#85.8MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasError rdf:datatype="&xsd;double">0.7</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">85.8</math:hasNumericValue>
+    </GeologicTime>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#850MYA -->
+
+    <owl:Thing rdf:about="#850MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">850</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#88.6MYA -->
+
+    <owl:Thing rdf:about="#88.6MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">88.6</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#93.6MYA -->
+
+    <owl:Thing rdf:about="#93.6MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.8</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">93.6</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#99.6MYA -->
+
+    <owl:Thing rdf:about="#99.6MYA">
+        <rdf:type rdf:resource="#GeologicTime"/>
+        <math:hasError rdf:datatype="&xsd;double">0.9</math:hasError>
+        <math:hasNumericValue rdf:datatype="&xsd;double">99.6</math:hasNumericValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Aalenian -->
+
+    <owl:Thing rdf:about="#Aalenian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#171.6MYA"/>
+        <time:hasStartTime rdf:resource="#175.6MYA"/>
+        <math:subsetOf rdf:resource="#MiddleJurassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Aeronhian -->
+
+    <owl:Thing rdf:about="#Aeronhian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#436.0MYA"/>
+        <time:hasStartTime rdf:resource="#439.0MYA"/>
+        <math:subsetOf rdf:resource="#Llandovery"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Albian -->
+
+    <owl:Thing rdf:about="#Albian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasStartTime rdf:resource="#112.0MYA"/>
+        <time:hasEndTime rdf:resource="#99.6MYA"/>
+        <math:subsetOf rdf:resource="#LowerCretaceous"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Anisian -->
+
+    <owl:Thing rdf:about="#Anisian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#237.0MYA"/>
+        <time:hasStartTime rdf:resource="#245.9MYA"/>
+        <math:subsetOf rdf:resource="#MiddleTriassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Aptian -->
+
+    <scale:Age rdf:about="#Aptian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#112.0MYA"/>
+        <time:hasStartTime rdf:resource="#125.0MYA"/>
+        <math:subsetOf rdf:resource="#LowerCretaceous"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Aquitanian -->
+
+    <owl:Thing rdf:about="#Aquitanian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#20.43MYA"/>
+        <time:hasStartTime rdf:resource="#23.03MYA"/>
+        <math:subsetOf rdf:resource="#Miocene"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Archean -->
+
+    <owl:Thing rdf:about="#Archean">
+        <rdf:type rdf:resource="&scale;Eon"/>
+        <time:hasEndTime rdf:resource="#2500MYA"/>
+        <time:hasStartTime rdf:resource="#4000MYA"/>
+        <math:subsetOf rdf:resource="#Precambrian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Artinskian -->
+
+    <owl:Thing rdf:about="#Artinskian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#275.6MYA"/>
+        <time:hasStartTime rdf:resource="#284.4MYA"/>
+        <time:hasEndTime rdf:resource="#284.4MYA"/>
+        <time:hasStartTime rdf:resource="#294.6MYA"/>
+        <math:subsetOf rdf:resource="#Cisuralian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Asselian -->
+
+    <owl:Thing rdf:about="#Asselian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#294.6MYA"/>
+        <time:hasStartTime rdf:resource="#299.0MYA"/>
+        <math:subsetOf rdf:resource="#Cisuralian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Bajocian -->
+
+    <scale:Age rdf:about="#Bajocian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#167.7MYA"/>
+        <time:hasStartTime rdf:resource="#171.6MYA"/>
+        <math:subsetOf rdf:resource="#MiddleJurassic"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Barremian -->
+
+    <owl:Thing rdf:about="#Barremian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#125.0MYA"/>
+        <time:hasStartTime rdf:resource="#130.0MYA"/>
+        <math:subsetOf rdf:resource="#LowerCretaceous"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Bartonian -->
+
+    <owl:Thing rdf:about="#Bartonian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#37.2MYA"/>
+        <time:hasStartTime rdf:resource="#40.4MYA"/>
+        <math:subsetOf rdf:resource="#Eocene"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Bashkirian -->
+
+    <scale:Age rdf:about="#Bashkirian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#311.7MYA"/>
+        <time:hasStartTime rdf:resource="#318.1MYA"/>
+        <math:subsetOf rdf:resource="#LowerPennsylvanian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#BasinGroups -->
+
+    <owl:Thing rdf:about="#BasinGroups">
+        <rdf:type rdf:resource="&scale;Era"/>
+        <math:subsetOf rdf:resource="#Hadean"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Bathonian -->
+
+    <scale:Age rdf:about="#Bathonian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#164.7MYA"/>
+        <time:hasStartTime rdf:resource="#167.7MYA"/>
+        <math:subsetOf rdf:resource="#MiddleJurassic"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Berriasian -->
+
+    <scale:Age rdf:about="#Berriasian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#140.2MYA"/>
+        <time:hasStartTime rdf:resource="#145.5MYA"/>
+        <math:subsetOf rdf:resource="#LowerCretaceous"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Burdigalian -->
+
+    <scale:Age rdf:about="#Burdigalian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#15.97MYA"/>
+        <time:hasStartTime rdf:resource="#20.43MYA"/>
+        <math:subsetOf rdf:resource="#Miocene"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Calabrian -->
+
+    <owl:Thing rdf:about="#Calabrian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#0.781MYA"/>
+        <time:hasStartTime rdf:resource="#1.806MYA"/>
+        <math:subsetOf rdf:resource="#Pleistocene"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Callovian -->
+
+    <owl:Thing rdf:about="#Callovian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#161.2MYA"/>
+        <time:hasStartTime rdf:resource="#164.7MYA"/>
+        <math:subsetOf rdf:resource="#MiddleJurassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Calymmian -->
+
+    <owl:Thing rdf:about="#Calymmian">
+        <rdf:type rdf:resource="&scale;Period"/>
+        <time:hasEndTime rdf:resource="#1400MYA"/>
+        <time:hasStartTime rdf:resource="#1600MYA"/>
+        <math:subsetOf rdf:resource="#Mesoproterozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Cambrian -->
+
+    <scale:Period rdf:about="#Cambrian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#488.3MYA"/>
+        <time:hasStartTime rdf:resource="#542MYA"/>
+        <math:subsetOf rdf:resource="#Paleozoic"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#CambrianSeries2 -->
+
+    <scale:Epoch rdf:about="#CambrianSeries2">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#510MYA"/>
+        <time:hasStartTime rdf:resource="#521MYA"/>
+        <math:subsetOf rdf:resource="#Cambrian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#CambrianSeries3 -->
+
+    <owl:Thing rdf:about="#CambrianSeries3">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#499MYA"/>
+        <time:hasStartTime rdf:resource="#510MYA"/>
+        <math:subsetOf rdf:resource="#Cambrian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#CambrianStage2 -->
+
+    <scale:Age rdf:about="#CambrianStage2">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#521MYA"/>
+        <time:hasStartTime rdf:resource="#528MYA"/>
+        <math:subsetOf rdf:resource="#Terreneuvian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#CambrianStage3 -->
+
+    <owl:Thing rdf:about="#CambrianStage3">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#515MYA"/>
+        <time:hasStartTime rdf:resource="#521MYA"/>
+        <math:subsetOf rdf:resource="#CambrianSeries2"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#CambrianStage4 -->
+
+    <scale:Age rdf:about="#CambrianStage4">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#510MYA"/>
+        <time:hasStartTime rdf:resource="#515MYA"/>
+        <math:subsetOf rdf:resource="#CambrianSeries2"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#CambrianStage5 -->
+
+    <scale:Age rdf:about="#CambrianStage5">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#506.5MYA"/>
+        <time:hasStartTime rdf:resource="#510MYA"/>
+        <math:subsetOf rdf:resource="#CambrianSeries3"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Campanian -->
+
+    <owl:Thing rdf:about="#Campanian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#70.6MYA"/>
+        <time:hasStartTime rdf:resource="#83.5MYA"/>
+        <math:subsetOf rdf:resource="#UpperCretaceous"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Capitanian -->
+
+    <scale:Age rdf:about="#Capitanian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#260.4MYA"/>
+        <time:hasStartTime rdf:resource="#265.8MYA"/>
+        <math:subsetOf rdf:resource="#Guadalupian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Carboniferous -->
+
+    <scale:Period rdf:about="#Carboniferous">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#299.0MYA"/>
+        <time:hasStartTime rdf:resource="#359.2MYA"/>
+        <math:subsetOf rdf:resource="#Paleozoic"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Carnian -->
+
+    <scale:Age rdf:about="#Carnian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#216.5MYA"/>
+        <time:hasStartTime rdf:resource="#228.7MYA"/>
+        <math:subsetOf rdf:resource="#UpperTriassic"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Cenomanian -->
+
+    <owl:Thing rdf:about="#Cenomanian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#93.6MYA"/>
+        <time:hasStartTime rdf:resource="#99.6MYA"/>
+        <math:subsetOf rdf:resource="#UpperCretaceous"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Cenozoic -->
+
+    <owl:Thing rdf:about="#Cenozoic">
+        <rdf:type rdf:resource="&scale;Era"/>
+        <time:hasEndTime rdf:resource="#0MYA"/>
+        <time:hasStartTime rdf:resource="#65.5MYA"/>
+        <math:subsetOf rdf:resource="#Phanerozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Changhsingian -->
+
+    <scale:Age rdf:about="#Changhsingian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#251.0MYA"/>
+        <time:hasStartTime rdf:resource="#253.8MYA"/>
+        <math:subsetOf rdf:resource="#Lopingian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Chattian -->
+
+    <scale:Age rdf:about="#Chattian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#23.03MYA"/>
+        <time:hasStartTime rdf:resource="#28.4MYA"/>
+        <math:subsetOf rdf:resource="#Oligocene"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Cisuralian -->
+
+    <scale:Epoch rdf:about="#Cisuralian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#270.6MYA"/>
+        <time:hasStartTime rdf:resource="#299.0MYA"/>
+        <math:subsetOf rdf:resource="#Permian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Coniacian -->
+
+    <scale:Age rdf:about="#Coniacian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#85.8MYA"/>
+        <time:hasStartTime rdf:resource="#88.6MYA"/>
+        <math:subsetOf rdf:resource="#UpperCretaceous"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Cretaceous -->
+
+    <scale:Period rdf:about="#Cretaceous">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasStartTime rdf:resource="#145.5MYA"/>
+        <time:hasEndTime rdf:resource="#65.5MYA"/>
+        <math:subsetOf rdf:resource="#Mesozoic"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Cryogenian -->
+
+    <scale:Period rdf:about="#Cryogenian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#635MYA"/>
+        <time:hasStartTime rdf:resource="#850MYA"/>
+        <math:subsetOf rdf:resource="#Neoproterozoic"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Cryptic -->
+
+    <owl:Thing rdf:about="#Cryptic">
+        <rdf:type rdf:resource="&scale;Era"/>
+        <math:subsetOf rdf:resource="#Hadean"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Danian -->
+
+    <scale:Age rdf:about="#Danian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#61.1MYA"/>
+        <time:hasStartTime rdf:resource="#65.5MYA"/>
+        <math:subsetOf rdf:resource="#Paleocene"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Dapingian -->
+
+    <scale:Age rdf:about="#Dapingian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#468.1MYA"/>
+        <time:hasStartTime rdf:resource="#471.8MYA"/>
+        <math:subsetOf rdf:resource="#MiddleOrdovician"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Darriwilian -->
+
+    <scale:Age rdf:about="#Darriwilian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#460.9MYA"/>
+        <time:hasStartTime rdf:resource="#468.1MYA"/>
+        <math:subsetOf rdf:resource="#MiddleOrdovician"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Devonian -->
+
+    <owl:Thing rdf:about="#Devonian">
+        <rdf:type rdf:resource="&scale;Period"/>
+        <time:hasEndTime rdf:resource="#359.2MYA"/>
+        <time:hasStartTime rdf:resource="#416.0MYA"/>
+        <math:subsetOf rdf:resource="#Paleozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Drumian -->
+
+    <owl:Thing rdf:about="#Drumian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#503MYA"/>
+        <time:hasStartTime rdf:resource="#506.5MYA"/>
+        <math:subsetOf rdf:resource="#CambrianSeries3"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Ectasian -->
+
+    <owl:Thing rdf:about="#Ectasian">
+        <rdf:type rdf:resource="&scale;Period"/>
+        <time:hasEndTime rdf:resource="#1200MYA"/>
+        <time:hasStartTime rdf:resource="#1400MYA"/>
+        <math:subsetOf rdf:resource="#Mesoproterozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Ediacaran -->
+
+    <scale:Period rdf:about="#Ediacaran">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#542MYA"/>
+        <time:hasStartTime rdf:resource="#635MYA"/>
+        <math:subsetOf rdf:resource="#Neoproterozoic"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Eifelian -->
+
+    <scale:Age rdf:about="#Eifelian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#391.8MYA"/>
+        <time:hasStartTime rdf:resource="#397.5MYA"/>
+        <math:subsetOf rdf:resource="#MiddleDevonian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Emsian -->
+
+    <owl:Thing rdf:about="#Emsian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#397.5MYA"/>
+        <time:hasStartTime rdf:resource="#407.0MYA"/>
+        <math:subsetOf rdf:resource="#LowerDevonian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Eoarchean -->
+
+    <scale:Era rdf:about="#Eoarchean">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#3600MYA"/>
+        <time:hasStartTime rdf:resource="#4000MYA"/>
+        <math:subsetOf rdf:resource="#Archean"/>
+    </scale:Era>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Eocene -->
+
+    <owl:Thing rdf:about="#Eocene">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#33.9MYA"/>
+        <time:hasStartTime rdf:resource="#55.8MYA"/>
+        <math:subsetOf rdf:resource="#Paleogene"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Famennian -->
+
+    <scale:Age rdf:about="#Famennian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#359.2MYA"/>
+        <time:hasStartTime rdf:resource="#374.5MYA"/>
+        <math:subsetOf rdf:resource="#UpperDevonian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Floian -->
+
+    <owl:Thing rdf:about="#Floian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#471.8MYA"/>
+        <time:hasStartTime rdf:resource="#478.6MYA"/>
+        <math:subsetOf rdf:resource="#LowerOrdovician"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Fortunian -->
+
+    <scale:Age rdf:about="#Fortunian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#528MYA"/>
+        <time:hasStartTime rdf:resource="#542MYA"/>
+        <math:subsetOf rdf:resource="#Terreneuvian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Frasnian -->
+
+    <owl:Thing rdf:about="#Frasnian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#374.5MYA"/>
+        <time:hasStartTime rdf:resource="#385.3MYA"/>
+        <math:subsetOf rdf:resource="#UpperDevonian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Furongian -->
+
+    <scale:Epoch rdf:about="#Furongian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#488.3MYA"/>
+        <time:hasStartTime rdf:resource="#499MYA"/>
+        <math:subsetOf rdf:resource="#Cambrian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#FurongianStage10 -->
+
+    <scale:Age rdf:about="#FurongianStage10">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#488.3MYA"/>
+        <time:hasStartTime rdf:resource="#492MYA"/>
+        <math:subsetOf rdf:resource="#Furongian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#FurongianStage9 -->
+
+    <owl:Thing rdf:about="#FurongianStage9">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#492MYA"/>
+        <time:hasStartTime rdf:resource="#496MYA"/>
+        <math:subsetOf rdf:resource="#Furongian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Gelasian -->
+
+    <scale:Age rdf:about="#Gelasian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#1.806MYA"/>
+        <time:hasStartTime rdf:resource="#2.588MYA"/>
+        <math:subsetOf rdf:resource="#Pleistocene"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Givetian -->
+
+    <owl:Thing rdf:about="#Givetian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#385.3MYA"/>
+        <time:hasStartTime rdf:resource="#391.8MYA"/>
+        <math:subsetOf rdf:resource="#MiddleDevonian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Gorstian -->
+
+    <scale:Age rdf:about="#Gorstian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#421.3MYA"/>
+        <time:hasStartTime rdf:resource="#422.9MYA"/>
+        <math:subsetOf rdf:resource="#Ludlow"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Guadalupian -->
+
+    <scale:Epoch rdf:about="#Guadalupian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#260.4MYA"/>
+        <time:hasStartTime rdf:resource="#270.6MYA"/>
+        <math:subsetOf rdf:resource="#Permian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Guzhangian -->
+
+    <scale:Age rdf:about="#Guzhangian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#499MYA"/>
+        <time:hasStartTime rdf:resource="#503MYA"/>
+        <math:subsetOf rdf:resource="#CambrianSeries3"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Gzhelian -->
+
+    <owl:Thing rdf:about="#Gzhelian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#299.0MYA"/>
+        <time:hasStartTime rdf:resource="#303.4MYA"/>
+        <math:subsetOf rdf:resource="#UpperPennsylvanian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Hadean -->
+
+    <scale:Eon rdf:about="#Hadean">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#4000MYA"/>
+        <math:subsetOf rdf:resource="#Precambrian"/>
+    </scale:Eon>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Hauterivian -->
+
+    <scale:Age rdf:about="#Hauterivian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#130.0MYA"/>
+        <time:hasStartTime rdf:resource="#133.9MYA"/>
+        <math:subsetOf rdf:resource="#LowerCretaceous"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Hettangian -->
+
+    <owl:Thing rdf:about="#Hettangian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#196.5MYA"/>
+        <time:hasStartTime rdf:resource="#199.6MYA"/>
+        <math:subsetOf rdf:resource="#LowerJurassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Himantian -->
+
+    <owl:Thing rdf:about="#Himantian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#443.7MYA"/>
+        <time:hasStartTime rdf:resource="#445.6MYA"/>
+        <math:subsetOf rdf:resource="#UpperOrdovician"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Holocene -->
+
+    <scale:Epoch rdf:about="#Holocene">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasStartTime rdf:resource="#0.0117MYA"/>
+        <time:hasEndTime rdf:resource="#0MYA"/>
+        <math:subsetOf rdf:resource="#Quaternary"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Homerian -->
+
+    <owl:Thing rdf:about="#Homerian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#422.9MYA"/>
+        <time:hasStartTime rdf:resource="#426.2MYA"/>
+        <math:subsetOf rdf:resource="#Wenlock"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Induan -->
+
+    <owl:Thing rdf:about="#Induan">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#249.5MYA"/>
+        <time:hasStartTime rdf:resource="#251.0MYA"/>
+        <math:subsetOf rdf:resource="#LowerTriassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Ionian -->
+
+    <owl:Thing rdf:about="#Ionian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#0.126MYA"/>
+        <time:hasStartTime rdf:resource="#0.781MYA"/>
+        <math:subsetOf rdf:resource="#Pleistocene"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Jurassic -->
+
+    <owl:Thing rdf:about="#Jurassic">
+        <rdf:type rdf:resource="&scale;Period"/>
+        <time:hasEndTime rdf:resource="#145.5MYA"/>
+        <time:hasStartTime rdf:resource="#199.6MYA"/>
+        <math:subsetOf rdf:resource="#Mesozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Kasimovian -->
+
+    <scale:Age rdf:about="#Kasimovian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#303.4MYA"/>
+        <time:hasStartTime rdf:resource="#307.2MYA"/>
+        <math:subsetOf rdf:resource="#UpperPennsylvanian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Katian -->
+
+    <scale:Age rdf:about="#Katian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#445.6MYA"/>
+        <time:hasStartTime rdf:resource="#455.8MYA"/>
+        <math:subsetOf rdf:resource="#UpperOrdovician"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Kimmeridgian -->
+
+    <owl:Thing rdf:about="#Kimmeridgian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#150.8MYA"/>
+        <time:hasStartTime rdf:resource="#155.6MYA"/>
+        <math:subsetOf rdf:resource="#UpperJurassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Kungurian -->
+
+    <owl:Thing rdf:about="#Kungurian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#270.6MYA"/>
+        <time:hasStartTime rdf:resource="#275.6MYA"/>
+        <math:subsetOf rdf:resource="#Cisuralian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Ladinian -->
+
+    <owl:Thing rdf:about="#Ladinian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#228.7MYA"/>
+        <time:hasStartTime rdf:resource="#237.0MYA"/>
+        <math:subsetOf rdf:resource="#MiddleTriassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Langhian -->
+
+    <owl:Thing rdf:about="#Langhian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#13.82MYA"/>
+        <time:hasStartTime rdf:resource="#15.97MYA"/>
+        <math:subsetOf rdf:resource="#Miocene"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Llandovery -->
+
+    <owl:Thing rdf:about="#Llandovery">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#428.2MYA"/>
+        <time:hasStartTime rdf:resource="#443.7MYA"/>
+        <math:subsetOf rdf:resource="#Silurian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Lochkovian -->
+
+    <owl:Thing rdf:about="#Lochkovian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#411.2MYA"/>
+        <time:hasStartTime rdf:resource="#416.0MYA"/>
+        <math:subsetOf rdf:resource="#LowerDevonian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Lopingian -->
+
+    <scale:Epoch rdf:about="#Lopingian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#251.0MYA"/>
+        <time:hasStartTime rdf:resource="#260.4MYA"/>
+        <math:subsetOf rdf:resource="#Permian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#LowerCretaceous -->
+
+    <owl:Thing rdf:about="#LowerCretaceous">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasStartTime rdf:resource="#145.5MYA"/>
+        <time:hasEndTime rdf:resource="#99.6MYA"/>
+        <math:subsetOf rdf:resource="#Cretaceous"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#LowerDevonian -->
+
+    <scale:Epoch rdf:about="#LowerDevonian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#397.5MYA"/>
+        <time:hasStartTime rdf:resource="#416.0MYA"/>
+        <math:subsetOf rdf:resource="#Devonian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#LowerImbrian -->
+
+    <scale:Era rdf:about="#LowerImbrian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:subsetOf rdf:resource="#Hadean"/>
+    </scale:Era>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#LowerJurassic -->
+
+    <scale:Epoch rdf:about="#LowerJurassic">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#175.6MYA"/>
+        <time:hasStartTime rdf:resource="#199.6MYA"/>
+        <math:subsetOf rdf:resource="#Jurassic"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#LowerMississippian -->
+
+    <scale:Epoch rdf:about="#LowerMississippian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#345.3MYA"/>
+        <time:hasStartTime rdf:resource="#359.2MYA"/>
+        <math:subsetOf rdf:resource="#Mississippian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#LowerOrdovician -->
+
+    <owl:Thing rdf:about="#LowerOrdovician">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#471.8MYA"/>
+        <time:hasStartTime rdf:resource="#488.3MYA"/>
+        <math:subsetOf rdf:resource="#Ordovician"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#LowerPennsylvanian -->
+
+    <owl:Thing rdf:about="#LowerPennsylvanian">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#311.7MYA"/>
+        <time:hasStartTime rdf:resource="#318.1MYA"/>
+        <math:subsetOf rdf:resource="#Pennsylvanian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#LowerTriassic -->
+
+    <owl:Thing rdf:about="#LowerTriassic">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#245.9MYA"/>
+        <time:hasStartTime rdf:resource="#251.0MYA"/>
+        <math:subsetOf rdf:resource="#Triassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Ludfordian -->
+
+    <scale:Age rdf:about="#Ludfordian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#418.7MYA"/>
+        <time:hasStartTime rdf:resource="#421.3MYA"/>
+        <math:subsetOf rdf:resource="#Ludlow"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Ludlow -->
+
+    <owl:Thing rdf:about="#Ludlow">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#418.7MYA"/>
+        <time:hasStartTime rdf:resource="#422.9MYA"/>
+        <math:subsetOf rdf:resource="#Silurian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Lutetian -->
+
+    <scale:Age rdf:about="#Lutetian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#40.4MYA"/>
+        <time:hasStartTime rdf:resource="#48.6MYA"/>
+        <math:subsetOf rdf:resource="#Eocene"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#MYA -->
+
+    <units:UnitDerivedByScaling rdf:about="#MYA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <units:hasScalingNumber rdf:datatype="&xsd;double">1000</units:hasScalingNumber>
+        <units:derivedFromUnit rdf:resource="&time;year"/>
+    </units:UnitDerivedByScaling>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Maastrichtian -->
+
+    <owl:Thing rdf:about="#Maastrichtian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#65.5MYA"/>
+        <time:hasStartTime rdf:resource="#70.6MYA"/>
+        <math:subsetOf rdf:resource="#UpperCretaceous"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Mesoarchean -->
+
+    <owl:Thing rdf:about="#Mesoarchean">
+        <rdf:type rdf:resource="&scale;Era"/>
+        <time:hasEndTime rdf:resource="#2800MYA"/>
+        <time:hasStartTime rdf:resource="#3200MYA"/>
+        <math:subsetOf rdf:resource="#Archean"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Mesoproterozoic -->
+
+    <scale:Era rdf:about="#Mesoproterozoic">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#1000MYA"/>
+        <time:hasStartTime rdf:resource="#1600MYA"/>
+        <math:subsetOf rdf:resource="#Proterozoic"/>
+    </scale:Era>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Mesozoic -->
+
+    <owl:Thing rdf:about="#Mesozoic">
+        <rdf:type rdf:resource="&scale;Era"/>
+        <time:hasStartTime rdf:resource="#251.0MYA"/>
+        <time:hasEndTime rdf:resource="#65.5MYA"/>
+        <math:subsetOf rdf:resource="#Phanerozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Messinian -->
+
+    <scale:Age rdf:about="#Messinian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#5.332MYA"/>
+        <time:hasStartTime rdf:resource="#7.246MYA"/>
+        <math:subsetOf rdf:resource="#Miocene"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#MiddleDevonian -->
+
+    <scale:Epoch rdf:about="#MiddleDevonian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#385.3MYA"/>
+        <time:hasStartTime rdf:resource="#397.5MYA"/>
+        <math:subsetOf rdf:resource="#Devonian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#MiddleJurassic -->
+
+    <owl:Thing rdf:about="#MiddleJurassic">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#161.2MYA"/>
+        <time:hasStartTime rdf:resource="#175.6MYA"/>
+        <math:subsetOf rdf:resource="#Jurassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#MiddleMississippian -->
+
+    <scale:Epoch rdf:about="#MiddleMississippian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#328.3MYA"/>
+        <time:hasStartTime rdf:resource="#345.3MYA"/>
+        <math:subsetOf rdf:resource="#Mississippian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#MiddleOrdovician -->
+
+    <scale:Epoch rdf:about="#MiddleOrdovician">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#460.9MYA"/>
+        <time:hasStartTime rdf:resource="#471.8MYA"/>
+        <math:subsetOf rdf:resource="#Ordovician"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#MiddlePennsylvanian -->
+
+    <scale:Epoch rdf:about="#MiddlePennsylvanian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#307.2MYA"/>
+        <time:hasStartTime rdf:resource="#311.7MYA"/>
+        <math:subsetOf rdf:resource="#Pennsylvanian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#MiddleTriassic -->
+
+    <scale:Epoch rdf:about="#MiddleTriassic">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#228.7MYA"/>
+        <time:hasStartTime rdf:resource="#245.9MYA"/>
+        <math:subsetOf rdf:resource="#Triassic"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Miocene -->
+
+    <owl:Thing rdf:about="#Miocene">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasStartTime rdf:resource="#23.03MYA"/>
+        <time:hasEndTime rdf:resource="#5.332MYA"/>
+        <math:subsetOf rdf:resource="#Neogene"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Mississippian -->
+
+    <owl:Thing rdf:about="#Mississippian">
+        <rdf:type rdf:resource="&scale;Period"/>
+        <time:hasEndTime rdf:resource="#318.1MYA"/>
+        <time:hasStartTime rdf:resource="#359.2MYA"/>
+        <math:subsetOf rdf:resource="#Paleozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Moscovian -->
+
+    <scale:Age rdf:about="#Moscovian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#307.2MYA"/>
+        <time:hasStartTime rdf:resource="#311.7MYA"/>
+        <math:subsetOf rdf:resource="#MiddlePennsylvanian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Nectarian -->
+
+    <scale:Era rdf:about="#Nectarian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:subsetOf rdf:resource="#Hadean"/>
+    </scale:Era>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Neoarchean -->
+
+    <owl:Thing rdf:about="#Neoarchean">
+        <rdf:type rdf:resource="&scale;Era"/>
+        <time:hasEndTime rdf:resource="#2500MYA"/>
+        <time:hasStartTime rdf:resource="#2800MYA"/>
+        <math:subsetOf rdf:resource="#Archean"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Neogene -->
+
+    <scale:Period rdf:about="#Neogene">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#2.588MYA"/>
+        <time:hasStartTime rdf:resource="#23.03MYA"/>
+        <math:subsetOf rdf:resource="#Cenozoic"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Neoproterozoic -->
+
+    <scale:Era rdf:about="#Neoproterozoic">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasStartTime rdf:resource="#1000MYA"/>
+        <time:hasEndTime rdf:resource="#542MYA"/>
+        <math:subsetOf rdf:resource="#Proterozoic"/>
+    </scale:Era>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Norian -->
+
+    <scale:Age rdf:about="#Norian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#203.6MYA"/>
+        <time:hasStartTime rdf:resource="#216.5MYA"/>
+        <math:subsetOf rdf:resource="#UpperTriassic"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Olenekian -->
+
+    <owl:Thing rdf:about="#Olenekian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#245.9MYA"/>
+        <time:hasStartTime rdf:resource="#249.5MYA"/>
+        <math:subsetOf rdf:resource="#LowerTriassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Oligocene -->
+
+    <scale:Epoch rdf:about="#Oligocene">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#23.03MYA"/>
+        <time:hasStartTime rdf:resource="#33.9MYA"/>
+        <math:subsetOf rdf:resource="#Paleogene"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Ordovician -->
+
+    <owl:Thing rdf:about="#Ordovician">
+        <rdf:type rdf:resource="&scale;Period"/>
+        <time:hasEndTime rdf:resource="#443.7MYA"/>
+        <time:hasStartTime rdf:resource="#488.3MYA"/>
+        <math:subsetOf rdf:resource="#Paleozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Orosirian -->
+
+    <owl:Thing rdf:about="#Orosirian">
+        <rdf:type rdf:resource="&scale;Period"/>
+        <time:hasEndTime rdf:resource="#1800MYA"/>
+        <time:hasStartTime rdf:resource="#2050MYA"/>
+        <math:subsetOf rdf:resource="#Paleoproterozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Oxfordian -->
+
+    <owl:Thing rdf:about="#Oxfordian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#155.6MYA"/>
+        <time:hasStartTime rdf:resource="#161.2MYA"/>
+        <math:subsetOf rdf:resource="#UpperJurassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Paibian -->
+
+    <owl:Thing rdf:about="#Paibian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#496MYA"/>
+        <time:hasStartTime rdf:resource="#499MYA"/>
+        <math:subsetOf rdf:resource="#Furongian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Paleoarchean -->
+
+    <scale:Era rdf:about="#Paleoarchean">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#3200MYA"/>
+        <time:hasStartTime rdf:resource="#3600MYA"/>
+        <math:subsetOf rdf:resource="#Archean"/>
+    </scale:Era>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Paleocene -->
+
+    <owl:Thing rdf:about="#Paleocene">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#55.8MYA"/>
+        <time:hasStartTime rdf:resource="#65.5MYA"/>
+        <math:subsetOf rdf:resource="#Paleogene"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Paleogene -->
+
+    <owl:Thing rdf:about="#Paleogene">
+        <rdf:type rdf:resource="&scale;Period"/>
+        <time:hasEndTime rdf:resource="#23.03MYA"/>
+        <time:hasStartTime rdf:resource="#65.5MYA"/>
+        <math:subsetOf rdf:resource="#Cenozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Paleoproterozoic -->
+
+    <scale:Era rdf:about="#Paleoproterozoic">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#1600MYA"/>
+        <time:hasStartTime rdf:resource="#2500MYA"/>
+        <math:subsetOf rdf:resource="#Proterozoic"/>
+    </scale:Era>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Paleozoic -->
+
+    <owl:Thing rdf:about="#Paleozoic">
+        <rdf:type rdf:resource="&scale;Era"/>
+        <time:hasEndTime rdf:resource="#251.0MYA"/>
+        <time:hasStartTime rdf:resource="#542MYA"/>
+        <math:subsetOf rdf:resource="#Phanerozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Pennsylvanian -->
+
+    <scale:Period rdf:about="#Pennsylvanian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#299.0MYA"/>
+        <time:hasStartTime rdf:resource="#318.1MYA"/>
+        <math:subsetOf rdf:resource="#Paleozoic"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Permian -->
+
+    <owl:Thing rdf:about="#Permian">
+        <rdf:type rdf:resource="&scale;Period"/>
+        <time:hasEndTime rdf:resource="#251.0MYA"/>
+        <time:hasStartTime rdf:resource="#299.0MYA"/>
+        <math:subsetOf rdf:resource="#Paleozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Phanerozoic -->
+
+    <owl:Thing rdf:about="#Phanerozoic">
+        <rdf:type rdf:resource="&scale;Eon"/>
+        <time:hasEndTime rdf:resource="#0MYA"/>
+        <time:hasStartTime rdf:resource="#542MYA"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Piacenzian -->
+
+    <owl:Thing rdf:about="#Piacenzian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#2.588MYA"/>
+        <time:hasStartTime rdf:resource="#3.600MYA"/>
+        <math:subsetOf rdf:resource="#Pliocene"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Pleistocene -->
+
+    <scale:Epoch rdf:about="#Pleistocene">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#0.0117MYA"/>
+        <time:hasStartTime rdf:resource="#2.588MYA"/>
+        <math:subsetOf rdf:resource="#Quaternary"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Pliensbachian -->
+
+    <owl:Thing rdf:about="#Pliensbachian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#183.0MYA"/>
+        <time:hasStartTime rdf:resource="#189.6MYA"/>
+        <math:subsetOf rdf:resource="#LowerJurassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Pliocene -->
+
+    <scale:Epoch rdf:about="#Pliocene">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#2.588MYA"/>
+        <time:hasStartTime rdf:resource="#5.332MYA"/>
+        <math:subsetOf rdf:resource="#Neogene"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Pragian -->
+
+    <owl:Thing rdf:about="#Pragian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#407.0MYA"/>
+        <time:hasStartTime rdf:resource="#411.2MYA"/>
+        <math:subsetOf rdf:resource="#LowerDevonian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Precambrian -->
+
+    <scale:Supereon rdf:about="#Precambrian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#542MYA"/>
+    </scale:Supereon>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Priabonian -->
+
+    <scale:Age rdf:about="#Priabonian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#33.9MYA"/>
+        <time:hasStartTime rdf:resource="#37.2MYA"/>
+        <math:subsetOf rdf:resource="#Eocene"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Pridoli -->
+
+    <owl:Thing rdf:about="#Pridoli">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#416.0MYA"/>
+        <time:hasStartTime rdf:resource="#418.7MYA"/>
+        <math:subsetOf rdf:resource="#Silurian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Proterozoic -->
+
+    <owl:Thing rdf:about="#Proterozoic">
+        <rdf:type rdf:resource="&scale;Eon"/>
+        <time:hasStartTime rdf:resource="#2500MYA"/>
+        <time:hasEndTime rdf:resource="#542MYA"/>
+        <math:subsetOf rdf:resource="#Precambrian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Quaternary -->
+
+    <scale:Period rdf:about="#Quaternary">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#0MYA"/>
+        <time:hasStartTime rdf:resource="#2.588MYA"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Rhaetian -->
+
+    <owl:Thing rdf:about="#Rhaetian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#199.6MYA"/>
+        <time:hasStartTime rdf:resource="#203.6MYA"/>
+        <math:subsetOf rdf:resource="#UpperTriassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Rhuddanian -->
+
+    <scale:Age rdf:about="#Rhuddanian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#439.0MYA"/>
+        <time:hasStartTime rdf:resource="#443.7MYA"/>
+        <math:subsetOf rdf:resource="#Llandovery"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Rhyacian -->
+
+    <scale:Period rdf:about="#Rhyacian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#2050MYA"/>
+        <time:hasStartTime rdf:resource="#2300MYA"/>
+        <math:subsetOf rdf:resource="#Paleoproterozoic"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Roadian -->
+
+    <owl:Thing rdf:about="#Roadian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#268.0MYA"/>
+        <time:hasStartTime rdf:resource="#270.6MYA"/>
+        <math:subsetOf rdf:resource="#Guadalupian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Rupelian -->
+
+    <owl:Thing rdf:about="#Rupelian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#28.4MYA"/>
+        <time:hasStartTime rdf:resource="#33.9MYA"/>
+        <math:subsetOf rdf:resource="#Oligocene"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Sakmarian -->
+
+    <owl:Thing rdf:about="#Sakmarian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#284.4MYA"/>
+        <time:hasStartTime rdf:resource="#294.6MYA"/>
+        <math:subsetOf rdf:resource="#Cisuralian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Sandbian -->
+
+    <scale:Age rdf:about="#Sandbian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#455.8MYA"/>
+        <time:hasStartTime rdf:resource="#460.9MYA"/>
+        <math:subsetOf rdf:resource="#UpperOrdovician"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Santonian -->
+
+    <owl:Thing rdf:about="#Santonian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#83.5MYA"/>
+        <time:hasStartTime rdf:resource="#85.8MYA"/>
+        <math:subsetOf rdf:resource="#UpperCretaceous"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Selandian -->
+
+    <scale:Age rdf:about="#Selandian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#58.7MYA"/>
+        <time:hasStartTime rdf:resource="#61.1MYA"/>
+        <math:subsetOf rdf:resource="#Paleocene"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Serpukhovian -->
+
+    <scale:Age rdf:about="#Serpukhovian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#318.1MYA"/>
+        <time:hasStartTime rdf:resource="#328.3MYA"/>
+        <math:subsetOf rdf:resource="#UpperMississippian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Serravallian -->
+
+    <owl:Thing rdf:about="#Serravallian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#11.608MYA"/>
+        <time:hasStartTime rdf:resource="#13.82MYA"/>
+        <math:subsetOf rdf:resource="#Miocene"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Sheinwoodian -->
+
+    <scale:Age rdf:about="#Sheinwoodian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#426.2MYA"/>
+        <time:hasStartTime rdf:resource="#428.2MYA"/>
+        <math:subsetOf rdf:resource="#Wenlock"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Siderian -->
+
+    <scale:Period rdf:about="#Siderian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#2300MYA"/>
+        <time:hasStartTime rdf:resource="#2500MYA"/>
+        <math:subsetOf rdf:resource="#Paleoproterozoic"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Silurian -->
+
+    <owl:Thing rdf:about="#Silurian">
+        <rdf:type rdf:resource="&scale;Period"/>
+        <time:hasEndTime rdf:resource="#416.0MYA"/>
+        <time:hasStartTime rdf:resource="#443.7MYA"/>
+        <math:subsetOf rdf:resource="#Paleozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Sinemurian -->
+
+    <owl:Thing rdf:about="#Sinemurian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#189.6MYA"/>
+        <time:hasStartTime rdf:resource="#196.5MYA"/>
+        <math:subsetOf rdf:resource="#LowerJurassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Statherian -->
+
+    <scale:Period rdf:about="#Statherian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#1600MYA"/>
+        <time:hasStartTime rdf:resource="#1800MYA"/>
+        <math:subsetOf rdf:resource="#Paleoproterozoic"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Stenian -->
+
+    <scale:Period rdf:about="#Stenian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#1000MYA"/>
+        <time:hasStartTime rdf:resource="#1200MYA"/>
+        <math:subsetOf rdf:resource="#Mesoproterozoic"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Telychian -->
+
+    <owl:Thing rdf:about="#Telychian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#428.2MYA"/>
+        <time:hasStartTime rdf:resource="#436.0MYA"/>
+        <math:subsetOf rdf:resource="#Llandovery"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Terreneuvian -->
+
+    <owl:Thing rdf:about="#Terreneuvian">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#521MYA"/>
+        <time:hasStartTime rdf:resource="#542MYA"/>
+        <math:subsetOf rdf:resource="#Cambrian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Thanetian -->
+
+    <scale:Age rdf:about="#Thanetian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#55.8MYA"/>
+        <time:hasStartTime rdf:resource="#58.7MYA"/>
+        <math:subsetOf rdf:resource="#Paleocene"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Tithonian -->
+
+    <owl:Thing rdf:about="#Tithonian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#145.5MYA"/>
+        <time:hasStartTime rdf:resource="#150.8MYA"/>
+        <math:subsetOf rdf:resource="#UpperJurassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Toarcian -->
+
+    <owl:Thing rdf:about="#Toarcian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#175.6MYA"/>
+        <time:hasStartTime rdf:resource="#183.0MYA"/>
+        <math:subsetOf rdf:resource="#LowerJurassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Tonian -->
+
+    <owl:Thing rdf:about="#Tonian">
+        <rdf:type rdf:resource="&scale;Period"/>
+        <time:hasStartTime rdf:resource="#1000MYA"/>
+        <time:hasEndTime rdf:resource="#850MYA"/>
+        <math:subsetOf rdf:resource="#Neoproterozoic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Tortonian -->
+
+    <scale:Age rdf:about="#Tortonian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasStartTime rdf:resource="#11.608MYA"/>
+        <time:hasEndTime rdf:resource="#7.246MYA"/>
+        <math:subsetOf rdf:resource="#Miocene"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Tournaisian -->
+
+    <scale:Age rdf:about="#Tournaisian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#345.3MYA"/>
+        <time:hasStartTime rdf:resource="#359.2MYA"/>
+        <math:subsetOf rdf:resource="#LowerMississippian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Tremadocian -->
+
+    <scale:Age rdf:about="#Tremadocian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#478.6MYA"/>
+        <time:hasStartTime rdf:resource="#488.3MYA"/>
+        <math:subsetOf rdf:resource="#LowerOrdovician"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Triassic -->
+
+    <scale:Period rdf:about="#Triassic">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#199.6MYA"/>
+        <time:hasStartTime rdf:resource="#251.0MYA"/>
+        <math:subsetOf rdf:resource="#Mesozoic"/>
+    </scale:Period>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Turonian -->
+
+    <owl:Thing rdf:about="#Turonian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#88.6MYA"/>
+        <time:hasStartTime rdf:resource="#93.6MYA"/>
+        <math:subsetOf rdf:resource="#UpperCretaceous"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#UpperCretaceous -->
+
+    <owl:Thing rdf:about="#UpperCretaceous">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#65.5MYA"/>
+        <time:hasStartTime rdf:resource="#99.6MYA"/>
+        <math:subsetOf rdf:resource="#Cretaceous"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#UpperDevonian -->
+
+    <scale:Epoch rdf:about="#UpperDevonian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#359.2MYA"/>
+        <time:hasStartTime rdf:resource="#385.3MYA"/>
+        <math:subsetOf rdf:resource="#Devonian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#UpperJurassic -->
+
+    <scale:Epoch rdf:about="#UpperJurassic">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#145.5MYA"/>
+        <time:hasStartTime rdf:resource="#161.2MYA"/>
+        <math:subsetOf rdf:resource="#Jurassic"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#UpperMississippian -->
+
+    <owl:Thing rdf:about="#UpperMississippian">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#318.1MYA"/>
+        <time:hasStartTime rdf:resource="#328.3MYA"/>
+        <math:subsetOf rdf:resource="#Mississippian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#UpperOrdovician -->
+
+    <scale:Epoch rdf:about="#UpperOrdovician">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#443.7MYA"/>
+        <time:hasStartTime rdf:resource="#460.9MYA"/>
+        <math:subsetOf rdf:resource="#Ordovician"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#UpperPennsylvanian -->
+
+    <scale:Epoch rdf:about="#UpperPennsylvanian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#299.0MYA"/>
+        <time:hasStartTime rdf:resource="#307.2MYA"/>
+        <math:subsetOf rdf:resource="#Pennsylvanian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#UpperPleistocene -->
+
+    <scale:Age rdf:about="#UpperPleistocene">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#0.0117MYA"/>
+        <time:hasStartTime rdf:resource="#0.126MYA"/>
+        <math:subsetOf rdf:resource="#Pleistocene"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#UpperTriassic -->
+
+    <owl:Thing rdf:about="#UpperTriassic">
+        <rdf:type rdf:resource="&scale;Epoch"/>
+        <time:hasEndTime rdf:resource="#199.6MYA"/>
+        <time:hasStartTime rdf:resource="#228.7MYA"/>
+        <math:subsetOf rdf:resource="#Triassic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Valanginian -->
+
+    <owl:Thing rdf:about="#Valanginian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#133.9MYA"/>
+        <time:hasStartTime rdf:resource="#140.2MYA"/>
+        <math:subsetOf rdf:resource="#LowerCretaceous"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Visean -->
+
+    <owl:Thing rdf:about="#Visean">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#328.3MYA"/>
+        <time:hasStartTime rdf:resource="#345.3MYA"/>
+        <math:subsetOf rdf:resource="#MiddleMississippian"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Wenlock -->
+
+    <scale:Epoch rdf:about="#Wenlock">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#422.9MYA"/>
+        <time:hasStartTime rdf:resource="#428.2MYA"/>
+        <math:subsetOf rdf:resource="#Silurian"/>
+    </scale:Epoch>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Wordian -->
+
+    <scale:Age rdf:about="#Wordian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#265.8MYA"/>
+        <time:hasStartTime rdf:resource="#268.0MYA"/>
+        <math:subsetOf rdf:resource="#Guadalupian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Wuchiapingian -->
+
+    <scale:Age rdf:about="#Wuchiapingian">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#253.8MYA"/>
+        <time:hasStartTime rdf:resource="#260.4MYA"/>
+        <math:subsetOf rdf:resource="#Lopingian"/>
+    </scale:Age>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Ypresian -->
+
+    <owl:Thing rdf:about="#Ypresian">
+        <rdf:type rdf:resource="&scale;Age"/>
+        <time:hasEndTime rdf:resource="#48.6MYA"/>
+        <time:hasStartTime rdf:resource="#55.8MYA"/>
+        <math:subsetOf rdf:resource="#Eocene"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeGeologic.owl#Zanclean -->
+
+    <scale:Age rdf:about="#Zanclean">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <time:hasEndTime rdf:resource="#3.600MYA"/>
+        <time:hasStartTime rdf:resource="#5.332MYA"/>
+        <math:subsetOf rdf:resource="#Pliocene"/>
+    </scale:Age>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

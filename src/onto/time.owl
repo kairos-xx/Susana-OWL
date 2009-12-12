@@ -1,0 +1,786 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY time "http://sweet.jpl.nasa.gov/2.0/time.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY calc "http://sweet.jpl.nasa.gov/2.0/mathCalculus.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/time.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/time.owl"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://sweet.jpl.nasa.gov/2.0/time.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl#"
+     xmlns:calc="http://sweet.jpl.nasa.gov/2.0/mathCalculus.owl#"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/mathCalculus.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#greaterThan -->
+
+    <owl:ObjectProperty rdf:about="&math;greaterThan"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#lessThan -->
+
+    <owl:ObjectProperty rdf:about="&math;lessThan"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathCalculus.owl#derivativeWithRespectTo -->
+
+    <owl:ObjectProperty rdf:about="&calc;derivativeWithRespectTo"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#derivedFromUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;derivedFromUnit"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasDefaultUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;hasDefaultUnit"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#after -->
+
+    <owl:ObjectProperty rdf:about="#after">
+        <rdfs:subPropertyOf rdf:resource="&math;greaterThan"/>
+        <owl:inverseOf rdf:resource="#before"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#before -->
+
+    <owl:ObjectProperty rdf:about="#before">
+        <rdfs:subPropertyOf rdf:resource="&math;lessThan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#followedBy -->
+
+    <owl:ObjectProperty rdf:about="#followedBy">
+        <rdfs:subPropertyOf rdf:resource="#after"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hasDuration -->
+
+    <owl:ObjectProperty rdf:about="#hasDuration">
+        <rdfs:range rdf:resource="#Duration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hasEndTime -->
+
+    <owl:ObjectProperty rdf:about="#hasEndTime">
+        <rdfs:subPropertyOf rdf:resource="#hasTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hasPeriod -->
+
+    <owl:ObjectProperty rdf:about="#hasPeriod">
+        <rdfs:range rdf:resource="#Period"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hasRate -->
+
+    <owl:ObjectProperty rdf:about="#hasRate">
+        <rdfs:range rdf:resource="#Rate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hasStartTime -->
+
+    <owl:ObjectProperty rdf:about="#hasStartTime">
+        <rdfs:subPropertyOf rdf:resource="#hasTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hasTemporalExtent -->
+
+    <owl:ObjectProperty rdf:about="#hasTemporalExtent">
+        <rdfs:range rdf:resource="#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hasTime -->
+
+    <owl:ObjectProperty rdf:about="#hasTime">
+        <rdfs:range rdf:resource="#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasPower -->
+
+    <owl:DatatypeProperty rdf:about="&math;hasPower"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasScalingNumber -->
+
+    <owl:DatatypeProperty rdf:about="&units;hasScalingNumber"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#fractionOfYear -->
+
+    <owl:DatatypeProperty rdf:about="#fractionOfYear">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#numberOfYears -->
+
+    <owl:DatatypeProperty rdf:about="#numberOfYears">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Interval -->
+
+    <owl:Class rdf:about="&math;Interval"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#NumericalEntity -->
+
+    <owl:Class rdf:about="&math;NumericalEntity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Point -->
+
+    <owl:Class rdf:about="&math;Point"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Subset -->
+
+    <owl:Class rdf:about="&math;Subset"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathCalculus.owl#PartialDerivative -->
+
+    <owl:Class rdf:about="&calc;PartialDerivative"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#UnitDerivedByRaisingToPower -->
+
+    <owl:Class rdf:about="&units;UnitDerivedByRaisingToPower"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#UnitDerivedByScaling -->
+
+    <owl:Class rdf:about="&units;UnitDerivedByScaling"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Age -->
+
+    <owl:Class rdf:about="#Age">
+        <rdfs:subClassOf rdf:resource="#Duration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Autumn -->
+
+    <owl:Class rdf:about="#Autumn">
+        <owl:equivalentClass rdf:resource="#Fall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Beginning -->
+
+    <owl:Class rdf:about="#Beginning">
+        <owl:equivalentClass rdf:resource="#Start"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#CurrentTime -->
+
+    <owl:Class rdf:about="#CurrentTime">
+        <rdfs:subClassOf rdf:resource="#Instant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Cycle -->
+
+    <owl:Class rdf:about="#Cycle">
+        <rdfs:subClassOf rdf:resource="#Duration"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTime"/>
+                <owl:allValuesFrom rdf:resource="#Period"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Day -->
+
+    <owl:Class rdf:about="#Day">
+        <rdfs:subClassOf rdf:resource="#Duration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Daytime -->
+
+    <owl:Class rdf:about="#Daytime">
+        <rdfs:subClassOf rdf:resource="#Duration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Delay -->
+
+    <owl:Class rdf:about="#Delay">
+        <rdfs:subClassOf rdf:resource="#Duration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Duration -->
+
+    <owl:Class rdf:about="#Duration">
+        <owl:equivalentClass rdf:resource="#Event"/>
+        <owl:equivalentClass rdf:resource="#TimeInterval"/>
+        <rdfs:subClassOf rdf:resource="&math;Interval"/>
+        <rdfs:subClassOf rdf:resource="#TemporalExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#End -->
+
+    <owl:Class rdf:about="#End">
+        <rdfs:subClassOf rdf:resource="#TemporalSubset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Evening -->
+
+    <owl:Class rdf:about="#Evening">
+        <rdfs:subClassOf rdf:resource="#Nighttime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Event -->
+
+    <owl:Class rdf:about="#Event">
+        <owl:equivalentClass rdf:resource="#Occurrence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Fall -->
+
+    <owl:Class rdf:about="#Fall">
+        <rdfs:subClassOf rdf:resource="#Season"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#History -->
+
+    <owl:Class rdf:about="#History">
+        <rdfs:subClassOf rdf:resource="#Period"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Instant -->
+
+    <owl:Class rdf:about="#Instant">
+        <rdfs:subClassOf rdf:resource="&math;Point"/>
+        <rdfs:subClassOf rdf:resource="#TemporalExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#LocalTime -->
+
+    <owl:Class rdf:about="#LocalTime">
+        <rdfs:subClassOf rdf:resource="#TimeZone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Morning -->
+
+    <owl:Class rdf:about="#Morning">
+        <rdfs:subClassOf rdf:resource="#Daytime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Nighttime -->
+
+    <owl:Class rdf:about="#Nighttime">
+        <owl:equivalentClass rdf:resource="#Nocturnal"/>
+        <rdfs:subClassOf rdf:resource="#Duration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Nocturnal -->
+
+    <owl:Class rdf:about="#Nocturnal"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Occurrence -->
+
+    <owl:Class rdf:about="#Occurrence"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Old -->
+
+    <owl:Class rdf:about="#Old">
+        <rdfs:subClassOf rdf:resource="#Age"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Period -->
+
+    <owl:Class rdf:about="#Period">
+        <rdfs:subClassOf rdf:resource="#TemporalExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Rate -->
+
+    <owl:Class rdf:about="#Rate">
+        <owl:equivalentClass rdf:resource="#Tendency"/>
+        <rdfs:subClassOf rdf:resource="&calc;PartialDerivative"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Season -->
+
+    <owl:Class rdf:about="#Season">
+        <rdfs:subClassOf rdf:resource="#Duration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#SolarTime -->
+
+    <owl:Class rdf:about="#SolarTime">
+        <rdfs:subClassOf rdf:resource="#TimeZone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Spring -->
+
+    <owl:Class rdf:about="#Spring">
+        <rdfs:subClassOf rdf:resource="#Season"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Start -->
+
+    <owl:Class rdf:about="#Start">
+        <rdfs:subClassOf rdf:resource="#TemporalSubset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Summer -->
+
+    <owl:Class rdf:about="#Summer">
+        <rdfs:subClassOf rdf:resource="#Season"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#TemporalEntity -->
+
+    <owl:Class rdf:about="#TemporalEntity">
+        <rdfs:subClassOf rdf:resource="&math;NumericalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#TemporalExtent -->
+
+    <owl:Class rdf:about="#TemporalExtent">
+        <rdfs:subClassOf rdf:resource="#TemporalEntity"/>
+        <rdfs:subClassOf rdf:resource="&sci;IntervalQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#TemporalReference -->
+
+    <owl:Class rdf:about="#TemporalReference">
+        <rdfs:subClassOf rdf:resource="#TemporalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#TemporalSubset -->
+
+    <owl:Class rdf:about="#TemporalSubset">
+        <rdfs:subClassOf rdf:resource="&math;Subset"/>
+        <rdfs:subClassOf rdf:resource="#TemporalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Tendency -->
+
+    <owl:Class rdf:about="#Tendency">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&calc;derivativeWithRespectTo"/>
+                <owl:allValuesFrom rdf:resource="#Time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;perSecond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Time -->
+
+    <owl:Class rdf:about="#Time">
+        <rdfs:subClassOf rdf:resource="&sci;Quantity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;second"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#TimeInterval -->
+
+    <owl:Class rdf:about="#TimeInterval"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#TimePeriod -->
+
+    <owl:Class rdf:about="#TimePeriod">
+        <rdfs:subClassOf rdf:resource="#Duration"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasEndTime"/>
+                <owl:allValuesFrom rdf:resource="#Time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasStartTime"/>
+                <owl:allValuesFrom rdf:resource="#Time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#TimeStep -->
+
+    <owl:Class rdf:about="#TimeStep">
+        <rdfs:subClassOf rdf:resource="#TemporalReference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#TimeZone -->
+
+    <owl:Class rdf:about="#TimeZone">
+        <rdfs:subClassOf rdf:resource="#TemporalReference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#UT -->
+
+    <owl:Class rdf:about="#UT">
+        <owl:equivalentClass rdf:resource="#UniversalTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#UniversalTime -->
+
+    <owl:Class rdf:about="#UniversalTime">
+        <rdfs:subClassOf rdf:resource="#TimeZone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Winter -->
+
+    <owl:Class rdf:about="#Winter">
+        <rdfs:subClassOf rdf:resource="#Season"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Young -->
+
+    <owl:Class rdf:about="#Young">
+        <rdfs:subClassOf rdf:resource="#Age"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#IntervalQuantity -->
+
+    <owl:Class rdf:about="&sci;IntervalQuantity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Quantity -->
+
+    <owl:Class rdf:about="&sci;Quantity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#perSecond -->
+
+    <owl:Thing rdf:about="&units;perSecond"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#second -->
+
+    <owl:Thing rdf:about="&units;second"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#century -->
+
+    <units:UnitDerivedByScaling rdf:about="#century">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <units:hasScalingNumber rdf:datatype="&xsd;double">3.1556926E09</units:hasScalingNumber>
+        <units:derivedFromUnit rdf:resource="&units;second"/>
+    </units:UnitDerivedByScaling>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#day -->
+
+    <units:UnitDerivedByScaling rdf:about="#day">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <units:hasScalingNumber rdf:datatype="&xsd;double">86400</units:hasScalingNumber>
+        <units:derivedFromUnit rdf:resource="&units;second"/>
+    </units:UnitDerivedByScaling>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#decade -->
+
+    <units:UnitDerivedByScaling rdf:about="#decade">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <units:hasScalingNumber rdf:datatype="&xsd;double">315569260</units:hasScalingNumber>
+        <units:derivedFromUnit rdf:resource="&units;second"/>
+    </units:UnitDerivedByScaling>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hour -->
+
+    <owl:Thing rdf:about="#hour">
+        <rdf:type rdf:resource="&units;UnitDerivedByScaling"/>
+        <units:hasScalingNumber rdf:datatype="&xsd;double">3600</units:hasScalingNumber>
+        <units:derivedFromUnit rdf:resource="&units;second"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#millenium -->
+
+    <units:UnitDerivedByScaling rdf:about="#millenium">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <units:hasScalingNumber rdf:datatype="&xsd;double">1000</units:hasScalingNumber>
+        <units:derivedFromUnit rdf:resource="#year"/>
+    </units:UnitDerivedByScaling>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#minute -->
+
+    <owl:Thing rdf:about="#minute">
+        <rdf:type rdf:resource="&units;UnitDerivedByScaling"/>
+        <units:hasScalingNumber rdf:datatype="&xsd;double">60</units:hasScalingNumber>
+        <units:derivedFromUnit rdf:resource="&units;second"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#month -->
+
+    <owl:Thing rdf:about="#month">
+        <rdf:type rdf:resource="&units;UnitDerivedByScaling"/>
+        <units:hasScalingNumber rdf:datatype="&xsd;double">2629744</units:hasScalingNumber>
+        <units:derivedFromUnit rdf:resource="&units;second"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#perHour -->
+
+    <owl:Thing rdf:about="#perHour">
+        <rdf:type rdf:resource="&units;UnitDerivedByRaisingToPower"/>
+        <math:hasPower rdf:datatype="&xsd;double">-1</math:hasPower>
+        <units:derivedFromUnit rdf:resource="#hour"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#season -->
+
+    <units:UnitDerivedByScaling rdf:about="#season">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <units:hasScalingNumber rdf:datatype="&xsd;double">7889232</units:hasScalingNumber>
+        <units:derivedFromUnit rdf:resource="&units;second"/>
+    </units:UnitDerivedByScaling>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#week -->
+
+    <owl:Thing rdf:about="#week">
+        <rdf:type rdf:resource="&units;UnitDerivedByScaling"/>
+        <units:hasScalingNumber rdf:datatype="&xsd;double">604800</units:hasScalingNumber>
+        <units:derivedFromUnit rdf:resource="&units;second"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#year -->
+
+    <owl:Thing rdf:about="#year">
+        <rdf:type rdf:resource="&units;UnitDerivedByScaling"/>
+        <units:hasScalingNumber rdf:datatype="&xsd;double">31556926</units:hasScalingNumber>
+        <units:derivedFromUnit rdf:resource="&units;second"/>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

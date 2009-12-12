@@ -1,0 +1,408 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl" >
+    <!ENTITY sciUnits "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY physThermo "http://sweet.jpl.nasa.gov/2.0/physThermo.owl#" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY trans "http://sweet.jpl.nasa.gov/2.0/physTransport.owl" >
+    <!ENTITY physTransport "http://sweet.jpl.nasa.gov/2.0/physTransport.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/physThermo.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/physThermo.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:physTransport="&trans;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"
+     xmlns:physThermo="http://sweet.jpl.nasa.gov/2.0/physThermo.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:trans="http://sweet.jpl.nasa.gov/2.0/physTransport.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:phys2="&phys;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:sciUnits="&units;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physTransport.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#studyOf -->
+
+    <owl:ObjectProperty rdf:about="&res;#studyOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasDefaultUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;#hasDefaultUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Capacity -->
+
+    <owl:Class rdf:about="&phys;#Capacity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Energy -->
+
+    <owl:Class rdf:about="&phys;#Energy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalProcess -->
+
+    <owl:Class rdf:about="&phys;#PhysicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalProperty -->
+
+    <owl:Class rdf:about="&phys;#PhysicalProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Physics -->
+
+    <owl:Class rdf:about="&phys;#Physics"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Adiabatic -->
+
+    <owl:Class rdf:about="#Adiabatic">
+        <rdfs:label
+            >Adiabatic Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ThermalProcess"/>
+        <owl:disjointWith rdf:resource="#Diabatic"/>
+        <rdfs:comment
+            >A process in which a system does not interact with its surroundings by virtue of a temperature difference between them.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#AntennaTemperature -->
+
+    <owl:Class rdf:about="#AntennaTemperature">
+        <rdfs:subClassOf rdf:resource="#Temperature"/>
+        <rdfs:comment xml:lang="en"
+            >Antenna temperature is a way of expressing the brightness of a radiation source - it is proportional to the power per unit area emitted by the source. In most cases where it is used it corresponds to the thermodynamic or physical temperature of the source being observed. It thus relates the power emitted by the source to an interesting physical property of that source.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#BoilingPoint -->
+
+    <owl:Class rdf:about="#BoilingPoint">
+        <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#BrightnessTemperature -->
+
+    <owl:Class rdf:about="#BrightnessTemperature">
+        <rdfs:subClassOf rdf:resource="#Temperature"/>
+        <rdfs:comment xml:lang="en"
+            >A descriptive measure of radiation in terms of the temperature of a hypothetical blackbody emitting an identical amount of radiation at the same wavelength.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Cooling -->
+
+    <owl:Class rdf:about="#Cooling">
+        <rdfs:subClassOf rdf:resource="#ThermalProcess"/>
+        <owl:disjointWith rdf:resource="#Heating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Diabatic -->
+
+    <owl:Class rdf:about="#Diabatic">
+        <rdfs:subClassOf rdf:resource="#ThermalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Enthalpy -->
+
+    <owl:Class rdf:about="#Enthalpy">
+        <rdfs:subClassOf rdf:resource="&phys;#Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Entropy -->
+
+    <owl:Class rdf:about="#Entropy">
+        <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Heat -->
+
+    <owl:Class rdf:about="#Heat">
+        <owl:equivalentClass rdf:resource="#HeatEnergy"/>
+        <rdfs:subClassOf rdf:resource="&phys;#Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#HeatCapacity -->
+
+    <owl:Class rdf:about="#HeatCapacity">
+        <rdfs:subClassOf rdf:resource="&phys;#Capacity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#HeatEnergy -->
+
+    <owl:Class rdf:about="#HeatEnergy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Heating -->
+
+    <owl:Class rdf:about="#Heating">
+        <rdfs:subClassOf rdf:resource="#ThermalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#LatentHeat -->
+
+    <owl:Class rdf:about="#LatentHeat">
+        <rdfs:subClassOf rdf:resource="#Heat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#MeltingPoint -->
+
+    <owl:Class rdf:about="#MeltingPoint">
+        <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#SensibleHeat -->
+
+    <owl:Class rdf:about="#SensibleHeat">
+        <rdfs:subClassOf rdf:resource="#Heat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#SpecificHeat -->
+
+    <owl:Class rdf:about="#SpecificHeat">
+        <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#joule_perKilogram_perKelvin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#StaticTemperature -->
+
+    <owl:Class rdf:about="#StaticTemperature">
+        <rdfs:subClassOf rdf:resource="#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Temperature -->
+
+    <owl:Class rdf:about="#Temperature">
+        <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#kelvin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The quantity measured by a thermometer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#ThermalConductivity -->
+
+    <owl:Class rdf:about="#ThermalConductivity">
+        <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+        <rdfs:subClassOf rdf:resource="&trans;#Conductivity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#watt_perMeter_perKelvin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#ThermalProcess -->
+
+    <owl:Class rdf:about="#ThermalProcess">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#ThermodynamicProperty -->
+
+    <owl:Class rdf:about="#ThermodynamicProperty">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#Heat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Thermodynamics -->
+
+    <owl:Class rdf:about="#Thermodynamics">
+        <rdfs:subClassOf rdf:resource="&phys;#Physics"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#studyOf"/>
+                <owl:allValuesFrom rdf:resource="#Heat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Thermosteric -->
+
+    <owl:Class rdf:about="#Thermosteric">
+        <rdfs:subClassOf rdf:resource="#ThermalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#TotalTemperature -->
+
+    <owl:Class rdf:about="#TotalTemperature">
+        <rdfs:subClassOf rdf:resource="#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#TriplePoint -->
+
+    <owl:Class rdf:about="#TriplePoint">
+        <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#VirtualTemperature -->
+
+    <owl:Class rdf:about="#VirtualTemperature">
+        <rdfs:subClassOf rdf:resource="#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physTransport.owl#Conductivity -->
+
+    <owl:Class rdf:about="&trans;#Conductivity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#joule_perKilogram_perKelvin -->
+
+    <owl:Thing rdf:about="&units;#joule_perKilogram_perKelvin"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#kelvin -->
+
+    <owl:Thing rdf:about="&units;#kelvin"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#watt_perMeter_perKelvin -->
+
+    <owl:Thing rdf:about="&units;#watt_perMeter_perKelvin"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

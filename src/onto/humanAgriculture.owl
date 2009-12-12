@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY biol "http://sweet.jpl.nasa.gov/2.0/biol.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY biol2 "http://sweet.jpl.nasa.gov/2.0/biol.owl#" >
+    <!ENTITY hydro "http://sweet.jpl.nasa.gov/2.0/hydro.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY hydro2 "http://sweet.jpl.nasa.gov/2.0/hydro.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY plant "http://sweet.jpl.nasa.gov/2.0/biolPlant.owl" >
+    <!ENTITY biolPlant "http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#" >
+    <!ENTITY anim "http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl" >
+    <!ENTITY ecol "http://sweet.jpl.nasa.gov/2.0/biolEcology.owl" >
+    <!ENTITY bproc "http://sweet.jpl.nasa.gov/2.0/biolProcess.owl" >
+    <!ENTITY biolAnimal "http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#" >
+    <!ENTITY comp "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl" >
+    <!ENTITY biolProcess "http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#" >
+    <!ENTITY biolEcology "http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#" >
+    <!ENTITY comm "http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl" >
+    <!ENTITY chemCompound "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#" >
+    <!ENTITY humanCommerce "http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#" >
+    <!ENTITY humanAgriculture "http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#" >
+    <!ENTITY infra "http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl" >
+    <!ENTITY humanInfrastructure "http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl"
+     xmlns:plant="http://sweet.jpl.nasa.gov/2.0/biolPlant.owl"
+     xmlns:anim="http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl"
+     xmlns:infra="http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl"
+     xmlns:biol2="&biol;#"
+     xmlns:biolProcess="&bproc;#"
+     xmlns:hydro="http://sweet.jpl.nasa.gov/2.0/hydro.owl"
+     xmlns:humanAgriculture="http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#"
+     xmlns:chemCompound="&comp;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:hydro2="&hydro;#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chem2="&chem;#"
+     xmlns:ecol="http://sweet.jpl.nasa.gov/2.0/biolEcology.owl"
+     xmlns:biol="http://sweet.jpl.nasa.gov/2.0/biol.owl"
+     xmlns:comm="http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl"
+     xmlns:humanInfrastructure="&infra;#"
+     xmlns:comp="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"
+     xmlns:biolPlant="&plant;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bproc="http://sweet.jpl.nasa.gov/2.0/biolProcess.owl"
+     xmlns:humanCommerce="&comm;#"
+     xmlns:biolAnimal="&anim;#"
+     xmlns:biolEcology="&ecol;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biol.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biolEcology.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biolPlant.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biolProcess.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/hydro.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#hasOrganism -->
+
+    <owl:ObjectProperty rdf:about="&biol;#hasOrganism"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolEcology.owl#kills -->
+
+    <owl:ObjectProperty rdf:about="&ecol;#kills"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasSubstance -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasSubstance"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#HealthIndex -->
+
+    <owl:Class rdf:about="&biol;#HealthIndex"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Nutrient -->
+
+    <owl:Class rdf:about="&biol;#Nutrient"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Pest -->
+
+    <owl:Class rdf:about="&biol;#Pest"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Animal -->
+
+    <owl:Class rdf:about="&anim;#Animal"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Bee -->
+
+    <owl:Class rdf:about="&anim;#Bee"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#MarineAnimal -->
+
+    <owl:Class rdf:about="&anim;#MarineAnimal"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Silkworm -->
+
+    <owl:Class rdf:about="&anim;#Silkworm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Plant -->
+
+    <owl:Class rdf:about="&plant;#Plant"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Waste -->
+
+    <owl:Class rdf:about="&bproc;#Waste"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Mixture -->
+
+    <owl:Class rdf:about="&chem;#Mixture"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Water -->
+
+    <owl:Class rdf:about="&comp;#Water"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#AgriculturalChemical -->
+
+    <owl:Class rdf:about="#AgriculturalChemical">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#AgriculturalProduct -->
+
+    <owl:Class rdf:about="#AgriculturalProduct">
+        <rdfs:subClassOf rdf:resource="&comm;#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#AgriculturalProductionFacility -->
+
+    <owl:Class rdf:about="#AgriculturalProductionFacility">
+        <rdfs:subClassOf rdf:resource="&infra;#ProductionFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Agriculture -->
+
+    <owl:Class rdf:about="#Agriculture">
+        <rdfs:subClassOf rdf:resource="&comm;#Production"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Aldrin -->
+
+    <owl:Class rdf:about="#Aldrin">
+        <rdfs:subClassOf rdf:resource="#Pesticide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#AnimalProduction -->
+
+    <owl:Class rdf:about="#AnimalProduction">
+        <rdfs:subClassOf rdf:resource="#Agriculture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#AnimalWaste -->
+
+    <owl:Class rdf:about="#AnimalWaste">
+        <rdfs:subClassOf rdf:resource="&bproc;#Waste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Apiculture -->
+
+    <owl:Class rdf:about="#Apiculture">
+        <owl:equivalentClass rdf:resource="#Beekeeping"/>
+        <rdfs:subClassOf rdf:resource="#AnimalProduction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Aquaculture -->
+
+    <owl:Class rdf:about="#Aquaculture">
+        <rdfs:subClassOf rdf:resource="#Agriculture"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biol;#hasOrganism"/>
+                <owl:allValuesFrom rdf:resource="&anim;#MarineAnimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Beekeeping -->
+
+    <owl:Class rdf:about="#Beekeeping">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biol;#hasOrganism"/>
+                <owl:allValuesFrom rdf:resource="&anim;#Bee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#BiomedicalChemical -->
+
+    <owl:Class rdf:about="#BiomedicalChemical">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Breeding -->
+
+    <owl:Class rdf:about="#Breeding">
+        <rdfs:subClassOf rdf:resource="#AnimalProduction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Crop -->
+
+    <owl:Class rdf:about="#Crop">
+        <rdfs:subClassOf rdf:resource="&plant;#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#CropMoistureIndex -->
+
+    <owl:Class rdf:about="#CropMoistureIndex">
+        <rdfs:subClassOf rdf:resource="&biol;#HealthIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#CropProduct -->
+
+    <owl:Class rdf:about="#CropProduct">
+        <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#CropProduction -->
+
+    <owl:Class rdf:about="#CropProduction">
+        <rdfs:subClassOf rdf:resource="#PlantProduction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Cultivation -->
+
+    <owl:Class rdf:about="#Cultivation">
+        <rdfs:subClassOf rdf:resource="#Agriculture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#DairyProduct -->
+
+    <owl:Class rdf:about="#DairyProduct">
+        <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Defoilant -->
+
+    <owl:Class rdf:about="#Defoilant">
+        <rdfs:subClassOf rdf:resource="#AgriculturalChemical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#DripIrrigation -->
+
+    <owl:Class rdf:about="#DripIrrigation">
+        <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Farm -->
+
+    <owl:Class rdf:about="#Farm">
+        <rdfs:subClassOf rdf:resource="#AgriculturalProductionFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Feed -->
+
+    <owl:Class rdf:about="#Feed">
+        <rdfs:subClassOf rdf:resource="&biol;#Nutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Fertilizer -->
+
+    <owl:Class rdf:about="#Fertilizer">
+        <rdfs:subClassOf rdf:resource="#AgriculturalChemical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#FishProduction -->
+
+    <owl:Class rdf:about="#FishProduction">
+        <rdfs:subClassOf rdf:resource="#AnimalProduction"/>
+        <rdfs:subClassOf rdf:resource="#Aquaculture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Fishery -->
+
+    <owl:Class rdf:about="#Fishery">
+        <rdfs:subClassOf rdf:resource="#AgriculturalProductionFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Fishing -->
+
+    <owl:Class rdf:about="#Fishing">
+        <rdfs:subClassOf rdf:resource="&comm;#Production"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#FruitProduct -->
+
+    <owl:Class rdf:about="#FruitProduct">
+        <rdfs:subClassOf rdf:resource="#HorticulturalProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Harvesting -->
+
+    <owl:Class rdf:about="#Harvesting">
+        <rdfs:subClassOf rdf:resource="#PlantProduction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#HorticulturalActivity -->
+
+    <owl:Class rdf:about="#HorticulturalActivity">
+        <rdfs:subClassOf rdf:resource="#Agriculture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#HorticulturalProduct -->
+
+    <owl:Class rdf:about="#HorticulturalProduct">
+        <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Horticulture -->
+
+    <owl:Class rdf:about="#Horticulture">
+        <rdfs:subClassOf rdf:resource="#Agriculture"/>
+        <rdfs:comment xml:lang="en"
+            >Horticulture is the art and science of the cultivation of plants</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Insecticide -->
+
+    <owl:Class rdf:about="#Insecticide">
+        <rdfs:subClassOf rdf:resource="#Pesticide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Irrigation -->
+
+    <owl:Class rdf:about="#Irrigation">
+        <rdfs:subClassOf rdf:resource="#SoilCultivation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&comp;#Water"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#KillingFreeze -->
+
+    <owl:Class rdf:about="#KillingFreeze">
+        <rdfs:subClassOf rdf:resource="&hydro;#Frost"/>
+        <rdfs:comment xml:lang="en"
+            >The occurrence of air temperature below 0 C (32F) that kills annual vegetation without formation of frost crystals on surfaces. See freeze, dry freeze, hard freeze, light freeze.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#LightFreeze -->
+
+    <owl:Class rdf:about="#LightFreeze">
+        <rdfs:subClassOf rdf:resource="&hydro;#Frost"/>
+        <rdfs:comment xml:lang="en"
+            >The occurrence of air temperature below 0 C (32F) that kills some, but not all, annual vegetation. This often occurs in the 0 to -1 C (32 30 F) range.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#LightFrost -->
+
+    <owl:Class rdf:about="#LightFrost">
+        <rdfs:subClassOf rdf:resource="&hydro;#Frost"/>
+        <rdfs:comment xml:lang="en"
+            >A thin and more or less patchy deposit of hoarfrost on surface objects and vegetation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Livestock -->
+
+    <owl:Class rdf:about="#Livestock">
+        <owl:equivalentClass rdf:resource="#LivestockProduct"/>
+        <rdfs:subClassOf rdf:resource="&anim;#Animal"/>
+        <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#LivestockProduct -->
+
+    <owl:Class rdf:about="#LivestockProduct"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Manure -->
+
+    <owl:Class rdf:about="#Manure">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+        <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#PCB -->
+
+    <owl:Class rdf:about="#PCB">
+        <rdfs:subClassOf rdf:resource="#Pesticide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Pesticide -->
+
+    <owl:Class rdf:about="#Pesticide">
+        <rdfs:subClassOf rdf:resource="#AgriculturalChemical"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ecol;#kills"/>
+                <owl:allValuesFrom rdf:resource="&biol;#Pest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#PlantProduction -->
+
+    <owl:Class rdf:about="#PlantProduction">
+        <rdfs:subClassOf rdf:resource="#Agriculture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#PoultryProduct -->
+
+    <owl:Class rdf:about="#PoultryProduct">
+        <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#Sericulture -->
+
+    <owl:Class rdf:about="#Sericulture">
+        <rdfs:subClassOf rdf:resource="#AnimalProduction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biol;#hasOrganism"/>
+                <owl:allValuesFrom rdf:resource="&anim;#Silkworm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#ShellfishProduction -->
+
+    <owl:Class rdf:about="#ShellfishProduction">
+        <rdfs:subClassOf rdf:resource="#AnimalProduction"/>
+        <rdfs:subClassOf rdf:resource="#Aquaculture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#SoilCultivation -->
+
+    <owl:Class rdf:about="#SoilCultivation">
+        <rdfs:subClassOf rdf:resource="#Agriculture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAgriculture.owl#VegetableProduct -->
+
+    <owl:Class rdf:about="#VegetableProduct">
+        <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Product -->
+
+    <owl:Class rdf:about="&comm;#Product"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Production -->
+
+    <owl:Class rdf:about="&comm;#Production"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#ProductionFacility -->
+
+    <owl:Class rdf:about="&infra;#ProductionFacility"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#Frost -->
+
+    <owl:Class rdf:about="&hydro;#Frost"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

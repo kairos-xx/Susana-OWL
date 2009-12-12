@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY astro "http://sweet.jpl.nasa.gov/2.0/astro.owl" >
+    <!ENTITY astro2 "http://sweet.jpl.nasa.gov/2.0/astro.owl#" >
+    <!ENTITY star "http://sweet.jpl.nasa.gov/2.0/astroStar.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY sys "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY chemState "http://sweet.jpl.nasa.gov/2.0/chemState.owl#" >
+    <!ENTITY astroStar "http://sweet.jpl.nasa.gov/2.0/astroStar.owl#" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY geom "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl" >
+    <!ENTITY spaceObject "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&star;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/astroStar.owl"
+     xmlns:sciSystem="&sys;#"
+     xmlns:sys="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:star="http://sweet.jpl.nasa.gov/2.0/astroStar.owl"
+     xmlns:geom="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"
+     xmlns:astroStar="&star;#"
+     xmlns:spaceObject="&geom;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:astro="http://sweet.jpl.nasa.gov/2.0/astro.owl"
+     xmlns:chemState="&state;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:astro2="&astro;#"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astro.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#hasStar -->
+
+    <owl:ObjectProperty rdf:about="#hasStar"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#hasStellarRealm -->
+
+    <owl:ObjectProperty rdf:about="#hasStellarRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#hasStateOfMatter -->
+
+    <owl:ObjectProperty rdf:about="&state;#hasStateOfMatter"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#hasPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&sci;#hasPhenomena"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#Star -->
+
+    <owl:Class rdf:about="&astro;#Star"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#ActiveRegion -->
+
+    <owl:Class rdf:about="#ActiveRegion">
+        <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#CME -->
+
+    <owl:Class rdf:about="#CME">
+        <owl:equivalentClass rdf:resource="#CoronalMassEjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#Chromosphere -->
+
+    <owl:Class rdf:about="#Chromosphere">
+        <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#Corona -->
+
+    <owl:Class rdf:about="#Corona">
+        <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#CoronaHole -->
+
+    <owl:Class rdf:about="#CoronaHole">
+        <rdfs:subClassOf rdf:resource="#StellarPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#CoronalMassEjection -->
+
+    <owl:Class rdf:about="#CoronalMassEjection">
+        <rdfs:subClassOf rdf:resource="#StellarPhenomena"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasStellarRealm"/>
+                <owl:allValuesFrom rdf:resource="#Corona"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Plasma"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A coronal mass ejection (CME) is an ejection of material from the solar corona, usually observed with a white-light coronagraph. The ejected material is a plasma consisting primarily of electrons and protons (in addition to small quantities of heavier elements such as helium, oxygen, and iron), plus the entrained coronal magnetic field.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#Filament -->
+
+    <owl:Class rdf:about="#Filament">
+        <rdfs:subClassOf rdf:resource="#Prominence"/>
+        <rdfs:comment
+            >If a solar prominence occurs on the disc of the sun it appears darker than its background (due to the lower temperature of the plasma). These are referred to as solar filaments.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#Flare -->
+
+    <owl:Class rdf:about="#Flare">
+        <rdfs:subClassOf rdf:resource="#StellarPhenomena"/>
+        <rdfs:comment
+            >A solar flare is a violent explosion in the atmosphere of the sun. Solar flares take place in the solar corona and chromosphere, heating plasma to tens of millions of kelvins and accelerating electrons, protons and heavier ions to near the speed of light. They produce electromagnetic radiation across the electromagnetic spectrum at all wavelengths from long-wave radio to the shortest wavelength gamma rays  Most flares occur in active regions around sunspots, where intense magnetic fields emerge from the Sun&#39;s surface into the corona. Flares are powered by the sudden (timescales of minutes to tens of minutes) release of magnetic energy stored in the corona.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#Photosphere -->
+
+    <owl:Class rdf:about="#Photosphere">
+        <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#Prominence -->
+
+    <owl:Class rdf:about="#Prominence">
+        <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+        <rdfs:comment
+            >A solar prominence is a large bright feature extending outwards from the sun&#39;s surface, often in a loop configuration. Prominences are anchored to the solar surface in the photosphere, and extend outwards into the solar corona. While the corona consists of extremely hot ionized gases, known as plasma, which do not emit much visible light, prominences contain much cooler plasma, similar in composition to that of the chromosphere. A prominence forms over timescales of about a day, and stable prominences may persist in the corona for several months. Some prominences break apart and give rise to coronal mass ejections</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#SolarActivity -->
+
+    <owl:Class rdf:about="#SolarActivity">
+        <rdfs:subClassOf rdf:resource="#SolarPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#SolarCycle -->
+
+    <owl:Class rdf:about="#SolarCycle">
+        <rdfs:subClassOf rdf:resource="&sys;#Cycle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#hasPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#SolarActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#SolarPhenomena -->
+
+    <owl:Class rdf:about="#SolarPhenomena">
+        <rdfs:subClassOf rdf:resource="#StellarPhenomena"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasStar"/>
+                <owl:hasValue rdf:resource="#Sun"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#StellarInterior -->
+
+    <owl:Class rdf:about="#StellarInterior">
+        <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#StellarPhenomena -->
+
+    <owl:Class rdf:about="#StellarPhenomena">
+        <rdfs:subClassOf rdf:resource="&sci;#Phenomena"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasStellarRealm"/>
+                <owl:someValuesFrom rdf:resource="#StellarRealm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#StellarRealm -->
+
+    <owl:Class rdf:about="#StellarRealm">
+        <rdfs:subClassOf rdf:resource="&sci;#Realm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#StellarSurface -->
+
+    <owl:Class rdf:about="#StellarSurface">
+        <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+        <rdfs:subClassOf rdf:resource="&geom;#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#Sunspot -->
+
+    <owl:Class rdf:about="#Sunspot">
+        <rdfs:subClassOf rdf:resource="#SolarPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#SunspotNumber -->
+
+    <owl:Class rdf:about="#SunspotNumber">
+        <rdfs:subClassOf rdf:resource="#SolarActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Plasma -->
+
+    <owl:Class rdf:about="&state;#Plasma"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Cycle -->
+
+    <owl:Class rdf:about="&sys;#Cycle"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Surface -->
+
+    <owl:Class rdf:about="&geom;#Surface"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Phenomena -->
+
+    <owl:Class rdf:about="&sci;#Phenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Realm -->
+
+    <owl:Class rdf:about="&sci;#Realm"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroStar.owl#Sun -->
+
+    <astro2:Star rdf:about="#Sun">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </astro2:Star>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

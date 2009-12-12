@@ -1,0 +1,786 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY atmo "http://sweet.jpl.nasa.gov/2.0/atmo.owl" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY atmo2 "http://sweet.jpl.nasa.gov/2.0/atmo.owl#" >
+    <!ENTITY wind "http://sweet.jpl.nasa.gov/2.0/atmoWind.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY atmoWind "http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#" >
+    <!ENTITY waves "http://sweet.jpl.nasa.gov/2.0/physWaves.owl" >
+    <!ENTITY physWaves "http://sweet.jpl.nasa.gov/2.0/physWaves.owl#" >
+    <!ENTITY thermo "http://sweet.jpl.nasa.gov/2.0/physThermo.owl" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY physThermo "http://sweet.jpl.nasa.gov/2.0/physThermo.owl#" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY obj "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY sed "http://sweet.jpl.nasa.gov/2.0/geogSediment.owl" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY dynam "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl" >
+    <!ENTITY spaceObject "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#" >
+    <!ENTITY physDynamics "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#" >
+    <!ENTITY geogSediment "http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#" >
+    <!ENTITY dir "http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl" >
+    <!ENTITY comp "http://sweet.jpl.nasa.gov/2.0/atmoComposition.owl" >
+    <!ENTITY spaceDirection "http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#" >
+    <!ENTITY atmoComposition "http://sweet.jpl.nasa.gov/2.0/atmoComposition.owl#" >
+    <!ENTITY fluid "http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl" >
+    <!ENTITY physFluidDynamics "http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&wind;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/atmoWind.owl"
+     xmlns:atmo2="&atmo;#"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:atmo="http://sweet.jpl.nasa.gov/2.0/atmo.owl"
+     xmlns:geogSediment="&sed;#"
+     xmlns:physFluidDynamics="&fluid;#"
+     xmlns:atmoWind="&wind;#"
+     xmlns:physThermo="&thermo;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:fluid="http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl"
+     xmlns:phys2="&phys;#"
+     xmlns:dir="http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dynam="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"
+     xmlns:physDynamics="&dynam;#"
+     xmlns:chem2="&chem;#"
+     xmlns:wind="http://sweet.jpl.nasa.gov/2.0/atmoWind.owl"
+     xmlns:comp="http://sweet.jpl.nasa.gov/2.0/atmoComposition.owl"
+     xmlns:physWaves="&waves;#"
+     xmlns:atmoComposition="&comp;#"
+     xmlns:waves="http://sweet.jpl.nasa.gov/2.0/physWaves.owl"
+     xmlns:spaceDirection="&dir;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:thermo="http://sweet.jpl.nasa.gov/2.0/physThermo.owl"
+     xmlns:spaceObject="&obj;#"
+     xmlns:sed="http://sweet.jpl.nasa.gov/2.0/geogSediment.owl"
+     xmlns:sciResearch="&res;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:obj="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"
+     xmlns:astroPlanet="&planet;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmo.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmoComposition.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geogSediment.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physThermo.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physWaves.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#hasMeteorologicalPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&atmo;#hasMeteorologicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasSubstance -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasSubstance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProcess -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProperty -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#AtmosphericPhenomena -->
+
+    <owl:Class rdf:about="&atmo;#AtmosphericPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#MeteorologicalPhenomena -->
+
+    <owl:Class rdf:about="&atmo;#MeteorologicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoComposition.owl#Dust -->
+
+    <owl:Class rdf:about="&comp;#Dust"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#AgeostrophicWind -->
+
+    <owl:Class rdf:about="#AgeostrophicWind">
+        <rdfs:label
+            >Ageostrophic Wind</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:comment
+            >The vector difference between the real (or observed) wind and the geostrophic wind</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#AtmosphericCirculation -->
+
+    <owl:Class rdf:about="#AtmosphericCirculation">
+        <rdfs:subClassOf rdf:resource="&atmo;#MeteorologicalPhenomena"/>
+        <rdfs:subClassOf rdf:resource="&fluid;#Circulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#AtmosphericPumping -->
+
+    <owl:Class rdf:about="#AtmosphericPumping">
+        <rdfs:subClassOf rdf:resource="#AtmosphericCirculation"/>
+        <rdfs:subClassOf rdf:resource="&phys;#FarFieldForce"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#BlockingIndex -->
+
+    <owl:Class rdf:about="#BlockingIndex">
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#Blowing -->
+
+    <owl:Class rdf:about="#Blowing">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:comment
+            >When dust, sand, snow, and/or spray is raised by the wind to a height of 6 feet or more</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#BuysBallotLaw -->
+
+    <owl:Class rdf:about="#BuysBallotLaw">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalLaw"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;#hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#Wind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&phys;#Pressure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A law describing the relationship of the horizontal wind direction in the atmosphere to the pressure distribution.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#ConstantAbsoluteVorticityTrajectory -->
+
+    <owl:Class rdf:about="#ConstantAbsoluteVorticityTrajectory">
+        <rdfs:subClassOf rdf:resource="&obj;#Trajectory"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&fluid;#AbsoluteVorticity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The path of an air parcel with absolute vorticity that remains constant in horizontal flow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#CrossWind -->
+
+    <owl:Class rdf:about="#CrossWind">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#Derecho -->
+
+    <owl:Class rdf:about="#Derecho">
+        <rdfs:subClassOf rdf:resource="#WindStorm"/>
+        <rdfs:comment xml:lang="en"
+            >A widespread convectively induced straight-line windstorm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#DopplersVelocity -->
+
+    <owl:Class rdf:about="#DopplersVelocity">
+        <rdfs:subClassOf rdf:resource="&dynam;#Velocity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#Downdraft -->
+
+    <owl:Class rdf:about="#Downdraft">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:comment xml:lang="en"
+            >Small-scale downward moving air current in a cumulonimbus cloud.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#DrainageWind -->
+
+    <owl:Class rdf:about="#DrainageWind">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#DustStorm -->
+
+    <owl:Class rdf:about="#DustStorm">
+        <rdfs:subClassOf rdf:resource="#LocalWind"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&comp;#Dust"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#Entrainment -->
+
+    <owl:Class rdf:about="#Entrainment">
+        <rdfs:label>Entrainment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalPhenomena"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="&dynam;#Mixing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >In meteorology, the mixing of environmental air into a preexisting organized air current so that the environmental air becomes part of the current; the opposite of detrainment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#EulerianWind -->
+
+    <owl:Class rdf:about="#EulerianWind">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:comment xml:lang="en"
+            >In the classification of Jeffreys, a wind motion only in response to the pressure force.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#Gust -->
+
+    <owl:Class rdf:about="#Gust">
+        <owl:equivalentClass rdf:resource="#WindGust"/>
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:comment xml:lang="en"
+            >1. A sudden, brief increase in the speed of the wind. It is of a more transient character than a squall and is followed by a lull or slackening in the wind speed. Generally, winds are least gusty over large water surfaces and most gusty over rough land and near high buildings. According to U.S. weather observing practice, gusts are reported when the peak wind speed reaches at least 16 knots and the variation in wind speed between the peaks and lulls is at least 9 knots. The duration of a gust is usually less than 20 s. 2. With respect to aircraft turbulence, a sharp change in wind speed relative to the aircraft; a sudden increase in airspeed due to fluctuations in the airflow, resulting in increased structural stresses upon the aircraft. 3. (Rare.) Same as cloudburst.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#HeadWind -->
+
+    <owl:Class rdf:about="#HeadWind">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:comment xml:lang="en"
+            >A wind that opposes the intended progress of an exposed, moving object, for example, rendering an airborne object&#39;s airspeed greater than its groundspeed; the opposite of a tailwind.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#HotWind -->
+
+    <owl:Class rdf:about="#HotWind">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&thermo;#Temperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >General term for winds characterized by intense heat and low relative humidity, such as summertime desert winds or an extreme foehn.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#JetEffectWind -->
+
+    <owl:Class rdf:about="#JetEffectWind">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:comment xml:lang="en"
+            >A local wind created by acceleration of the airflow through a gap, constriction, or channel in a mountain range or between ranges.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#JetStreak -->
+
+    <owl:Class rdf:about="#JetStreak">
+        <rdfs:subClassOf rdf:resource="#JetStream"/>
+        <rdfs:comment xml:lang="en"
+            >The region of a jet stream axis with the greatest winds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#JetStream -->
+
+    <owl:Class rdf:about="#JetStream">
+        <owl:equivalentClass rdf:resource="#JetStreamWind"/>
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:subClassOf rdf:resource="&waves;#Wave"/>
+        <rdfs:comment xml:lang="en"
+            >Relatively strong winds concentrated within a narrow stream in the atmosphere.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#JetStreamAxis -->
+
+    <owl:Class rdf:about="#JetStreamAxis">
+        <rdfs:subClassOf rdf:resource="&dir;#Axis"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;#hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#JetStream"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The axis of maximum wind speed in a jet stream.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#JetStreamWind -->
+
+    <owl:Class rdf:about="#JetStreamWind"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#LocalWind -->
+
+    <owl:Class rdf:about="#LocalWind">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:comment xml:lang="en"
+            >1. Winds that, over a small area, differ from those that would be appropriate to the general large-scale pressure distribution, or that possess some other peculiarity. Often these winds have names unique to the area where they occur. Local winds may be classified into three main groups. The first includes diurnally varying airflows that are driven by local gradients of surface heat flux (e.g., near the shore of a sea or lake) or by diurnal heating or cooling of the ground surface in areas of sloping or mountainous terrain. These include land and sea breezes, mountain?valley circulations, and drainage and slope winds. The second group consists of winds produced by the interaction of a synoptic-scale flow with orography. These may be further subdivided into barrier jets, gap winds, downslope windstorms, and include such local phenomena as the tehuantepecer, Santa Ana, foehn, mistral, and bora. The third group includes those winds accompanying convective activity, more specifically individual thunderstorms or mesoscale convective systems. These are generally the surface manifestations of precipitation- cooled diverging outflow and in some locations are given special names due to the distinctive character of the weather associated with them (e.g., the haboob). 2. Local or colloquial names given to frequently occurring or particularly noteworthy winds (sometimes because of the bad weather associated with them), usually from a certain direction. Often these names reflect the direction from which the wind comes (e.g., sou&#39;wester, nor&#39;easter).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#MeridionalWind -->
+
+    <owl:Class rdf:about="#MeridionalWind">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:comment xml:lang="en"
+            >The wind or wind component along the local meridian, as distinguished from the zonal wind. In a horizontal coordinate system fixed locally with the x axis directed eastward and the y axis northward, the meridional wind is positive if from the south, and negative if from the north.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#Omega -->
+
+    <owl:Class rdf:about="#Omega">
+        <rdfs:subClassOf rdf:resource="&dynam;#Velocity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#RadialVelocity -->
+
+    <owl:Class rdf:about="#RadialVelocity">
+        <rdfs:subClassOf rdf:resource="&dynam;#Velocity"/>
+        <rdfs:comment xml:lang="en"
+            >The component of a three-dimensional velocity vector oriented along the radial direction from the origin point or axis in polar, cylindrical, or spherical coordinates.  In connection with Doppler radar, the radial velocity component is called Doppler velocity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#SandStorm -->
+
+    <owl:Class rdf:about="#SandStorm">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&sed;#Sand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#TertiaryCirculation -->
+
+    <owl:Class rdf:about="#TertiaryCirculation">
+        <rdfs:subClassOf rdf:resource="#AtmosphericCirculation"/>
+        <rdfs:comment xml:lang="en"
+            >The generally small, localized atmospheric circulations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#ThermalWind -->
+
+    <owl:Class rdf:about="#ThermalWind">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:comment xml:lang="en"
+            >The mean wind-shear vector in geostrophic balance with the gradient of mean temperature of a layer bounded by two isobaric surfaces.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#TradeWinds -->
+
+    <owl:Class rdf:about="#TradeWinds">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#AtmosphericCirculation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The wind system, occupying most of the Tropics, that blows from the subtropical highs toward the equatorial trough; a major component of the general circulation of the atmosphere.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#VeeringWind -->
+
+    <owl:Class rdf:about="#VeeringWind">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="&dynam;#Rotation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >In the Northern Hemisphere, a wind that rotates in a clockwise direction with increasing height; the opposite of backing wind.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#WarmConveyorBelt -->
+
+    <owl:Class rdf:about="#WarmConveyorBelt">
+        <rdfs:subClassOf rdf:resource="#AtmosphericCirculation"/>
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#Wind -->
+
+    <owl:Class rdf:about="#Wind">
+        <rdfs:subClassOf rdf:resource="&atmo;#AtmosphericPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#WindChill -->
+
+    <owl:Class rdf:about="#WindChill">
+        <owl:equivalentClass rdf:resource="#WindChillIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#WindChillIndex -->
+
+    <owl:Class rdf:about="#WindChillIndex">
+        <rdfs:subClassOf rdf:resource="&thermo;#Temperature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="#Wind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A means of quantifying the threat of rapid cooling during breezy or windy conditions that may result in hypothermia in cold conditions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#WindGust -->
+
+    <owl:Class rdf:about="#WindGust">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#WindShear -->
+
+    <owl:Class rdf:about="#WindShear">
+        <rdfs:subClassOf rdf:resource="&atmo;#AtmosphericPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#WindStorm -->
+
+    <owl:Class rdf:about="#WindStorm">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#Windborne -->
+
+    <owl:Class rdf:about="#Windborne">
+        <rdfs:subClassOf rdf:resource="&atmo;#AtmosphericPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#ZonalFlow -->
+
+    <owl:Class rdf:about="#ZonalFlow">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:comment xml:lang="en"
+            >In meteorology, the flow of air along a latitude circle; more specifically, the latitudinal (east or west) component of existing flow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#ZonalIndex -->
+
+    <owl:Class rdf:about="#ZonalIndex">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;#hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#ZonalFlow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A measure of strength of the middle-latitude westerlies, usually expressed as the horizontal pressure difference between 35 and 55N latitude, or as the corresponding geostrophic wind.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#ZonalKineticEnergy -->
+
+    <owl:Class rdf:about="#ZonalKineticEnergy">
+        <rdfs:subClassOf rdf:resource="&dynam;#KineticEnergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;#hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#ZonalFlow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The kinetic energy of the mean zonal wind, obtained by averaging the component of the wind along a fixed latitude circle.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#ZonalWaveNumber -->
+
+    <owl:Class rdf:about="#ZonalWaveNumber">
+        <rdfs:subClassOf rdf:resource="&waves;#WaveNumber"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;#hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#ZonalFlow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The wavenumber in the zonal direction, that is, along a line of constant latitude.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#ZonalWind -->
+
+    <owl:Class rdf:about="#ZonalWind">
+        <rdfs:subClassOf rdf:resource="#Wind"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;#hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#ZonalFlow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Sand -->
+
+    <owl:Class rdf:about="&sed;#Sand"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#FarFieldForce -->
+
+    <owl:Class rdf:about="&phys;#FarFieldForce"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalLaw -->
+
+    <owl:Class rdf:about="&phys;#PhysicalLaw"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalPhenomena -->
+
+    <owl:Class rdf:about="&phys;#PhysicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalProperty -->
+
+    <owl:Class rdf:about="&phys;#PhysicalProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Pressure -->
+
+    <owl:Class rdf:about="&phys;#Pressure"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#KineticEnergy -->
+
+    <owl:Class rdf:about="&dynam;#KineticEnergy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Mixing -->
+
+    <owl:Class rdf:about="&dynam;#Mixing"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Rotation -->
+
+    <owl:Class rdf:about="&dynam;#Rotation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Velocity -->
+
+    <owl:Class rdf:about="&dynam;#Velocity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#AbsoluteVorticity -->
+
+    <owl:Class rdf:about="&fluid;#AbsoluteVorticity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Circulation -->
+
+    <owl:Class rdf:about="&fluid;#Circulation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Temperature -->
+
+    <owl:Class rdf:about="&thermo;#Temperature"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physWaves.owl#Wave -->
+
+    <owl:Class rdf:about="&waves;#Wave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physWaves.owl#WaveNumber -->
+
+    <owl:Class rdf:about="&waves;#WaveNumber"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Index -->
+
+    <owl:Class rdf:about="&res;#Index"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Axis -->
+
+    <owl:Class rdf:about="&dir;#Axis"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Trajectory -->
+
+    <owl:Class rdf:about="&obj;#Trajectory"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

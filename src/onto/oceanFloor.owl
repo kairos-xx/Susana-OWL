@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ocean "http://sweet.jpl.nasa.gov/2.0/ocean.owl" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY space2 "http://sweet.jpl.nasa.gov/2.0/space.owl#" >
+    <!ENTITY ocean2 "http://sweet.jpl.nasa.gov/2.0/ocean.owl#" >
+    <!ENTITY coast "http://sweet.jpl.nasa.gov/2.0/geogCoast.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY solid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl" >
+    <!ENTITY physSolid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl#" >
+    <!ENTITY floor "http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY vol "http://sweet.jpl.nasa.gov/2.0/geolVolcano.owl" >
+    <!ENTITY oceanFloor "http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#" >
+    <!ENTITY land "http://sweet.jpl.nasa.gov/2.0/geogLandform.owl" >
+    <!ENTITY geolVolcano "http://sweet.jpl.nasa.gov/2.0/geolVolcano.owl#" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY geogLandform "http://sweet.jpl.nasa.gov/2.0/geogLandform.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&floor;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl"
+     xmlns:physSolid="&solid;#"
+     xmlns:space2="&space;#"
+     xmlns:geogLandform="&land;#"
+     xmlns:land="http://sweet.jpl.nasa.gov/2.0/geogLandform.owl"
+     xmlns:ocean="http://sweet.jpl.nasa.gov/2.0/ocean.owl"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:coast="http://sweet.jpl.nasa.gov/2.0/geogCoast.owl"
+     xmlns:solid="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vol="http://sweet.jpl.nasa.gov/2.0/geolVolcano.owl"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:floor="http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl"
+     xmlns:geolVolcano="&vol;#"
+     xmlns:ocean2="&ocean;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:oceanFloor="&floor;#"
+     xmlns:astroPlanet="&planet;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geogCoast.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geogLandform.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geolVolcano.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/ocean.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogLandform.owl#Canyon -->
+
+    <owl:Class rdf:about="&land;#Canyon"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogLandform.owl#Hill -->
+
+    <owl:Class rdf:about="&land;#Hill"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogLandform.owl#Mountain -->
+
+    <owl:Class rdf:about="&land;#Mountain"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogLandform.owl#Plain -->
+
+    <owl:Class rdf:about="&land;#Plain"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogLandform.owl#Ridge -->
+
+    <owl:Class rdf:about="&land;#Ridge"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogLandform.owl#Trench -->
+
+    <owl:Class rdf:about="&land;#Trench"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolVolcano.owl#Vent -->
+
+    <owl:Class rdf:about="&vol;#Vent"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/ocean.owl#WaterBodyBoundary -->
+
+    <owl:Class rdf:about="&ocean;#WaterBodyBoundary"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#AbyssalHill -->
+
+    <owl:Class rdf:about="#AbyssalHill">
+        <rdfs:subClassOf rdf:resource="&land;#Hill"/>
+        <rdfs:subClassOf rdf:resource="#SeaFloor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#AbyssalPlain -->
+
+    <owl:Class rdf:about="#AbyssalPlain">
+        <rdfs:subClassOf rdf:resource="&land;#Plain"/>
+        <rdfs:subClassOf rdf:resource="#SeaFloor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#Bathymetry -->
+
+    <owl:Class rdf:about="#Bathymetry">
+        <rdfs:subClassOf rdf:resource="&space;#Depth"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#ColdSeep -->
+
+    <owl:Class rdf:about="#ColdSeep">
+        <rdfs:subClassOf rdf:resource="#SeaFloor"/>
+        <rdfs:subClassOf rdf:resource="&solid;#Fissure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#ContinentalRise -->
+
+    <owl:Class rdf:about="#ContinentalRise">
+        <rdfs:subClassOf rdf:resource="#SeaFloor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#ContinentalShelf -->
+
+    <owl:Class rdf:about="#ContinentalShelf">
+        <rdfs:subClassOf rdf:resource="#SeaFloor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#ContinentalSlope -->
+
+    <owl:Class rdf:about="#ContinentalSlope">
+        <rdfs:subClassOf rdf:resource="#SeaFloor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#DeepSeaTrench -->
+
+    <owl:Class rdf:about="#DeepSeaTrench">
+        <rdfs:subClassOf rdf:resource="&land;#Trench"/>
+        <rdfs:subClassOf rdf:resource="#SeaFloor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#Guyot -->
+
+    <owl:Class rdf:about="#Guyot">
+        <rdfs:subClassOf rdf:resource="#Seamount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#HydrothermalVent -->
+
+    <owl:Class rdf:about="#HydrothermalVent">
+        <rdfs:subClassOf rdf:resource="&vol;#Vent"/>
+        <rdfs:subClassOf rdf:resource="#SeaFloor"/>
+        <rdfs:subClassOf rdf:resource="&solid;#Fissure"/>
+        <rdfs:comment xml:lang="en"
+            >A hydrothermal vent is a fissure in a planet&#39;s surface from which geothermally heated water issues. Hydrothermal vents are commonly found near volcanically active places, areas where tectonic plates are moving apart, ocean basins, and hotspots.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#MidOceanRidge -->
+
+    <owl:Class rdf:about="#MidOceanRidge">
+        <rdfs:subClassOf rdf:resource="#OceanRidge"/>
+        <rdfs:comment xml:lang="en"
+            >A mid-ocean ridge or mid-oceanic ridge is an underwater mountain range, formed by plate tectonics. This uplifting of the ocean floor occurs when convection currents rise in the mantle beneath the oceanic crust and create magma where two tectonic plates meet at a divergent boundary. The mid-ocean ridges of the world are connected and form a single global mid-oceanic ridge system that is part of every ocean, making the mid-oceanic ridge system the longest mountain range in the world.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#OceanRidge -->
+
+    <owl:Class rdf:about="#OceanRidge">
+        <rdfs:subClassOf rdf:resource="&land;#Ridge"/>
+        <rdfs:subClassOf rdf:resource="#SeaFloor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#OceanicPlateau -->
+
+    <owl:Class rdf:about="#OceanicPlateau">
+        <rdfs:subClassOf rdf:resource="#OceanRidge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#SeaFloor -->
+
+    <owl:Class rdf:about="#SeaFloor">
+        <rdfs:subClassOf rdf:resource="&ocean;#WaterBodyBoundary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#Seamount -->
+
+    <owl:Class rdf:about="#Seamount">
+        <rdfs:subClassOf rdf:resource="&land;#Mountain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="#SeaFloor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A seamount is a mountain rising from the ocean seafloor that does not reach to the water&#39;s surface (sea level), and thus is not an island. These are typically formed from extinct volcanoes, that rise abruptly and are usually found rising from a seafloor of 1,000 - 4,000 meters depth. They are defined by oceanographers as independent features that rise to at least 1,000 meters above the seafloor. The peaks are often found hundreds to thousands of meters below the surface, and are therefore considered to be within the deep sea.[1] An estimated 30,000 seamounts occur across the globe, with only a few having been studied. However, some seamounts are also unusual.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanFloor.owl#SubmarineCanyon -->
+
+    <owl:Class rdf:about="#SubmarineCanyon">
+        <rdfs:subClassOf rdf:resource="&land;#Canyon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="#SeaFloor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A submarine canyon is a steep-sided valley on the sea floor of the continental slope. Many submarine canyons are found as extensions to large rivers; however there are many that have no such association. Canyons cutting the continental slopes have been found at depths greater than 2 km below sea level. They are formed by powerful turbidity currents, volcanic and earthquake activity. Many submarine canyons continue as submarine channels across continental rise areas and may extend for hundreds of kilometers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSolid.owl#Fissure -->
+
+    <owl:Class rdf:about="&solid;#Fissure"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Depth -->
+
+    <owl:Class rdf:about="&space;#Depth"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

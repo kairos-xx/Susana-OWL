@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl" >
+    <!ENTITY atmo "http://sweet.jpl.nasa.gov/2.0/atmo.owl" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY math2 "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY atmo2 "http://sweet.jpl.nasa.gov/2.0/atmo.owl#" >
+    <!ENTITY space2 "http://sweet.jpl.nasa.gov/2.0/space.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY units2 "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY scale "http://sweet.jpl.nasa.gov/2.0/spaceScale.owl" >
+    <!ENTITY scale2 "http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY planet2 "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY allo "http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl" >
+    <!ENTITY astab "http://sweet.jpl.nasa.gov/2.0/atmoStability.owl" >
+    <!ENTITY atmoStability "http://sweet.jpl.nasa.gov/2.0/atmoStability.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&atmo;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/atmo.owl"
+     xmlns:atmo2="&atmo;#"
+     xmlns:scale="http://sweet.jpl.nasa.gov/2.0/spaceScale.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:atmo="http://sweet.jpl.nasa.gov/2.0/atmo.owl"
+     xmlns:allo="http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:atmoStability="&astab;#"
+     xmlns:units2="&units;#"
+     xmlns:scale2="&scale;#"
+     xmlns:space2="&space;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:math2="&math;#"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl"
+     xmlns:astab="http://sweet.jpl.nasa.gov/2.0/atmoStability.owl"
+     xmlns:planet2="&planet;#"
+     xmlns:sciResearch="&res;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource=""/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmoStability.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceScale.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#hasMeteorologicalPhenomena -->
+
+    <owl:ObjectProperty rdf:about="#hasMeteorologicalPhenomena">
+        <rdfs:range rdf:resource="#MeteorologicalPhenomena"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoStability.owl#dTdh -->
+
+    <owl:ObjectProperty rdf:about="&astab;#dTdh"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;#hasUnit"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasLowerBoundary -->
+
+    <owl:ObjectProperty rdf:about="&space;#hasLowerBoundary"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasUpperBoundary -->
+
+    <owl:ObjectProperty rdf:about="&space;#hasUpperBoundary"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasLowerBound -->
+
+    <owl:DatatypeProperty rdf:about="&math;#hasLowerBound"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasUpperBound -->
+
+    <owl:DatatypeProperty rdf:about="&math;#hasUpperBound"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Atmosphere -->
+
+    <owl:Class rdf:about="&planet;#Atmosphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetSurface -->
+
+    <owl:Class rdf:about="&planet;#PlanetSurface"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetaryBoundary -->
+
+    <owl:Class rdf:about="&planet;#PlanetaryBoundary"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetaryLayer -->
+
+    <owl:Class rdf:about="&planet;#PlanetaryLayer"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetaryPhenomena -->
+
+    <owl:Class rdf:about="&planet;#PlanetaryPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetaryScience -->
+
+    <owl:Class rdf:about="&planet;#PlanetaryScience"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#AtmosphereLayer -->
+
+    <owl:Class rdf:about="#AtmosphereLayer">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryLayer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:someValuesFrom rdf:resource="&planet;#Atmosphere"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#AtmosphericPhenomena -->
+
+    <owl:Class rdf:about="#AtmosphericPhenomena">
+        <rdfs:subClassOf rdf:resource="#MeteorologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#AtmosphericScience -->
+
+    <owl:Class rdf:about="#AtmosphericScience">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryScience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Exosphere -->
+
+    <owl:Class rdf:about="#Exosphere">
+        <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#ExtendedForecast -->
+
+    <owl:Class rdf:about="#ExtendedForecast">
+        <rdfs:subClassOf rdf:resource="#WeatherForecast"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Ionosphere -->
+
+    <owl:Class rdf:about="#Ionosphere">
+        <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#LowerAtmosphere -->
+
+    <owl:Class rdf:about="#LowerAtmosphere">
+        <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Magnetosphere -->
+
+    <owl:Class rdf:about="#Magnetosphere">
+        <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Mesopause -->
+
+    <owl:Class rdf:about="#Mesopause">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryBoundary"/>
+        <rdfs:comment xml:lang="en"
+            >The top of the mesosphere and the base of the thermosphere. The mesopause is usually located at heights of 85?95 km, and is the site of the coldest temperatures in the atmosphere. Temperatures as low as 100 K (- 173?C) have been measured at the mesopause by rockets. See atmospheric shell.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Mesosphere -->
+
+    <owl:Class rdf:about="#Mesosphere">
+        <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&astab;#dTdh"/>
+                <owl:hasValue rdf:resource="#NegativeSlope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&space;#hasUpperBoundary"/>
+                <owl:allValuesFrom rdf:resource="#Mesopause"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&space;#hasLowerBoundary"/>
+                <owl:allValuesFrom rdf:resource="#Stratopause"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#MeteorologicalPhenomena -->
+
+    <owl:Class rdf:about="#MeteorologicalPhenomena">
+        <owl:equivalentClass rdf:resource="#Weather"/>
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Meteorology -->
+
+    <owl:Class rdf:about="#Meteorology">
+        <rdfs:subClassOf rdf:resource="#AtmosphericScience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#MiddleAtmosphere -->
+
+    <owl:Class rdf:about="#MiddleAtmosphere">
+        <owl:equivalentClass rdf:resource="#OzoneLayer"/>
+        <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#OzoneLayer -->
+
+    <owl:Class rdf:about="#OzoneLayer"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Stratopause -->
+
+    <owl:Class rdf:about="#Stratopause">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryBoundary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Stratosphere -->
+
+    <owl:Class rdf:about="#Stratosphere">
+        <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&space;#hasUpperBoundary"/>
+                <owl:allValuesFrom rdf:resource="#Stratopause"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&astab;#dTdh"/>
+                <owl:hasValue rdf:resource="#PositiveSlope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&space;#hasLowerBoundary"/>
+                <owl:allValuesFrom rdf:resource="#Tropopause"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Thermosphere -->
+
+    <owl:Class rdf:about="#Thermosphere">
+        <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&space;#hasLowerBoundary"/>
+                <owl:allValuesFrom rdf:resource="#Mesopause"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&astab;#dTdh"/>
+                <owl:hasValue rdf:resource="#PositiveSlope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Tropopause -->
+
+    <owl:Class rdf:about="#Tropopause">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryBoundary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Troposphere -->
+
+    <owl:Class rdf:about="#Troposphere">
+        <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&space;#hasLowerBoundary"/>
+                <owl:allValuesFrom rdf:resource="&planet;#PlanetSurface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&space;#hasUpperBoundary"/>
+                <owl:allValuesFrom rdf:resource="#Tropopause"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&astab;#dTdh"/>
+                <owl:hasValue rdf:resource="#NegativeSlope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#UpperAtmosphere -->
+
+    <owl:Class rdf:about="#UpperAtmosphere">
+        <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Weather -->
+
+    <owl:Class rdf:about="#Weather"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#WeatherForecast -->
+
+    <owl:Class rdf:about="#WeatherForecast">
+        <rdfs:subClassOf rdf:resource="&res;#Forecast"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#Weather"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Forecast -->
+
+    <owl:Class rdf:about="&res;#Forecast"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#HeightRange -->
+
+    <owl:Class rdf:about="&scale;#HeightRange"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#NegativeSlope -->
+
+    <scale2:HeightRange rdf:about="#NegativeSlope">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;double">0</math2:hasUpperBound>
+        <units2:hasUnit rdf:resource="&units;#kelvin_perMeter"/>
+    </scale2:HeightRange>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#PositiveSlope -->
+
+    <owl:Thing rdf:about="#PositiveSlope">
+        <rdf:type rdf:resource="&scale;#HeightRange"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;double">0</math2:hasLowerBound>
+        <units2:hasUnit rdf:resource="&units;#kelvin_perMeter"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#kelvin_perMeter -->
+
+    <owl:Thing rdf:about="&units;#kelvin_perMeter"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

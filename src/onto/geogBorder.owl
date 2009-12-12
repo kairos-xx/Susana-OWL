@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY bord "http://sweet.jpl.nasa.gov/2.0/geogBorder.owl" >
+    <!ENTITY geom "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl" >
+    <!ENTITY geogBorder "http://sweet.jpl.nasa.gov/2.0/geogBorder.owl#" >
+    <!ENTITY spaceObject "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&bord;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/geogBorder.owl"
+     xmlns:bord="http://sweet.jpl.nasa.gov/2.0/geogBorder.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:geom="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:spaceObject="&geom;#"
+     xmlns:geogBorder="&bord;#"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#partOf -->
+
+    <owl:ObjectProperty rdf:about="&sci;#partOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogBorder.owl#AdministrativeRegion -->
+
+    <owl:Class rdf:about="#AdministrativeRegion">
+        <rdfs:subClassOf rdf:resource="&geom;#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogBorder.owl#City -->
+
+    <owl:Class rdf:about="#City">
+        <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogBorder.owl#Continent -->
+
+    <owl:Class rdf:about="#Continent">
+        <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogBorder.owl#Country -->
+
+    <owl:Class rdf:about="#Country">
+        <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogBorder.owl#County -->
+
+    <owl:Class rdf:about="#County">
+        <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#partOf"/>
+                <owl:allValuesFrom rdf:resource="#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogBorder.owl#Province -->
+
+    <owl:Class rdf:about="#Province">
+        <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#partOf"/>
+                <owl:allValuesFrom rdf:resource="#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogBorder.owl#State -->
+
+    <owl:Class rdf:about="#State">
+        <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#partOf"/>
+                <owl:allValuesFrom rdf:resource="#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogBorder.owl#UrbanArea -->
+
+    <owl:Class rdf:about="#UrbanArea">
+        <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+        <rdfs:comment xml:lang="en"
+            >An urban area is an area with an increased density of human-created structures in comparison to the areas surrounding it. This term is at one end of the spectrum of suburban and rural areas. An urban area is more frequently called a city or town.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Region -->
+
+    <owl:Class rdf:about="&geom;#Region"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

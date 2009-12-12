@@ -1,0 +1,472 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY data "http://sweet.jpl.nasa.gov/2.0/data.owl" >
+    <!ENTITY human "http://sweet.jpl.nasa.gov/2.0/human.owl" >
+    <!ENTITY data2 "http://sweet.jpl.nasa.gov/2.0/data.owl#" >
+    <!ENTITY human2 "http://sweet.jpl.nasa.gov/2.0/human.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY serv "http://sweet.jpl.nasa.gov/2.0/dataService.owl" >
+    <!ENTITY dataService "http://sweet.jpl.nasa.gov/2.0/dataService.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/dataService.owl"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/dataService.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:dataService="&serv;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:data="http://sweet.jpl.nasa.gov/2.0/data.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:data2="&data;#"
+     xmlns:serv="http://sweet.jpl.nasa.gov/2.0/dataService.owl"
+     xmlns:human2="&human;#"
+     xmlns:human="http://sweet.jpl.nasa.gov/2.0/human.owl">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/data.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/human.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="#hasParameter"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Dimension -->
+
+    <owl:Class rdf:about="&data;#Dimension"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Access -->
+
+    <owl:Class rdf:about="#Access">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Archive -->
+
+    <owl:Class rdf:about="#Archive">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#BinaryMask -->
+
+    <owl:Class rdf:about="#BinaryMask">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Binning -->
+
+    <owl:Class rdf:about="#Binning">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Calibration -->
+
+    <owl:Class rdf:about="#Calibration">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#CoordinateTransformation -->
+
+    <owl:Class rdf:about="#CoordinateTransformation">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+        <rdfs:comment
+            >A conversion from one system to another, to describe the same space.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#DODS -->
+
+    <owl:Class rdf:about="#DODS">
+        <owl:equivalentClass rdf:resource="#OPeNDAP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#DataAssimilation -->
+
+    <owl:Class rdf:about="#DataAssimilation">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#DataMining -->
+
+    <owl:Class rdf:about="#DataMining">
+        <rdfs:subClassOf rdf:resource="#Subset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#DataService -->
+
+    <owl:Class rdf:about="#DataService">
+        <rdfs:subClassOf rdf:resource="&human;#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#DataSynchronization -->
+
+    <owl:Class rdf:about="#DataSynchronization">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Discover -->
+
+    <owl:Class rdf:about="#Discover">
+        <owl:equivalentClass rdf:resource="#Discovery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Discovery -->
+
+    <owl:Class rdf:about="#Discovery">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#FormatConversion -->
+
+    <owl:Class rdf:about="#FormatConversion">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Georeferencing -->
+
+    <owl:Class rdf:about="#Georeferencing">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Gridding -->
+
+    <owl:Class rdf:about="#Gridding">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Image -->
+
+    <owl:Class rdf:about="#Image">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Input -->
+
+    <owl:Class rdf:about="#Input">
+        <rdfs:subClassOf rdf:resource="#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#InterfaceProtocol -->
+
+    <owl:Class rdf:about="#InterfaceProtocol">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Interpolation -->
+
+    <owl:Class rdf:about="#Interpolation">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Map -->
+
+    <owl:Class rdf:about="#Map">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#NearestNeighbor -->
+
+    <owl:Class rdf:about="#NearestNeighbor">
+        <rdfs:subClassOf rdf:resource="#Interpolation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#NewtonianRelaxation -->
+
+    <owl:Class rdf:about="#NewtonianRelaxation">
+        <rdfs:subClassOf rdf:resource="#DataAssimilation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Normalization -->
+
+    <owl:Class rdf:about="#Normalization">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#OPeNDAP -->
+
+    <owl:Class rdf:about="#OPeNDAP">
+        <rdfs:subClassOf rdf:resource="#InterfaceProtocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Output -->
+
+    <owl:Class rdf:about="#Output">
+        <rdfs:subClassOf rdf:resource="#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Parameter -->
+
+    <owl:Class rdf:about="#Parameter">
+        <rdfs:subClassOf rdf:resource="&data;#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#ParameterSubset -->
+
+    <owl:Class rdf:about="#ParameterSubset">
+        <rdfs:subClassOf rdf:resource="#Subset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasParameter"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#PixelScreening -->
+
+    <owl:Class rdf:about="#PixelScreening">
+        <rdfs:subClassOf rdf:resource="#QualityScreening"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Plot -->
+
+    <owl:Class rdf:about="#Plot">
+        <rdfs:subClassOf rdf:resource="#Visualization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#PostProcessing -->
+
+    <owl:Class rdf:about="#PostProcessing">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#PreProcessing -->
+
+    <owl:Class rdf:about="#PreProcessing">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#QualityScreening -->
+
+    <owl:Class rdf:about="#QualityScreening">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Reformat -->
+
+    <owl:Class rdf:about="#Reformat">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Regridding -->
+
+    <owl:Class rdf:about="#Regridding">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Scaling -->
+
+    <owl:Class rdf:about="#Scaling">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#SpatialSubset -->
+
+    <owl:Class rdf:about="#SpatialSubset">
+        <rdfs:subClassOf rdf:resource="#Subset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Subset -->
+
+    <owl:Class rdf:about="#Subset">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#SynopticMap -->
+
+    <owl:Class rdf:about="#SynopticMap">
+        <rdfs:subClassOf rdf:resource="#Map"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#TemporalSubset -->
+
+    <owl:Class rdf:about="#TemporalSubset">
+        <rdfs:subClassOf rdf:resource="#Subset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#Visualization -->
+
+    <owl:Class rdf:about="#Visualization">
+        <rdfs:subClassOf rdf:resource="#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#WCS -->
+
+    <owl:Class rdf:about="#WCS">
+        <owl:equivalentClass rdf:resource="#WebCoverageServer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#WFS -->
+
+    <owl:Class rdf:about="#WFS">
+        <owl:equivalentClass rdf:resource="#WebFeatureServer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#WMS -->
+
+    <owl:Class rdf:about="#WMS">
+        <owl:equivalentClass rdf:resource="#WebMapServer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#WebCoverageServer -->
+
+    <owl:Class rdf:about="#WebCoverageServer">
+        <rdfs:subClassOf rdf:resource="#InterfaceProtocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#WebFeatureServer -->
+
+    <owl:Class rdf:about="#WebFeatureServer">
+        <rdfs:subClassOf rdf:resource="#InterfaceProtocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataService.owl#WebMapServer -->
+
+    <owl:Class rdf:about="#WebMapServer">
+        <rdfs:subClassOf rdf:resource="#InterfaceProtocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Service -->
+
+    <owl:Class rdf:about="&human;#Service"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

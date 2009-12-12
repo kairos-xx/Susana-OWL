@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY chemState "http://sweet.jpl.nasa.gov/2.0/chemState.owl#" >
+    <!ENTITY part "http://sweet.jpl.nasa.gov/2.0/physParticle.owl" >
+    <!ENTITY physParticle "http://sweet.jpl.nasa.gov/2.0/physParticle.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&part;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/physParticle.owl"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:physParticle="&part;#"
+     xmlns:chemState="&state;#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:part="http://sweet.jpl.nasa.gov/2.0/physParticle.owl"
+     xmlns:chem2="&chem;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Substance -->
+
+    <owl:Class rdf:about="&chem;#Substance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#SubstanceForm -->
+
+    <owl:Class rdf:about="&chem;#SubstanceForm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Radioactive -->
+
+    <owl:Class rdf:about="&state;#Radioactive"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#AlphaParticle -->
+
+    <owl:Class rdf:about="#AlphaParticle">
+        <rdfs:subClassOf rdf:resource="#EnergeticParticle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Atom -->
+
+    <owl:Class rdf:about="#Atom">
+        <rdfs:subClassOf rdf:resource="&chem;#SubstanceForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#BetaParticle -->
+
+    <owl:Class rdf:about="#BetaParticle">
+        <rdfs:subClassOf rdf:resource="#EnergeticParticle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#CosmicRay -->
+
+    <owl:Class rdf:about="#CosmicRay">
+        <rdfs:subClassOf rdf:resource="#EnergeticParticle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Electron -->
+
+    <owl:Class rdf:about="#Electron">
+        <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#EnergeticParticle -->
+
+    <owl:Class rdf:about="#EnergeticParticle">
+        <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#GammaRay -->
+
+    <owl:Class rdf:about="#GammaRay">
+        <rdfs:subClassOf rdf:resource="#Photon"/>
+        <rdfs:comment
+            >Gamma rays are a form of electromagnetic radiation or light emission of frequencies produced by sub-atomic particle interactions, such as electron-positron annihilation or radioactive decay. Gamma rays are generally characterized as electromagnetic radiation having the highest frequency and energy, and also the shortest wavelength, within the electromagnetic spectrum, i.e. high energy photons. Due to their high energy content, they can cause serious damage when absorbed by living cells.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#HeavyNuclei -->
+
+    <owl:Class rdf:about="#HeavyNuclei">
+        <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Molecule -->
+
+    <owl:Class rdf:about="#Molecule">
+        <rdfs:subClassOf rdf:resource="&chem;#SubstanceForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Neutrino -->
+
+    <owl:Class rdf:about="#Neutrino">
+        <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Neutron -->
+
+    <owl:Class rdf:about="#Neutron">
+        <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Nucleon -->
+
+    <owl:Class rdf:about="#Nucleon">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Neutron"/>
+                    <rdf:Description rdf:about="#Proton"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment
+            >A collective name for the two baryons: neutron and the proton.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Particle -->
+
+    <owl:Class rdf:about="#Particle">
+        <rdfs:subClassOf rdf:resource="&chem;#Substance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Photon -->
+
+    <owl:Class rdf:about="#Photon">
+        <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Proton -->
+
+    <owl:Class rdf:about="#Proton">
+        <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Radiation -->
+
+    <owl:Class rdf:about="#Radiation">
+        <rdfs:subClassOf rdf:resource="&chem;#Substance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Radiocarbon -->
+
+    <owl:Class rdf:about="#Radiocarbon">
+        <rdfs:subClassOf rdf:resource="&state;#Radioactive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Radioisotope -->
+
+    <owl:Class rdf:about="#Radioisotope">
+        <owl:equivalentClass rdf:resource="#Radionuclide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Radionuclide -->
+
+    <owl:Class rdf:about="#Radionuclide">
+        <rdfs:subClassOf rdf:resource="&state;#Radioactive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#SubatomicParticle -->
+
+    <owl:Class rdf:about="#SubatomicParticle">
+        <rdfs:subClassOf rdf:resource="&chem;#Substance"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

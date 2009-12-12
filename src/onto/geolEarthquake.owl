@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY geol "http://sweet.jpl.nasa.gov/2.0/geol.owl" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY geol2 "http://sweet.jpl.nasa.gov/2.0/geol.owl#" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY space2 "http://sweet.jpl.nasa.gov/2.0/space.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY waves "http://sweet.jpl.nasa.gov/2.0/physWaves.owl" >
+    <!ENTITY physWaves "http://sweet.jpl.nasa.gov/2.0/physWaves.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY tec "http://sweet.jpl.nasa.gov/2.0/geolTectonics.owl" >
+    <!ENTITY quake "http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl" >
+    <!ENTITY geolEarthquake "http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&quake;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl"
+     xmlns:geolEarthquake="&quake;#"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:geol2="&geol;#"
+     xmlns:space2="&space;#"
+     xmlns:physWaves="&waves;#"
+     xmlns:waves="http://sweet.jpl.nasa.gov/2.0/physWaves.owl"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:geol="http://sweet.jpl.nasa.gov/2.0/geol.owl"
+     xmlns:tec="http://sweet.jpl.nasa.gov/2.0/geolTectonics.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:quake="http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geol.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physWaves.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#measureOf -->
+
+    <owl:ObjectProperty rdf:about="&res;#measureOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#hasPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&sci;#hasPhenomena"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#GeologicFeature -->
+
+    <owl:Class rdf:about="&geol;#GeologicFeature"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#GeospherePhenomena -->
+
+    <owl:Class rdf:about="&geol;#GeospherePhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#Aftershock -->
+
+    <owl:Class rdf:about="#Aftershock">
+        <rdfs:subClassOf rdf:resource="#Earthquake"/>
+        <owl:disjointWith rdf:resource="#Foreshock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#DeepFocusEarthquake -->
+
+    <owl:Class rdf:about="#DeepFocusEarthquake">
+        <rdfs:subClassOf rdf:resource="#Earthquake"/>
+        <owl:disjointWith rdf:resource="#ShallowFocusEarthquake"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#Earthquake -->
+
+    <owl:Class rdf:about="#Earthquake">
+        <rdfs:subClassOf rdf:resource="#SeismicPhenomena"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#hasPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#SeismicWave"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Earthquakes are caused by energy release during rapid slippage along a fault. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#EarthquakeMagnitude -->
+
+    <owl:Class rdf:about="#EarthquakeMagnitude">
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#measureOf"/>
+                <owl:allValuesFrom rdf:resource="#SeismicWave"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Richter magnitude scale, also known as the local magnitude (ML) scale, assigns a single number to quantify the amount of seismic energy released by an earthquake. It is a base-10 logarithmic scale obtained by calculating the logarithm of the combined horizontal amplitude of the largest displacement from zero on a Wood&#8211;Anderson torsion seismometer output. Though still widely used, the Richter scale has been superseded by the moment magnitude scale, which gives generally similar values. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#Epicenter -->
+
+    <owl:Class rdf:about="#Epicenter">
+        <rdfs:subClassOf rdf:resource="&space;#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#Foreshock -->
+
+    <owl:Class rdf:about="#Foreshock">
+        <rdfs:subClassOf rdf:resource="#Earthquake"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#LoveWave -->
+
+    <owl:Class rdf:about="#LoveWave">
+        <owl:equivalentClass rdf:resource="#Lwave"/>
+        <rdfs:subClassOf rdf:resource="&waves;#SurfaceWave"/>
+        <rdfs:comment xml:lang="en"
+            >A type of seismic surface wave having a horizontal motion that is shear or transverse to the direction of propagation. Its velocity depends only on density and rigidity modulus, and not on bulk modulus. It is named after A. E. H. Love, the English mathematician who discovered it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#Lwave -->
+
+    <owl:Class rdf:about="#Lwave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#PWave -->
+
+    <owl:Class rdf:about="#PWave">
+        <owl:equivalentClass rdf:resource="#PrimaryWave"/>
+        <rdfs:subClassOf rdf:resource="#SeismicBodyWave"/>
+        <rdfs:subClassOf rdf:resource="&waves;#LongitudinalWave"/>
+        <rdfs:comment xml:lang="en"
+            >P waves are longitudinal or compressional waves, which means that the ground is alternately compressed and dilated in the direction of propagation. In solids these waves generally travel slightly less than twice as fast as S waves and can travel through any type of material. In air, these pressure waves take the form of sound waves, hence they travel at the speed of sound. Typical speeds are 330 m/s in air, 1450 m/s in water and about 5000 m/s in granite. P waves are sometimes called primary waves. When generated by an earthquake they are less destructive than the S waves and surface waves that follow them, due to their lesser amplitudes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#PrimaryWave -->
+
+    <owl:Class rdf:about="#PrimaryWave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#SWave -->
+
+    <owl:Class rdf:about="#SWave">
+        <owl:equivalentClass rdf:resource="#SecondaryWave"/>
+        <owl:equivalentClass rdf:resource="#ShearWave"/>
+        <rdfs:subClassOf rdf:resource="#SeismicBodyWave"/>
+        <rdfs:subClassOf rdf:resource="&waves;#TransverseWave"/>
+        <rdfs:comment xml:lang="en"
+            >S waves are transverse or shear waves, which means that the ground is displaced perpendicularly to the direction of propagation. In the case of horizontally polarized S waves, the ground moves alternately to one side and then the other. S waves can travel only through solids, as fluids (liquids and gases) do not support shear stresses. Their speed is about 60% of that of P waves in a given material. S waves are sometimes called secondary waves, and are several times larger in amplitude than P waves for earthquake sources.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#SecondaryWave -->
+
+    <owl:Class rdf:about="#SecondaryWave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#SeismicBodyWave -->
+
+    <owl:Class rdf:about="#SeismicBodyWave">
+        <rdfs:subClassOf rdf:resource="#SeismicWave"/>
+        <rdfs:subClassOf rdf:resource="&waves;#BodyWave"/>
+        <rdfs:comment xml:lang="en"
+            >Body waves are seismic waves that travel through the lithosphere. Two kinds of body waves exist: P-waves and S-waves.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#SeismicPhenomena -->
+
+    <owl:Class rdf:about="#SeismicPhenomena">
+        <rdfs:subClassOf rdf:resource="&geol;#GeospherePhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#SeismicSurfaceWave -->
+
+    <owl:Class rdf:about="#SeismicSurfaceWave">
+        <rdfs:subClassOf rdf:resource="#SeismicWave"/>
+        <rdfs:comment xml:lang="en"
+            >Surface waves are analogous to water waves and travel just under the Earth&#39;s surface. They travel more slowly than body waves. Because of their low frequency, long duration, and large amplitude, they can be the most destructive type of seismic wave. There are two types of surface waves: Rayleigh waves and Love waves. Theoretically, surface waves can be understood as systems of interacting P and/or S waves.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#SeismicWave -->
+
+    <owl:Class rdf:about="#SeismicWave">
+        <rdfs:subClassOf rdf:resource="&waves;#Wave"/>
+        <rdfs:comment xml:lang="en"
+            >Seismic waves are phenomena that travel through the Earth or other elastic body, for example as the result of an earthquake, explosion, or some other process that imparts forces to the body. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#SeismicZone -->
+
+    <owl:Class rdf:about="#SeismicZone">
+        <rdfs:subClassOf rdf:resource="&geol;#GeologicFeature"/>
+        <rdfs:comment xml:lang="en"
+            >Seismic Zones are broad elongated regions along a fault line where earthquakes take place. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#ShallowFocusEarthquake -->
+
+    <owl:Class rdf:about="#ShallowFocusEarthquake">
+        <rdfs:subClassOf rdf:resource="#Earthquake"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#ShearWave -->
+
+    <owl:Class rdf:about="#ShearWave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#Tremor -->
+
+    <owl:Class rdf:about="#Tremor">
+        <rdfs:subClassOf rdf:resource="#Earthquake"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physWaves.owl#BodyWave -->
+
+    <owl:Class rdf:about="&waves;#BodyWave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physWaves.owl#LongitudinalWave -->
+
+    <owl:Class rdf:about="&waves;#LongitudinalWave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physWaves.owl#SurfaceWave -->
+
+    <owl:Class rdf:about="&waves;#SurfaceWave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physWaves.owl#TransverseWave -->
+
+    <owl:Class rdf:about="&waves;#TransverseWave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physWaves.owl#Wave -->
+
+    <owl:Class rdf:about="&waves;#Wave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Index -->
+
+    <owl:Class rdf:about="&res;#Index"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Location -->
+
+    <owl:Class rdf:about="&space;#Location"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

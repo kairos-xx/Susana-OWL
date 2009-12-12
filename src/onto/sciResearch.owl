@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&res;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:sciResearch="&res;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#hasCause -->
+
+    <owl:ObjectProperty rdf:about="#hasCause"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#hasEffect -->
+
+    <owl:ObjectProperty rdf:about="#hasEffect"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#hasGenesis -->
+
+    <owl:ObjectProperty rdf:about="#hasGenesis">
+        <rdfs:range rdf:resource="#Genesis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#measureOf -->
+
+    <owl:ObjectProperty rdf:about="#measureOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#representationOf -->
+
+    <owl:ObjectProperty rdf:about="#representationOf">
+        <rdfs:range rdf:resource="#Representation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#studyOf -->
+
+    <owl:ObjectProperty rdf:about="#studyOf">
+        <rdfs:domain rdf:resource="#KnowledgeDomain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Adjusted -->
+
+    <owl:Class rdf:about="#Adjusted">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Analysis -->
+
+    <owl:Class rdf:about="#Analysis">
+        <rdfs:subClassOf rdf:resource="#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Assessment -->
+
+    <owl:Class rdf:about="#Assessment">
+        <rdfs:subClassOf rdf:resource="#Investigation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Background -->
+
+    <owl:Class rdf:about="#Background">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Baseline -->
+
+    <owl:Class rdf:about="#Baseline">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Bias -->
+
+    <owl:Class rdf:about="#Bias">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Campaign -->
+
+    <owl:Class rdf:about="#Campaign">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Correction -->
+
+    <owl:Class rdf:about="#Correction">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Count -->
+
+    <owl:Class rdf:about="#Count">
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Defining -->
+
+    <owl:Class rdf:about="#Defining">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Difference -->
+
+    <owl:Class rdf:about="#Difference">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Dimension -->
+
+    <owl:Class rdf:about="#Dimension">
+        <rdfs:subClassOf rdf:resource="&sci;#Measurement"/>
+        <rdfs:comment
+            >In common usage, a dimension is a parameter or measurement used to describe some relevant characteristic of an object. The most commonly used dimensions are the parameters describing the size of an object: length, width, and height, but dimensions can also be other physical parameters such as the mass and electric charge of an object, or even, in a context where cost is relevant, an economic parameter such as its price.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#EmpiricalLaw -->
+
+    <owl:Class rdf:about="#EmpiricalLaw">
+        <rdfs:subClassOf rdf:resource="#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#EnsembleForecast -->
+
+    <owl:Class rdf:about="#EnsembleForecast">
+        <rdfs:subClassOf rdf:resource="#Forecast"/>
+        <rdfs:comment xml:lang="en"
+            >A set of different forecasts all valid at the same forecast time(s).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Experiment -->
+
+    <owl:Class rdf:about="#Experiment">
+        <rdfs:subClassOf rdf:resource="#Investigation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#ExperimentActivity -->
+
+    <owl:Class rdf:about="#ExperimentActivity">
+        <rdfs:subClassOf rdf:resource="#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#ExtendedForecast -->
+
+    <owl:Class rdf:about="#ExtendedForecast">
+        <rdfs:subClassOf rdf:resource="#Forecast"/>
+        <rdfs:comment xml:lang="en"
+            >A forecast of weather conditions for a period extending beyond three or more days from the day of issuance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Forecast -->
+
+    <owl:Class rdf:about="#Forecast">
+        <rdfs:subClassOf rdf:resource="#Prediction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Genesis -->
+
+    <owl:Class rdf:about="#Genesis">
+        <rdfs:subClassOf rdf:resource="&sci;#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Hypothesis -->
+
+    <owl:Class rdf:about="#Hypothesis">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#HypothesisTest -->
+
+    <owl:Class rdf:about="#HypothesisTest">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Index -->
+
+    <owl:Class rdf:about="#Index">
+        <rdfs:subClassOf rdf:resource="&sci;#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Indicator -->
+
+    <owl:Class rdf:about="#Indicator">
+        <rdfs:subClassOf rdf:resource="#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Instance -->
+
+    <owl:Class rdf:about="#Instance">
+        <rdfs:subClassOf rdf:resource="#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Investigation -->
+
+    <owl:Class rdf:about="#Investigation">
+        <rdfs:subClassOf rdf:resource="#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Iteration -->
+
+    <owl:Class rdf:about="#Iteration">
+        <rdfs:subClassOf rdf:resource="#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#KnowledgeDomain -->
+
+    <owl:Class rdf:about="#KnowledgeDomain">
+        <rdfs:subClassOf rdf:resource="&sci;#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Measurement -->
+
+    <owl:Class rdf:about="#Measurement">
+        <rdfs:subClassOf rdf:resource="#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#MeasurementScale -->
+
+    <owl:Class rdf:about="#MeasurementScale">
+        <owl:equivalentClass rdf:resource="#Scale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Model -->
+
+    <owl:Class rdf:about="#Model">
+        <rdfs:subClassOf rdf:resource="#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Observation -->
+
+    <owl:Class rdf:about="#Observation">
+        <rdfs:subClassOf rdf:resource="#Investigation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#PhysicalApproximation -->
+
+    <owl:Class rdf:about="#PhysicalApproximation">
+        <rdfs:subClassOf rdf:resource="#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Prediction -->
+
+    <owl:Class rdf:about="#Prediction">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Project -->
+
+    <owl:Class rdf:about="#Project">
+        <rdfs:subClassOf rdf:resource="#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Quantitative -->
+
+    <owl:Class rdf:about="#Quantitative">
+        <rdfs:subClassOf rdf:resource="#MeasurementScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Realization -->
+
+    <owl:Class rdf:about="#Realization">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Reconstruction -->
+
+    <owl:Class rdf:about="#Reconstruction">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Record -->
+
+    <owl:Class rdf:about="#Record">
+        <rdfs:subClassOf rdf:resource="#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Reference -->
+
+    <owl:Class rdf:about="#Reference">
+        <rdfs:subClassOf rdf:resource="&sci;#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Representation -->
+
+    <owl:Class rdf:about="#Representation">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Research -->
+
+    <owl:Class rdf:about="#Research">
+        <rdfs:subClassOf rdf:resource="&sci;#Knowledge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#ResearchExploration -->
+
+    <owl:Class rdf:about="#ResearchExploration">
+        <rdfs:subClassOf rdf:resource="#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Residual -->
+
+    <owl:Class rdf:about="#Residual">
+        <rdfs:subClassOf rdf:resource="#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Sample -->
+
+    <owl:Class rdf:about="#Sample">
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Scale -->
+
+    <owl:Class rdf:about="#Scale">
+        <rdfs:subClassOf rdf:resource="#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Science -->
+
+    <owl:Class rdf:about="#Science">
+        <rdfs:subClassOf rdf:resource="#KnowledgeDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Simulation -->
+
+    <owl:Class rdf:about="#Simulation">
+        <rdfs:subClassOf rdf:resource="#Investigation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Superimpose -->
+
+    <owl:Class rdf:about="#Superimpose">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Theory -->
+
+    <owl:Class rdf:about="#Theory">
+        <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Variable -->
+
+    <owl:Class rdf:about="#Variable">
+        <rdfs:subClassOf rdf:resource="#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Knowledge -->
+
+    <owl:Class rdf:about="&sci;#Knowledge"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Measurement -->
+
+    <owl:Class rdf:about="&sci;#Measurement"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Property -->
+
+    <owl:Class rdf:about="&sci;#Property"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

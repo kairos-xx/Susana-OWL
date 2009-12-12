@@ -1,0 +1,533 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vect "http://sweet.jpl.nasa.gov/2.0/mathVector.owl" >
+    <!ENTITY obj "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl" >
+    <!ENTITY mathVector "http://sweet.jpl.nasa.gov/2.0/mathVector.owl#" >
+    <!ENTITY spaceObject "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#" >
+    <!ENTITY dir "http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl" >
+    <!ENTITY spaceDirection "http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&dir;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl"
+     xmlns:vect="http://sweet.jpl.nasa.gov/2.0/mathVector.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:dir="http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:spaceDirection="&dir;#"
+     xmlns:obj="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"
+     xmlns:mathVector="&vect;#"
+     xmlns:spaceObject="&obj;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/mathVector.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#above -->
+
+    <owl:ObjectProperty rdf:about="#above"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#below -->
+
+    <owl:ObjectProperty rdf:about="#below">
+        <owl:inverseOf rdf:resource="#above"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#east -->
+
+    <owl:ObjectProperty rdf:about="#east">
+        <owl:inverseOf rdf:resource="#west"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#hasAxis -->
+
+    <owl:ObjectProperty rdf:about="#hasAxis">
+        <rdfs:range rdf:resource="#Axis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#hasDirection -->
+
+    <owl:ObjectProperty rdf:about="#hasDirection">
+        <rdfs:range rdf:resource="#Direction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#hasNormal -->
+
+    <owl:ObjectProperty rdf:about="#hasNormal">
+        <rdfs:range rdf:resource="#Direction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#north -->
+
+    <owl:ObjectProperty rdf:about="#north">
+        <owl:inverseOf rdf:resource="#south"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#south -->
+
+    <owl:ObjectProperty rdf:about="#south"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#under -->
+
+    <owl:ObjectProperty rdf:about="#under">
+        <rdfs:subPropertyOf rdf:resource="#below"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#west -->
+
+    <owl:ObjectProperty rdf:about="#west"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathVector.owl#Vector_3D -->
+
+    <owl:Class rdf:about="&vect;#Vector_3D"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Angle -->
+
+    <owl:Class rdf:about="#Angle">
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#AngularDirection -->
+
+    <owl:Class rdf:about="#AngularDirection">
+        <owl:equivalentClass rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Attitude -->
+
+    <owl:Class rdf:about="#Attitude">
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Axis -->
+
+    <owl:Class rdf:about="#Axis">
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Azimuth -->
+
+    <owl:Class rdf:about="#Azimuth">
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Bearing -->
+
+    <owl:Class rdf:about="#Bearing">
+        <owl:equivalentClass rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Component -->
+
+    <owl:Class rdf:about="#Component">
+        <owl:equivalentClass rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Direction -->
+
+    <owl:Class rdf:about="#Direction">
+        <rdfs:subClassOf rdf:resource="&vect;#Vector_3D"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Down -->
+
+    <owl:Class rdf:about="#Down">
+        <owl:equivalentClass rdf:resource="#Downward"/>
+        <rdfs:subClassOf rdf:resource="#VerticalDirection"/>
+        <owl:disjointWith rdf:resource="#Up"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Downward -->
+
+    <owl:Class rdf:about="#Downward"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#East -->
+
+    <owl:Class rdf:about="#East">
+        <owl:equivalentClass rdf:resource="#Eastward"/>
+        <rdfs:subClassOf rdf:resource="#HorizontalDirection"/>
+        <owl:disjointWith rdf:resource="#West"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Eastward -->
+
+    <owl:Class rdf:about="#Eastward"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Horizontal -->
+
+    <owl:Class rdf:about="#Horizontal">
+        <owl:equivalentClass rdf:resource="#HorizontalDirection"/>
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#HorizontalDirection -->
+
+    <owl:Class rdf:about="#HorizontalDirection">
+        <owl:disjointWith rdf:resource="#Vertical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Inclination -->
+
+    <owl:Class rdf:about="#Inclination">
+        <rdfs:subClassOf rdf:resource="#Angle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Incoming -->
+
+    <owl:Class rdf:about="#Incoming">
+        <owl:equivalentClass rdf:resource="#Inward"/>
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+        <owl:disjointWith rdf:resource="#Outgoing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Inward -->
+
+    <owl:Class rdf:about="#Inward"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Lateral -->
+
+    <owl:Class rdf:about="#Lateral">
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Lee -->
+
+    <owl:Class rdf:about="#Lee">
+        <owl:equivalentClass rdf:resource="#Leeward"/>
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Leeward -->
+
+    <owl:Class rdf:about="#Leeward">
+        <owl:disjointWith rdf:resource="#Windward"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Left -->
+
+    <owl:Class rdf:about="#Left">
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+        <owl:disjointWith rdf:resource="#Right"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Normal -->
+
+    <owl:Class rdf:about="#Normal">
+        <owl:equivalentClass rdf:resource="#Perpendicular"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#North -->
+
+    <owl:Class rdf:about="#North">
+        <owl:equivalentClass rdf:resource="#Northward"/>
+        <rdfs:subClassOf rdf:resource="#HorizontalDirection"/>
+        <owl:disjointWith rdf:resource="#South"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Northward -->
+
+    <owl:Class rdf:about="#Northward"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Orientation -->
+
+    <owl:Class rdf:about="#Orientation">
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Outgoing -->
+
+    <owl:Class rdf:about="#Outgoing">
+        <owl:equivalentClass rdf:resource="#Outward"/>
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Outward -->
+
+    <owl:Class rdf:about="#Outward"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Parallel -->
+
+    <owl:Class rdf:about="#Parallel">
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+        <owl:disjointWith rdf:resource="#Perpendicular"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Perpendicular -->
+
+    <owl:Class rdf:about="#Perpendicular">
+        <owl:equivalentClass rdf:resource="#Transverse"/>
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Pole -->
+
+    <owl:Class rdf:about="#Pole">
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Radial -->
+
+    <owl:Class rdf:about="#Radial">
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Right -->
+
+    <owl:Class rdf:about="#Right">
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#SolidAngle -->
+
+    <owl:Class rdf:about="#SolidAngle">
+        <rdfs:subClassOf rdf:resource="&obj;#Cone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#South -->
+
+    <owl:Class rdf:about="#South">
+        <owl:equivalentClass rdf:resource="#Southward"/>
+        <rdfs:subClassOf rdf:resource="#HorizontalDirection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Southward -->
+
+    <owl:Class rdf:about="#Southward"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Tilt -->
+
+    <owl:Class rdf:about="#Tilt">
+        <rdfs:subClassOf rdf:resource="#Angle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Transverse -->
+
+    <owl:Class rdf:about="#Transverse"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Up -->
+
+    <owl:Class rdf:about="#Up">
+        <owl:equivalentClass rdf:resource="#Upward"/>
+        <rdfs:subClassOf rdf:resource="#VerticalDirection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Upward -->
+
+    <owl:Class rdf:about="#Upward"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Vertical -->
+
+    <owl:Class rdf:about="#Vertical">
+        <owl:equivalentClass rdf:resource="#VerticalDirection"/>
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#VerticalDirection -->
+
+    <owl:Class rdf:about="#VerticalDirection"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#West -->
+
+    <owl:Class rdf:about="#West">
+        <owl:equivalentClass rdf:resource="#Westward"/>
+        <rdfs:subClassOf rdf:resource="#HorizontalDirection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Westward -->
+
+    <owl:Class rdf:about="#Westward"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Windward -->
+
+    <owl:Class rdf:about="#Windward">
+        <rdfs:subClassOf rdf:resource="#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#X -->
+
+    <owl:Class rdf:about="#X">
+        <rdfs:subClassOf rdf:resource="#HorizontalDirection"/>
+        <owl:disjointWith rdf:resource="#Y"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Y -->
+
+    <owl:Class rdf:about="#Y">
+        <rdfs:subClassOf rdf:resource="#HorizontalDirection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Z -->
+
+    <owl:Class rdf:about="#Z">
+        <rdfs:subClassOf rdf:resource="#VerticalDirection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#ZenithAngle -->
+
+    <owl:Class rdf:about="#ZenithAngle">
+        <rdfs:subClassOf rdf:resource="#Angle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Cone -->
+
+    <owl:Class rdf:about="&obj;#Cone"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

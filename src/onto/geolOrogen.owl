@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY geol "http://sweet.jpl.nasa.gov/2.0/geol.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY geol2 "http://sweet.jpl.nasa.gov/2.0/geol.owl#" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY solid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl" >
+    <!ENTITY basin "http://sweet.jpl.nasa.gov/2.0/geolBasin.owl" >
+    <!ENTITY geolBasin "http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#" >
+    <!ENTITY oro "http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl" >
+    <!ENTITY physSolid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl#" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY geolOrogen "http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#" >
+    <!ENTITY geom "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY spaceObject "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#" >
+    <!ENTITY petr "http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl" >
+    <!ENTITY tec "http://sweet.jpl.nasa.gov/2.0/geolTectonics.owl" >
+    <!ENTITY dir "http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl" >
+    <!ENTITY geolPetrology "http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#" >
+    <!ENTITY geolTectonics "http://sweet.jpl.nasa.gov/2.0/geolTectonics.owl#" >
+    <!ENTITY spaceDirection "http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#" >
+    <!ENTITY geomor "http://sweet.jpl.nasa.gov/2.0/geogGeomorphology.owl" >
+]>
+
+
+<rdf:RDF xmlns="&oro;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl"
+     xmlns:geol2="&geol;#"
+     xmlns:basin="http://sweet.jpl.nasa.gov/2.0/geolBasin.owl"
+     xmlns:oro="http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl"
+     xmlns:geom="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"
+     xmlns:geol="http://sweet.jpl.nasa.gov/2.0/geol.owl"
+     xmlns:tec="http://sweet.jpl.nasa.gov/2.0/geolTectonics.owl"
+     xmlns:geomor="http://sweet.jpl.nasa.gov/2.0/geogGeomorphology.owl"
+     xmlns:petr="http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:phys2="&phys;#"
+     xmlns:dir="http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chem2="&chem;#"
+     xmlns:geolTectonics="&tec;#"
+     xmlns:physSolid="&solid;#"
+     xmlns:geolPetrology="&petr;#"
+     xmlns:spaceDirection="&dir;#"
+     xmlns:geolOrogen="&oro;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:spaceObject="&geom;#"
+     xmlns:solid="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:astroPlanet="&planet;#"
+     xmlns:geolBasin="&basin;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geogGeomorphology.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geol.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geolBasin.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geolTectonics.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryStructure -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryStructure"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasSubstance -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasSubstance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#hasGeologicalPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&geol;#hasGeologicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProcess -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#hasAxis -->
+
+    <owl:ObjectProperty rdf:about="&dir;#hasAxis"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#GeologicFeature -->
+
+    <owl:Class rdf:about="&geol;#GeologicFeature"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#GeologicProcess -->
+
+    <owl:Class rdf:about="&geol;#GeologicProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#GeologicProvince -->
+
+    <owl:Class rdf:about="&geol;#GeologicProvince"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#ForelandBasin -->
+
+    <owl:Class rdf:about="&basin;#ForelandBasin"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#SuccessorBasin -->
+
+    <owl:Class rdf:about="&basin;#SuccessorBasin"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#Arc -->
+
+    <owl:Class rdf:about="#Arc">
+        <rdfs:subClassOf rdf:resource="&geol;#GeologicFeature"/>
+        <rdfs:subClassOf rdf:resource="&geom;#Arc"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#ArcAxis -->
+
+    <owl:Class rdf:about="#ArcAxis">
+        <rdfs:subClassOf rdf:resource="&dir;#Axis"/>
+        <rdfs:comment xml:lang="en"
+            >In a Back-arc basin the arc axis is the line where spreading occurs on the overlying plate of the subduction zone. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#BackArc -->
+
+    <owl:Class rdf:about="#BackArc">
+        <owl:equivalentClass rdf:resource="#RearArc"/>
+        <owl:equivalentClass rdf:resource="#RetroArc"/>
+        <rdfs:subClassOf rdf:resource="#Arc"/>
+        <rdfs:comment xml:lang="en"
+            >Back-arc basins (or retro-arc basins) are geologic features, submarine basins associated with island arcs and subduction zones. They are found at some convergent plate boundaries, presently concentrated in the Western Pacific ocean. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#ForeArc -->
+
+    <owl:Class rdf:about="#ForeArc">
+        <rdfs:subClassOf rdf:resource="#Arc"/>
+        <rdfs:subClassOf rdf:resource="&tec;#SupraSubductionZoneComplex"/>
+        <rdfs:comment xml:lang="en"
+            >A forearc is a depression in the sea floor located between a subduction zone and an associated volcanic arc. It is typically filled with sediments from the adjacent landmass and the island arc in addition to trapped oceanic crustal material.  [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#IntraplateProcess -->
+
+    <owl:Class rdf:about="#IntraplateProcess">
+        <rdfs:subClassOf rdf:resource="&tec;#TectonicPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#MagmaticArc -->
+
+    <owl:Class rdf:about="#MagmaticArc">
+        <rdfs:subClassOf rdf:resource="#Arc"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryStructure"/>
+                <owl:someValuesFrom rdf:resource="#ForeArc"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dir;#hasAxis"/>
+                <owl:allValuesFrom rdf:resource="#ArcAxis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryStructure"/>
+                <owl:someValuesFrom rdf:resource="#RearArc"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#Orogen -->
+
+    <owl:Class rdf:about="#Orogen">
+        <rdfs:subClassOf rdf:resource="&geol;#GeologicProvince"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:someValuesFrom rdf:resource="&solid;#Deformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:someValuesFrom rdf:resource="#Orogeny"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryStructure"/>
+                <owl:someValuesFrom rdf:resource="&tec;#ThrustSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:someValuesFrom rdf:resource="&petr;#Melange"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryStructure"/>
+                <owl:someValuesFrom rdf:resource="&basin;#ForelandBasin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryStructure"/>
+                <owl:someValuesFrom rdf:resource="&tec;#Suture"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&geol;#hasGeologicalPhenomena"/>
+                <owl:someValuesFrom rdf:resource="#OrogenicCollapse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryStructure"/>
+                <owl:someValuesFrom rdf:resource="&tec;#Terrane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#Orogenesis -->
+
+    <owl:Class rdf:about="#Orogenesis">
+        <rdfs:subClassOf rdf:resource="&geol;#GeologicProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#OrogenicCollapse -->
+
+    <owl:Class rdf:about="#OrogenicCollapse">
+        <rdfs:subClassOf rdf:resource="&tec;#TectonicPhenomena"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="#Orogen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryStructure"/>
+                <owl:allValuesFrom rdf:resource="&basin;#SuccessorBasin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&petr;#AnorogenicIgneousRock"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >The process in which mountains begin to collapse under their own weight and spread out laterally.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#Orogeny -->
+
+    <owl:Class rdf:about="#Orogeny">
+        <rdfs:subClassOf rdf:resource="&tec;#TectonicPhenomena"/>
+        <rdfs:comment xml:lang="en"
+            >Orogeny refers to natural mountain building, and may be studied as (a) a tectonic structural event, (b) as a geographical event, and (c) a chronological event. Orogenic events (a) cause distinctive structural phenomena and related tectonic activity, (b) affect certain regions of rocks and crust, and (c) happen within a specific period of time. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#RearArc -->
+
+    <owl:Class rdf:about="#RearArc"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#RemnantArc -->
+
+    <owl:Class rdf:about="#RemnantArc">
+        <rdfs:subClassOf rdf:resource="#Arc"/>
+        <rdfs:comment xml:lang="en"
+            >The remnant arc is what is left on the rear side of the speading zone as athe basin broadens. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolOrogen.owl#RetroArc -->
+
+    <owl:Class rdf:about="#RetroArc"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#AnorogenicIgneousRock -->
+
+    <owl:Class rdf:about="&petr;#AnorogenicIgneousRock"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Melange -->
+
+    <owl:Class rdf:about="&petr;#Melange"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolTectonics.owl#SupraSubductionZoneComplex -->
+
+    <owl:Class rdf:about="&tec;#SupraSubductionZoneComplex"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolTectonics.owl#Suture -->
+
+    <owl:Class rdf:about="&tec;#Suture"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolTectonics.owl#TectonicPhenomena -->
+
+    <owl:Class rdf:about="&tec;#TectonicPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolTectonics.owl#Terrane -->
+
+    <owl:Class rdf:about="&tec;#Terrane"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolTectonics.owl#ThrustSystem -->
+
+    <owl:Class rdf:about="&tec;#ThrustSystem"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSolid.owl#Deformation -->
+
+    <owl:Class rdf:about="&solid;#Deformation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Axis -->
+
+    <owl:Class rdf:about="&dir;#Axis"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Arc -->
+
+    <owl:Class rdf:about="&geom;#Arc"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,553 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY time "http://sweet.jpl.nasa.gov/2.0/time.owl" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY atmo "http://sweet.jpl.nasa.gov/2.0/atmo.owl#" >
+    <!ENTITY wind "http://sweet.jpl.nasa.gov/2.0/atmoWind.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY front "http://sweet.jpl.nasa.gov/2.0/atmoFront.owl" >
+    <!ENTITY solid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl" >
+    <!ENTITY sys "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY atmoFront "http://sweet.jpl.nasa.gov/2.0/atmoFront.owl#" >
+    <!ENTITY physSolid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl#" >
+    <!ENTITY scale "http://sweet.jpl.nasa.gov/2.0/spaceScale.owl" >
+    <!ENTITY atherm "http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY spaceScale "http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY atmoThermo "http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY dynam "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl" >
+    <!ENTITY atmoBoundary "http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#" >
+    <!ENTITY trans "http://sweet.jpl.nasa.gov/2.0/physTransport.owl" >
+    <!ENTITY astab "http://sweet.jpl.nasa.gov/2.0/atmoStability.owl" >
+    <!ENTITY physDynamics "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#" >
+    <!ENTITY atmoStability "http://sweet.jpl.nasa.gov/2.0/atmoStability.owl#" >
+    <!ENTITY physTransport "http://sweet.jpl.nasa.gov/2.0/physTransport.owl#" >
+    <!ENTITY fluid "http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl" >
+    <!ENTITY physFluidDynamics "http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl"
+     xmlns:scale="http://sweet.jpl.nasa.gov/2.0/spaceScale.owl"
+     xmlns:atmo="http://sweet.jpl.nasa.gov/2.0/atmo.owl#"
+     xmlns:physFluidDynamics="&fluid;#"
+     xmlns:spaceScale="&scale;#"
+     xmlns:sys="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:atmoFront="&front;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:time="http://sweet.jpl.nasa.gov/2.0/time.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:fluid="http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl"
+     xmlns:phys2="&phys;#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:atmoStability="&astab;#"
+     xmlns:dynam="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"
+     xmlns:physDynamics="&dynam;#"
+     xmlns:chem2="&chem;#"
+     xmlns:physSolid="&solid;#"
+     xmlns:wind="http://sweet.jpl.nasa.gov/2.0/atmoWind.owl"
+     xmlns:sciSystem="&sys;#"
+     xmlns:physTransport="&trans;#"
+     xmlns:atmoBoundary="http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#"
+     xmlns:front="http://sweet.jpl.nasa.gov/2.0/atmoFront.owl"
+     xmlns:atmoThermo="&atherm;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:atherm="http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl"
+     xmlns:solid="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"
+     xmlns:trans="http://sweet.jpl.nasa.gov/2.0/physTransport.owl"
+     xmlns:astab="http://sweet.jpl.nasa.gov/2.0/atmoStability.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:astroPlanet="&planet;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmo.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmoFront.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmoStability.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmoWind.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physTransport.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceScale.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/time.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#hasMeteorologicalPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&atmo;hasMeteorologicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasSubstance -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasSubstance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProcess -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProperty -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Atmosphere -->
+
+    <owl:Class rdf:about="&planet;#Atmosphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetarySurface -->
+
+    <owl:Class rdf:about="&planet;#PlanetarySurface"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#AtmosphereLayer -->
+
+    <owl:Class rdf:about="&atmo;AtmosphereLayer"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#MeteorologicalPhenomena -->
+
+    <owl:Class rdf:about="&atmo;MeteorologicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#AtmosphericBoundaryLayer -->
+
+    <owl:Class rdf:about="#AtmosphericBoundaryLayer">
+        <owl:equivalentClass rdf:resource="#BoundaryLayer"/>
+        <rdfs:subClassOf rdf:resource="&atmo;AtmosphereLayer"/>
+        <rdfs:comment xml:lang="en"
+            >The bottom layer of the troposphere that is in contact with the surface of the earth.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#BoundaryLayer -->
+
+    <owl:Class rdf:about="#BoundaryLayer">
+        <owl:equivalentClass rdf:resource="#PlanetaryBoundaryLayer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#CappingInversion -->
+
+    <owl:Class rdf:about="#CappingInversion">
+        <rdfs:subClassOf rdf:resource="&astab;#InversionLayer"/>
+        <rdfs:comment xml:lang="en"
+            >A statically stable layer at the top of the atmospheric boundary layer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#ConstantFluxLayer -->
+
+    <owl:Class rdf:about="#ConstantFluxLayer">
+        <rdfs:subClassOf rdf:resource="#AtmosphericBoundaryLayer"/>
+        <rdfs:comment xml:lang="en"
+            >A layer of air tens of meters thick at the bottom of the atmosphere where the variation of vertical turbulent flux with altitude is less than 10% of its magnitude.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#GroundInversion -->
+
+    <owl:Class rdf:about="#GroundInversion">
+        <rdfs:subClassOf rdf:resource="&astab;#InversionLayer"/>
+        <rdfs:comment xml:lang="en"
+            >An air layer with its base at the ground surface and in which temperature increases with height. These often form at night over land under clear skies and are statically stable. See inversion, lapse rate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#InternalBoundaryLayer -->
+
+    <owl:Class rdf:about="#InternalBoundaryLayer">
+        <rdfs:subClassOf rdf:resource="#AtmosphericBoundaryLayer"/>
+        <rdfs:comment xml:lang="en"
+            >A layer within the atmosphere bounded below by the surface, and above by a more or less sharp discontinuity in some atmospheric property. Internal boundary layers are associated with the horizontal advection of air across a discontinuity in some property of the surface (e.g., aerodynamic roughness length or surface heat flux) and can be viewed as layers in which the atmosphere is adjusting to new surface properties. See thermal internal boundary layer, mechanical internal boundary layer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#MaximumWindSpeedLevel -->
+
+    <owl:Class rdf:about="#MaximumWindSpeedLevel">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetarySurface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#MechanicalInternalBoundaryLayer -->
+
+    <owl:Class rdf:about="#MechanicalInternalBoundaryLayer">
+        <rdfs:subClassOf rdf:resource="#InternalBoundaryLayer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="&trans;#Advection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >(Abbreviated MIBL.) An internal boundary layer caused by advection of air across a discontinuity in surface roughness. When the new surface is rougher than the old one, the MIBL depth grows roughly as the 0.8 power of the ratio of the two roughness lengths. In this example, the MIBL grows to include the whole surface layer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#Microfront -->
+
+    <owl:Class rdf:about="#Microfront">
+        <rdfs:subClassOf rdf:resource="&front;#Front"/>
+        <rdfs:comment xml:lang="en"
+            >A sharp horizontal temperature contrast of a few degrees Celsius within a width of tens of centimeters to a few meters along the trailing edge of a thermal plume in the surface layer of the atmospheric boundary layer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#MixedLayer -->
+
+    <owl:Class rdf:about="#MixedLayer">
+        <rdfs:subClassOf rdf:resource="#BoundaryLayer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="&fluid;#Turbulence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A type of atmospheric boundary layer characterized by vigorous turbulence tending to stir and uniformly mix, primarily in the vertical, quantities such as conservative tracer concentrations, potential temperature, and momentum or wind speed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#MixedLayerCappingInversion -->
+
+    <owl:Class rdf:about="#MixedLayerCappingInversion">
+        <rdfs:subClassOf rdf:resource="#CappingInversion"/>
+        <rdfs:comment xml:lang="en"
+            >The statically stable layer of air at the top of the atmospheric boundary layer. Because the troposphere is statically stable on the average (i.e., potential temperature increases with height), and because turbulence in the boundary layer causes potential temperatures to become somewhat well mixed there, conservation of heat requires that there be a potential temperature increase (i.e., a temperature step or inversion) at the top of the boundary layer. It is this inversion that separates the boundary layer from the rest of the troposphere by limiting the domain of turbulence. It is also responsible for trapping pollutants near the ground during fair weather.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#MixedLayerEvolution -->
+
+    <owl:Class rdf:about="#MixedLayerEvolution">
+        <rdfs:subClassOf rdf:resource="&sys;#Evolution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#MixedLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The three-part change of the atmospheric boundary layer that typically occurs during fair weather over land on sunny days. In the early morning, the mixed layer is shallow, slowly deepening, cool (in a potential temperature sense), and is capped by the remains of the stable boundary layer from the previous night. In mid- to late morning, the top of the mixed layer exhibits rapid rise as heating eliminates the nocturnal inversion, and the mixed layer grows through the residual layer. The third stage in late morning and afternoon is that of a deep (order of 1?2 km) convective boundary layer of relatively constant depth.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#MixedLayerVenting -->
+
+    <owl:Class rdf:about="#MixedLayerVenting">
+        <rdfs:subClassOf rdf:resource="&sys;#Removal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#MixedLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&chem;#Pollutant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Removal of pollutants out of the top of the atmospheric boundary layer through the mixed-layer capping inversion. Normally pollutants cannot escape through the capping inversion. However, penetrating cumulus clouds, thunderstorms, mountain circulations, and frontal circulations can force polluted air through the inversion to vent pollutants into the free atmosphere.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#MixingLengthScale -->
+
+    <owl:Class rdf:about="#MixingLengthScale">
+        <rdfs:subClassOf rdf:resource="&scale;#SpatialScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#MoisturePooling -->
+
+    <owl:Class rdf:about="#MoisturePooling">
+        <rdfs:subClassOf rdf:resource="&atmo;MeteorologicalPhenomena"/>
+        <rdfs:comment xml:lang="en"
+            >The development of an area in the boundary layer (e.g., often observed on surface or 850-mb charts) where moisture values become higher than in the surrounding region. Moisture pooling typically occurs in an area of low-level convergence during the warm (growing) season, and can have a significant effect on convection initiation and evolution.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#NocturnalBoundaryLayer -->
+
+    <owl:Class rdf:about="#NocturnalBoundaryLayer">
+        <rdfs:subClassOf rdf:resource="#BoundaryLayer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&atmo;hasMeteorologicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="&atherm;#NocturnalCooling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The cool layer of air adjacent to the ground that forms at night. At night under clear skies, radiation to space cools the land surface, which in turn cools the adjacent air through processes of molecular conduction, turbulence, and radiative transfer. This causes a stable boundary layer to form and grow to depths of a few hundreds of meters, depending on the season. Many interacting processes can occur within the statically stable nocturnal boundary layer: patchy sporadic turbulence, internal gravity waves, drainage flows, inertial oscillations, and nocturnal jets.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#OuterLayer -->
+
+    <owl:Class rdf:about="#OuterLayer">
+        <rdfs:subClassOf rdf:resource="#BoundaryLayer"/>
+        <rdfs:comment xml:lang="en"
+            >For flow over a hill, the top layer in the boundary layer that accelerates relative to its upstream value due to the Bernoulli effect.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#PlanetaryBoundaryLayer -->
+
+    <owl:Class rdf:about="#PlanetaryBoundaryLayer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:someValuesFrom rdf:resource="&planet;#Atmosphere"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The bottom layer of the troposphere that is in contact with the surface of the earth.   It is often turbulent and is capped by a statically stable layer of air or temperature inversion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#ResidualLayer -->
+
+    <owl:Class rdf:about="#ResidualLayer">
+        <rdfs:subClassOf rdf:resource="#AtmosphericBoundaryLayer"/>
+        <rdfs:comment xml:lang="en"
+            >The middle portion of the nocturnal atmospheric boundary layer characterized by weak sporadic turbulence and initially uniformly mixed potential temperature and pollutants remaining from the mixed layer of the previous day.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#RoughnessSublayer -->
+
+    <owl:Class rdf:about="#RoughnessSublayer">
+        <rdfs:subClassOf rdf:resource="#AtmosphericBoundaryLayer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&solid;#Roughness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Same as transition layer. The lowest atmospheric layer immediately adjacent to a surface covered with relatively large roughness elements such as stones, vegetation, trees, or buildings.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#SkinLayer -->
+
+    <owl:Class rdf:about="#SkinLayer">
+        <rdfs:subClassOf rdf:resource="#AtmosphericBoundaryLayer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#StableBoundaryLayer -->
+
+    <owl:Class rdf:about="#StableBoundaryLayer">
+        <rdfs:subClassOf rdf:resource="#AtmosphericBoundaryLayer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#StackEffect -->
+
+    <owl:Class rdf:about="#StackEffect">
+        <rdfs:subClassOf rdf:resource="&trans;#Convection"/>
+        <rdfs:comment xml:lang="en"
+            >An effect due to heat sources within a local exhaust enclosure (stack) producing convective air currents with vertical velocities proportional to the rate of heat transferred to the surrounding air and to the height of rise of the heated air.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#Thermal -->
+
+    <owl:Class rdf:about="#Thermal">
+        <rdfs:subClassOf rdf:resource="&trans;#Convection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#VonKarmansConstant -->
+
+    <owl:Class rdf:about="#VonKarmansConstant">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalConstant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoBoundary.owl#WellMixedLayer -->
+
+    <owl:Class rdf:about="#WellMixedLayer">
+        <rdfs:subClassOf rdf:resource="#AtmosphericBoundaryLayer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="&dynam;#Mixing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A type of atmospheric boundary layer characterized by vigorous turbulence tending to stir and uniformly mix, primarily in the vertical, quantities such as conservative tracer concentrations, potential temperature, and momentum or wind speed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoFront.owl#Front -->
+
+    <owl:Class rdf:about="&front;#Front"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoStability.owl#InversionLayer -->
+
+    <owl:Class rdf:about="&astab;#InversionLayer"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoThermo.owl#NocturnalCooling -->
+
+    <owl:Class rdf:about="&atherm;#NocturnalCooling"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Pollutant -->
+
+    <owl:Class rdf:about="&chem;#Pollutant"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalConstant -->
+
+    <owl:Class rdf:about="&phys;#PhysicalConstant"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Mixing -->
+
+    <owl:Class rdf:about="&dynam;#Mixing"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Turbulence -->
+
+    <owl:Class rdf:about="&fluid;#Turbulence"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSolid.owl#Roughness -->
+
+    <owl:Class rdf:about="&solid;#Roughness"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physTransport.owl#Advection -->
+
+    <owl:Class rdf:about="&trans;#Advection"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physTransport.owl#Convection -->
+
+    <owl:Class rdf:about="&trans;#Convection"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Evolution -->
+
+    <owl:Class rdf:about="&sys;#Evolution"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Removal -->
+
+    <owl:Class rdf:about="&sys;#Removal"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#SpatialScale -->
+
+    <owl:Class rdf:about="&scale;#SpatialScale"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

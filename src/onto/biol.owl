@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY time "http://sweet.jpl.nasa.gov/2.0/time.owl" >
+    <!ENTITY biol "http://sweet.jpl.nasa.gov/2.0/biol.owl#" >
+    <!ENTITY time2 "http://sweet.jpl.nasa.gov/2.0/time.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY sys "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY qual "http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl" >
+    <!ENTITY sciCategorical "http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/biol.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/biol.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:biol="http://sweet.jpl.nasa.gov/2.0/biol.owl#"
+     xmlns:sciSystem="&sys;#"
+     xmlns:sciCategorical="&qual;#"
+     xmlns:sys="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://sweet.jpl.nasa.gov/2.0/time.owl"
+     xmlns:time2="&time;#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:qual="http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/time.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#hasOrganism -->
+
+    <owl:ObjectProperty rdf:about="#hasOrganism">
+        <rdfs:range rdf:resource="#Organism"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#studyOf -->
+
+    <owl:ObjectProperty rdf:about="&res;#studyOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="&sci;#hasProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Adult -->
+
+    <owl:Class rdf:about="#Adult">
+        <rdfs:subClassOf rdf:resource="#AgeGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#AgeGroup -->
+
+    <owl:Class rdf:about="#AgeGroup">
+        <rdfs:subClassOf rdf:resource="&qual;#Category"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Anatomy -->
+
+    <owl:Class rdf:about="#Anatomy">
+        <rdfs:subClassOf rdf:resource="#Biology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#AquaticOrganism -->
+
+    <owl:Class rdf:about="#AquaticOrganism">
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Bioavailability -->
+
+    <owl:Class rdf:about="#Bioavailability">
+        <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Biochemistry -->
+
+    <owl:Class rdf:about="#Biochemistry">
+        <rdfs:subClassOf rdf:resource="#Biology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#BiologicalClassification -->
+
+    <owl:Class rdf:about="#BiologicalClassification">
+        <rdfs:subClassOf rdf:resource="&qual;#Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#BiologicalOxygenDemand -->
+
+    <owl:Class rdf:about="#BiologicalOxygenDemand">
+        <owl:equivalentClass rdf:resource="#OxygenDemand"/>
+        <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#BiologicalProperty -->
+
+    <owl:Class rdf:about="#BiologicalProperty">
+        <rdfs:subClassOf rdf:resource="&sci;#Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Biology -->
+
+    <owl:Class rdf:about="#Biology">
+        <rdfs:subClassOf rdf:resource="&res;#Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Biomass -->
+
+    <owl:Class rdf:about="#Biomass">
+        <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Community -->
+
+    <owl:Class rdf:about="#Community">
+        <rdfs:subClassOf rdf:resource="&qual;#Group"/>
+        <rdfs:comment
+            >A community is a social group of organisms sharing an environment, normally with shared interests.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Detritus -->
+
+    <owl:Class rdf:about="#Detritus">
+        <rdfs:subClassOf rdf:resource="#Biomass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Disease -->
+
+    <owl:Class rdf:about="#Disease">
+        <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Epidemic -->
+
+    <owl:Class rdf:about="#Epidemic">
+        <rdfs:subClassOf rdf:resource="#Disease"/>
+        <rdfs:comment xml:lang="en"
+            >In epidemiology, an epidemic is a classification of a disease that appears as new cases in a given human population, during a given period, at a rate that substantially exceeds what is expected based on recent experience (the number of new cases in the population during a specified period of time is called the incidence rate).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Epidemiology -->
+
+    <owl:Class rdf:about="#Epidemiology">
+        <rdfs:subClassOf rdf:resource="#Biology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#studyOf"/>
+                <owl:allValuesFrom rdf:resource="#Disease"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Fertility -->
+
+    <owl:Class rdf:about="#Fertility">
+        <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Food -->
+
+    <owl:Class rdf:about="#Food">
+        <rdfs:subClassOf rdf:resource="#Nutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Genetics -->
+
+    <owl:Class rdf:about="#Genetics">
+        <rdfs:subClassOf rdf:resource="#Biology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Health -->
+
+    <owl:Class rdf:about="#Health">
+        <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#HealthIndex -->
+
+    <owl:Class rdf:about="#HealthIndex">
+        <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Honey -->
+
+    <owl:Class rdf:about="#Honey">
+        <rdfs:subClassOf rdf:resource="#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Humus -->
+
+    <owl:Class rdf:about="#Humus">
+        <rdfs:subClassOf rdf:resource="#Biomass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#IncidenceRate -->
+
+    <owl:Class rdf:about="#IncidenceRate">
+        <rdfs:subClassOf rdf:resource="&time;#Rate"/>
+        <rdfs:comment xml:lang="en"
+            >The incidence rate is the number of new cases per unit of person-time at risk to some disease.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#IndicatorSpecies -->
+
+    <owl:Class rdf:about="#IndicatorSpecies">
+        <rdfs:subClassOf rdf:resource="#Species"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#hasProperty"/>
+                <owl:allValuesFrom rdf:resource="&qual;#Characteristics"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >An indicator species is any biological species that defines a trait or characteristic of the environment. For example, a species may delineate an ecoregion or indicate an environmental condition such as a disease outbreak, pollution, species competition or climate change. Indicator species can be among the most sensitive species in a region, acting as an early warning to monitoring biologists.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#LeafAreaIndex -->
+
+    <owl:Class rdf:about="#LeafAreaIndex">
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#LifeHistory -->
+
+    <owl:Class rdf:about="#LifeHistory">
+        <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Litter -->
+
+    <owl:Class rdf:about="#Litter">
+        <rdfs:subClassOf rdf:resource="#Biomass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#LivingEntity -->
+
+    <owl:Class rdf:about="#LivingEntity">
+        <owl:equivalentClass rdf:resource="&sci;#LivingThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Micronutrient -->
+
+    <owl:Class rdf:about="#Micronutrient">
+        <rdfs:subClassOf rdf:resource="#Nutrient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Nutrient -->
+
+    <owl:Class rdf:about="#Nutrient">
+        <rdfs:subClassOf rdf:resource="#Food"/>
+        <rdfs:subClassOf rdf:resource="&sys;#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#NutritionScience -->
+
+    <owl:Class rdf:about="#NutritionScience">
+        <rdfs:subClassOf rdf:resource="#Biology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#studyOf"/>
+                <owl:allValuesFrom rdf:resource="#Food"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Organism -->
+
+    <owl:Class rdf:about="#Organism">
+        <rdfs:subClassOf rdf:resource="#LivingEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#OxygenDemand -->
+
+    <owl:Class rdf:about="#OxygenDemand"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Pest -->
+
+    <owl:Class rdf:about="#Pest">
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+        <rdfs:subClassOf rdf:resource="&sys;#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#PhysiologicalParameter -->
+
+    <owl:Class rdf:about="#PhysiologicalParameter">
+        <rdfs:subClassOf rdf:resource="#Health"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Physiology -->
+
+    <owl:Class rdf:about="#Physiology">
+        <rdfs:subClassOf rdf:resource="#Biology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Pigment -->
+
+    <owl:Class rdf:about="#Pigment">
+        <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Productivity -->
+
+    <owl:Class rdf:about="#Productivity">
+        <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#PsycologicalParameter -->
+
+    <owl:Class rdf:about="#PsycologicalParameter">
+        <rdfs:subClassOf rdf:resource="#Health"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Species -->
+
+    <owl:Class rdf:about="#Species">
+        <rdfs:subClassOf rdf:resource="#Community"/>
+        <rdfs:subClassOf rdf:resource="#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Toxicology -->
+
+    <owl:Class rdf:about="#Toxicology">
+        <rdfs:subClassOf rdf:resource="#Biology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#VitalStatistics -->
+
+    <owl:Class rdf:about="#VitalStatistics">
+        <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Category -->
+
+    <owl:Class rdf:about="&qual;#Category"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Characteristics -->
+
+    <owl:Class rdf:about="&qual;#Characteristics"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Classification -->
+
+    <owl:Class rdf:about="&qual;#Classification"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#Group -->
+
+    <owl:Class rdf:about="&qual;#Group"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Index -->
+
+    <owl:Class rdf:about="&res;#Index"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Science -->
+
+    <owl:Class rdf:about="&res;#Science"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Role -->
+
+    <owl:Class rdf:about="&sys;#Role"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Rate -->
+
+    <owl:Class rdf:about="&time;#Rate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#LivingThing -->
+
+    <owl:Class rdf:about="&sci;#LivingThing"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Quantity -->
+
+    <owl:Class rdf:about="&sci;#Quantity"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,1219 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY chemState "http://sweet.jpl.nasa.gov/2.0/chemState.owl#" >
+    <!ENTITY chemElement "http://sweet.jpl.nasa.gov/2.0/chemElement.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/chemElement.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/chemElement.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chemState="&state;#"
+     xmlns:chemElement="http://sweet.jpl.nasa.gov/2.0/chemElement.owl#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chem2="&chem;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#hasElement -->
+
+    <owl:ObjectProperty rdf:about="#hasElement">
+        <rdfs:range rdf:resource="#Element"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasBaseNeutrons -->
+
+    <owl:DatatypeProperty rdf:about="&chem;#hasBaseNeutrons"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasExcessNeutrons -->
+
+    <owl:DatatypeProperty rdf:about="&chem;#hasExcessNeutrons"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#hasProtons -->
+
+    <owl:DatatypeProperty rdf:about="#hasProtons"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Chemical -->
+
+    <owl:Class rdf:about="&chem;#Chemical"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#TraceSubstance -->
+
+    <owl:Class rdf:about="&chem;#TraceSubstance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Al -->
+
+    <owl:Class rdf:about="#Al">
+        <owl:equivalentClass rdf:resource="#Aluminum"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">13</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">14</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Aluminum -->
+
+    <owl:Class rdf:about="#Aluminum"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Antimony -->
+
+    <owl:Class rdf:about="#Antimony">
+        <owl:equivalentClass rdf:resource="#Sb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Ar -->
+
+    <owl:Class rdf:about="#Ar">
+        <owl:equivalentClass rdf:resource="#Argon"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">18</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">22</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Argon -->
+
+    <owl:Class rdf:about="#Argon"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Arsenic -->
+
+    <owl:Class rdf:about="#Arsenic">
+        <owl:equivalentClass rdf:resource="#As"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#As -->
+
+    <owl:Class rdf:about="#As">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">42</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">33</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#B -->
+
+    <owl:Class rdf:about="#B">
+        <owl:equivalentClass rdf:resource="#Boron"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">6</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">5</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Be -->
+
+    <owl:Class rdf:about="#Be">
+        <owl:equivalentClass rdf:resource="#Beryllium"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">4</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">5</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Beryllium -->
+
+    <owl:Class rdf:about="#Beryllium"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Boron -->
+
+    <owl:Class rdf:about="#Boron"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Br -->
+
+    <owl:Class rdf:about="#Br">
+        <owl:equivalentClass rdf:resource="#Bromine"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">35</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">45</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Bromine -->
+
+    <owl:Class rdf:about="#Bromine"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#C -->
+
+    <owl:Class rdf:about="#C">
+        <owl:equivalentClass rdf:resource="#Carbon"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">6</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">6</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#C14 -->
+
+    <owl:Class rdf:about="#C14">
+        <rdfs:subClassOf rdf:resource="#C"/>
+        <rdfs:subClassOf rdf:resource="#Isotope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasExcessNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Ca -->
+
+    <owl:Class rdf:about="#Ca">
+        <owl:equivalentClass rdf:resource="#Calcium"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">20</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">20</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Cadmium -->
+
+    <owl:Class rdf:about="#Cadmium">
+        <owl:equivalentClass rdf:resource="#Cd"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Calcium -->
+
+    <owl:Class rdf:about="#Calcium"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Carbon -->
+
+    <owl:Class rdf:about="#Carbon"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Cd -->
+
+    <owl:Class rdf:about="#Cd">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">65</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">48</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Ch -->
+
+    <owl:Class rdf:about="#Ch">
+        <owl:equivalentClass rdf:resource="#Chromium"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">28</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">24</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#ChemicalElement -->
+
+    <owl:Class rdf:about="#ChemicalElement">
+        <owl:equivalentClass rdf:resource="#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Chlorine -->
+
+    <owl:Class rdf:about="#Chlorine">
+        <owl:equivalentClass rdf:resource="#Cl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Chromium -->
+
+    <owl:Class rdf:about="#Chromium"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Cl -->
+
+    <owl:Class rdf:about="#Cl">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">18</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">17</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Copper -->
+
+    <owl:Class rdf:about="#Copper">
+        <owl:equivalentClass rdf:resource="#Cu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Cu -->
+
+    <owl:Class rdf:about="#Cu">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">29</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">34</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Element -->
+
+    <owl:Class rdf:about="#Element">
+        <rdfs:subClassOf rdf:resource="&chem;#Chemical"/>
+        <rdfs:comment xml:lang="en"
+            >A chemical element is a pure chemical substance consisting of one type of atom distinguished by its atomic number, which is the number of protons in its nucleus. The term is also used to refer to a pure chemical substance composed of atoms with the same number of protons. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#F -->
+
+    <owl:Class rdf:about="#F">
+        <owl:equivalentClass rdf:resource="#Fluorine"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">10</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">9</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Fe -->
+
+    <owl:Class rdf:about="#Fe">
+        <owl:equivalentClass rdf:resource="#Iron"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">26</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">30</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Flourine -->
+
+    <owl:Class rdf:about="#Flourine"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Fluorine -->
+
+    <owl:Class rdf:about="#Fluorine"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#H -->
+
+    <owl:Class rdf:about="#H">
+        <owl:equivalentClass rdf:resource="#Hydrogen"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Ha -->
+
+    <owl:Class rdf:about="#Ha">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Bromine"/>
+                    <rdf:Description rdf:about="#Chlorine"/>
+                    <rdf:Description rdf:about="#Flourine"/>
+                    <rdf:Description rdf:about="#Iodine"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&chem;#Chemical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#He -->
+
+    <owl:Class rdf:about="#He">
+        <owl:equivalentClass rdf:resource="#Helium"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#HeavyMetal -->
+
+    <owl:Class rdf:about="#HeavyMetal">
+        <rdfs:subClassOf rdf:resource="#Metal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Helium -->
+
+    <owl:Class rdf:about="#Helium"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Hg -->
+
+    <owl:Class rdf:about="#Hg">
+        <owl:equivalentClass rdf:resource="#Mercury"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">80</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">121</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Hydrogen -->
+
+    <owl:Class rdf:about="#Hydrogen"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#I -->
+
+    <owl:Class rdf:about="#I">
+        <owl:equivalentClass rdf:resource="#Mercury"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">74</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">53</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Iodine -->
+
+    <owl:Class rdf:about="#Iodine"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Iron -->
+
+    <owl:Class rdf:about="#Iron"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Isotope -->
+
+    <owl:Class rdf:about="#Isotope">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#K -->
+
+    <owl:Class rdf:about="#K">
+        <owl:equivalentClass rdf:resource="#Potassium"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">20</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">19</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Lead -->
+
+    <owl:Class rdf:about="#Lead">
+        <owl:equivalentClass rdf:resource="#Pb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Li -->
+
+    <owl:Class rdf:about="#Li">
+        <owl:equivalentClass rdf:resource="#Lithium"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">4</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Lithium -->
+
+    <owl:Class rdf:about="#Lithium"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Magnesium -->
+
+    <owl:Class rdf:about="#Magnesium">
+        <owl:equivalentClass rdf:resource="#Mg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Manganese -->
+
+    <owl:Class rdf:about="#Manganese">
+        <owl:equivalentClass rdf:resource="#Mn"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Mercury -->
+
+    <owl:Class rdf:about="#Mercury"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Metal -->
+
+    <owl:Class rdf:about="#Metal">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:comment xml:lang="en"
+            >A metal is a chemical element whose atoms readily lose electrons to form positive ions (cations), and form metallic bonds between other metal atoms and ionic bonds between nonmetal atoms.[Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Mg -->
+
+    <owl:Class rdf:about="#Mg">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">12</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">12</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Mn -->
+
+    <owl:Class rdf:about="#Mn">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">25</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">30</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Mo -->
+
+    <owl:Class rdf:about="#Mo">
+        <owl:equivalentClass rdf:resource="#Molybdenum"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">54</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">42</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Molybdenum -->
+
+    <owl:Class rdf:about="#Molybdenum"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#N -->
+
+    <owl:Class rdf:about="#N">
+        <owl:equivalentClass rdf:resource="#Nitrogen"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Na -->
+
+    <owl:Class rdf:about="#Na">
+        <owl:equivalentClass rdf:resource="#Sodium"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">11</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">12</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Ne -->
+
+    <owl:Class rdf:about="#Ne">
+        <owl:equivalentClass rdf:resource="#Neon"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">10</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">10</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Neon -->
+
+    <owl:Class rdf:about="#Neon"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Nitrogen -->
+
+    <owl:Class rdf:about="#Nitrogen"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#O -->
+
+    <owl:Class rdf:about="#O">
+        <owl:equivalentClass rdf:resource="#Oxygen"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">8</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">8</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Oxygen -->
+
+    <owl:Class rdf:about="#Oxygen"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#P -->
+
+    <owl:Class rdf:about="#P">
+        <owl:equivalentClass rdf:resource="#Phosphorus"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">15</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">16</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Pb -->
+
+    <owl:Class rdf:about="#Pb">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">82</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">125</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Phosphorus -->
+
+    <owl:Class rdf:about="#Phosphorus"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Potassium -->
+
+    <owl:Class rdf:about="#Potassium"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Radon -->
+
+    <owl:Class rdf:about="#Radon">
+        <owl:equivalentClass rdf:resource="#Rn"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Rn -->
+
+    <owl:Class rdf:about="#Rn">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">136</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">86</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#S -->
+
+    <owl:Class rdf:about="#S">
+        <owl:equivalentClass rdf:resource="#Sulfur"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">16</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">16</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Sb -->
+
+    <owl:Class rdf:about="#Sb">
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">51</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">71</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Se -->
+
+    <owl:Class rdf:about="#Se">
+        <owl:equivalentClass rdf:resource="#Selenium"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">34</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">45</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Selenium -->
+
+    <owl:Class rdf:about="#Selenium"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Si -->
+
+    <owl:Class rdf:about="#Si">
+        <owl:equivalentClass rdf:resource="#Silicon"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">14</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">18</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Silicon -->
+
+    <owl:Class rdf:about="#Silicon"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Sodium -->
+
+    <owl:Class rdf:about="#Sodium"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Sulfur -->
+
+    <owl:Class rdf:about="#Sulfur"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Th -->
+
+    <owl:Class rdf:about="#Th">
+        <owl:equivalentClass rdf:resource="#Thorium"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf rdf:resource="&state;#Radioactive"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">90</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">142</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Thorium -->
+
+    <owl:Class rdf:about="#Thorium"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#TraceMetal -->
+
+    <owl:Class rdf:about="#TraceMetal">
+        <rdfs:subClassOf rdf:resource="&chem;#TraceSubstance"/>
+        <rdfs:subClassOf rdf:resource="#Metal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#U -->
+
+    <owl:Class rdf:about="#U">
+        <owl:equivalentClass rdf:resource="#Uranium"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf rdf:resource="&state;#Radioactive"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">146</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">92</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Uranium -->
+
+    <owl:Class rdf:about="#Uranium"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Zi -->
+
+    <owl:Class rdf:about="#Zi">
+        <owl:equivalentClass rdf:resource="#Zinc"/>
+        <rdfs:subClassOf rdf:resource="#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProtons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">30</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasBaseNeutrons"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">34</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Zinc -->
+
+    <owl:Class rdf:about="#Zinc"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Radioactive -->
+
+    <owl:Class rdf:about="&state;#Radioactive"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY func "http://sweet.jpl.nasa.gov/2.0/mathFunction.owl" >
+    <!ENTITY mathFunction "http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#" >
+    <!ENTITY dist "http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl" >
+    <!ENTITY spaceDistribution "http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&dist;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mathFunction="&func;#"
+     xmlns:spaceDistribution="&dist;#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:func="http://sweet.jpl.nasa.gov/2.0/mathFunction.owl"
+     xmlns:dist="http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/mathFunction.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathFunction.owl#DistributionFunction -->
+
+    <owl:Class rdf:about="&func;#DistributionFunction"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#AngularDistribution -->
+
+    <owl:Class rdf:about="#AngularDistribution">
+        <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Anisotropic -->
+
+    <owl:Class rdf:about="#Anisotropic">
+        <rdfs:subClassOf rdf:resource="#AngularDistribution"/>
+        <owl:disjointWith rdf:resource="#Isotropic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Anisotropy -->
+
+    <owl:Class rdf:about="#Anisotropy">
+        <rdfs:subClassOf rdf:resource="#AngularDistribution"/>
+        <owl:disjointWith rdf:resource="#Isotropy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Asymmetry -->
+
+    <owl:Class rdf:about="#Asymmetry">
+        <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+        <owl:disjointWith rdf:resource="#Symmetry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Cluster -->
+
+    <owl:Class rdf:about="#Cluster">
+        <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Configuration -->
+
+    <owl:Class rdf:about="#Configuration">
+        <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Confined -->
+
+    <owl:Class rdf:about="#Confined">
+        <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+        <owl:disjointWith rdf:resource="#Unconfined"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Contained -->
+
+    <owl:Class rdf:about="#Contained">
+        <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Containment -->
+
+    <owl:Class rdf:about="#Containment">
+        <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Expand -->
+
+    <owl:Class rdf:about="#Expand">
+        <owl:equivalentClass rdf:resource="#Expanding"/>
+        <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Expanding -->
+
+    <owl:Class rdf:about="#Expanding"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Isotropic -->
+
+    <owl:Class rdf:about="#Isotropic">
+        <rdfs:subClassOf rdf:resource="#AngularDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Isotropy -->
+
+    <owl:Class rdf:about="#Isotropy">
+        <rdfs:subClassOf rdf:resource="#AngularDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Patch -->
+
+    <owl:Class rdf:about="#Patch">
+        <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#SpatialDistribution -->
+
+    <owl:Class rdf:about="#SpatialDistribution">
+        <rdfs:subClassOf rdf:resource="&func;#DistributionFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Spread -->
+
+    <owl:Class rdf:about="#Spread">
+        <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Symmetry -->
+
+    <owl:Class rdf:about="#Symmetry">
+        <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDistribution.owl#Unconfined -->
+
+    <owl:Class rdf:about="#Unconfined">
+        <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

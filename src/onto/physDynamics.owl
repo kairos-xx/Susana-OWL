@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl" >
+    <!ENTITY sciUnits "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vect "http://sweet.jpl.nasa.gov/2.0/mathVector.owl" >
+    <!ENTITY physDynamics "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#" >
+    <!ENTITY dir "http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl" >
+    <!ENTITY spaceDirection "http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"
+     xmlns:vect="http://sweet.jpl.nasa.gov/2.0/mathVector.owl"
+     xmlns:spaceDirection="&dir;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:phys2="&phys;#"
+     xmlns:dir="http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sciUnits="&units;#"
+     xmlns:physDynamics="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/mathVector.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasDefaultUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;#hasDefaultUnit"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#hasDirection -->
+
+    <owl:ObjectProperty rdf:about="&dir;#hasDirection"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Energy -->
+
+    <owl:Class rdf:about="&phys;#Energy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Force -->
+
+    <owl:Class rdf:about="&phys;#Force"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalConstant -->
+
+    <owl:Class rdf:about="&phys;#PhysicalConstant"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalProcess -->
+
+    <owl:Class rdf:about="&phys;#PhysicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalProperty -->
+
+    <owl:Class rdf:about="&phys;#PhysicalProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Physics -->
+
+    <owl:Class rdf:about="&phys;#Physics"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Pressure -->
+
+    <owl:Class rdf:about="&phys;#Pressure"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Acceleration -->
+
+    <owl:Class rdf:about="#Acceleration">
+        <rdfs:label>Acceleration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MotionProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#meter_perSecondSquared"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >The rate of change with time of the velocity vector of a particle.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#AngularMomentum -->
+
+    <owl:Class rdf:about="#AngularMomentum">
+        <rdfs:subClassOf rdf:resource="#Momentum"/>
+        <rdfs:comment xml:lang="en"
+            >In physics, the angular momentum of an object rotating about some reference point is the measure of the extent to which the object will continue to rotate about that point unless acted upon by an external torque. In particular, if a point mass rotates about an axis, then the angular momentum with respect to a point on the axis is related to the mass of the object, the velocity and the distance of the mass to the axis. While the motion associated with linear momentum has no absolute frame of reference, the rotation associated with angular momentum is sometimes spoken of as being measured relative to the fixed stars.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#CentrifugalForce -->
+
+    <owl:Class rdf:about="#CentrifugalForce">
+        <rdfs:label
+            >CentrifugalForce</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&phys;#Force"/>
+        <rdfs:subClassOf rdf:resource="#MotionProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Collision -->
+
+    <owl:Class rdf:about="#Collision">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#CoriolisEffect -->
+
+    <owl:Class rdf:about="#CoriolisEffect">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#CoriolisParameter -->
+
+    <owl:Class rdf:about="#CoriolisParameter">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalConstant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#perSecond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Dynamics -->
+
+    <owl:Class rdf:about="#Dynamics">
+        <rdfs:subClassOf rdf:resource="&phys;#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Inertia -->
+
+    <owl:Class rdf:about="#Inertia">
+        <rdfs:label>Inertia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MotionProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#KineticEnergy -->
+
+    <owl:Class rdf:about="#KineticEnergy">
+        <rdfs:subClassOf rdf:resource="&phys;#Energy"/>
+        <rdfs:subClassOf rdf:resource="#MotionProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Mixing -->
+
+    <owl:Class rdf:about="#Mixing">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Momentum -->
+
+    <owl:Class rdf:about="#Momentum">
+        <rdfs:subClassOf rdf:resource="#MotionProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#kilogram_meter_perSecond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#MomentumFlux -->
+
+    <owl:Class rdf:about="#MomentumFlux">
+        <rdfs:subClassOf rdf:resource="&phys;#Pressure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Motion -->
+
+    <owl:Class rdf:about="#Motion">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#MotionProperty -->
+
+    <owl:Class rdf:about="#MotionProperty">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Rotation -->
+
+    <owl:Class rdf:about="#Rotation">
+        <rdfs:subClassOf rdf:resource="#Motion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Shear -->
+
+    <owl:Class rdf:about="#Shear">
+        <rdfs:subClassOf rdf:resource="#MotionProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Speed -->
+
+    <owl:Class rdf:about="#Speed">
+        <rdfs:subClassOf rdf:resource="#MotionProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#meter_perSecond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#TangentialAcceleration -->
+
+    <owl:Class rdf:about="#TangentialAcceleration">
+        <rdfs:subClassOf rdf:resource="#Acceleration"/>
+        <rdfs:comment xml:lang="en"
+            >The component of the acceleration directed along the velocity vector (streamline), with magnitude equal to the rate of change of speed of the parcel dV/dt, where V is the speed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#TerminalVelocity -->
+
+    <owl:Class rdf:about="#TerminalVelocity">
+        <rdfs:subClassOf rdf:resource="#Velocity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Velocity -->
+
+    <owl:Class rdf:about="#Velocity">
+        <rdfs:subClassOf rdf:resource="#MotionProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dir;#hasDirection"/>
+                <owl:allValuesFrom rdf:resource="&dir;#Direction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#meter_perSecond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The time rate of change of a position vector; that is, a change of position expressed in terms of speed and direction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Direction -->
+
+    <owl:Class rdf:about="&dir;#Direction"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#kilogram_meter_perSecond -->
+
+    <owl:Thing rdf:about="&units;#kilogram_meter_perSecond"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#meter_perSecond -->
+
+    <owl:Thing rdf:about="&units;#meter_perSecond"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#meter_perSecondSquared -->
+
+    <owl:Thing rdf:about="&units;#meter_perSecondSquared"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#perSecond -->
+
+    <owl:Thing rdf:about="&units;#perSecond"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

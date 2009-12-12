@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY biol "http://sweet.jpl.nasa.gov/2.0/biol.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY biol2 "http://sweet.jpl.nasa.gov/2.0/biol.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY plant "http://sweet.jpl.nasa.gov/2.0/biolPlant.owl" >
+    <!ENTITY sys "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY biolPlant "http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#" >
+    <!ENTITY biolBiome "http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#" >
+    <!ENTITY anim "http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY biolAnimal "http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY comp "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY chemCompound "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/biolBiome.owl"
+     xmlns:plant="http://sweet.jpl.nasa.gov/2.0/biolPlant.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:biol="http://sweet.jpl.nasa.gov/2.0/biol.owl"
+     xmlns:comp="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"
+     xmlns:anim="http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl"
+     xmlns:sciSystem="&sys;#"
+     xmlns:biol2="&biol;#"
+     xmlns:biolPlant="&plant;#"
+     xmlns:sys="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:chemCompound="&comp;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:biolBiome="http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:biolAnimal="&anim;#"
+     xmlns:astroPlanet="&planet;#"
+     xmlns:chem2="&chem;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biol.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biolPlant.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#hasOrganism -->
+
+    <owl:ObjectProperty rdf:about="&biol;#hasOrganism"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#hasVegetation -->
+
+    <owl:ObjectProperty rdf:about="&plant;#hasVegetation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasSubstance -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasSubstance"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Land -->
+
+    <owl:Class rdf:about="&planet;#Land"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Ocean -->
+
+    <owl:Class rdf:about="&planet;#Ocean"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Coral -->
+
+    <owl:Class rdf:about="&anim;#Coral"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#Aerobic -->
+
+    <owl:Class rdf:about="#Aerobic">
+        <rdfs:subClassOf rdf:resource="&sys;#Environment"/>
+        <owl:disjointWith rdf:resource="#Anaerobic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#Anaerobic -->
+
+    <owl:Class rdf:about="#Anaerobic">
+        <rdfs:subClassOf rdf:resource="&sys;#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#AquaticEcosystem -->
+
+    <owl:Class rdf:about="#AquaticEcosystem">
+        <rdfs:subClassOf rdf:resource="#Ecosystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="&planet;#Ocean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >An aquatic ecosystem is an ecosystem located in a body of water. Communities of organisms that are dependent on each other and on their environment live in aquatic ecosystems. The two main types of aquatic ecosystems are marine ecosystems and freshwater ecosystems.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#BenthicIndex -->
+
+    <owl:Class rdf:about="#BenthicIndex">
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#Biome -->
+
+    <owl:Class rdf:about="#Biome">
+        <rdfs:subClassOf rdf:resource="&sys;#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#Biosphere -->
+
+    <owl:Class rdf:about="#Biosphere">
+        <rdfs:subClassOf rdf:resource="&sys;#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#CaveEcosystem -->
+
+    <owl:Class rdf:about="#CaveEcosystem">
+        <rdfs:subClassOf rdf:resource="#TerrestrialEcosystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#CoralReef -->
+
+    <owl:Class rdf:about="#CoralReef">
+        <rdfs:subClassOf rdf:resource="#Reef"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&comp;#CalciumCarbonate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biol;#hasOrganism"/>
+                <owl:allValuesFrom rdf:resource="&anim;#Coral"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The term coral reef generally refers to a marine ecosystem in which the main organisms are corals that house algal symbionts within their tissues. These ecosystems require: 1) fully marine waters; 2) warm temperatures; and 3) ample sunlight. They are therefore restricted to shallow waters of tropical and subtropical regions. Corals that do not have algal symbionts can also form significant reef communities in deeper, darker, and colder waters, but these communities are distinguished as cold-water coral bioherms. The more technical definition of coral reef includes an additional geological requirement that the reef organisms produce enough calcium carbonate to build the physical reef structure. The coral reef community lives only on the surface veneer of the reef, on top of already existing skeletal material left behind by previous reef-builders. Many processes act to break down the skeletal material and reef as soon it is laid down by organisms. These include mechanical processes such as waves and currents, and a wide array of biological processes (e.g., bioerosion). Some of the best known bioeroders are large organisms such as parrotfish and sponges, but much of the bioerosion occurs at the microscopic scale by organisms such as algae and fungi. A coral reef is produced only if the coral reef community produces more calcium carbonate than is removed. Indeed, some coral reef communities grow too slowly to build a reef.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#Ecosystem -->
+
+    <owl:Class rdf:about="#Ecosystem">
+        <rdfs:subClassOf rdf:resource="&sys;#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#EmergentLayer -->
+
+    <owl:Class rdf:about="#EmergentLayer">
+        <rdfs:subClassOf rdf:resource="#TerrestrialEcosystem"/>
+        <rdfs:comment xml:lang="en"
+            >An irregular zone of extremely tall trees, rising above the mean canopy</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#Forest -->
+
+    <owl:Class rdf:about="#Forest">
+        <rdfs:subClassOf rdf:resource="#TerrestrialEcosystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biol;#hasOrganism"/>
+                <owl:allValuesFrom rdf:resource="&plant;#Vegetation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A forest is an area with a high density of trees. There are many definitions of a forest, based on various criteria. These plant communities cover large areas of the globe and function as habitats for organisms, hydrologic flow modulators, and soil conservers, constituting one of the most important aspects of the Earth&#39;s biosphere.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#Grassland -->
+
+    <owl:Class rdf:about="#Grassland">
+        <rdfs:subClassOf rdf:resource="#TerrestrialEcosystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&plant;#hasVegetation"/>
+                <owl:allValuesFrom rdf:resource="&plant;#Grass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Grasslands are areas where the vegetation is dominated by grasses (Poaceae) and other herbaceous (non-woody) plants (forbs). Plants of the sedge (Cyperacae) and rush (Juncaceae) families can also be frequent in grasslands. Grasslands occur naturally on all continents except Antarctica, and in many other areas they have replaced the natural vegetation due to human influence. In temperate latitudes, such as north-west Europe, grasslands are dominated by perennial species, whereas in warmer climates annual species form a greater component of the vegetation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#Habitat -->
+
+    <owl:Class rdf:about="#Habitat">
+        <rdfs:subClassOf rdf:resource="&sys;#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#MarineEcosystem -->
+
+    <owl:Class rdf:about="#MarineEcosystem">
+        <rdfs:subClassOf rdf:resource="#AquaticEcosystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#Reef -->
+
+    <owl:Class rdf:about="#Reef">
+        <rdfs:subClassOf rdf:resource="#MarineEcosystem"/>
+        <rdfs:comment xml:lang="en"
+            >In nautical terminology, a reef is a rock, sandbar, or other feature lying beneath the surface of the water yet shallow enough to be a hazard to ships. Many reefs result from abiotic processes&#8212;deposition of sand, wave erosion planning down rock outcrops, and other natural processes&#8212;but the best-known reefs are the coral reefs of tropical waters developed through biotic processes dominated by corals and calcareous algae</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#Savanna -->
+
+    <owl:Class rdf:about="#Savanna">
+        <rdfs:subClassOf rdf:resource="#TerrestrialEcosystem"/>
+        <rdfs:comment xml:lang="en"
+            >A savanna or savannah is a tropical or subtropical woodland ecosystem. Savannas are characterised by the trees being sufficiently small or widely spaced so that the canopy does not close. It is often believed that savannas are characterized by widely spaced, scattered trees, however in many savanna communities tree densities are higher and trees are more regularly spaced than in forest communities. The open canopy allows sufficient light to reach the ground to support an unbroken herbaceous layer consisting primarily of C4 grasses. Savannas are also characterised by seasonal water availability, with the majority of rainfall being confined to one season of the year. Savannas can be associated with several types of biomes. Savannas are frequently seen as a transitional zone, occurring between forest regions and desert regions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#Scrubland -->
+
+    <owl:Class rdf:about="#Scrubland">
+        <rdfs:subClassOf rdf:resource="#TerrestrialEcosystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&biol;#hasOrganism"/>
+                <owl:allValuesFrom rdf:resource="&plant;#Scrub"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Scrubland is plant community characterized by scrub vegetation. Scrub consists of low shrubs, mixed with grasses, herbs, and geophytes. Scrublands are sometimes known as heathlands. Scrublands may be either naturally occurring or the result of human activity. They may be the mature vegetation type in a particular region and remain stable over time, or a transitional community that occurs temporarily as the result of a disturbance, such as a major fire. Many people do not live in scrubland because of the fires that can easily occur.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolBiome.owl#TerrestrialEcosystem -->
+
+    <owl:Class rdf:about="#TerrestrialEcosystem">
+        <rdfs:subClassOf rdf:resource="#Ecosystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="&planet;#Land"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Grass -->
+
+    <owl:Class rdf:about="&plant;#Grass"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Scrub -->
+
+    <owl:Class rdf:about="&plant;#Scrub"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Vegetation -->
+
+    <owl:Class rdf:about="&plant;#Vegetation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#CalciumCarbonate -->
+
+    <owl:Class rdf:about="&comp;#CalciumCarbonate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Index -->
+
+    <owl:Class rdf:about="&res;#Index"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Environment -->
+
+    <owl:Class rdf:about="&sys;#Environment"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

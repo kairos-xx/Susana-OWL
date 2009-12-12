@@ -1,0 +1,759 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY geol "http://sweet.jpl.nasa.gov/2.0/geol.owl" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY geol2 "http://sweet.jpl.nasa.gov/2.0/geol.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY solid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY physSolid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl#" >
+    <!ENTITY chemState "http://sweet.jpl.nasa.gov/2.0/chemState.owl#" >
+    <!ENTITY sres "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/geolResources.owl" >
+    <!ENTITY geolResources "http://sweet.jpl.nasa.gov/2.0/geolResources.owl#" >
+    <!ENTITY geolPetrology "http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl"
+     xmlns:physSolid="&solid;#"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/geolResources.owl"
+     xmlns:geol2="&geol;#"
+     xmlns:geolPetrology="http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#"
+     xmlns:geolResources="&res;#"
+     xmlns:sres="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:geol="http://sweet.jpl.nasa.gov/2.0/geol.owl"
+     xmlns:solid="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chemState="&state;#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&sres;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:top="&sci;#"
+     xmlns:chem2="&chem;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geol.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geolResources.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasSubstance -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasSubstance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#hasRock -->
+
+    <owl:ObjectProperty rdf:about="#hasRock"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#studyOf -->
+
+    <owl:ObjectProperty rdf:about="&res;#studyOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#hasGenesis -->
+
+    <owl:ObjectProperty rdf:about="&sres;#hasGenesis"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#ExtraterrestrialSubstance -->
+
+    <owl:Class rdf:about="&chem;#ExtraterrestrialSubstance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Mixture -->
+
+    <owl:Class rdf:about="&chem;#Mixture"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Solid -->
+
+    <owl:Class rdf:about="&state;#Solid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#GeologicStructure -->
+
+    <owl:Class rdf:about="&geol;#GeologicStructure"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#Geology -->
+
+    <owl:Class rdf:about="&geol;#Geology"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Aa -->
+
+    <owl:Class rdf:about="#Aa">
+        <rdfs:subClassOf rdf:resource="#ExtrusiveRock"/>
+        <rdfs:subClassOf rdf:resource="#Lava"/>
+        <rdfs:comment xml:lang="en"
+            >[Lava - type 2] A__ (also spelled aa, a_a, _a_a and a-aa is one of three basic types of flow lava. _A__ is basaltic lava characterized by a rough or rubbly surface composed of broken lava blocks called clinker. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#AnorogenicIgneousRock -->
+
+    <owl:Class rdf:about="#AnorogenicIgneousRock">
+        <rdfs:subClassOf rdf:resource="#IntrusiveRock"/>
+        <rdfs:comment xml:lang="en"
+            >A-type or anorogenic granites are formed above volcanic &quot;hot spot&quot; activity and have peculiar mineralogy and geochemistry. These granites are formed by melting of the lower crust under conditions that are usually extremely dry. The rhyolites of the Yellowstone caldera are examples of volcanic equivalents of A-type granite. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Aphanite -->
+
+    <owl:Class rdf:about="#Aphanite">
+        <rdfs:subClassOf rdf:resource="#Rock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Basalt -->
+
+    <owl:Class rdf:about="#Basalt">
+        <rdfs:subClassOf rdf:resource="#ExtrusiveRock"/>
+        <rdfs:comment xml:lang="en"
+            >Basalt is the most common extrusive volcanic rock. It is usually grey to black and fine-grained due to rapid cooling of lava at the surface of a planet. It may be porphyritic containing larger crystals in a fine matrix, or vesicular, or frothy scoria. Unweathered basalt is black or grey. On Earth, most basalt magmas have formed by decompression melting of the mantle. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Batholith -->
+
+    <owl:Class rdf:about="#Batholith">
+        <rdfs:subClassOf rdf:resource="#PlutonicStructure"/>
+        <rdfs:comment xml:lang="en"
+            >[Pluton] Igneous intrusion - A batholith is a large emplacement of igneous intrusive (also called plutonic) rock that forms from cooled magma deep in the Earth&#39;s crust. Batholiths are almost always made mostly of felsic or intermediate rock-types, such as granite, quartz monzonite, or diorite (see also granite dome).There is also an important geographic usage of the term batholith. For a geographer, a batholith is an exposed area of mostly continuous plutonic rock that covers an area larger than 100 square kilometers. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#CompositeProcess -->
+
+    <owl:Class rdf:about="#CompositeProcess">
+        <rdfs:subClassOf rdf:resource="&sres;#Genesis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Corona -->
+
+    <owl:Class rdf:about="#Corona">
+        <rdfs:subClassOf rdf:resource="#RockConstituent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Dike -->
+
+    <owl:Class rdf:about="#Dike">
+        <rdfs:subClassOf rdf:resource="#PlutonicStructure"/>
+        <rdfs:comment xml:lang="en"
+            >[Pluton] Igneous intrusion - Dikes, long, planar (sheet) igneous intrusions, enter along cracks, and therefore often form in large numbers in areas that are being actively deformed. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#ExtrusiveRock -->
+
+    <owl:Class rdf:about="#ExtrusiveRock">
+        <rdfs:subClassOf rdf:resource="#IgneousRock"/>
+        <rdfs:comment xml:lang="en"
+            >Magma that has erupted onto the surface of the earth and cooled suffciently to form solid rock.  [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#FelsicRock -->
+
+    <owl:Class rdf:about="#FelsicRock">
+        <rdfs:subClassOf rdf:resource="#IgneousRock"/>
+        <owl:disjointWith rdf:resource="#MaficRock"/>
+        <rdfs:comment xml:lang="en"
+            >Felsic refers to silicate minerals, magma, and rocks which are enriched in the lighter elements such as silicon, oxygen, aluminium, sodium, and potassium. The term combines the words &quot;feldspar&quot; and &quot;silica.&quot; Felsic minerals are usually light in color and have specific gravities less than 3. Common felsic minerals include quartz, muscovite, orthoclase, and the sodium-rich plagioclase feldspars. The most common felsic rock is granite. On the opposite side of the rock spectrum are the iron and magnesium-rich mafic and ultramafic minerals and rocks. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Groundmass -->
+
+    <owl:Class rdf:about="#Groundmass">
+        <rdfs:subClassOf rdf:resource="#RockConstituent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#HeterogenousRock -->
+
+    <owl:Class rdf:about="#HeterogenousRock">
+        <rdfs:subClassOf rdf:resource="#SedimentaryRock"/>
+        <rdfs:comment xml:lang="en"
+            >A heterogeneous or conglomerate is a rock consisting of individual stones that have become cemented together. Conglomerates are sedimentary rocks consisting of rounded fragments and are thus differentiated from breccias, which consist of angular clasts.[1] Both conglomerates and breccias are characterized by clasts larger than sand (&gt;2 mm). [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#HypabyssalRock -->
+
+    <owl:Class rdf:about="#HypabyssalRock">
+        <rdfs:subClassOf rdf:resource="#IgneousRock"/>
+        <rdfs:comment xml:lang="en"
+            >Hypabyssal are igneous rocks formed at a depth in between the plutonic and volcanic rocks. They are characterized by their porphyritic nature (porphyry). They consist of phenocrysts embedded in a fine-grained groundmass. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Igneous -->
+
+    <owl:Class rdf:about="#Igneous">
+        <rdfs:subClassOf rdf:resource="#RockCycle"/>
+        <rdfs:comment xml:lang="en"
+            >One of 3 processes in the Rock Cycle. Igneous refers to the process whereby hot material from the mantle is squeezed upward toward the earth&#39;s surface. If it has not reached the surface then the material is described as an intrusive structure and the rocks it creates are called Intrusive Rock. If it extrudes from the surface the the material is described as a volcano and the rock it creates is known as Extrusive Rock. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#IgneousRock -->
+
+    <owl:Class rdf:about="#IgneousRock">
+        <rdfs:subClassOf rdf:resource="#Rock"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sres;#hasGenesis"/>
+                <owl:allValuesFrom rdf:resource="#Igneous"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >By definition, all igneous rock is formed from magma [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Inclusion -->
+
+    <owl:Class rdf:about="#Inclusion">
+        <rdfs:subClassOf rdf:resource="#RockConstituent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Interstitial -->
+
+    <owl:Class rdf:about="#Interstitial">
+        <rdfs:subClassOf rdf:resource="#RockConstituent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#IntrusiveRock -->
+
+    <owl:Class rdf:about="#IntrusiveRock">
+        <rdfs:subClassOf rdf:resource="#IgneousRock"/>
+        <rdfs:comment xml:lang="en"
+            >Beneath the surface magma tends to cool slowly which allows for the growth of large crystals within the rock. Rocks formed in this way are intrusive or plutonic rocks. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Kimberlite -->
+
+    <owl:Class rdf:about="#Kimberlite">
+        <rdfs:subClassOf rdf:resource="#IgneousRock"/>
+        <rdfs:comment xml:lang="en"
+            >Kimberlite is a type of potassic volcanic rock best known for sometimes containing diamonds. The general consensus reached on kimberlites is that they are formed deep within the mantle, at between 150 and 450 kilometres depth, from anomalously enriched exotic mantle compositions, and are erupted rapidly and violently, often with considerable carbon dioxide and other volatile components.  [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Laccolith -->
+
+    <owl:Class rdf:about="#Laccolith">
+        <rdfs:subClassOf rdf:resource="#PlutonicStructure"/>
+        <rdfs:comment xml:lang="en"
+            >[Pluton] Igneous intrusion - A laccolith is an igneous intrusion (or concordant pluton) that has been injected between two layers of sedimentary rock. The pressure of the magma is high enough that the overlying strata are forced upward, giving the laccolith a dome or mushroom-like form with a generally planar base.Laccoliths tend to form at relatively shallow depths and are typically formed by relatively viscous magmas, such as those that crystallize to diorite, granodiorite, and granite.[Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Lava -->
+
+    <owl:Class rdf:about="#Lava">
+        <rdfs:subClassOf rdf:resource="#ExtrusiveRock"/>
+        <rdfs:subClassOf rdf:resource="#VolcanicRock"/>
+        <rdfs:comment xml:lang="en"
+            >Magma that extrudes onto the surface of earth is called lava.  [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Lithology -->
+
+    <owl:Class rdf:about="#Lithology">
+        <rdfs:subClassOf rdf:resource="#Petrology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Lopolith -->
+
+    <owl:Class rdf:about="#Lopolith">
+        <rdfs:subClassOf rdf:resource="#PlutonicStructure"/>
+        <rdfs:comment xml:lang="en"
+            >[Pluton] Igneous intrusion - A lopolith is a large igneous intrusion which is lenticular in shape with a depressed central region. Lopoliths are generally concordant with the intruded strata with dike or funnel-shaped feeder bodies below the body. Lopoliths typically consist of large ultramafic to mafic layered intrusions that range in age from Archean to Eocene. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#MaficRock -->
+
+    <owl:Class rdf:about="#MaficRock">
+        <rdfs:subClassOf rdf:resource="#IgneousRock"/>
+        <rdfs:comment xml:lang="en"
+            >Mafic is an adjective describing a silicate mineral or rock that is rich in magnesium and iron; the term was derived by contracting &quot;magnesium&quot; and &quot;ferric&quot;. Most mafic minerals are dark in color and the specific gravity is greater than 3. Common rock-forming mafic minerals include olivine, pyroxene, amphibole, and biotite. Common mafic rocks include basalt and gabbro. In terms of chemistry, mafic rocks are on the other side of the rock spectrum from the felsic rocks. The term roughly corresponds to the older basic rock class.Mafic lava, before cooling, has a low viscosity, in comparison to felsic lava, due to the lower silica content in mafic magma. Water and other volatiles can more easily and gradually escape from mafic lava, so eruptions of volcanoes made of mafic lavas are less explosively violent than felsic lava eruptions. Most mafic lava volcanoes are oceanic volcanoes, like Hawaii. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Magma -->
+
+    <owl:Class rdf:about="#Magma">
+        <rdfs:subClassOf rdf:resource="#VolcanicRock"/>
+        <rdfs:comment xml:lang="en"
+            >Magma is molten rock that is found beneath the surface of the Earth.Magma is a complex high-temperature fluid substance in 3 phases; a system of silicate liquid, solid minerals, and perhaps a vapor phase. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Matrix -->
+
+    <owl:Class rdf:about="#Matrix">
+        <rdfs:subClassOf rdf:resource="#RockConstituent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Megacryst -->
+
+    <owl:Class rdf:about="#Megacryst">
+        <rdfs:subClassOf rdf:resource="#RockConstituent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Melange -->
+
+    <owl:Class rdf:about="#Melange">
+        <rdfs:subClassOf rdf:resource="#Rock"/>
+        <rdfs:comment xml:lang="en"
+            >A m&#233;lange is a large scale breccia, a mappable body of rock characterized by a lack of continuous bedding and the inclusion of fragments of rock of all sizes, contained in a fine-grained deformed matrix. The m&#233;lange typically consists of a jumble of large blocks of varied lithologies of altered oceanic crustal material and blocks of continental slope sediments in a sheared mudstone matrix. Some larger blocks of rock may be as much as 1 km across. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Metamorphic -->
+
+    <owl:Class rdf:about="#Metamorphic">
+        <rdfs:subClassOf rdf:resource="#RockCycle"/>
+        <rdfs:comment xml:lang="en"
+            >One of 3 processes in the Rock Cycle. When sedimentary (and/or) igneous layers are folded, bent or twisted by heat and pressure due to motions of tectonic plates or intrusions by magma, the rocky material is transformed into other rock called metamorphic rock. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#MetamorphicRock -->
+
+    <owl:Class rdf:about="#MetamorphicRock">
+        <rdfs:subClassOf rdf:resource="#Rock"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sres;#hasGenesis"/>
+                <owl:allValuesFrom rdf:resource="#Metamorphic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >One of the major groups of rock that makes up the crust of the Earth; consists of pre-existing rock mass in which new minerals or textures are formed at higher temperatures and greater pressures than those present on the Earth&#39;s surface [wicktionary]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Meteorite -->
+
+    <owl:Class rdf:about="#Meteorite">
+        <rdfs:subClassOf rdf:resource="&chem;#ExtraterrestrialSubstance"/>
+        <rdfs:subClassOf rdf:resource="&state;#Solid"/>
+        <rdfs:comment xml:lang="en"
+            >Meteoric substances are rocks that have composition significantly different from earth rocks. Meteorites have traditionally been divided into three broad categories: stony meteorites are rocks, mainly composed of silicate minerals; iron meteorites are largely composed of metallic iron-nickel; and, stony-iron meteorites contain large amounts of both metallic and rocky material. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Molasse -->
+
+    <owl:Class rdf:about="#Molasse">
+        <rdfs:subClassOf rdf:resource="#Sedimentary"/>
+        <rdfs:comment xml:lang="en"
+            >Molasse refers to the sandstones, shales and conglomerates formed as terrestrial or shallow marine deposits in front of rising mountain chains deposited in a foreland basin, especially on top of flysch, for example that left from the rising Alps, or erosion in the Himalaya. These deposits are typically the non-marine alluvial and fluvial sediments of lowlands, as compared to deep-water flysch sediments. Sedimentation stops once the orogeny stops, or once the mountains have eroded flat. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Obsidian -->
+
+    <owl:Class rdf:about="#Obsidian">
+        <rdfs:subClassOf rdf:resource="#ExtrusiveRock"/>
+        <rdfs:subClassOf rdf:resource="#Lava"/>
+        <rdfs:comment xml:lang="en"
+            >Obsidian, a type of quenched lava, is a silicic black volcanic glass [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Pahoehoe -->
+
+    <owl:Class rdf:about="#Pahoehoe">
+        <rdfs:subClassOf rdf:resource="#ExtrusiveRock"/>
+        <rdfs:subClassOf rdf:resource="#Lava"/>
+        <rdfs:comment xml:lang="en"
+            >[Lava - type 1] P_hoehoe is basaltic lava that has a smooth, billowy, undulating, or ropy surface. These surface features are due to the movement of very fluid lava under a congealing surface crust. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Particulate -->
+
+    <owl:Class rdf:about="#Particulate">
+        <rdfs:subClassOf rdf:resource="#RockConstituent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Peridotite -->
+
+    <owl:Class rdf:about="#Peridotite">
+        <rdfs:subClassOf rdf:resource="#IgneousRock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Petrography -->
+
+    <owl:Class rdf:about="#Petrography">
+        <rdfs:subClassOf rdf:resource="#Petrology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Petrology -->
+
+    <owl:Class rdf:about="#Petrology">
+        <rdfs:subClassOf rdf:resource="&geol;#Geology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#studyOf"/>
+                <owl:allValuesFrom rdf:resource="#Rock"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Phenocryst -->
+
+    <owl:Class rdf:about="#Phenocryst">
+        <rdfs:subClassOf rdf:resource="&res;#Mineral"/>
+        <rdfs:comment xml:lang="en"
+            >A phenocryst is a relatively large and usually conspicuous crystal distinctly larger than the grains of the rock groundmass of a porphyritic igneous rock. Phenocrysts often have euhedral forms either due to early growth within a magma or by post-emplacement recrystallization. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#PillowLava -->
+
+    <owl:Class rdf:about="#PillowLava">
+        <rdfs:subClassOf rdf:resource="#ExtrusiveRock"/>
+        <rdfs:subClassOf rdf:resource="#Lava"/>
+        <rdfs:comment xml:lang="en"
+            >[Lava - type 2] Pillow lava is the lava structure typically formed when lava emerges from an underwater volcanic vent or subglacial volcano or a lava flow enters the ocean. However, pillow lava can also form when lava is erupted beneath thick glacial ice. The viscous lava gains a solid crust on contact with the water, and this crust cracks and oozes additional large blobs or &quot;pillows&quot; as more lava emerges from the advancing flow. Since water covers the majority of Earth&#39;s surface and most volcanoes are situated near or under bodies of water, pillow lava is very common. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Pluton -->
+
+    <owl:Class rdf:about="#Pluton">
+        <owl:equivalentClass rdf:resource="#PlutonicRock"/>
+        <rdfs:subClassOf rdf:resource="#IntrusiveRock"/>
+        <rdfs:comment xml:lang="en"
+            >A pluton is an intrusive igneous rock body that crystallized from a magma slowly cooling below the surface of the Earth. Plutons include batholiths, dikes, sills, laccoliths, lopoliths, and other igneous bodies. In practice, &quot;pluton&quot; usually refers to a distinctive mass of igneous rock, typically kilometers in dimension, without a tabular shape like those of dikes and sills. Batholiths commonly are aggregations of plutons. The most common rock types in plutons are granite, granodiorite, tonalite, and quartz diorite. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#PlutonicRock -->
+
+    <owl:Class rdf:about="#PlutonicRock"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#PlutonicStructure -->
+
+    <owl:Class rdf:about="#PlutonicStructure">
+        <rdfs:subClassOf rdf:resource="&geol;#GeologicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Pyroclastics -->
+
+    <owl:Class rdf:about="#Pyroclastics">
+        <rdfs:subClassOf rdf:resource="#ExtrusiveRock"/>
+        <rdfs:subClassOf rdf:resource="#VolcanicRock"/>
+        <rdfs:comment xml:lang="en"
+            >A descriptive term, usually for rock, which results from explosive magma ejection [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Regolith -->
+
+    <owl:Class rdf:about="#Regolith">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+        <rdfs:subClassOf rdf:resource="&state;#Solid"/>
+        <owl:disjointWith rdf:resource="#Rock"/>
+        <rdfs:comment xml:lang="en"
+            >Regolith (Greek: &quot;blanket rock&quot;) is a layer of loose, heterogeneous material covering solid rock (bedrock). It includes dust, soil, broken rock, and other related materials  [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Rock -->
+
+    <owl:Class rdf:about="#Rock">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+        <rdfs:subClassOf rdf:resource="&state;#Solid"/>
+        <rdfs:comment xml:lang="en"
+            >Rock is a naturally occurring solid aggregate of minerals and/or mineraloids.  In general rocks are of three types, namely, igneous, sedimentary, and metamorphic. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#RockBody -->
+
+    <owl:Class rdf:about="#RockBody">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+        <rdfs:subClassOf rdf:resource="&state;#Solid"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="#Rock"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#RockConstituent -->
+
+    <owl:Class rdf:about="#RockConstituent">
+        <rdfs:subClassOf rdf:resource="&solid;#Constituent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="#Rock"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#RockCycle -->
+
+    <owl:Class rdf:about="#RockCycle">
+        <rdfs:subClassOf rdf:resource="&sci;#Process"/>
+        <rdfs:comment xml:lang="en"
+            >The rock cycle is a fundamental concept that describes the dynamic transitions through geologic time among the three main rock types: sedimentary, metamorphic, and igneous. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Sedimentary -->
+
+    <owl:Class rdf:about="#Sedimentary">
+        <rdfs:subClassOf rdf:resource="#RockCycle"/>
+        <rdfs:comment xml:lang="en"
+            >One of 3 processes in the Rock Cycle. When wind or water deposit fine grained material on the surface, it creates sheets. Over thousands of years, the composition can change subtly or distinctly and the result is differing compositions of layered deposits. As the overlying layers compact the soil underneath the soil is converted to rock by the process of lithification. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#SedimentaryRock -->
+
+    <owl:Class rdf:about="#SedimentaryRock">
+        <rdfs:subClassOf rdf:resource="#Rock"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sres;#hasGenesis"/>
+                <owl:allValuesFrom rdf:resource="#Sedimentary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >One of the major groups of rock that makes up the crust of the Earth; formed by the deposition of either the weathered remains of other rocks, the results of biological activity, or precipitation from solution [wicktionary]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Sill -->
+
+    <owl:Class rdf:about="#Sill">
+        <rdfs:subClassOf rdf:resource="#PlutonicStructure"/>
+        <rdfs:comment xml:lang="en"
+            >[Pluton] Igneous intrusion - A sill is a tabular pluton that has intruded between older layers of sedimentary rock, beds of volcanic lava or tuff, or even along the direction of foliation in metamorphic rock. The term sill is synonymous with concordant intrusive sheet. This means that the sill does not cut across preexisting rocks, in contrast to dikes, which do cut across older rocks. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Structural -->
+
+    <owl:Class rdf:about="#Structural">
+        <rdfs:subClassOf rdf:resource="#RockConstituent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Tephra -->
+
+    <owl:Class rdf:about="#Tephra">
+        <rdfs:subClassOf rdf:resource="#ExtrusiveRock"/>
+        <rdfs:subClassOf rdf:resource="#VolcanicRock"/>
+        <rdfs:comment xml:lang="en"
+            >Tephra is a collective term (generally plural) used for all material -- regardless of size-- ejected during an explosive volcanic eruption.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#UltramaphicRock -->
+
+    <owl:Class rdf:about="#UltramaphicRock">
+        <rdfs:subClassOf rdf:resource="#ExtrusiveRock"/>
+        <rdfs:subClassOf rdf:resource="#VolcanicRock"/>
+        <rdfs:comment xml:lang="en"
+            >The mantle is composed mostly of Ultramafic rocks (or see Igneous Primer) such as peridotite and dunite and their metamorphic equivalents (e.g. ecologite). [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#VolcanicRock -->
+
+    <owl:Class rdf:about="#VolcanicRock">
+        <rdfs:subClassOf rdf:resource="#ExtrusiveRock"/>
+        <rdfs:comment xml:lang="en"
+            >Volcanic rock is an igneous rock produced by extrusion from a volcano. It has various subtypes based on chemical composition and whether the extrusion was violent (pyroclastic) or slow (laval). [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Xenocryst -->
+
+    <owl:Class rdf:about="#Xenocryst">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+        <rdfs:subClassOf rdf:resource="&state;#Solid"/>
+        <rdfs:comment xml:lang="en"
+            >A xenocryst is an individual foreign crystal included within an igneous body. Examples of xenocrysts are quartz crystals in a silica-deficient lava and diamonds within kimberlite diatremes. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Xenolith -->
+
+    <owl:Class rdf:about="#Xenolith">
+        <rdfs:subClassOf rdf:resource="#Rock"/>
+        <rdfs:comment xml:lang="en"
+            >A xenolith is a rock fragment which becomes enveloped in a larger rock during the latter&#39;s development and hardening. The term xenolith is almost exclusively used to describe inclusions in igneous rock during magma emplacement and eruption [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Mineral -->
+
+    <owl:Class rdf:about="&res;#Mineral"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSolid.owl#Constituent -->
+
+    <owl:Class rdf:about="&solid;#Constituent"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Genesis -->
+
+    <owl:Class rdf:about="&sres;#Genesis"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Process -->
+
+    <owl:Class rdf:about="&sci;#Process"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

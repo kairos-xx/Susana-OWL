@@ -1,0 +1,658 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY geol "http://sweet.jpl.nasa.gov/2.0/geol.owl#" >
+    <!ENTITY atmo "http://sweet.jpl.nasa.gov/2.0/atmo.owl#" >
+    <!ENTITY ocean "http://sweet.jpl.nasa.gov/2.0/ocean.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY earthReference2 "http://sweet.jpl.nasa.gov/2.0/earthReference.owl#" >
+    <!ENTITY earthReference9 "http://sweet.jpl.nasa.gov/2.0/earthReference.owl#1" >
+    <!ENTITY earthReference3 "http://sweet.jpl.nasa.gov/2.0/earthReference.owl#0" >
+    <!ENTITY earthReference8 "http://sweet.jpl.nasa.gov/2.0/earthReference.owl#4" >
+    <!ENTITY earthReference6 "http://sweet.jpl.nasa.gov/2.0/earthReference.owl#85" >
+    <!ENTITY earthReference7 "http://sweet.jpl.nasa.gov/2.0/earthReference.owl#40" >
+    <!ENTITY earthReference5 "http://sweet.jpl.nasa.gov/2.0/earthReference.owl#12" >
+    <!ENTITY earthReference4 "http://sweet.jpl.nasa.gov/2.0/earthReference.owl#50" >
+    <!ENTITY earthReference11 "http://sweet.jpl.nasa.gov/2.0/earthReference.owl#500" >
+    <!ENTITY earthReference "http://sweet.jpl.nasa.gov/2.0/earthReference.owl#200" >
+    <!ENTITY earthReference10 "http://sweet.jpl.nasa.gov/2.0/earthReference.owl#289" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/earthReference.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/earthReference.owl"
+     xmlns:earthReference10="&earthReference2;289"
+     xmlns:earthReference8="&earthReference2;4"
+     xmlns:earthReference11="&earthReference2;500"
+     xmlns:earthReference7="&earthReference2;40"
+     xmlns:atmo="http://sweet.jpl.nasa.gov/2.0/atmo.owl#"
+     xmlns:earthReference6="&earthReference2;85"
+     xmlns:earthReference5="&earthReference2;12"
+     xmlns:earthReference4="&earthReference2;50"
+     xmlns:earthReference3="&earthReference2;0"
+     xmlns:earthReference2="http://sweet.jpl.nasa.gov/2.0/earthReference.owl#"
+     xmlns:ocean="http://sweet.jpl.nasa.gov/2.0/ocean.owl#"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#"
+     xmlns:geol="http://sweet.jpl.nasa.gov/2.0/geol.owl#"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#"
+     xmlns:earthReference9="&earthReference2;1"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:earthReference="&earthReference2;200">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmo.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geol.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/ocean.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanet -->
+
+    <owl:ObjectProperty rdf:about="&planet;hasPlanet"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasReferenceDepth -->
+
+    <owl:ObjectProperty rdf:about="&planet;hasReferenceDepth"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasReferenceHeight -->
+
+    <owl:ObjectProperty rdf:about="&planet;hasReferenceHeight"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;hasUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasLowerBound -->
+
+    <owl:DatatypeProperty rdf:about="&math;hasLowerBound"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasUpperBound -->
+
+    <owl:DatatypeProperty rdf:about="&math;hasUpperBound"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Atmosphere -->
+
+    <owl:Class rdf:about="&planet;Atmosphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Geosphere -->
+
+    <owl:Class rdf:about="&planet;Geosphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Ocean -->
+
+    <owl:Class rdf:about="&planet;Ocean"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Exosphere -->
+
+    <owl:Class rdf:about="&atmo;Exosphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Mesosphere -->
+
+    <owl:Class rdf:about="&atmo;Mesosphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Stratosphere -->
+
+    <owl:Class rdf:about="&atmo;Stratosphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Thermosphere -->
+
+    <owl:Class rdf:about="&atmo;Thermosphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#Troposphere -->
+
+    <owl:Class rdf:about="&atmo;Troposphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#Core -->
+
+    <owl:Class rdf:about="&geol;Core"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#Crust -->
+
+    <owl:Class rdf:about="&geol;Crust"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#Lithosphere -->
+
+    <owl:Class rdf:about="&geol;Lithosphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#UpperMantle -->
+
+    <owl:Class rdf:about="&geol;UpperMantle"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/ocean.owl#AbyssopelagicZone -->
+
+    <owl:Class rdf:about="&ocean;AbyssopelagicZone"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/ocean.owl#BathypelagicZone -->
+
+    <owl:Class rdf:about="&ocean;BathypelagicZone"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/ocean.owl#MesopelagicZone -->
+
+    <owl:Class rdf:about="&ocean;MesopelagicZone"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/ocean.owl#PhoticZone -->
+
+    <owl:Class rdf:about="&ocean;PhoticZone"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#DepthRange -->
+
+    <owl:Class rdf:about="&space;DepthRange"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#HeightRange -->
+
+    <owl:Class rdf:about="&space;HeightRange"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#SpatialScale -->
+
+    <owl:Class rdf:about="&space;SpatialScale"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Earth -->
+
+    <owl:Thing rdf:about="&planet;Earth"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#0to12km -->
+
+    <owl:Thing rdf:about="#0to12km">
+        <rdf:type rdf:resource="&space;HeightRange"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">0</math:hasLowerBound>
+        <math:hasUpperBound rdf:datatype="&xsd;double">12</math:hasUpperBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#0to150km -->
+
+    <space:DepthRange rdf:about="#0to150km">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">0</math:hasLowerBound>
+        <math:hasUpperBound rdf:datatype="&xsd;double">150</math:hasUpperBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </space:DepthRange>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#0to200m -->
+
+    <space:DepthRange rdf:about="#0to200m">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">0</math:hasLowerBound>
+        <math:hasUpperBound rdf:datatype="&xsd;double">200</math:hasUpperBound>
+        <units:hasUnit rdf:resource="&units;meter"/>
+    </space:DepthRange>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#0to40km -->
+
+    <owl:Thing rdf:about="#0to40km">
+        <rdf:type rdf:resource="&space;DepthRange"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">0</math:hasLowerBound>
+        <math:hasUpperBound rdf:datatype="&xsd;double">40</math:hasUpperBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#0to500km -->
+
+    <owl:Thing rdf:about="#0to500km">
+        <rdf:type rdf:resource="&space;HeightRange"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">0</math:hasLowerBound>
+        <math:hasUpperBound rdf:datatype="&xsd;double">500</math:hasUpperBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#0to6371km -->
+
+    <owl:Thing rdf:about="#0to6371km">
+        <rdf:type rdf:resource="&space;DepthRange"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">0</math:hasLowerBound>
+        <math:hasUpperBound rdf:datatype="&xsd;double">6371</math:hasUpperBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#12to50km -->
+
+    <space:HeightRange rdf:about="#12to50km">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">12</math:hasLowerBound>
+        <math:hasUpperBound rdf:datatype="&xsd;double">50</math:hasUpperBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </space:HeightRange>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#1to4km -->
+
+    <space:DepthRange rdf:about="#1to4km">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">1</math:hasLowerBound>
+        <math:hasUpperBound rdf:datatype="&xsd;double">4</math:hasUpperBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </space:DepthRange>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#200to1000m -->
+
+    <owl:Thing rdf:about="#200to1000m">
+        <rdf:type rdf:resource="&space;DepthRange"/>
+        <math:hasUpperBound rdf:datatype="&xsd;double">1000</math:hasUpperBound>
+        <math:hasLowerBound rdf:datatype="&xsd;double">200</math:hasLowerBound>
+        <units:hasUnit rdf:resource="&units;meter"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#289to637km -->
+
+    <space:DepthRange rdf:about="#289to637km">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">289</math:hasLowerBound>
+        <math:hasUpperBound rdf:datatype="&xsd;double">637</math:hasUpperBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </space:DepthRange>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#40to150km -->
+
+    <space:DepthRange rdf:about="#40to150km">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasUpperBound rdf:datatype="&xsd;double">150</math:hasUpperBound>
+        <math:hasLowerBound rdf:datatype="&xsd;double">40</math:hasLowerBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </space:DepthRange>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#4pluskm -->
+
+    <space:DepthRange rdf:about="#4pluskm">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">4</math:hasLowerBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </space:DepthRange>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#500tokm -->
+
+    <space:HeightRange rdf:about="#500tokm">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">500</math:hasLowerBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </space:HeightRange>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#50to85km -->
+
+    <space:HeightRange rdf:about="#50to85km">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">50</math:hasLowerBound>
+        <math:hasUpperBound rdf:datatype="&xsd;double">85</math:hasUpperBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </space:HeightRange>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#85to500km -->
+
+    <space:HeightRange rdf:about="#85to500km">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasUpperBound rdf:datatype="&xsd;double">500</math:hasUpperBound>
+        <math:hasLowerBound rdf:datatype="&xsd;double">85</math:hasLowerBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </space:HeightRange>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#AntarcticOcean -->
+
+    <planet:Ocean rdf:about="#AntarcticOcean">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </planet:Ocean>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#ArcticOcean -->
+
+    <planet:Ocean rdf:about="#ArcticOcean">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </planet:Ocean>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#AtlanticOcean -->
+
+    <owl:Thing rdf:about="#AtlanticOcean">
+        <rdf:type rdf:resource="&planet;Ocean"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#CaribbeanSea -->
+
+    <planet:Ocean rdf:about="#CaribbeanSea">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </planet:Ocean>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthAbyssopelagicZone -->
+
+    <owl:Thing rdf:about="#EarthAbyssopelagicZone">
+        <rdf:type rdf:resource="&ocean;AbyssopelagicZone"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceDepth rdf:resource="#4pluskm"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthAtmosphere -->
+
+    <owl:Thing rdf:about="#EarthAtmosphere">
+        <rdf:type rdf:resource="&planet;Atmosphere"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceHeight rdf:resource="#0to500km"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthAtmosphereMesoscale -->
+
+    <space:SpatialScale rdf:about="#EarthAtmosphereMesoscale">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">100</math:hasLowerBound>
+        <math:hasUpperBound rdf:datatype="&xsd;double">1000</math:hasUpperBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </space:SpatialScale>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthAtmosphereSynopticScale -->
+
+    <space:SpatialScale rdf:about="#EarthAtmosphereSynopticScale">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasLowerBound rdf:datatype="&xsd;double">1000</math:hasLowerBound>
+        <math:hasUpperBound rdf:datatype="&xsd;double">2500</math:hasUpperBound>
+        <units:hasUnit rdf:resource="&units;kilometer"/>
+    </space:SpatialScale>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthBathypelagicZone -->
+
+    <owl:Thing rdf:about="#EarthBathypelagicZone">
+        <rdf:type rdf:resource="&ocean;BathypelagicZone"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceDepth rdf:resource="#1to4km"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthCore -->
+
+    <geol:Core rdf:about="#EarthCore">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceDepth rdf:resource="#289to637km"/>
+    </geol:Core>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthCrust -->
+
+    <owl:Thing rdf:about="#EarthCrust">
+        <rdf:type rdf:resource="&geol;Crust"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceDepth rdf:resource="#0to40km"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthExosphere -->
+
+    <owl:Thing rdf:about="#EarthExosphere">
+        <rdf:type rdf:resource="&atmo;Exosphere"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceHeight rdf:resource="#500tokm"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthGeosphere -->
+
+    <planet:Geosphere rdf:about="#EarthGeosphere">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceDepth rdf:resource="#0to6371km"/>
+    </planet:Geosphere>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthLithosphere -->
+
+    <geol:Lithosphere rdf:about="#EarthLithosphere">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceDepth rdf:resource="#0to150km"/>
+    </geol:Lithosphere>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthMesopelagicZone -->
+
+    <owl:Thing rdf:about="#EarthMesopelagicZone">
+        <rdf:type rdf:resource="&ocean;MesopelagicZone"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceDepth rdf:resource="#200to1000m"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthMesosphere -->
+
+    <owl:Thing rdf:about="#EarthMesosphere">
+        <rdf:type rdf:resource="&atmo;Mesosphere"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceHeight rdf:resource="#50to85km"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthPhoticZone -->
+
+    <owl:Thing rdf:about="#EarthPhoticZone">
+        <rdf:type rdf:resource="&ocean;PhoticZone"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceDepth rdf:resource="#0to200m"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthStratosphere -->
+
+    <owl:Thing rdf:about="#EarthStratosphere">
+        <rdf:type rdf:resource="&atmo;Stratosphere"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceHeight rdf:resource="#12to50km"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthThermosphere -->
+
+    <owl:Thing rdf:about="#EarthThermosphere">
+        <rdf:type rdf:resource="&atmo;Thermosphere"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceHeight rdf:resource="#85to500km"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthTroposphere -->
+
+    <atmo:Troposphere rdf:about="#EarthTroposphere">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceHeight rdf:resource="#0to12km"/>
+    </atmo:Troposphere>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#EarthUpperMantle -->
+
+    <geol:UpperMantle rdf:about="#EarthUpperMantle">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <planet:hasPlanet rdf:resource="&planet;Earth"/>
+        <planet:hasReferenceDepth rdf:resource="#40to150km"/>
+    </geol:UpperMantle>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/earthReference.owl#PacificOcean -->
+
+    <planet:Ocean rdf:about="#PacificOcean">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </planet:Ocean>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#kilometer -->
+
+    <owl:Thing rdf:about="&units;kilometer"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#meter -->
+
+    <owl:Thing rdf:about="&units;meter"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

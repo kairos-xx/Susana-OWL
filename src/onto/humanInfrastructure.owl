@@ -1,0 +1,538 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY human "http://sweet.jpl.nasa.gov/2.0/human.owl" >
+    <!ENTITY human2 "http://sweet.jpl.nasa.gov/2.0/human.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY commerce "http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl" >
+    <!ENTITY humanCommerce "http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#" >
+    <!ENTITY humanInfrastructure "http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl"
+     xmlns:humanInfrastructure="http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#"
+     xmlns:human2="&human;#"
+     xmlns:commerce="http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl"
+     xmlns:human="http://sweet.jpl.nasa.gov/2.0/human.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:humanCommerce="&commerce;#"
+     xmlns:top="&sci;#"
+     xmlns:chem2="&chem;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/human.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="&human;#hasActivity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#hasInfrastructure -->
+
+    <owl:ObjectProperty rdf:about="#hasInfrastructure">
+        <rdfs:range rdf:resource="#Infrastructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Mixture -->
+
+    <owl:Class rdf:about="&chem;#Mixture"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#HumanActivity -->
+
+    <owl:Class rdf:about="&human;#HumanActivity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Product -->
+
+    <owl:Class rdf:about="&commerce;#Product"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Production -->
+
+    <owl:Class rdf:about="&commerce;#Production"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Antenna -->
+
+    <owl:Class rdf:about="#Antenna">
+        <rdfs:subClassOf rdf:resource="#CommunicationEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#ArtesianWell -->
+
+    <owl:Class rdf:about="#ArtesianWell">
+        <rdfs:subClassOf rdf:resource="#ConfinedWell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Borehole -->
+
+    <owl:Class rdf:about="#Borehole">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+        <rdfs:comment
+            >A borehole is the generalised term for any narrow shaft drilled in the ground, either vertically or horizontally. A borehole may be constructed for many different purposes including the extraction of water or fluid (such as oil) or gases (such as natural gas or methane), as part of a geotechnical investigation or environmental site assessment, for mineral exploration, or as a pilot hole for installing piers or underground utilities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Building -->
+
+    <owl:Class rdf:about="#Building">
+        <rdfs:subClassOf rdf:resource="#Structure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#CommunicationEquipment -->
+
+    <owl:Class rdf:about="#CommunicationEquipment">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&human;#hasActivity"/>
+                <owl:allValuesFrom rdf:resource="#Communications"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#CommunicationFacility -->
+
+    <owl:Class rdf:about="#CommunicationFacility">
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Communications -->
+
+    <owl:Class rdf:about="#Communications">
+        <rdfs:subClassOf rdf:resource="&human;#HumanActivity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasInfrastructure"/>
+                <owl:allValuesFrom rdf:resource="#CommunicationEquipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#ComputerHardware -->
+
+    <owl:Class rdf:about="#ComputerHardware">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#ConfinedWell -->
+
+    <owl:Class rdf:about="#ConfinedWell">
+        <rdfs:subClassOf rdf:resource="#Well"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#CulturalFeature -->
+
+    <owl:Class rdf:about="#CulturalFeature">
+        <rdfs:subClassOf rdf:resource="#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#DisposalWell -->
+
+    <owl:Class rdf:about="#DisposalWell">
+        <rdfs:subClassOf rdf:resource="#Well"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Dome -->
+
+    <owl:Class rdf:about="#Dome">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#DrainageWell -->
+
+    <owl:Class rdf:about="#DrainageWell">
+        <rdfs:subClassOf rdf:resource="#Well"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#DrillingMud -->
+
+    <owl:Class rdf:about="#DrillingMud">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Electricity -->
+
+    <owl:Class rdf:about="#Electricity">
+        <rdfs:subClassOf rdf:resource="#IndustrialProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#ElectricityEquipment -->
+
+    <owl:Class rdf:about="#ElectricityEquipment">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Equipment -->
+
+    <owl:Class rdf:about="#Equipment">
+        <rdfs:subClassOf rdf:resource="#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Facility -->
+
+    <owl:Class rdf:about="#Facility">
+        <rdfs:subClassOf rdf:resource="#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#IndustrialProduct -->
+
+    <owl:Class rdf:about="#IndustrialProduct">
+        <rdfs:subClassOf rdf:resource="&commerce;#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Infrastructure -->
+
+    <owl:Class rdf:about="#Infrastructure">
+        <rdfs:subClassOf rdf:resource="&sci;#MaterialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#InjectionWell -->
+
+    <owl:Class rdf:about="#InjectionWell">
+        <rdfs:subClassOf rdf:resource="#Well"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Internet -->
+
+    <owl:Class rdf:about="#Internet">
+        <rdfs:subClassOf rdf:resource="#CommunicationFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Mine -->
+
+    <owl:Class rdf:about="#Mine">
+        <rdfs:subClassOf rdf:resource="#MiningFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#MiningFacility -->
+
+    <owl:Class rdf:about="#MiningFacility">
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#MonitoringWell -->
+
+    <owl:Class rdf:about="#MonitoringWell">
+        <rdfs:subClassOf rdf:resource="#Well"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#NavigationEquipment -->
+
+    <owl:Class rdf:about="#NavigationEquipment">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#PhoneMainline -->
+
+    <owl:Class rdf:about="#PhoneMainline">
+        <rdfs:subClassOf rdf:resource="#CommunicationEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#PhoneMobile -->
+
+    <owl:Class rdf:about="#PhoneMobile">
+        <rdfs:subClassOf rdf:resource="#CommunicationEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Piezometer -->
+
+    <owl:Class rdf:about="#Piezometer">
+        <rdfs:subClassOf rdf:resource="#Well"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Pipeline -->
+
+    <owl:Class rdf:about="#Pipeline">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Platform -->
+
+    <owl:Class rdf:about="#Platform">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#PowerPlant -->
+
+    <owl:Class rdf:about="#PowerPlant">
+        <rdfs:subClassOf rdf:resource="#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#PowerTransmissionFacility -->
+
+    <owl:Class rdf:about="#PowerTransmissionFacility">
+        <rdfs:subClassOf rdf:resource="#TransportationFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#ProductionFacility -->
+
+    <owl:Class rdf:about="#ProductionFacility">
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&human;#hasActivity"/>
+                <owl:allValuesFrom rdf:resource="&commerce;#Production"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#PumpingWell -->
+
+    <owl:Class rdf:about="#PumpingWell">
+        <rdfs:subClassOf rdf:resource="#Well"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#RechargeWell -->
+
+    <owl:Class rdf:about="#RechargeWell">
+        <rdfs:subClassOf rdf:resource="#Well"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Satellite -->
+
+    <owl:Class rdf:about="#Satellite">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Scrubber -->
+
+    <owl:Class rdf:about="#Scrubber">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Sink -->
+
+    <owl:Class rdf:about="#Sink">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#SpaceShuttle -->
+
+    <owl:Class rdf:about="#SpaceShuttle">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Station -->
+
+    <owl:Class rdf:about="#Station">
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Structure -->
+
+    <owl:Class rdf:about="#Structure">
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Transportation -->
+
+    <owl:Class rdf:about="#Transportation">
+        <rdfs:subClassOf rdf:resource="&human;#HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#TransportationEquipment -->
+
+    <owl:Class rdf:about="#TransportationEquipment">
+        <rdfs:subClassOf rdf:resource="#Equipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&human;#hasActivity"/>
+                <owl:allValuesFrom rdf:resource="#Transportation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#TransportationFacility -->
+
+    <owl:Class rdf:about="#TransportationFacility">
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#UnconfinedWell -->
+
+    <owl:Class rdf:about="#UnconfinedWell">
+        <rdfs:subClassOf rdf:resource="#Well"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Vehicle -->
+
+    <owl:Class rdf:about="#Vehicle">
+        <rdfs:subClassOf rdf:resource="#TransportationEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Well -->
+
+    <owl:Class rdf:about="#Well">
+        <rdfs:subClassOf rdf:resource="#Structure"/>
+        <rdfs:comment xml:lang="en"
+            >A bored, drilled or driven shaft, or a dug hole, whose depth is greater than the largest surface dimension.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#WellInjection -->
+
+    <owl:Class rdf:about="#WellInjection">
+        <rdfs:subClassOf rdf:resource="&human;#HumanActivity"/>
+        <rdfs:comment xml:lang="en"
+            >The subsurface emplacement of &quot;fluids&quot; through a bored, drilled, or driven &quot;well&quot;, or through a dug well, where the depth of the dug well is greater than the largest surface dimension.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#MaterialThing -->
+
+    <owl:Class rdf:about="&sci;#MaterialThing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

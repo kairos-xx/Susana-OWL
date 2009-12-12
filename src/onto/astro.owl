@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY astro "http://sweet.jpl.nasa.gov/2.0/astro.owl" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY astro2 "http://sweet.jpl.nasa.gov/2.0/astro.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY sys "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY geom "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl" >
+    <!ENTITY spaceObject "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&astro;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/astro.owl"
+     xmlns:sciSystem="&sys;#"
+     xmlns:sys="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:geom="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:spaceObject="&geom;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:astro="http://sweet.jpl.nasa.gov/2.0/astro.owl"
+     xmlns:phys2="&phys;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:astro2="&astro;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#Asteroid -->
+
+    <owl:Class rdf:about="#Asteroid">
+        <rdfs:subClassOf rdf:resource="#AstronomicalBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#AstronomicalBody -->
+
+    <owl:Class rdf:about="#AstronomicalBody">
+        <rdfs:subClassOf rdf:resource="&geom;#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#BodyTide -->
+
+    <owl:Class rdf:about="#BodyTide">
+        <rdfs:subClassOf rdf:resource="#Tide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#Comet -->
+
+    <owl:Class rdf:about="#Comet">
+        <rdfs:subClassOf rdf:resource="#AstronomicalBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#Galaxy -->
+
+    <owl:Class rdf:about="#Galaxy">
+        <rdfs:subClassOf rdf:resource="#AstronomicalBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#GlobalOscillation -->
+
+    <owl:Class rdf:about="#GlobalOscillation">
+        <rdfs:subClassOf rdf:resource="&phys;#FarFieldForce"/>
+        <rdfs:subClassOf rdf:resource="&sys;#Oscillation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#Moon -->
+
+    <owl:Class rdf:about="#Moon">
+        <rdfs:subClassOf rdf:resource="#AstronomicalBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#Planet -->
+
+    <owl:Class rdf:about="#Planet">
+        <rdfs:subClassOf rdf:resource="#AstronomicalBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#PoleTide -->
+
+    <owl:Class rdf:about="#PoleTide">
+        <rdfs:subClassOf rdf:resource="#Tide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#Precession -->
+
+    <owl:Class rdf:about="#Precession">
+        <rdfs:subClassOf rdf:resource="#GlobalOscillation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#Satellite -->
+
+    <owl:Class rdf:about="#Satellite">
+        <rdfs:subClassOf rdf:resource="#AstronomicalBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#Star -->
+
+    <owl:Class rdf:about="#Star">
+        <rdfs:subClassOf rdf:resource="#AstronomicalBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#Tide -->
+
+    <owl:Class rdf:about="#Tide">
+        <rdfs:subClassOf rdf:resource="#GlobalOscillation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#FarFieldForce -->
+
+    <owl:Class rdf:about="&phys;#FarFieldForce"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Oscillation -->
+
+    <owl:Class rdf:about="&sys;#Oscillation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Body -->
+
+    <owl:Class rdf:about="&geom;#Body"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

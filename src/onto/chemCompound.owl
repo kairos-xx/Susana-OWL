@@ -1,0 +1,1564 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY elem "http://sweet.jpl.nasa.gov/2.0/chemElement.owl" >
+    <!ENTITY chemElement "http://sweet.jpl.nasa.gov/2.0/chemElement.owl#" >
+    <!ENTITY allo "http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl" >
+    <!ENTITY chemCompound "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#" >
+    <!ENTITY chemAllotrope "http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"
+     xmlns:allo="http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:chemCompound="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#"
+     xmlns:elem="http://sweet.jpl.nasa.gov/2.0/chemElement.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chemElement="&elem;#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chemAllotrope="&allo;#"
+     xmlns:chem2="&chem;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemElement.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasChemical_1 -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasChemical_1"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasChemical_2 -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasChemical_2"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasChemical_3 -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasChemical_3"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasChemical_4 -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasChemical_4"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Acid -->
+
+    <owl:Class rdf:about="&chem;#Acid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Chemical -->
+
+    <owl:Class rdf:about="&chem;#Chemical"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Cl2 -->
+
+    <owl:Class rdf:about="&allo;#Cl2"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Fe2 -->
+
+    <owl:Class rdf:about="&allo;#Fe2"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Fe3 -->
+
+    <owl:Class rdf:about="&allo;#Fe3"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#H2 -->
+
+    <owl:Class rdf:about="&allo;#H2"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#H3 -->
+
+    <owl:Class rdf:about="&allo;#H3"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#N2 -->
+
+    <owl:Class rdf:about="&allo;#N2"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#O2 -->
+
+    <owl:Class rdf:about="&allo;#O2"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#O3 -->
+
+    <owl:Class rdf:about="&allo;#O3"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#O4 -->
+
+    <owl:Class rdf:about="&allo;#O4"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#O5 -->
+
+    <owl:Class rdf:about="&allo;#O5"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Ox -->
+
+    <owl:Class rdf:about="&allo;#Ox"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Ammonia -->
+
+    <owl:Class rdf:about="#Ammonia">
+        <owl:equivalentClass rdf:resource="#NH3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#BrCl -->
+
+    <owl:Class rdf:about="#BrCl">
+        <owl:equivalentClass rdf:resource="#BromineChloride"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Cl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Br"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#BrNO3 -->
+
+    <owl:Class rdf:about="#BrNO3">
+        <owl:equivalentClass rdf:resource="#BromineNitrate"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_3"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Br"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#BrO -->
+
+    <owl:Class rdf:about="#BrO">
+        <owl:equivalentClass rdf:resource="#BromineMonoxide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Br"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#BrOx -->
+
+    <owl:Class rdf:about="#BrOx">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#Ox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Br"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#BromineChloride -->
+
+    <owl:Class rdf:about="#BromineChloride"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#BromineMonoxide -->
+
+    <owl:Class rdf:about="#BromineMonoxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#BromineNitrate -->
+
+    <owl:Class rdf:about="#BromineNitrate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#CO -->
+
+    <owl:Class rdf:about="#CO">
+        <owl:equivalentClass rdf:resource="#CarbonMonoxide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#CO2 -->
+
+    <owl:Class rdf:about="#CO2">
+        <owl:equivalentClass rdf:resource="#CarbonDioxide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#CaCO3 -->
+
+    <owl:Class rdf:about="#CaCO3">
+        <owl:equivalentClass rdf:resource="#CalciumCarbonate"/>
+        <rdfs:subClassOf rdf:resource="#Carbonate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Ca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_3"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Calcite -->
+
+    <owl:Class rdf:about="#Calcite">
+        <rdfs:subClassOf rdf:resource="#CalciumCarbonate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#CalciumCarbonate -->
+
+    <owl:Class rdf:about="#CalciumCarbonate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#CarbonDioxide -->
+
+    <owl:Class rdf:about="#CarbonDioxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#CarbonMonoxide -->
+
+    <owl:Class rdf:about="#CarbonMonoxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Carbonate -->
+
+    <owl:Class rdf:about="#Carbonate">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#ChemicalCompound -->
+
+    <owl:Class rdf:about="#ChemicalCompound">
+        <owl:equivalentClass rdf:resource="#Compound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#ChlorineDioxide -->
+
+    <owl:Class rdf:about="#ChlorineDioxide">
+        <owl:equivalentClass rdf:resource="#ClO2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#ChlorineMonoxide -->
+
+    <owl:Class rdf:about="#ChlorineMonoxide">
+        <owl:equivalentClass rdf:resource="#ClO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#ChlorineNitrate -->
+
+    <owl:Class rdf:about="#ChlorineNitrate">
+        <owl:equivalentClass rdf:resource="#ClONO2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Cl2O2 -->
+
+    <owl:Class rdf:about="#Cl2O2">
+        <owl:equivalentClass rdf:resource="#DichlorinePeroxide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&allo;#Cl2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#ClO -->
+
+    <owl:Class rdf:about="#ClO">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Cl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#ClO2 -->
+
+    <owl:Class rdf:about="#ClO2">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Cl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#ClONO2 -->
+
+    <owl:Class rdf:about="#ClONO2">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_4"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_3"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Cl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#ClOx -->
+
+    <owl:Class rdf:about="#ClOx">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Cl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#Ox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Clathrate -->
+
+    <owl:Class rdf:about="#Clathrate">
+        <rdfs:subClassOf rdf:resource="#Compound"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Compound -->
+
+    <owl:Class rdf:about="#Compound">
+        <rdfs:subClassOf rdf:resource="&chem;#Chemical"/>
+        <rdfs:comment xml:lang="en"
+            >A chemical compound is a pure chemical substance consisting of two or more different chemical elements[1][2][3] that can be separated into simpler substances by chemical reactions[4] and that have a unique and defined chemical structure. Chemical compounds consist of a fixed ratio of atoms[3] that are hold together in a defined spatial arrangement by chemical bonds. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#DichlorinePeroxide -->
+
+    <owl:Class rdf:about="#DichlorinePeroxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#DinitrogenPentoxide -->
+
+    <owl:Class rdf:about="#DinitrogenPentoxide">
+        <owl:equivalentClass rdf:resource="#N2O5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Fe2O3 -->
+
+    <owl:Class rdf:about="#Fe2O3">
+        <owl:equivalentClass rdf:resource="#Hematite"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&allo;#Fe2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Fe3O4 -->
+
+    <owl:Class rdf:about="#Fe3O4">
+        <owl:equivalentClass rdf:resource="#Magnetite"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&allo;#Fe3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#H2O -->
+
+    <owl:Class rdf:about="#H2O">
+        <owl:equivalentClass rdf:resource="#Water"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&allo;#H2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#H2O2 -->
+
+    <owl:Class rdf:about="#H2O2">
+        <owl:equivalentClass rdf:resource="#HydrogenPeroxide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&allo;#H2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#H2SO4 -->
+
+    <owl:Class rdf:about="#H2SO4">
+        <owl:equivalentClass rdf:resource="#SulfuricAcid"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#S"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_3"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&allo;#H2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HBr -->
+
+    <owl:Class rdf:about="#HBr">
+        <owl:equivalentClass rdf:resource="#HydrogenBromide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Br"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HBrO -->
+
+    <owl:Class rdf:about="#HBrO">
+        <owl:equivalentClass rdf:resource="#HydrobromousAcid"/>
+        <rdfs:subClassOf rdf:resource="&chem;#Acid"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_3"/>
+                <owl:allValuesFrom rdf:resource="&elem;#O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Br"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HCl -->
+
+    <owl:Class rdf:about="#HCl">
+        <owl:equivalentClass rdf:resource="#HydrogenChloride"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Cl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HClO -->
+
+    <owl:Class rdf:about="#HClO">
+        <owl:equivalentClass rdf:resource="#HypochlorousAcid"/>
+        <rdfs:subClassOf rdf:resource="&chem;#Acid"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_3"/>
+                <owl:allValuesFrom rdf:resource="&elem;#O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Cl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HF -->
+
+    <owl:Class rdf:about="#HF">
+        <owl:equivalentClass rdf:resource="#HydrogenFluoride"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HNO2 -->
+
+    <owl:Class rdf:about="#HNO2">
+        <owl:equivalentClass rdf:resource="#NitrousAcid"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_3"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HNO3 -->
+
+    <owl:Class rdf:about="#HNO3">
+        <owl:equivalentClass rdf:resource="#NitricAcid"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_3"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HNO4 -->
+
+    <owl:Class rdf:about="#HNO4">
+        <owl:equivalentClass rdf:resource="#PeroxynitricAcid"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_3"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HO2 -->
+
+    <owl:Class rdf:about="#HO2">
+        <owl:equivalentClass rdf:resource="#Hydroperoxyl"/>
+        <rdfs:subClassOf rdf:resource="#PeroxyRadical"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HOCl -->
+
+    <owl:Class rdf:about="#HOCl">
+        <owl:equivalentClass rdf:resource="#HydrochlorousAcid"/>
+        <rdfs:subClassOf rdf:resource="&chem;#Acid"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_3"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Cl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HOx -->
+
+    <owl:Class rdf:about="#HOx">
+        <owl:equivalentClass rdf:resource="#HydrogenOxides"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#Ox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Halogen -->
+
+    <owl:Class rdf:about="#Halogen">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Hematite -->
+
+    <owl:Class rdf:about="#Hematite"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HydrobromousAcid -->
+
+    <owl:Class rdf:about="#HydrobromousAcid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HydrochlorousAcid -->
+
+    <owl:Class rdf:about="#HydrochlorousAcid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HydrogenBromide -->
+
+    <owl:Class rdf:about="#HydrogenBromide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HydrogenChloride -->
+
+    <owl:Class rdf:about="#HydrogenChloride"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HydrogenFluoride -->
+
+    <owl:Class rdf:about="#HydrogenFluoride"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HydrogenOxides -->
+
+    <owl:Class rdf:about="#HydrogenOxides"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HydrogenPeroxide -->
+
+    <owl:Class rdf:about="#HydrogenPeroxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Hydroperoxyl -->
+
+    <owl:Class rdf:about="#Hydroperoxyl"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Hydroxyl -->
+
+    <owl:Class rdf:about="#Hydroxyl">
+        <owl:equivalentClass rdf:resource="#OH"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HypochlorousAcid -->
+
+    <owl:Class rdf:about="#HypochlorousAcid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#HypochlorousMonoxide -->
+
+    <owl:Class rdf:about="#HypochlorousMonoxide">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#InorganicCompound -->
+
+    <owl:Class rdf:about="#InorganicCompound">
+        <rdfs:subClassOf rdf:resource="#Compound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Magnetite -->
+
+    <owl:Class rdf:about="#Magnetite"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#N2O -->
+
+    <owl:Class rdf:about="#N2O">
+        <owl:equivalentClass rdf:resource="#NitrousOxide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&allo;#N2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#N2O5 -->
+
+    <owl:Class rdf:about="#N2O5">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&allo;#N2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NAT -->
+
+    <owl:Class rdf:about="#NAT">
+        <owl:equivalentClass rdf:resource="#NitricAcidTrihydrate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NH3 -->
+
+    <owl:Class rdf:about="#NH3">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#H3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NO -->
+
+    <owl:Class rdf:about="#NO">
+        <owl:equivalentClass rdf:resource="#NitricOxide"/>
+        <owl:equivalentClass rdf:resource="#NitrogenMonoxide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NO2 -->
+
+    <owl:Class rdf:about="#NO2">
+        <owl:equivalentClass rdf:resource="#NitrogenDioxide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NO3 -->
+
+    <owl:Class rdf:about="#NO3">
+        <owl:equivalentClass rdf:resource="#NitrateRadical"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NOx -->
+
+    <owl:Class rdf:about="#NOx">
+        <owl:equivalentClass rdf:resource="#NitrogenOxide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#Ox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NOy -->
+
+    <owl:Class rdf:about="#NOy">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NaCl -->
+
+    <owl:Class rdf:about="#NaCl">
+        <owl:equivalentClass rdf:resource="#Salt"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Cl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Na"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A salt is defined as the product formed from the neutralization reaction of acids and bases. Salts are ionic compounds composed of cations (positively charged ions) and anions (negative ions) so that the product is electrically neutral (without a net charge). [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NitrateRadical -->
+
+    <owl:Class rdf:about="#NitrateRadical"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NitricAcid -->
+
+    <owl:Class rdf:about="#NitricAcid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NitricAcidTrihydrate -->
+
+    <owl:Class rdf:about="#NitricAcidTrihydrate">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NitricOxide -->
+
+    <owl:Class rdf:about="#NitricOxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NitrogenDioxide -->
+
+    <owl:Class rdf:about="#NitrogenDioxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NitrogenMonoxide -->
+
+    <owl:Class rdf:about="#NitrogenMonoxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NitrogenOxide -->
+
+    <owl:Class rdf:about="#NitrogenOxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NitrousAcid -->
+
+    <owl:Class rdf:about="#NitrousAcid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#NitrousOxide -->
+
+    <owl:Class rdf:about="#NitrousOxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#OH -->
+
+    <owl:Class rdf:about="#OH">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&elem;#O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#PO -->
+
+    <owl:Class rdf:about="#PO">
+        <owl:equivalentClass rdf:resource="#Phosphate"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#P"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#Ox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#PeroxyRadical -->
+
+    <owl:Class rdf:about="#PeroxyRadical">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#PeroxynitricAcid -->
+
+    <owl:Class rdf:about="#PeroxynitricAcid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Phosphate -->
+
+    <owl:Class rdf:about="#Phosphate">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#SO2 -->
+
+    <owl:Class rdf:about="#SO2">
+        <owl:equivalentClass rdf:resource="#SulfurDioxide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#S"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#SO4 -->
+
+    <owl:Class rdf:about="#SO4">
+        <owl:equivalentClass rdf:resource="#Sulfate"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#S"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#SOx -->
+
+    <owl:Class rdf:about="#SOx">
+        <owl:equivalentClass rdf:resource="#SulfurOxide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#S"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#Ox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Salt -->
+
+    <owl:Class rdf:about="#Salt"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#SiO2 -->
+
+    <owl:Class rdf:about="#SiO2">
+        <owl:equivalentClass rdf:resource="#Silica"/>
+        <owl:equivalentClass rdf:resource="#SiliconDioxide"/>
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#Si"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&allo;#O2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Silica -->
+
+    <owl:Class rdf:about="#Silica"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Silicate -->
+
+    <owl:Class rdf:about="#Silicate">
+        <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#SiliconDioxide -->
+
+    <owl:Class rdf:about="#SiliconDioxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Sulfate -->
+
+    <owl:Class rdf:about="#Sulfate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#SulfurDioxide -->
+
+    <owl:Class rdf:about="#SulfurDioxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#SulfurOxide -->
+
+    <owl:Class rdf:about="#SulfurOxide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#SulfuricAcid -->
+
+    <owl:Class rdf:about="#SulfuricAcid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Water -->
+
+    <owl:Class rdf:about="#Water"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Br -->
+
+    <owl:Class rdf:about="&elem;#Br"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#C -->
+
+    <owl:Class rdf:about="&elem;#C"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Ca -->
+
+    <owl:Class rdf:about="&elem;#Ca"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Cl -->
+
+    <owl:Class rdf:about="&elem;#Cl"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#F -->
+
+    <owl:Class rdf:about="&elem;#F"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#H -->
+
+    <owl:Class rdf:about="&elem;#H"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#N -->
+
+    <owl:Class rdf:about="&elem;#N"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Na -->
+
+    <owl:Class rdf:about="&elem;#Na"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#O -->
+
+    <owl:Class rdf:about="&elem;#O"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#P -->
+
+    <owl:Class rdf:about="&elem;#P"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#S -->
+
+    <owl:Class rdf:about="&elem;#S"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Si -->
+
+    <owl:Class rdf:about="&elem;#Si"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

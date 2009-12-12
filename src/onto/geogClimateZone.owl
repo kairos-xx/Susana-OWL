@@ -1,0 +1,1639 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY time "http://sweet.jpl.nasa.gov/2.0/time.owl" >
+    <!ENTITY time2 "http://sweet.jpl.nasa.gov/2.0/time.owl#" >
+    <!ENTITY math2 "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY climate "http://sweet.jpl.nasa.gov/2.0/climate.owl" >
+    <!ENTITY climate2 "http://sweet.jpl.nasa.gov/2.0/climate.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl" >
+    <!ENTITY sciUnits "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY qual "http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl" >
+    <!ENTITY sciCategorical "http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#" >
+    <!ENTITY zone "http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl" >
+    <!ENTITY zone2 "http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&zone;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl"
+     xmlns:climate2="&climate;#"
+     xmlns:sciCategorical="&qual;#"
+     xmlns:zone2="&zone;#"
+     xmlns:math2="&math;#"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:time2="&time;#"
+     xmlns:time="http://sweet.jpl.nasa.gov/2.0/time.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:qual="http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl"
+     xmlns:sciUnits="&units;#"
+     xmlns:astroPlanet="&planet;#"
+     xmlns:zone="http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl"
+     xmlns:climate="http://sweet.jpl.nasa.gov/2.0/climate.owl"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/climate.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/time.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasAnnualPrecipitationRangeLowerBound -->
+
+    <owl:ObjectProperty rdf:about="#hasAnnualPrecipitationRangeLowerBound"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasAnnualPrecipitationRangeUpperBound -->
+
+    <owl:ObjectProperty rdf:about="#hasAnnualPrecipitationRangeUpperBound"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasAverageMonthlyPrecipitationRange -->
+
+    <owl:ObjectProperty rdf:about="#hasAverageMonthlyPrecipitationRange">
+        <rdfs:range rdf:resource="#AverageMonthlyPrecipitationRange"/>
+        <rdfs:subPropertyOf rdf:resource="#hasPrecipitationRange"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasClimateClassification -->
+
+    <owl:ObjectProperty rdf:about="#hasClimateClassification"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasClimatePhenomena -->
+
+    <owl:ObjectProperty rdf:about="#hasClimatePhenomena">
+        <rdfs:range rdf:resource="&climate;#ClimatePhenomena"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasClimateZoneType -->
+
+    <owl:ObjectProperty rdf:about="#hasClimateZoneType">
+        <rdfs:range rdf:resource="#ClimateZoneType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasClimatologicalAverage -->
+
+    <owl:ObjectProperty rdf:about="#hasClimatologicalAverage">
+        <rdfs:range rdf:resource="#ClimatologicalAverage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasDrySeason -->
+
+    <owl:ObjectProperty rdf:about="#hasDrySeason">
+        <rdfs:subPropertyOf rdf:resource="#hasClimatePhenomena"/>
+        <rdfs:range rdf:resource="&time;#Season"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasITCZDominance -->
+
+    <owl:ObjectProperty rdf:about="#hasITCZDominance">
+        <rdfs:subPropertyOf rdf:resource="#hasClimatePhenomena"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasPrecipitationClimate -->
+
+    <owl:ObjectProperty rdf:about="#hasPrecipitationClimate">
+        <rdfs:subPropertyOf rdf:resource="#hasClimatePhenomena"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasPrecipitationRange -->
+
+    <owl:ObjectProperty rdf:about="#hasPrecipitationRange">
+        <rdfs:range rdf:resource="#PrecipitationRange"/>
+        <rdfs:subPropertyOf rdf:resource="#hasClimatologicalAverage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasSnowCoverDuration -->
+
+    <owl:ObjectProperty rdf:about="#hasSnowCoverDuration">
+        <rdfs:subPropertyOf rdf:resource="#hasClimatePhenomena"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasTemperatureClimate -->
+
+    <owl:ObjectProperty rdf:about="#hasTemperatureClimate">
+        <rdfs:subPropertyOf rdf:resource="#hasClimatePhenomena"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasWetSeason -->
+
+    <owl:ObjectProperty rdf:about="#hasWetSeason">
+        <rdfs:range rdf:resource="#WetSeason"/>
+        <rdfs:subPropertyOf rdf:resource="#hasClimatePhenomena"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#hasWinterDuration -->
+
+    <owl:ObjectProperty rdf:about="#hasWinterDuration">
+        <rdfs:subPropertyOf rdf:resource="#hasClimatePhenomena"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;#hasUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasLowerBound -->
+
+    <owl:DatatypeProperty rdf:about="&math;#hasLowerBound"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasUpperBound -->
+
+    <owl:DatatypeProperty rdf:about="&math;#hasUpperBound"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Ocean -->
+
+    <owl:Class rdf:about="&planet;#Ocean"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#ClimatePhenomena -->
+
+    <owl:Class rdf:about="&climate;#ClimatePhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#PotentialEvapotranspiration -->
+
+    <owl:Class rdf:about="&climate;#PotentialEvapotranspiration"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#A -->
+
+    <owl:Class rdf:about="#A">
+        <owl:equivalentClass rdf:resource="#TropicalClimate"/>
+        <rdfs:subClassOf rdf:resource="#ClimateClassification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#AMeanAnnualTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The A climate classification, also known as the Tropical climate classification, is characterized as being consistently warm with all months averaging above 18 degrees C and having annual precipitation exceeds potential evapotranspiration (POTET).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Af -->
+
+    <owl:Class rdf:about="#Af">
+        <owl:equivalentClass rdf:resource="#TropicalRainForestClimate"/>
+        <rdfs:subClassOf rdf:resource="#A"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecipitationClimate"/>
+                <owl:hasValue rdf:resource="#AfAverageMonthlyPrecipitation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Af climate classification, also known as the tropical rain forest climate classification, is characterized by monthly precipitation in excess of 6 cm all months out of year.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Am -->
+
+    <owl:Class rdf:about="#Am">
+        <owl:equivalentClass rdf:resource="#TropicalMonsoonClimate"/>
+        <rdfs:subClassOf rdf:resource="#A"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasITCZDominance"/>
+                <owl:hasValue rdf:resource="#AmITCZDominance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecipitationClimate"/>
+                <owl:hasValue rdf:resource="#AmDrySeasonPrecipitation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Am climate classification, also known as Tropical Monsoon Climate, is characterized by a short marked dry season with 1 or more months receiving less than 6 cm of precipitation, an otherwise excessively wet rainy season, and ITCZ dominance for 6 - 12 months out of the year.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Arid -->
+
+    <owl:Class rdf:about="#Arid">
+        <owl:equivalentClass rdf:resource="#BW"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#AridClimate -->
+
+    <owl:Class rdf:about="#AridClimate">
+        <owl:equivalentClass rdf:resource="#BW"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#AverageMonthlyPrecipitationRange -->
+
+    <owl:Class rdf:about="#AverageMonthlyPrecipitationRange">
+        <rdfs:subClassOf rdf:resource="#PrecipitationRange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Aw -->
+
+    <owl:Class rdf:about="#Aw">
+        <owl:equivalentClass rdf:resource="#TropicalSavannaClimate"/>
+        <rdfs:subClassOf rdf:resource="#A"/>
+        <rdfs:subClassOf rdf:resource="#WetSummerDryWinterClimate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasITCZDominance"/>
+                <owl:hasValue rdf:resource="#AwITCZDominance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Aw climate classification, also known as Tropical Savanna climate classification, is characterized by a summer wet season, winter dry season, and ITCZ dominance for 6 months or less.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#B -->
+
+    <owl:Class rdf:about="#B">
+        <owl:equivalentClass rdf:resource="#DryClimate"/>
+        <rdfs:subClassOf rdf:resource="#ClimateClassification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAnnualPrecipitationRangeLowerBound"/>
+                <owl:allValuesFrom rdf:resource="&climate;#PotentialEvapotranspiration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Potential evapotranspiration (POTET) exceeds precipitation in all B climates. Subdivisions are based on precipitation timing and amount and mean annual temperature.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#BS -->
+
+    <owl:Class rdf:about="#BS">
+        <owl:equivalentClass rdf:resource="#SemiAridClimate"/>
+        <rdfs:subClassOf rdf:resource="#B"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAnnualPrecipitationRangeLowerBound"/>
+                <owl:allValuesFrom rdf:resource="#HalfPotentialEvapotranspiration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAnnualPrecipitationRangeUpperBound"/>
+                <owl:allValuesFrom rdf:resource="&climate;#PotentialEvapotranspiration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The BS climate classification, also known as semiarid climate classification, is characterized by having precipitation amounts greater than 1/2 potential evapotranspiration (POTET), but not equal to it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#BSh -->
+
+    <owl:Class rdf:about="#BSh">
+        <owl:equivalentClass rdf:resource="#HotLowLatitudeSteppeClimate"/>
+        <rdfs:subClassOf rdf:resource="#BS"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#BShMeanAnnualTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The BSh climate classification, also known as the hot low-latitude steppe, is characterized by having mean annual temperatures greater than 18 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#BSk -->
+
+    <owl:Class rdf:about="#BSk">
+        <owl:equivalentClass rdf:resource="#ColdMidlatitudeSteppeClimate"/>
+        <rdfs:subClassOf rdf:resource="#BS"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#BSkMeanAnnualTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The BSk climate classification, also known as cold midlatitude steppe climate classification, is characterized by having mean annual temperatures less than 18 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#BW -->
+
+    <owl:Class rdf:about="#BW">
+        <rdfs:subClassOf rdf:resource="#B"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAnnualPrecipitationRangeUpperBound"/>
+                <owl:allValuesFrom rdf:resource="#HalfPotentialEvapotranspiration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The BW climate classification, also known as the arid climate classification, is characterized by having precipitation amounts less than 1/2 potential evapotranspiration (POTET).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#BWh -->
+
+    <owl:Class rdf:about="#BWh">
+        <owl:equivalentClass rdf:resource="#HotLowLatitudeDesertClimate"/>
+        <rdfs:subClassOf rdf:resource="#BW"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#BWhMeanAnnualTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >the BWh climate classification, also known as the hot low-latitude desert, is characterized by having mean annual temperatures greater than 18 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#BWk -->
+
+    <owl:Class rdf:about="#BWk">
+        <owl:equivalentClass rdf:resource="#ColdMidlatitudeDesertClimate"/>
+        <rdfs:subClassOf rdf:resource="#BW"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#BWkMeanAnnualTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The BWk climate classification, also known as the cold midlatitude desert, is characterized by having mean annual temperatures less than 18 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#C -->
+
+    <owl:Class rdf:about="#C">
+        <owl:equivalentClass rdf:resource="#TemperateClimate"/>
+        <rdfs:subClassOf rdf:resource="#C"/>
+        <rdfs:subClassOf rdf:resource="#ClimateClassification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#CWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#CColdestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Cfa -->
+
+    <owl:Class rdf:about="#Cfa">
+        <rdfs:subClassOf rdf:resource="#C"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#CfaWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Cfa climate classification is characterized by year-round precipitation, hot summers, and having the warmest month above 22 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Cfb -->
+
+    <owl:Class rdf:about="#Cfb">
+        <rdfs:subClassOf rdf:resource="#C"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#CfbWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasWinterDuration"/>
+                <owl:hasValue rdf:resource="#CfbWinterDuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#CfbColdestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Cfb climate classfication receives year-round precipitation, its warmest month is below 22 degree C and has 4 months above 10 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Cfc -->
+
+    <owl:Class rdf:about="#Cfc">
+        <rdfs:subClassOf rdf:resource="#C"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#CfcColdestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasWinterDuration"/>
+                <owl:hasValue rdf:resource="#CfcWinterDuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Cfc climate classification is charactericized by year-round precipitation and having 1 - 3 months with temperatures above 10 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#ClimateClassification -->
+
+    <owl:Class rdf:about="#ClimateClassification">
+        <rdfs:subClassOf rdf:resource="&qual;#CategoricalScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#ClimateZoneType -->
+
+    <owl:Class rdf:about="#ClimateZoneType">
+        <rdfs:subClassOf rdf:resource="&qual;#CategoricalScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#ClimatologicalAverage -->
+
+    <owl:Class rdf:about="#ClimatologicalAverage">
+        <rdfs:subClassOf rdf:resource="&climate;#ClimatePhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#ColdMidlatitudeDesertClimate -->
+
+    <owl:Class rdf:about="#ColdMidlatitudeDesertClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#ColdMidlatitudeSteppeClimate -->
+
+    <owl:Class rdf:about="#ColdMidlatitudeSteppeClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#ColdestMonthTemperature -->
+
+    <owl:Class rdf:about="#ColdestMonthTemperature">
+        <rdfs:subClassOf rdf:resource="&climate;#ClimatePhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Csa -->
+
+    <owl:Class rdf:about="#Csa">
+        <rdfs:subClassOf rdf:resource="#C"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasWetSeason"/>
+                <owl:allValuesFrom rdf:resource="&time;#Winter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#CsaWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Csa climate classification is characterized by pronounced summer droughts with 70% of precipitation in the winter and hot summers with its warmest month above 22 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Csb -->
+
+    <owl:Class rdf:about="#Csb">
+        <rdfs:subClassOf rdf:resource="#C"/>
+        <rdfs:subClassOf rdf:resource="#WetSummerDryWinterClimate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#CsbWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Cwa -->
+
+    <owl:Class rdf:about="#Cwa">
+        <rdfs:subClassOf rdf:resource="#C"/>
+        <rdfs:subClassOf rdf:resource="#WetSummerDryWinterClimate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#CwaWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >the Cwa climate classification is characterized by winter drought, summer&#39;s wettest month getting 10 times more precipitation than driest winter month, and the warmest month being above 22 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#D -->
+
+    <owl:Class rdf:about="#D">
+        <rdfs:subClassOf rdf:resource="#ClimateClassification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#DColdestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#DWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The D climate classification, also known as the microthermal climate classification,  is characterized by by having the warmest month of the year above 10 degree C and the coldest below 0 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DesertClimateZone -->
+
+    <owl:Class rdf:about="#DesertClimateZone">
+        <rdfs:subClassOf rdf:resource="#ClimateZoneType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Dfa -->
+
+    <owl:Class rdf:about="#Dfa">
+        <rdfs:subClassOf rdf:resource="#D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#DfaWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Dfa climate classification is characterized by having year-round precipitation and warmest month temperatures above 22 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Dfb -->
+
+    <owl:Class rdf:about="#Dfb">
+        <rdfs:subClassOf rdf:resource="#D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#DfbWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Dfb climate classifcation is characterized by having year-round precipitation and warmest month temperatures below 22 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Dfc -->
+
+    <owl:Class rdf:about="#Dfc">
+        <rdfs:subClassOf rdf:resource="#D"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#DfcColdestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasWinterDuration"/>
+                <owl:hasValue rdf:resource="#DfcWinterDuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Dfc climate classification is characterized by having year-round precipitation and having 1 - 4 months above 10 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Doldrums -->
+
+    <owl:Class rdf:about="#Doldrums">
+        <rdfs:subClassOf rdf:resource="#ClimateZoneType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="#Equator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A nautical term for the equatorial trough, with special reference to the light and variable nature of the winds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DryClimate -->
+
+    <owl:Class rdf:about="#DryClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DrySeasonPrecipitation -->
+
+    <owl:Class rdf:about="#DrySeasonPrecipitation">
+        <rdfs:subClassOf rdf:resource="#PrecipitationRange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DrySeasonPrecipitationRange -->
+
+    <owl:Class rdf:about="#DrySeasonPrecipitationRange">
+        <rdfs:subClassOf rdf:resource="#PrecipitationRange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DryWinterClimate -->
+
+    <owl:Class rdf:about="#DryWinterClimate">
+        <rdfs:subClassOf rdf:resource="#ClimateClassification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasDrySeason"/>
+                <owl:allValuesFrom rdf:resource="&time;#Winter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Dwa -->
+
+    <owl:Class rdf:about="#Dwa">
+        <rdfs:subClassOf rdf:resource="#D"/>
+        <rdfs:subClassOf rdf:resource="#DryWinterClimate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#DwaWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Dwa climate classification is characterized by winter drought and warmest month temperatures above 22 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Dwb -->
+
+    <owl:Class rdf:about="#Dwb">
+        <rdfs:subClassOf rdf:resource="#D"/>
+        <rdfs:subClassOf rdf:resource="#DryWinterClimate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#DwbWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Dwb climate classification is characterized by winter drought and warmest month temperatures below 22 degree c.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Dwc -->
+
+    <owl:Class rdf:about="#Dwc">
+        <rdfs:subClassOf rdf:resource="#D"/>
+        <rdfs:subClassOf rdf:resource="#DryWinterClimate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#DwcColdestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasWinterDuration"/>
+                <owl:hasValue rdf:resource="#DwcWinterDuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Dwc climate classification is characterized by winter drought and haviong 1 - 4 months with temperatures above 10 degrees C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Dwd -->
+
+    <owl:Class rdf:about="#Dwd">
+        <rdfs:subClassOf rdf:resource="#D"/>
+        <rdfs:subClassOf rdf:resource="#DryWinterClimate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#DwdColdestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The Dwd climate classification is characterized by winter drought and having coldest month temperatures below -38 degree C (in Siberia only).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#E -->
+
+    <owl:Class rdf:about="#E">
+        <rdfs:subClassOf rdf:resource="#ClimateClassification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#EF -->
+
+    <owl:Class rdf:about="#EF">
+        <owl:equivalentClass rdf:resource="#IceCapClimate"/>
+        <rdfs:subClassOf rdf:resource="#E"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#EFWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAnnualPrecipitationRangeLowerBound"/>
+                <owl:allValuesFrom rdf:resource="&climate;#PotentialEvapotranspiration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The EF climate classification, also known as the Ice Cap climate classification, is characterized by having warmest month temperatures below 0 degrees C and having precipitation exceeding very small potential evapotranspiration (POTET).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#EM -->
+
+    <owl:Class rdf:about="#EM">
+        <owl:equivalentClass rdf:resource="#PolarMarineClimate"/>
+        <rdfs:subClassOf rdf:resource="#E"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#EMWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#EMMeanAnnualTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The EM climate classification, also known as the polar marine climate classification, is characterized by all months having temperatures above -7 degree C, warmest month above 0 degree C, and annual temperatures less than 17 degree C.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#ET -->
+
+    <owl:Class rdf:about="#ET">
+        <owl:equivalentClass rdf:resource="#TundraClimate"/>
+        <rdfs:subClassOf rdf:resource="#E"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSnowCoverDuration"/>
+                <owl:hasValue rdf:resource="#ETSnowCoverDuration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTemperatureClimate"/>
+                <owl:hasValue rdf:resource="#ETWarmestMonthTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAnnualPrecipitationRangeLowerBound"/>
+                <owl:allValuesFrom rdf:resource="&climate;#PotentialEvapotranspiration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The ET climate classification, also known as the tundra climate classification, is characterizex by warmest month temperatures between 0 - 10 degree C, precipitation exceeds small potential evapotranspiration demand, and has snow cover 8 - 10 months out of the year.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Equator -->
+
+    <owl:Class rdf:about="#Equator">
+        <rdfs:subClassOf rdf:resource="#TropicalClimateZone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#HalfPotentialEvapotranspiration -->
+
+    <owl:Class rdf:about="#HalfPotentialEvapotranspiration">
+        <rdfs:subClassOf rdf:resource="&climate;#PotentialEvapotranspiration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#HotLowLatitudeDesertClimate -->
+
+    <owl:Class rdf:about="#HotLowLatitudeDesertClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#HotLowLatitudeSteppeClimate -->
+
+    <owl:Class rdf:about="#HotLowLatitudeSteppeClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#ITCZDominance -->
+
+    <owl:Class rdf:about="#ITCZDominance">
+        <rdfs:subClassOf rdf:resource="#MonthRange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#ITCZDominanceDuration -->
+
+    <owl:Class rdf:about="#ITCZDominanceDuration">
+        <rdfs:subClassOf rdf:resource="#ClimatologicalAverage"/>
+        <rdfs:subClassOf rdf:resource="&time;#Duration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#IceCapClimate -->
+
+    <owl:Class rdf:about="#IceCapClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#MarineClimate -->
+
+    <owl:Class rdf:about="#MarineClimate">
+        <rdfs:subClassOf rdf:resource="#ClimateClassification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:someValuesFrom rdf:resource="&planet;#Ocean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >(Also called maritime climate, oceanic climate.) A regional climate under the predominant influence of the sea, characterized by relatively small seasonal variations and high atmospheric moisture content; the antithesis of a continental climate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#MeanAnnualTemperature -->
+
+    <owl:Class rdf:about="#MeanAnnualTemperature">
+        <rdfs:subClassOf rdf:resource="#ClimatologicalAverage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasUnit"/>
+                <owl:hasValue rdf:resource="&units;#degreeC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Midlatitude -->
+
+    <owl:Class rdf:about="#Midlatitude">
+        <rdfs:label>Midlatitude</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SubtropicalClimateZone"/>
+        <rdfs:comment
+            >geophysical region that is often referred to as mid-latitude ranging from 25-55 degree in both hemisphere</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#MonthRange -->
+
+    <owl:Class rdf:about="#MonthRange">
+        <rdfs:subClassOf rdf:resource="&sci;#IntervalQuantity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasUnit"/>
+                <owl:hasValue rdf:resource="&time;#month"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#PolarMarineClimate -->
+
+    <owl:Class rdf:about="#PolarMarineClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#PrecipitationRange -->
+
+    <owl:Class rdf:about="#PrecipitationRange">
+        <rdfs:subClassOf rdf:resource="&sci;#IntervalQuantity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasUnit"/>
+                <owl:hasValue rdf:resource="&units;#centimeter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#RainShadow -->
+
+    <owl:Class rdf:about="#RainShadow">
+        <rdfs:subClassOf rdf:resource="#ClimateZoneType"/>
+        <rdfs:comment xml:lang="en"
+            >A region of sharply reduced precipitation on the lee side of an orographic barrier, as compared with regions upwind of the barrier.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#SemiAridClimate -->
+
+    <owl:Class rdf:about="#SemiAridClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#SnowCoverDuration -->
+
+    <owl:Class rdf:about="#SnowCoverDuration">
+        <rdfs:subClassOf rdf:resource="#ClimatologicalAverage"/>
+        <rdfs:subClassOf rdf:resource="#MonthRange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#SubtropicalClimateZone -->
+
+    <owl:Class rdf:about="#SubtropicalClimateZone">
+        <rdfs:subClassOf rdf:resource="#ClimateZoneType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#TemperateClimate -->
+
+    <owl:Class rdf:about="#TemperateClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#TropicalClimate -->
+
+    <owl:Class rdf:about="#TropicalClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#TropicalClimateZone -->
+
+    <owl:Class rdf:about="#TropicalClimateZone">
+        <rdfs:subClassOf rdf:resource="#ClimateZoneType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#TropicalMonsoonClimate -->
+
+    <owl:Class rdf:about="#TropicalMonsoonClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#TropicalRainForestClimate -->
+
+    <owl:Class rdf:about="#TropicalRainForestClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#TropicalSavannaClimate -->
+
+    <owl:Class rdf:about="#TropicalSavannaClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#Tropics -->
+
+    <owl:Class rdf:about="#Tropics">
+        <rdfs:subClassOf rdf:resource="#TropicalClimateZone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#TundraClimate -->
+
+    <owl:Class rdf:about="#TundraClimate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#WarmestMonthTemperature -->
+
+    <owl:Class rdf:about="#WarmestMonthTemperature">
+        <rdfs:subClassOf rdf:resource="&climate;#ClimatePhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#WetSeason -->
+
+    <owl:Class rdf:about="#WetSeason">
+        <rdfs:subClassOf rdf:resource="&climate;#ClimatePhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#WetSummerClimate -->
+
+    <owl:Class rdf:about="#WetSummerClimate">
+        <rdfs:subClassOf rdf:resource="#ClimateClassification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasWetSeason"/>
+                <owl:allValuesFrom rdf:resource="&time;#Summer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#WetSummerDryWinterClimate -->
+
+    <owl:Class rdf:about="#WetSummerDryWinterClimate">
+        <rdfs:subClassOf rdf:resource="#DryWinterClimate"/>
+        <rdfs:subClassOf rdf:resource="#WetSummerClimate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#WinterDuration -->
+
+    <owl:Class rdf:about="#WinterDuration">
+        <rdfs:subClassOf rdf:resource="#MonthRange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciCategorical.owl#CategoricalScale -->
+
+    <owl:Class rdf:about="&qual;#CategoricalScale"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Duration -->
+
+    <owl:Class rdf:about="&time;#Duration"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Season -->
+
+    <owl:Class rdf:about="&time;#Season"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Summer -->
+
+    <owl:Class rdf:about="&time;#Summer"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Winter -->
+
+    <owl:Class rdf:about="&time;#Winter"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#IntervalQuantity -->
+
+    <owl:Class rdf:about="&sci;#IntervalQuantity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#AMeanAnnualTemperature -->
+
+    <MeanAnnualTemperature rdf:about="#AMeanAnnualTemperature">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;double">18</math2:hasLowerBound>
+    </MeanAnnualTemperature>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#AfAverageMonthlyPrecipitation -->
+
+    <DrySeasonPrecipitation rdf:about="#AfAverageMonthlyPrecipitation">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;double">6</math2:hasLowerBound>
+    </DrySeasonPrecipitation>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#AmDrySeasonPrecipitation -->
+
+    <DrySeasonPrecipitation rdf:about="#AmDrySeasonPrecipitation">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;double">6</math2:hasUpperBound>
+    </DrySeasonPrecipitation>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#AmITCZDominance -->
+
+    <owl:Thing rdf:about="#AmITCZDominance">
+        <rdf:type rdf:resource="#ITCZDominance"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">6</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#AwITCZDominance -->
+
+    <owl:Thing rdf:about="#AwITCZDominance">
+        <rdf:type rdf:resource="#ITCZDominance"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">6</math2:hasLowerBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#BShMeanAnnualTemperature -->
+
+    <MeanAnnualTemperature rdf:about="#BShMeanAnnualTemperature">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">18</math2:hasLowerBound>
+    </MeanAnnualTemperature>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#BSkMeanAnnualTemperature -->
+
+    <MeanAnnualTemperature rdf:about="#BSkMeanAnnualTemperature">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">18</math2:hasUpperBound>
+    </MeanAnnualTemperature>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#BSwMeanAnnualTemperature -->
+
+    <owl:Thing rdf:about="#BSwMeanAnnualTemperature">
+        <rdf:type rdf:resource="#MeanAnnualTemperature"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">18</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#BWhMeanAnnualTemperature -->
+
+    <owl:Thing rdf:about="#BWhMeanAnnualTemperature">
+        <rdf:type rdf:resource="#MeanAnnualTemperature"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">18</math2:hasLowerBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#BWkMeanAnnualTemperature -->
+
+    <MeanAnnualTemperature rdf:about="#BWkMeanAnnualTemperature">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">18</math2:hasUpperBound>
+    </MeanAnnualTemperature>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#CColdestMonthTemperature -->
+
+    <owl:Thing rdf:about="#CColdestMonthTemperature">
+        <rdf:type rdf:resource="#ColdestMonthTemperature"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">0</math2:hasLowerBound>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">18</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#CWarmestMonthTemperature -->
+
+    <WarmestMonthTemperature rdf:about="#CWarmestMonthTemperature">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">10</math2:hasLowerBound>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">22</math2:hasUpperBound>
+    </WarmestMonthTemperature>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#CfaWarmestMonthTemperature -->
+
+    <owl:Thing rdf:about="#CfaWarmestMonthTemperature">
+        <rdf:type rdf:resource="#WarmestMonthTemperature"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">22</math2:hasLowerBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#CfbColdestMonthTemperature -->
+
+    <owl:Thing rdf:about="#CfbColdestMonthTemperature">
+        <rdf:type rdf:resource="#ColdestMonthTemperature"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">10</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#CfbWarmestMonthTemperature -->
+
+    <owl:Thing rdf:about="#CfbWarmestMonthTemperature">
+        <rdf:type rdf:resource="#WarmestMonthTemperature"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">22</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#CfbWinterDuration -->
+
+    <WinterDuration rdf:about="#CfbWinterDuration">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">4</math2:hasLowerBound>
+    </WinterDuration>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#CfcColdestMonthTemperature -->
+
+    <ColdestMonthTemperature rdf:about="#CfcColdestMonthTemperature">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">10</math2:hasLowerBound>
+    </ColdestMonthTemperature>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#CfcWinterDuration -->
+
+    <owl:Thing rdf:about="#CfcWinterDuration">
+        <rdf:type rdf:resource="#WinterDuration"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">1</math2:hasLowerBound>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">3</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#CsaWarmestMonthTemperature -->
+
+    <owl:Thing rdf:about="#CsaWarmestMonthTemperature">
+        <rdf:type rdf:resource="#WarmestMonthTemperature"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">22</math2:hasLowerBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#CsbWarmestMonthTemperature -->
+
+    <WarmestMonthTemperature rdf:about="#CsbWarmestMonthTemperature">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">10</math2:hasLowerBound>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">22</math2:hasUpperBound>
+    </WarmestMonthTemperature>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#CwaWarmestMonthTemperature -->
+
+    <owl:Thing rdf:about="#CwaWarmestMonthTemperature">
+        <rdf:type rdf:resource="#WarmestMonthTemperature"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">22</math2:hasLowerBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DColdestMonthTemperature -->
+
+    <owl:Thing rdf:about="#DColdestMonthTemperature">
+        <rdf:type rdf:resource="#ColdestMonthTemperature"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">0</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DWarmestMonthTemperature -->
+
+    <owl:Thing rdf:about="#DWarmestMonthTemperature">
+        <rdf:type rdf:resource="#WarmestMonthTemperature"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">10</math2:hasLowerBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DfaWarmestMonthTemperature -->
+
+    <owl:Thing rdf:about="#DfaWarmestMonthTemperature">
+        <rdf:type rdf:resource="#WarmestMonthTemperature"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">22</math2:hasLowerBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DfbWarmestMonthTemperature -->
+
+    <owl:Thing rdf:about="#DfbWarmestMonthTemperature">
+        <rdf:type rdf:resource="#WarmestMonthTemperature"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">22</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DfcColdestMonthTemperature -->
+
+    <ColdestMonthTemperature rdf:about="#DfcColdestMonthTemperature">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">10</math2:hasLowerBound>
+    </ColdestMonthTemperature>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DfcWinterDuration -->
+
+    <owl:Thing rdf:about="#DfcWinterDuration">
+        <rdf:type rdf:resource="#WinterDuration"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">1</math2:hasLowerBound>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">4</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DwaWarmestMonthTemperature -->
+
+    <owl:Thing rdf:about="#DwaWarmestMonthTemperature">
+        <rdf:type rdf:resource="#WarmestMonthTemperature"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">22</math2:hasLowerBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DwbWarmestMonthTemperature -->
+
+    <owl:Thing rdf:about="#DwbWarmestMonthTemperature">
+        <rdf:type rdf:resource="#WarmestMonthTemperature"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">22</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DwcColdestMonthTemperature -->
+
+    <ColdestMonthTemperature rdf:about="#DwcColdestMonthTemperature">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">10</math2:hasLowerBound>
+    </ColdestMonthTemperature>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DwcWinterDuration -->
+
+    <WinterDuration rdf:about="#DwcWinterDuration">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">1</math2:hasLowerBound>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">4</math2:hasUpperBound>
+    </WinterDuration>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#DwdColdestMonthTemperature -->
+
+    <owl:Thing rdf:about="#DwdColdestMonthTemperature">
+        <rdf:type rdf:resource="#ColdestMonthTemperature"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">-38</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#EFWarmestMonthTemperature -->
+
+    <owl:Thing rdf:about="#EFWarmestMonthTemperature">
+        <rdf:type rdf:resource="#WarmestMonthTemperature"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">0</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#EMMeanAnnualTemperature -->
+
+    <owl:Thing rdf:about="#EMMeanAnnualTemperature">
+        <rdf:type rdf:resource="#MeanAnnualTemperature"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">-7</math2:hasLowerBound>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">17</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#EMWarmestMonthTemperature -->
+
+    <owl:Thing rdf:about="#EMWarmestMonthTemperature">
+        <rdf:type rdf:resource="#WarmestMonthTemperature"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">0</math2:hasLowerBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#ETSnowCoverDuration -->
+
+    <SnowCoverDuration rdf:about="#ETSnowCoverDuration">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">10</math2:hasUpperBound>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">8</math2:hasLowerBound>
+    </SnowCoverDuration>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogClimateZone.owl#ETWarmestMonthTemperature -->
+
+    <owl:Thing rdf:about="#ETWarmestMonthTemperature">
+        <rdf:type rdf:resource="#WarmestMonthTemperature"/>
+        <math2:hasLowerBound rdf:datatype="&xsd;integer">0</math2:hasLowerBound>
+        <math2:hasUpperBound rdf:datatype="&xsd;integer">10</math2:hasUpperBound>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#centimeter -->
+
+    <owl:Thing rdf:about="&units;#centimeter"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#degreeC -->
+
+    <owl:Thing rdf:about="&units;#degreeC"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#month -->
+
+    <owl:Thing rdf:about="&time;#month"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

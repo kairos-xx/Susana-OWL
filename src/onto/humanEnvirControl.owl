@@ -1,0 +1,745 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY human "http://sweet.jpl.nasa.gov/2.0/human.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY com "http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#" >
+    <!ENTITY imp "http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#" >
+    <!ENTITY con "http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl"
+     xmlns:con="http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:com="http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:imp="http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl#"
+     xmlns:human="http://sweet.jpl.nasa.gov/2.0/human.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/human.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#ControlStrategy -->
+
+    <owl:Class rdf:about="&human;ControlStrategy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#HumanActivity -->
+
+    <owl:Class rdf:about="&human;HumanActivity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Law -->
+
+    <owl:Class rdf:about="&human;Law"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#SocialActivity -->
+
+    <owl:Class rdf:about="&human;SocialActivity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Management -->
+
+    <owl:Class rdf:about="&com;Management"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#AAQS -->
+
+    <owl:Class rdf:about="#AAQS">
+        <owl:equivalentClass rdf:resource="#AmbientAirQualityStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#ADI -->
+
+    <owl:Class rdf:about="#ADI">
+        <owl:equivalentClass rdf:resource="#AcceptableDailyIntake"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#ATCM -->
+
+    <owl:Class rdf:about="#ATCM">
+        <owl:equivalentClass rdf:resource="#AirborneToxicControlMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Abatement -->
+
+    <owl:Class rdf:about="#Abatement">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#AcceptableDailyIntake -->
+
+    <owl:Class rdf:about="#AcceptableDailyIntake">
+        <rdfs:subClassOf rdf:resource="#AcceptableLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#AcceptableLevel -->
+
+    <owl:Class rdf:about="#AcceptableLevel">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Afforestation -->
+
+    <owl:Class rdf:about="#Afforestation">
+        <rdfs:subClassOf rdf:resource="#Conservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#AirQualityStandard -->
+
+    <owl:Class rdf:about="#AirQualityStandard">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#AirborneToxicControlMeasure -->
+
+    <owl:Class rdf:about="#AirborneToxicControlMeasure">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#AmbientAirQualityStandard -->
+
+    <owl:Class rdf:about="#AmbientAirQualityStandard">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#BACT -->
+
+    <owl:Class rdf:about="#BACT">
+        <owl:equivalentClass rdf:resource="#BestAvailablControlTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#BestAvailablControlTechnology -->
+
+    <owl:Class rdf:about="#BestAvailablControlTechnology">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#CEMS -->
+
+    <owl:Class rdf:about="#CEMS">
+        <owl:equivalentClass rdf:resource="#ContinousEmissionMonitoringSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#CloudSeeding -->
+
+    <owl:Class rdf:about="#CloudSeeding">
+        <rdfs:subClassOf rdf:resource="&human;ControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Conservation -->
+
+    <owl:Class rdf:about="#Conservation">
+        <rdfs:subClassOf rdf:resource="&human;HumanActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#ContinousEmissionMonitoringSystem -->
+
+    <owl:Class rdf:about="#ContinousEmissionMonitoringSystem">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Criteria -->
+
+    <owl:Class rdf:about="#Criteria">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Distillation -->
+
+    <owl:Class rdf:about="#Distillation">
+        <rdfs:subClassOf rdf:resource="#WaterTreatmentProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Dosage -->
+
+    <owl:Class rdf:about="#Dosage">
+        <owl:equivalentClass rdf:resource="#Dose"/>
+        <rdfs:subClassOf rdf:resource="&imp;Exposure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Dose -->
+
+    <owl:Class rdf:about="#Dose"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#EnvironmentalAssessment -->
+
+    <owl:Class rdf:about="#EnvironmentalAssessment">
+        <rdfs:subClassOf rdf:resource="&res;Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#EnvironmentalControlStrategy -->
+
+    <owl:Class rdf:about="#EnvironmentalControlStrategy">
+        <rdfs:subClassOf rdf:resource="&human;ControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#EnvironmentalStandard -->
+
+    <owl:Class rdf:about="#EnvironmentalStandard">
+        <rdfs:subClassOf rdf:resource="&human;Law"/>
+        <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+        <rdfs:subClassOf rdf:resource="#Standard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#EnvironmentalStandardsBody -->
+
+    <owl:Class rdf:about="#EnvironmentalStandardsBody">
+        <rdfs:subClassOf rdf:resource="&human;SocialActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#FCAA -->
+
+    <owl:Class rdf:about="#FCAA">
+        <owl:equivalentClass rdf:resource="#FederalCleanAirAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#FederalCleanAirAct -->
+
+    <owl:Class rdf:about="#FederalCleanAirAct">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Flocculation -->
+
+    <owl:Class rdf:about="#Flocculation">
+        <rdfs:subClassOf rdf:resource="#WaterTreatmentProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#HRA -->
+
+    <owl:Class rdf:about="#HRA">
+        <owl:equivalentClass rdf:resource="#HealthRiskAssessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#HealthRiskAssessment -->
+
+    <owl:Class rdf:about="#HealthRiskAssessment">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalAssessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Inventory -->
+
+    <owl:Class rdf:about="#Inventory">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#LandManagement -->
+
+    <owl:Class rdf:about="#LandManagement">
+        <rdfs:subClassOf rdf:resource="&com;Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#LandResource -->
+
+    <owl:Class rdf:about="#LandResource">
+        <rdfs:subClassOf rdf:resource="#LandManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#MACT -->
+
+    <owl:Class rdf:about="#MACT">
+        <owl:equivalentClass rdf:resource="#MaximumAchievableControlTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#MaximumAchievableControlTechnology -->
+
+    <owl:Class rdf:about="#MaximumAchievableControlTechnology">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#NESHAP -->
+
+    <owl:Class rdf:about="#NESHAP">
+        <owl:equivalentClass rdf:resource="#NationalEmissionStandardsForHazardousAirPollutant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#NOAEL -->
+
+    <owl:Class rdf:about="#NOAEL">
+        <owl:equivalentClass rdf:resource="#NoObservedAdverseEffectLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#NOEL -->
+
+    <owl:Class rdf:about="#NOEL">
+        <owl:equivalentClass rdf:resource="#NoObservedEffectLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#NSPS -->
+
+    <owl:Class rdf:about="#NSPS">
+        <owl:equivalentClass rdf:resource="#NewSourcePerformanceStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#NSR -->
+
+    <owl:Class rdf:about="#NSR">
+        <owl:equivalentClass rdf:resource="#NewSourceReview"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#NationalEmissionStandardsForHazardousAirPollutant -->
+
+    <owl:Class rdf:about="#NationalEmissionStandardsForHazardousAirPollutant">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#NationalToxicsInventory -->
+
+    <owl:Class rdf:about="#NationalToxicsInventory">
+        <rdfs:subClassOf rdf:resource="#Inventory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#NewSourcePerformanceStandard -->
+
+    <owl:Class rdf:about="#NewSourcePerformanceStandard">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#NewSourceReview -->
+
+    <owl:Class rdf:about="#NewSourceReview">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#NoObservedAdverseEffectLevel -->
+
+    <owl:Class rdf:about="#NoObservedAdverseEffectLevel">
+        <rdfs:subClassOf rdf:resource="&res;Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#NoObservedEffectLevel -->
+
+    <owl:Class rdf:about="#NoObservedEffectLevel">
+        <rdfs:subClassOf rdf:resource="&res;Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#NonAttainmentArea -->
+
+    <owl:Class rdf:about="#NonAttainmentArea">
+        <rdfs:subClassOf rdf:resource="&sci;Realm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Offset -->
+
+    <owl:Class rdf:about="#Offset">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#PSD -->
+
+    <owl:Class rdf:about="#PSD">
+        <owl:equivalentClass rdf:resource="#PreventionOfSignificantDeteriorization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#PSI -->
+
+    <owl:Class rdf:about="#PSI">
+        <owl:equivalentClass rdf:resource="#PollutantStandardsIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Penalty -->
+
+    <owl:Class rdf:about="#Penalty">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#PollutantStandardsIndex -->
+
+    <owl:Class rdf:about="#PollutantStandardsIndex">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#PreventionOfSignificantDeteriorization -->
+
+    <owl:Class rdf:about="#PreventionOfSignificantDeteriorization">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#PrimaryTreatment -->
+
+    <owl:Class rdf:about="#PrimaryTreatment">
+        <rdfs:subClassOf rdf:resource="#WaterTreatmentProcess"/>
+        <rdfs:comment xml:lang="en"
+            >In wastewater treatment, a combination of step processes, usually physical in nature, that are designed to remove floating and settleable solids. Examples of process steps are screening and sedimentation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Protection -->
+
+    <owl:Class rdf:about="#Protection">
+        <rdfs:subClassOf rdf:resource="#Conservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#RCRA -->
+
+    <owl:Class rdf:about="#RCRA">
+        <owl:equivalentClass rdf:resource="#ResourceConservationAndRecoveryAct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#REC -->
+
+    <owl:Class rdf:about="#REC">
+        <owl:equivalentClass rdf:resource="#ReferenceExposureConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#REL -->
+
+    <owl:Class rdf:about="#REL">
+        <owl:equivalentClass rdf:resource="#ReferenceExposureLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Reclamation -->
+
+    <owl:Class rdf:about="#Reclamation">
+        <rdfs:subClassOf rdf:resource="#Conservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#ReferenceDose -->
+
+    <owl:Class rdf:about="#ReferenceDose">
+        <owl:equivalentClass rdf:resource="#RfD"/>
+        <rdfs:subClassOf rdf:resource="#Dose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#ReferenceExposureConcentration -->
+
+    <owl:Class rdf:about="#ReferenceExposureConcentration">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#ReferenceExposureLevel -->
+
+    <owl:Class rdf:about="#ReferenceExposureLevel">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Reforestation -->
+
+    <owl:Class rdf:about="#Reforestation">
+        <rdfs:subClassOf rdf:resource="#Conservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#ResourceConservationAndRecoveryAct -->
+
+    <owl:Class rdf:about="#ResourceConservationAndRecoveryAct">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Restoration -->
+
+    <owl:Class rdf:about="#Restoration">
+        <rdfs:subClassOf rdf:resource="#Conservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Revegetation -->
+
+    <owl:Class rdf:about="#Revegetation">
+        <rdfs:subClassOf rdf:resource="#Conservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#RfD -->
+
+    <owl:Class rdf:about="#RfD"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#SecondaryTreatment -->
+
+    <owl:Class rdf:about="#SecondaryTreatment">
+        <rdfs:subClassOf rdf:resource="#WaterTreatmentProcess"/>
+        <rdfs:comment xml:lang="en"
+            >In wastewater treatment, a combination of step processes, usually biochemical in nature, that are designed to remove primarily organic material. Examples of process steps are aeration and trickling filters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#Standard -->
+
+    <owl:Class rdf:about="#Standard">
+        <rdfs:subClassOf rdf:resource="&human;Law"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#StateImplementationPlan -->
+
+    <owl:Class rdf:about="#StateImplementationPlan">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#TertiaryTreatment -->
+
+    <owl:Class rdf:about="#TertiaryTreatment">
+        <rdfs:subClassOf rdf:resource="#WaterTreatmentProcess"/>
+        <rdfs:comment xml:lang="en"
+            >Post-secondary treatment of wastewater designed to improve the quality of the water to the point where it can be put to a particular beneficial use. Generally, tertiary treatment steps remove nutrients (e.g., nitrogen and phosphorus) which are poorly removed by secondary treatment. Commonly used steps include coagulation and clarification.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#URF -->
+
+    <owl:Class rdf:about="#URF">
+        <owl:equivalentClass rdf:resource="#UnitRiskFactor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#UnitRiskFactor -->
+
+    <owl:Class rdf:about="#UnitRiskFactor">
+        <rdfs:subClassOf rdf:resource="&res;Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#WastewaterTreatment -->
+
+    <owl:Class rdf:about="#WastewaterTreatment">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#WaterManagement -->
+
+    <owl:Class rdf:about="#WaterManagement">
+        <rdfs:subClassOf rdf:resource="&com;Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#WaterQualityStandard -->
+
+    <owl:Class rdf:about="#WaterQualityStandard">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#WaterTreatmentProcess -->
+
+    <owl:Class rdf:about="#WaterTreatmentProcess">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#WeightOfEvidence -->
+
+    <owl:Class rdf:about="#WeightOfEvidence">
+        <rdfs:subClassOf rdf:resource="&res;Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Exposure -->
+
+    <owl:Class rdf:about="&imp;Exposure"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Assessment -->
+
+    <owl:Class rdf:about="&res;Assessment"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Realm -->
+
+    <owl:Class rdf:about="&sci;Realm"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirControl.owl#EPA -->
+
+    <EnvironmentalStandardsBody rdf:about="#EPA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </EnvironmentalStandardsBody>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

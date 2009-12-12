@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY hydro "http://sweet.jpl.nasa.gov/2.0/hydro.owl" >
+    <!ENTITY hydro2 "http://sweet.jpl.nasa.gov/2.0/hydro.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl" >
+    <!ENTITY sciUnits "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY static "http://sweet.jpl.nasa.gov/2.0/physFluid.owl" >
+    <!ENTITY solid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY physSolid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl#" >
+    <!ENTITY physFluid "http://sweet.jpl.nasa.gov/2.0/physFluid.owl#" >
+    <!ENTITY chemState "http://sweet.jpl.nasa.gov/2.0/chemState.owl#" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY comp "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY trans "http://sweet.jpl.nasa.gov/2.0/physTransport.owl" >
+    <!ENTITY chemCompound "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#" >
+    <!ENTITY physTransport "http://sweet.jpl.nasa.gov/2.0/physTransport.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&hydro;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/hydro.owl"
+     xmlns:physSolid="&solid;#"
+     xmlns:comp="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"
+     xmlns:static="http://sweet.jpl.nasa.gov/2.0/physFluid.owl"
+     xmlns:physTransport="&trans;#"
+     xmlns:physFluid="&static;#"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:hydro="http://sweet.jpl.nasa.gov/2.0/hydro.owl"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"
+     xmlns:chemCompound="&comp;#"
+     xmlns:solid="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:trans="http://sweet.jpl.nasa.gov/2.0/physTransport.owl"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chemState="&state;#"
+     xmlns:hydro2="&hydro;#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sciUnits="&units;#"
+     xmlns:astroPlanet="&planet;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physFluid.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physTransport.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#hasStateOfMatter -->
+
+    <owl:ObjectProperty rdf:about="&state;#hasStateOfMatter"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasDefaultUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;#hasDefaultUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Hydrosphere -->
+
+    <owl:Class rdf:about="&planet;#Hydrosphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetaryPhenomena -->
+
+    <owl:Class rdf:about="&planet;#PlanetaryPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetaryScience -->
+
+    <owl:Class rdf:about="&planet;#PlanetaryScience"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Water -->
+
+    <owl:Class rdf:about="&comp;#Water"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Frozen -->
+
+    <owl:Class rdf:about="&state;#Frozen"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Gas -->
+
+    <owl:Class rdf:about="&state;#Gas"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Liquid -->
+
+    <owl:Class rdf:about="&state;#Liquid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Solid -->
+
+    <owl:Class rdf:about="&state;#Solid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#AvailableWaterCapacity -->
+
+    <owl:Class rdf:about="#AvailableWaterCapacity">
+        <rdfs:subClassOf rdf:resource="&solid;#SolidProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#Dew -->
+
+    <owl:Class rdf:about="#Dew">
+        <rdfs:subClassOf rdf:resource="&comp;#Water"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#DifferentialWaterCapacity -->
+
+    <owl:Class rdf:about="#DifferentialWaterCapacity">
+        <rdfs:subClassOf rdf:resource="&solid;#SolidProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#Frost -->
+
+    <owl:Class rdf:about="#Frost">
+        <rdfs:subClassOf rdf:resource="&comp;#Water"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Frozen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#HydraulicConductivity -->
+
+    <owl:Class rdf:about="#HydraulicConductivity">
+        <rdfs:subClassOf rdf:resource="&solid;#SolidProperty"/>
+        <rdfs:subClassOf rdf:resource="&trans;#Conductivity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#meter_perSecond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#Hydrology -->
+
+    <owl:Class rdf:about="#Hydrology">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryScience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#HydrosphereFeature -->
+
+    <owl:Class rdf:about="#HydrosphereFeature">
+        <rdfs:subClassOf rdf:resource="&planet;#Hydrosphere"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#HydrospherePhenomena -->
+
+    <owl:Class rdf:about="#HydrospherePhenomena">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryPhenomena"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="&planet;#Hydrosphere"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#Ice -->
+
+    <owl:Class rdf:about="#Ice">
+        <rdfs:subClassOf rdf:resource="&comp;#Water"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Solid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#Limnology -->
+
+    <owl:Class rdf:about="#Limnology">
+        <rdfs:subClassOf rdf:resource="#Hydrology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#LiquidWater -->
+
+    <owl:Class rdf:about="#LiquidWater">
+        <rdfs:subClassOf rdf:resource="&comp;#Water"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#Snow -->
+
+    <owl:Class rdf:about="#Snow">
+        <rdfs:subClassOf rdf:resource="&comp;#Water"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Solid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#WaterHoldingCapacity -->
+
+    <owl:Class rdf:about="#WaterHoldingCapacity">
+        <rdfs:subClassOf rdf:resource="&solid;#SolidProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#dimensionlessUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#WaterPressure -->
+
+    <owl:Class rdf:about="#WaterPressure">
+        <rdfs:subClassOf rdf:resource="&static;#FluidPressure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#WaterVapor -->
+
+    <owl:Class rdf:about="#WaterVapor">
+        <rdfs:subClassOf rdf:resource="&comp;#Water"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Gas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#FluidPressure -->
+
+    <owl:Class rdf:about="&static;#FluidPressure"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSolid.owl#SolidProperty -->
+
+    <owl:Class rdf:about="&solid;#SolidProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physTransport.owl#Conductivity -->
+
+    <owl:Class rdf:about="&trans;#Conductivity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#dimensionlessUnit -->
+
+    <owl:Thing rdf:about="&units;#dimensionlessUnit"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#meter_perSecond -->
+
+    <owl:Thing rdf:about="&units;#meter_perSecond"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

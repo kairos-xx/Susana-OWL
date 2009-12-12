@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY data "http://sweet.jpl.nasa.gov/2.0/data.owl" >
+    <!ENTITY data2 "http://sweet.jpl.nasa.gov/2.0/data.owl#" >
+    <!ENTITY file "http://sweet.jpl.nasa.gov/2.0/dataFile.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY dataFile "http://sweet.jpl.nasa.gov/2.0/dataFile.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/dataFile.owl"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/dataFile.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:file="http://sweet.jpl.nasa.gov/2.0/dataFile.owl"
+     xmlns:sciResearch="&res;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:data="http://sweet.jpl.nasa.gov/2.0/data.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:data2="&data;#"
+     xmlns:dataFile="&file;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/data.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#hasByteOrder -->
+
+    <owl:ObjectProperty rdf:about="#hasByteOrder">
+        <rdfs:domain rdf:resource="#Binary"/>
+        <rdfs:range rdf:resource="#ByteOrder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#hasCompression -->
+
+    <owl:ObjectProperty rdf:about="#hasCompression">
+        <rdfs:range rdf:resource="#Compression"/>
+        <rdfs:domain rdf:resource="#File"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#hasFormat -->
+
+    <owl:ObjectProperty rdf:about="#hasFormat">
+        <rdfs:domain rdf:resource="#File"/>
+        <rdfs:range rdf:resource="#Format"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#hasHeader -->
+
+    <owl:ObjectProperty rdf:about="#hasHeader">
+        <rdfs:domain rdf:resource="#Binary"/>
+        <rdfs:range rdf:resource="#Header"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#hasdelimiter -->
+
+    <owl:ObjectProperty rdf:about="#hasdelimiter">
+        <rdfs:range rdf:resource="#Delimiter"/>
+        <rdfs:domain rdf:resource="#Xls"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/data.owl#Metadata -->
+
+    <owl:Class rdf:about="&data;#Metadata"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#ARFF -->
+
+    <owl:Class rdf:about="#ARFF">
+        <rdfs:subClassOf rdf:resource="#ASCII"/>
+        <rdfs:subClassOf rdf:resource="#SelfDescribingFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#ASCII -->
+
+    <owl:Class rdf:about="#ASCII">
+        <rdfs:subClassOf rdf:resource="#Format"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#BigEndian -->
+
+    <owl:Class rdf:about="#BigEndian">
+        <rdfs:subClassOf rdf:resource="#ByteOrder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#Binary -->
+
+    <owl:Class rdf:about="#Binary">
+        <rdfs:subClassOf rdf:resource="#Format"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#ByteOrder -->
+
+    <owl:Class rdf:about="#ByteOrder">
+        <rdfs:subClassOf rdf:resource="&res;#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#Bzip2 -->
+
+    <owl:Class rdf:about="#Bzip2">
+        <rdfs:subClassOf rdf:resource="#Compression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#CD -->
+
+    <owl:Class rdf:about="#CD">
+        <rdfs:subClassOf rdf:resource="#StorageMedia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#Character -->
+
+    <owl:Class rdf:about="#Character">
+        <rdfs:subClassOf rdf:resource="&res;#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#Compression -->
+
+    <owl:Class rdf:about="#Compression">
+        <rdfs:subClassOf rdf:resource="&res;#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#Delimiter -->
+
+    <owl:Class rdf:about="#Delimiter">
+        <rdfs:subClassOf rdf:resource="#Character"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#File -->
+
+    <owl:Class rdf:about="#File">
+        <rdfs:subClassOf rdf:resource="&res;#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#Format -->
+
+    <owl:Class rdf:about="#Format">
+        <rdfs:subClassOf rdf:resource="&res;#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#GRIB -->
+
+    <owl:Class rdf:about="#GRIB">
+        <rdfs:subClassOf rdf:resource="#Format"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#GRIB1 -->
+
+    <owl:Class rdf:about="#GRIB1">
+        <rdfs:subClassOf rdf:resource="#GRIB"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#GRIB2 -->
+
+    <owl:Class rdf:about="#GRIB2">
+        <rdfs:subClassOf rdf:resource="#GRIB"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#GeoTIFF -->
+
+    <owl:Class rdf:about="#GeoTIFF">
+        <rdfs:subClassOf rdf:resource="#SelfDescribingFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#Gzip -->
+
+    <owl:Class rdf:about="#Gzip">
+        <rdfs:subClassOf rdf:resource="#Compression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#HDF -->
+
+    <owl:Class rdf:about="#HDF">
+        <rdfs:subClassOf rdf:resource="#SelfDescribingFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#HDF4 -->
+
+    <owl:Class rdf:about="#HDF4">
+        <rdfs:subClassOf rdf:resource="#HDF"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#HDF5 -->
+
+    <owl:Class rdf:about="#HDF5">
+        <rdfs:subClassOf rdf:resource="#HDF"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#HDFEOS -->
+
+    <owl:Class rdf:about="#HDFEOS">
+        <rdfs:subClassOf rdf:resource="#HDF4"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#HDFEOS2 -->
+
+    <owl:Class rdf:about="#HDFEOS2">
+        <rdfs:subClassOf rdf:resource="#HDF5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#Header -->
+
+    <owl:Class rdf:about="#Header">
+        <rdfs:subClassOf rdf:resource="&data;#Metadata"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#LittleEndian -->
+
+    <owl:Class rdf:about="#LittleEndian">
+        <rdfs:subClassOf rdf:resource="#ByteOrder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#MiddleEndian -->
+
+    <owl:Class rdf:about="#MiddleEndian">
+        <rdfs:subClassOf rdf:resource="#ByteOrder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#NetCDF -->
+
+    <owl:Class rdf:about="#NetCDF">
+        <rdfs:subClassOf rdf:resource="#SelfDescribingFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#NetCDF3 -->
+
+    <owl:Class rdf:about="#NetCDF3">
+        <rdfs:subClassOf rdf:resource="#NetCDF"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#NetCDF4 -->
+
+    <owl:Class rdf:about="#NetCDF4">
+        <rdfs:subClassOf rdf:resource="#NetCDF"/>
+        <rdfs:comment xml:lang="en"
+            >Shares data model with HDF5.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#NetworkEndian -->
+
+    <owl:Class rdf:about="#NetworkEndian">
+        <rdfs:subClassOf rdf:resource="#ByteOrder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#SelfDescribingFormat -->
+
+    <owl:Class rdf:about="#SelfDescribingFormat">
+        <rdfs:subClassOf rdf:resource="#Format"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#StorageMedia -->
+
+    <owl:Class rdf:about="#StorageMedia">
+        <rdfs:subClassOf rdf:resource="&res;#Representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#Tape -->
+
+    <owl:Class rdf:about="#Tape">
+        <rdfs:subClassOf rdf:resource="#StorageMedia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#Xls -->
+
+    <owl:Class rdf:about="#Xls">
+        <rdfs:subClassOf rdf:resource="#Format"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/dataFile.owl#Z -->
+
+    <owl:Class rdf:about="#Z">
+        <rdfs:subClassOf rdf:resource="#Compression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Representation -->
+
+    <owl:Class rdf:about="&res;#Representation"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ocean "http://sweet.jpl.nasa.gov/2.0/ocean.owl" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY space2 "http://sweet.jpl.nasa.gov/2.0/space.owl#" >
+    <!ENTITY ocean2 "http://sweet.jpl.nasa.gov/2.0/ocean.owl#" >
+    <!ENTITY coast "http://sweet.jpl.nasa.gov/2.0/geogCoast.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY geogCoast "http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY land "http://sweet.jpl.nasa.gov/2.0/geogLandform.owl" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY dyn "http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl" >
+    <!ENTITY geogLandform "http://sweet.jpl.nasa.gov/2.0/geogLandform.owl#" >
+    <!ENTITY oceanDynamics "http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#" >
+    <!ENTITY body "http://sweet.jpl.nasa.gov/2.0/hydroBodyOfWater.owl" >
+    <!ENTITY hydroBodyOfWater "http://sweet.jpl.nasa.gov/2.0/hydroBodyOfWater.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&coast;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/geogCoast.owl"
+     xmlns:body="http://sweet.jpl.nasa.gov/2.0/hydroBodyOfWater.owl"
+     xmlns:geogLandform="&land;#"
+     xmlns:space2="&space;#"
+     xmlns:land="http://sweet.jpl.nasa.gov/2.0/geogLandform.owl"
+     xmlns:ocean="http://sweet.jpl.nasa.gov/2.0/ocean.owl"
+     xmlns:dyn="http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl"
+     xmlns:geogCoast="&coast;#"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:coast="http://sweet.jpl.nasa.gov/2.0/geogCoast.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:ocean2="&ocean;#"
+     xmlns:oceanDynamics="&dyn;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:astroPlanet="&planet;#"
+     xmlns:hydroBodyOfWater="&body;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geogLandform.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/hydroBodyOfWater.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/ocean.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasCommon2DBorderWith -->
+
+    <owl:ObjectProperty rdf:about="&space;#hasCommon2DBorderWith"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#isAdjacentTo -->
+
+    <owl:ObjectProperty rdf:about="&space;#isAdjacentTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Land -->
+
+    <owl:Class rdf:about="&planet;#Land"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetaryRealm -->
+
+    <owl:Class rdf:about="&planet;#PlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#Beach -->
+
+    <owl:Class rdf:about="#Beach">
+        <rdfs:subClassOf rdf:resource="&land;#Landform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&space;#isAdjacentTo"/>
+                <owl:allValuesFrom rdf:resource="&body;#BodyOfWater"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A beach, or strand, is a geological landform consisting of loose rock particles - such as sand, gravel, shingle, pebbles, cobble - or even shell fragments, along the shoreline of a body of water. Beaches occur along coastal areas, where wave or current action deposits and reworks sediments, or at the margin of land along a lake or river subject to erosion caused by rainfall. Beaches are not necessarily found in conjunction with salt water, such as the ocean, in all instances. A seashore beach is merely one type of beach but it is the most commonly associated with the perception of the word beach.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#Breaker -->
+
+    <owl:Class rdf:about="#Breaker">
+        <rdfs:subClassOf rdf:resource="#BreakingWave"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#BreakingWave -->
+
+    <owl:Class rdf:about="#BreakingWave">
+        <rdfs:subClassOf rdf:resource="&ocean;#OceanPhenomena"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="#CoastalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#CoastalRegion -->
+
+    <owl:Class rdf:about="#CoastalRegion">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryRealm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&space;#hasCommon2DBorderWith"/>
+                <owl:someValuesFrom rdf:resource="&planet;#Land"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&space;#hasCommon2DBorderWith"/>
+                <owl:someValuesFrom rdf:resource="&ocean;#OceanRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#Cove -->
+
+    <owl:Class rdf:about="#Cove">
+        <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#Delta -->
+
+    <owl:Class rdf:about="#Delta">
+        <rdfs:subClassOf rdf:resource="&land;#Landform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="&body;#River"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A delta is a landform where the mouth of a river flows into an ocean, sea, desert, estuary, lake or another river. It builds up sediment outwards into the flat area which the river&#39;s flow encounters (as a deltaic deposit) transported by the water and set down as the currents slow. Deltaic deposits of larger, heavily-laden rivers are characterized by the main channel dividing amongst often substantial land masses into multiple streams known as distributaries. These divide and come together again to form a maze of active and inactive channels.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#Harbor -->
+
+    <owl:Class rdf:about="#Harbor">
+        <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#IntertidalZone -->
+
+    <owl:Class rdf:about="#IntertidalZone">
+        <owl:equivalentClass rdf:resource="#LittoralZone"/>
+        <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryPhenomena"/>
+                <owl:allValuesFrom rdf:resource="&dyn;#OceanTide"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The intertidal zone, also known as the littoral zone, in marine aquatic environments is the area of the foreshore and seabed that is exposed to the air at low tide and submerged at high tide, for example, the area between tide marks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#Isthmus -->
+
+    <owl:Class rdf:about="#Isthmus">
+        <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#LittoralZone -->
+
+    <owl:Class rdf:about="#LittoralZone"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#PlungingBreaker -->
+
+    <owl:Class rdf:about="#PlungingBreaker">
+        <rdfs:subClassOf rdf:resource="#Breaker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#RiparianZone -->
+
+    <owl:Class rdf:about="#RiparianZone">
+        <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+        <rdfs:comment xml:lang="en"
+            >A riparian zone is the interface between land and a flowing surface water body. Plant communities along the river margins are called riparian vegetation, characterized by hydrophilic plants. Riparian zones are significant in ecology, environmental management, and civil engineering due to their role in soil conservation, their biodiversity, and the influence they have on aquatic ecosystems. Riparian zones occur in many forms including grassland, woodland, wetland or even non-vegetative. In some regions the terms riparian woodland, riparian forest, riparian buffer zone or riparian strip are used to characterize a riparian zone.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#Shoal -->
+
+    <owl:Class rdf:about="#Shoal">
+        <rdfs:subClassOf rdf:resource="&land;#Landform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="&body;#BodyOfWater"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A shoal is a somewhat linear landform within or extending into a body of water, typically comprised of sand, silt or small pebbles. Alternatively termed sandbar or sandbank, a bar is characteristically long and narrow (linear) and develops where a stream or ocean current promote deposition of granular material, resulting in localized shallowing (shoaling) of the water. Bars can appear in the sea, in a lake, or in a river. Alternatively a bar may separate a lake from the sea, as in the case of an ayre. They are typically composed of sand, although could be of any granular matter that the moving water has access to and is capable of shifting around (for example, soil, silt, gravel, cobble, shingle, or even boulders). The grain size of the material comprising a bar is related to the size of the waves or the strength of the currents moving the material, but the availability of material to be worked by waves and currents is also important.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#Shore -->
+
+    <owl:Class rdf:about="#Shore">
+        <owl:equivalentClass rdf:resource="#Shoreline"/>
+        <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+        <rdfs:subClassOf rdf:resource="&land;#Land"/>
+        <rdfs:comment xml:lang="en"
+            >A shore or shoreline is the fringe of land at the edge of a large body of water, such as an ocean, sea, or lake.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#Shoreline -->
+
+    <owl:Class rdf:about="#Shoreline"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#SpillingBreaker -->
+
+    <owl:Class rdf:about="#SpillingBreaker">
+        <rdfs:subClassOf rdf:resource="#Breaker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogCoast.owl#SurgingBreaker -->
+
+    <owl:Class rdf:about="#SurgingBreaker">
+        <rdfs:subClassOf rdf:resource="#Breaker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogLandform.owl#Land -->
+
+    <owl:Class rdf:about="&land;#Land"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogLandform.owl#Landform -->
+
+    <owl:Class rdf:about="&land;#Landform"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroBodyOfWater.owl#BodyOfWater -->
+
+    <owl:Class rdf:about="&body;#BodyOfWater"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroBodyOfWater.owl#River -->
+
+    <owl:Class rdf:about="&body;#River"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/ocean.owl#OceanPhenomena -->
+
+    <owl:Class rdf:about="&ocean;#OceanPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/ocean.owl#OceanRegion -->
+
+    <owl:Class rdf:about="&ocean;#OceanRegion"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#OceanTide -->
+
+    <owl:Class rdf:about="&dyn;#OceanTide"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

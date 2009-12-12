@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY geol "http://sweet.jpl.nasa.gov/2.0/geol.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY geol2 "http://sweet.jpl.nasa.gov/2.0/geol.owl#" >
+    <!ENTITY basin "http://sweet.jpl.nasa.gov/2.0/geolBasin.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY geolBasin "http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY obj "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl" >
+    <!ENTITY spaceObject "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY petr "http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl" >
+    <!ENTITY geolPetrology "http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&basin;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/geolBasin.owl"
+     xmlns:geol2="&geol;#"
+     xmlns:basin="http://sweet.jpl.nasa.gov/2.0/geolBasin.owl"
+     xmlns:geolPetrology="&petr;#"
+     xmlns:spaceObject="&obj;#"
+     xmlns:geol="http://sweet.jpl.nasa.gov/2.0/geol.owl"
+     xmlns:petr="http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:obj="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"
+     xmlns:astroPlanet="&planet;#"
+     xmlns:geolBasin="&basin;#"
+     xmlns:chem2="&chem;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geol.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryStructure -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryStructure"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasSubstance -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasSubstance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#hasBasin -->
+
+    <owl:ObjectProperty rdf:about="#hasBasin">
+        <rdfs:range rdf:resource="#Basin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#GeologicFeature -->
+
+    <owl:Class rdf:about="&geol;#GeologicFeature"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#BackArcBasin -->
+
+    <owl:Class rdf:about="#BackArcBasin">
+        <rdfs:subClassOf rdf:resource="#Basin"/>
+        <rdfs:comment xml:lang="en"
+            >Back-arc basins (or retro-arc basins) are geologic features, submarine basins associated with island arcs and subduction zones. They are found at some convergent plate boundaries, presently concentrated in the Western Pacific ocean. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#Basin -->
+
+    <owl:Class rdf:about="#Basin">
+        <rdfs:subClassOf rdf:resource="&geol;#GeologicFeature"/>
+        <rdfs:subClassOf rdf:resource="&obj;#Depression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#FlyschBasin -->
+
+    <owl:Class rdf:about="#FlyschBasin">
+        <rdfs:subClassOf rdf:resource="#Basin"/>
+        <rdfs:comment xml:lang="en"
+            >Flysch is a sequence of sedimentary rocks that is deposited in a deep marine facies in the foreland basin of a developing orogen. Flysch is formed under deep marine circumstances, in a quiet and low-energetic depositional environment. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#ForeArcBasin -->
+
+    <owl:Class rdf:about="#ForeArcBasin">
+        <rdfs:subClassOf rdf:resource="#Basin"/>
+        <rdfs:comment xml:lang="en"
+            >A forearc is a depression (basin) in the sea floor located between a subduction zone and an associated volcanic arc. It is typically filled with sediments from the adjacent landmass and the island arc in addition to trapped oceanic crustal material. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#ForelandBasin -->
+
+    <owl:Class rdf:about="#ForelandBasin">
+        <rdfs:subClassOf rdf:resource="#Basin"/>
+        <rdfs:comment xml:lang="en"
+            >A foreland basin is a depression that develops adjacent and parallel to a mountain belt. Foreland basins form because the immense mass created by crustal thickening associated with the evolution of a mountain belt causes the lithosphere to bend, by a process known as lithospheric flexure. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#IntraArcBasin -->
+
+    <owl:Class rdf:about="#IntraArcBasin">
+        <rdfs:subClassOf rdf:resource="#Basin"/>
+        <rdfs:comment xml:lang="en"
+            >Intra-arc basins are basins that occur between Fore-arc basins and back-arc basins [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#IntracratonicBasin -->
+
+    <owl:Class rdf:about="#IntracratonicBasin">
+        <rdfs:subClassOf rdf:resource="#Basin"/>
+        <rdfs:comment xml:lang="en"
+            >Intracratonic basins are formed by fluvial sedimentation of an intracratonic area which has undergone sediment sag-loading. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#PeripheralForelandBasin -->
+
+    <owl:Class rdf:about="#PeripheralForelandBasin">
+        <rdfs:subClassOf rdf:resource="#Basin"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryStructure"/>
+                <owl:allValuesFrom rdf:resource="#FlyschBasin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&petr;#Molasse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Peripheral (Pro) foreland basins occur on the plate that is subducted or underthrust during plate collision (i.e. the outer arc of the orogen).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#RetroarcForelandBasin -->
+
+    <owl:Class rdf:about="#RetroarcForelandBasin">
+        <rdfs:subClassOf rdf:resource="#Basin"/>
+        <rdfs:comment xml:lang="en"
+            >Retroarc (Retro) foreland basins occur on the plate that overrides during plate convergence or collision (i.e. situated behind the magmatic arc that is linked with the subduction of oceanic lithosphere). [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#SuccessorBasin -->
+
+    <owl:Class rdf:about="#SuccessorBasin">
+        <rdfs:subClassOf rdf:resource="#Basin"/>
+        <rdfs:comment xml:lang="en"
+            >Successor basins arise from shifting and merging of fore arc, back-arc and intra-arc basins. Basins or sequences that overlap terrane boundaries. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#TranspressionalBasin -->
+
+    <owl:Class rdf:about="#TranspressionalBasin">
+        <rdfs:subClassOf rdf:resource="#Basin"/>
+        <rdfs:comment xml:lang="en"
+            >Transpression basins are formed during oblique collision of tectonic plates and during non-orthogonal subduction. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolBasin.owl#TranstensionalBasin -->
+
+    <owl:Class rdf:about="#TranstensionalBasin">
+        <rdfs:subClassOf rdf:resource="#Basin"/>
+        <rdfs:comment xml:lang="en"
+            >Transtension basins are oblique tensional environments where stretching takes place. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Molasse -->
+
+    <owl:Class rdf:about="&petr;#Molasse"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Depression -->
+
+    <owl:Class rdf:about="&obj;#Depression"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,610 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY time "http://sweet.jpl.nasa.gov/2.0/time.owl" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY time2 "http://sweet.jpl.nasa.gov/2.0/time.owl#" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY human "http://sweet.jpl.nasa.gov/2.0/human.owl" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY human2 "http://sweet.jpl.nasa.gov/2.0/human.owl#" >
+    <!ENTITY sound "http://sweet.jpl.nasa.gov/2.0/physSound.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY tscale "http://sweet.jpl.nasa.gov/2.0/timeScale.owl" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY sys "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY physSound "http://sweet.jpl.nasa.gov/2.0/physSound.owl#" >
+    <!ENTITY timeScale "http://sweet.jpl.nasa.gov/2.0/timeScale.owl#" >
+    <!ENTITY chemState "http://sweet.jpl.nasa.gov/2.0/chemState.owl#" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY com "http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl" >
+    <!ENTITY humanCommerce "http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#" >
+    <!ENTITY imp "http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl" >
+    <!ENTITY humanEnvirImpact "http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&imp;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:com="http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl"
+     xmlns:sys="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:timeScale="&tscale;#"
+     xmlns:imp="http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:humanEnvirImpact="&imp;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time2="&time;#"
+     xmlns:time="http://sweet.jpl.nasa.gov/2.0/time.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:phys2="&phys;#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:tscale="http://sweet.jpl.nasa.gov/2.0/timeScale.owl"
+     xmlns:chem2="&chem;#"
+     xmlns:sciSystem="&sys;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:human2="&human;#"
+     xmlns:human="http://sweet.jpl.nasa.gov/2.0/human.owl"
+     xmlns:physSound="&sound;#"
+     xmlns:chemState="&state;#"
+     xmlns:sound="http://sweet.jpl.nasa.gov/2.0/physSound.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:humanCommerce="&com;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/human.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physSound.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/time.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/timeScale.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#hasRole -->
+
+    <owl:ObjectProperty rdf:about="&sys;#hasRole"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Mixture -->
+
+    <owl:Class rdf:about="&chem;#Mixture"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Substance -->
+
+    <owl:Class rdf:about="&chem;#Substance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Liquid -->
+
+    <owl:Class rdf:about="&state;#Liquid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/human.owl#Anthropogenic -->
+
+    <owl:Class rdf:about="&human;#Anthropogenic"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanCommerce.owl#Product -->
+
+    <owl:Class rdf:about="&com;#Product"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Acute -->
+
+    <owl:Class rdf:about="#Acute">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#AirQualityIndex -->
+
+    <owl:Class rdf:about="#AirQualityIndex">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#AmbientNoise -->
+
+    <owl:Class rdf:about="#AmbientNoise">
+        <rdfs:subClassOf rdf:resource="&sound;#Noise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#BiochemicalRelease -->
+
+    <owl:Class rdf:about="#BiochemicalRelease">
+        <rdfs:subClassOf rdf:resource="#Release"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#BirthDefect -->
+
+    <owl:Class rdf:about="#BirthDefect">
+        <rdfs:subClassOf rdf:resource="#Hazard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Broncitis -->
+
+    <owl:Class rdf:about="#Broncitis">
+        <rdfs:subClassOf rdf:resource="#Hazard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#ByProduct -->
+
+    <owl:Class rdf:about="#ByProduct">
+        <rdfs:subClassOf rdf:resource="&com;#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#COH -->
+
+    <owl:Class rdf:about="#COH">
+        <owl:equivalentClass rdf:resource="#CoefficientOfHaze"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Cancer -->
+
+    <owl:Class rdf:about="#Cancer">
+        <rdfs:subClassOf rdf:resource="#Hazard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Carcinogen -->
+
+    <owl:Class rdf:about="#Carcinogen">
+        <rdfs:subClassOf rdf:resource="#HazardousSubstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#CardiovascularDisease -->
+
+    <owl:Class rdf:about="#CardiovascularDisease">
+        <rdfs:subClassOf rdf:resource="#Hazard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#CoefficientOfHaze -->
+
+    <owl:Class rdf:about="#CoefficientOfHaze">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Contaminant -->
+
+    <owl:Class rdf:about="#Contaminant">
+        <rdfs:subClassOf rdf:resource="#Hazard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Contamination -->
+
+    <owl:Class rdf:about="#Contamination">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalImpact"/>
+        <rdfs:subClassOf rdf:resource="#Hazard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Deforestation -->
+
+    <owl:Class rdf:about="#Deforestation">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Desertification -->
+
+    <owl:Class rdf:about="#Desertification">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Emission -->
+
+    <owl:Class rdf:about="#Emission">
+        <rdfs:subClassOf rdf:resource="#ByProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#EnvironmentalImpact -->
+
+    <owl:Class rdf:about="#EnvironmentalImpact">
+        <rdfs:subClassOf rdf:resource="&human;#Anthropogenic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#EnvironmentalIndex -->
+
+    <owl:Class rdf:about="#EnvironmentalIndex">
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Episode -->
+
+    <owl:Class rdf:about="#Episode">
+        <owl:equivalentClass rdf:resource="#Episodic"/>
+        <rdfs:subClassOf rdf:resource="#Exposure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Episodic -->
+
+    <owl:Class rdf:about="#Episodic"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Explosion -->
+
+    <owl:Class rdf:about="#Explosion">
+        <rdfs:subClassOf rdf:resource="#Hazard"/>
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalPhenomena"/>
+        <rdfs:subClassOf rdf:resource="&sound;#Noise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Exposure -->
+
+    <owl:Class rdf:about="#Exposure">
+        <rdfs:subClassOf rdf:resource="&time;#Duration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Fire -->
+
+    <owl:Class rdf:about="#Fire">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#FireWeatherIndex -->
+
+    <owl:Class rdf:about="#FireWeatherIndex">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#FluidLeak -->
+
+    <owl:Class rdf:about="#FluidLeak">
+        <rdfs:subClassOf rdf:resource="#Leak"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#ForestFireDangerIndex -->
+
+    <owl:Class rdf:about="#ForestFireDangerIndex">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#GasFlare -->
+
+    <owl:Class rdf:about="#GasFlare">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#GasLeak -->
+
+    <owl:Class rdf:about="#GasLeak">
+        <rdfs:subClassOf rdf:resource="#Leak"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#GlobalChange -->
+
+    <owl:Class rdf:about="#GlobalChange">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Hazard -->
+
+    <owl:Class rdf:about="#Hazard">
+        <rdfs:subClassOf rdf:resource="&sys;#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Hazardous -->
+
+    <owl:Class rdf:about="#Hazardous">
+        <owl:equivalentClass rdf:resource="#HazardousSubstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#HazardousSubstance -->
+
+    <owl:Class rdf:about="#HazardousSubstance">
+        <rdfs:subClassOf rdf:resource="&chem;#Substance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#hasRole"/>
+                <owl:allValuesFrom rdf:resource="#Hazard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#HeatIsland -->
+
+    <owl:Class rdf:about="#HeatIsland">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Incidence -->
+
+    <owl:Class rdf:about="#Incidence">
+        <rdfs:subClassOf rdf:resource="&tscale;#Frequency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#IndustrialEmission -->
+
+    <owl:Class rdf:about="#IndustrialEmission">
+        <rdfs:subClassOf rdf:resource="#Emission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#LandDegradation -->
+
+    <owl:Class rdf:about="#LandDegradation">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Leak -->
+
+    <owl:Class rdf:about="#Leak">
+        <rdfs:subClassOf rdf:resource="#Contamination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#MobileSource -->
+
+    <owl:Class rdf:about="#MobileSource">
+        <rdfs:subClassOf rdf:resource="&phys;#Source"/>
+        <owl:disjointWith rdf:resource="#StationarySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#NonPointEmissionSource -->
+
+    <owl:Class rdf:about="#NonPointEmissionSource">
+        <rdfs:subClassOf rdf:resource="&phys;#Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#OilSpill -->
+
+    <owl:Class rdf:about="#OilSpill">
+        <rdfs:subClassOf rdf:resource="#Contamination"/>
+        <rdfs:subClassOf rdf:resource="#FluidLeak"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Poison -->
+
+    <owl:Class rdf:about="#Poison">
+        <rdfs:subClassOf rdf:resource="#Hazard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#RadiationExposure -->
+
+    <owl:Class rdf:about="#RadiationExposure">
+        <rdfs:subClassOf rdf:resource="#Hazard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Release -->
+
+    <owl:Class rdf:about="#Release">
+        <rdfs:subClassOf rdf:resource="#Emission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#RingelmannChart -->
+
+    <owl:Class rdf:about="#RingelmannChart">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Sewage -->
+
+    <owl:Class rdf:about="#Sewage">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+        <rdfs:subClassOf rdf:resource="&state;#Liquid"/>
+        <rdfs:subClassOf rdf:resource="#HazardousSubstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Spill -->
+
+    <owl:Class rdf:about="#Spill">
+        <rdfs:subClassOf rdf:resource="#Contamination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#StationarySource -->
+
+    <owl:Class rdf:about="#StationarySource">
+        <rdfs:subClassOf rdf:resource="&phys;#Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#TAC -->
+
+    <owl:Class rdf:about="#TAC">
+        <owl:equivalentClass rdf:resource="#ToxicAirContaminant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#ToxicAirContaminant -->
+
+    <owl:Class rdf:about="#ToxicAirContaminant">
+        <rdfs:subClassOf rdf:resource="#HazardousSubstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Toxin -->
+
+    <owl:Class rdf:about="#Toxin">
+        <rdfs:subClassOf rdf:resource="#HazardousSubstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanEnvirImpact.owl#Urbanization -->
+
+    <owl:Class rdf:about="#Urbanization">
+        <rdfs:subClassOf rdf:resource="#EnvironmentalImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalPhenomena -->
+
+    <owl:Class rdf:about="&phys;#PhysicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Source -->
+
+    <owl:Class rdf:about="&phys;#Source"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSound.owl#Noise -->
+
+    <owl:Class rdf:about="&sound;#Noise"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Index -->
+
+    <owl:Class rdf:about="&res;#Index"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Role -->
+
+    <owl:Class rdf:about="&sys;#Role"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Duration -->
+
+    <owl:Class rdf:about="&time;#Duration"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Frequency -->
+
+    <owl:Class rdf:about="&tscale;#Frequency"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

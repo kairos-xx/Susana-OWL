@@ -1,0 +1,397 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY chemState "http://sweet.jpl.nasa.gov/2.0/chemState.owl#" >
+    <!ENTITY elem "http://sweet.jpl.nasa.gov/2.0/chemElement.owl" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY comp "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl" >
+    <!ENTITY chemElement "http://sweet.jpl.nasa.gov/2.0/chemElement.owl#" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY chemCompound "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#" >
+    <!ENTITY qual "http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl" >
+    <!ENTITY hydroComposition "http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&qual;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl"
+     xmlns:comp="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:chemCompound="&comp;#"
+     xmlns:elem="http://sweet.jpl.nasa.gov/2.0/chemElement.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chemState="&state;#"
+     xmlns:chemElement="&elem;#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:hydroComposition="&qual;#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:qual="http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl"
+     xmlns:astroPlanet="&planet;#"
+     xmlns:chem2="&chem;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemElement.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasChemical_1 -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasChemical_1"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasChemical_2 -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasChemical_2"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasSubstance -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasSubstance"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Hydrosphere -->
+
+    <owl:Class rdf:about="&planet;#Hydrosphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Pollution -->
+
+    <owl:Class rdf:about="&planet;#Pollution"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Mixture -->
+
+    <owl:Class rdf:about="&chem;#Mixture"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#H2O -->
+
+    <owl:Class rdf:about="&comp;#H2O"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Salt -->
+
+    <owl:Class rdf:about="&comp;#Salt"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Nitrogen -->
+
+    <owl:Class rdf:about="&elem;#Nitrogen"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Phosphorus -->
+
+    <owl:Class rdf:about="&elem;#Phosphorus"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#DissolvedSolid -->
+
+    <owl:Class rdf:about="&state;#DissolvedSolid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#DissolvedSubstance -->
+
+    <owl:Class rdf:about="&state;#DissolvedSubstance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#SuspendedSolid -->
+
+    <owl:Class rdf:about="&state;#SuspendedSolid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#BlackWater -->
+
+    <owl:Class rdf:about="#BlackWater">
+        <rdfs:subClassOf rdf:resource="#WaterMixture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#BrackWater -->
+
+    <owl:Class rdf:about="#BrackWater">
+        <owl:equivalentClass rdf:resource="#BrackishWater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#BrackishWater -->
+
+    <owl:Class rdf:about="#BrackishWater">
+        <rdfs:subClassOf rdf:resource="#SaltWater"/>
+        <owl:disjointWith rdf:resource="#FreshWater"/>
+        <rdfs:comment xml:lang="en"
+            >Brackish water (less commonly brack water) is water that has more salinity than fresh water, but not as much as seawater. It may result from mixing of seawater with fresh water, as in estuaries, or it may occur in brackish fossil aquifers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#DO -->
+
+    <owl:Class rdf:about="#DO">
+        <owl:equivalentClass rdf:resource="#DissolvedOxygen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#DOC -->
+
+    <owl:Class rdf:about="#DOC">
+        <owl:equivalentClass rdf:resource="#DissolvedOrganicCarbons"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#DissolvedOrganicCarbons -->
+
+    <owl:Class rdf:about="#DissolvedOrganicCarbons">
+        <rdfs:subClassOf rdf:resource="&state;#DissolvedSubstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#DissolvedOxygen -->
+
+    <owl:Class rdf:about="#DissolvedOxygen">
+        <rdfs:subClassOf rdf:resource="&state;#DissolvedSubstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#DrinkingWater -->
+
+    <owl:Class rdf:about="#DrinkingWater">
+        <rdfs:subClassOf rdf:resource="#WaterMixture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#Effluent -->
+
+    <owl:Class rdf:about="#Effluent">
+        <rdfs:subClassOf rdf:resource="#WaterMixture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#Eutrophication -->
+
+    <owl:Class rdf:about="#Eutrophication">
+        <rdfs:subClassOf rdf:resource="#WaterPollution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:someValuesFrom rdf:resource="&elem;#Phosphorus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:someValuesFrom rdf:resource="&elem;#Nitrogen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#FreshWater -->
+
+    <owl:Class rdf:about="#FreshWater">
+        <rdfs:subClassOf rdf:resource="#WaterMixture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#GrayWater -->
+
+    <owl:Class rdf:about="#GrayWater">
+        <rdfs:subClassOf rdf:resource="#WaterMixture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#Potability -->
+
+    <owl:Class rdf:about="#Potability">
+        <rdfs:subClassOf rdf:resource="#WaterQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#PotableWater -->
+
+    <owl:Class rdf:about="#PotableWater">
+        <rdfs:subClassOf rdf:resource="#WaterMixture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#SalineWater -->
+
+    <owl:Class rdf:about="#SalineWater">
+        <rdfs:subClassOf rdf:resource="#SaltWater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#SaltWater -->
+
+    <owl:Class rdf:about="#SaltWater">
+        <rdfs:subClassOf rdf:resource="#WaterMixture"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="&comp;#Salt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#SeaWater -->
+
+    <owl:Class rdf:about="#SeaWater">
+        <rdfs:subClassOf rdf:resource="#SaltWater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#ThermalPollution -->
+
+    <owl:Class rdf:about="#ThermalPollution">
+        <rdfs:subClassOf rdf:resource="#WaterPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#TotalDissolvedSolids -->
+
+    <owl:Class rdf:about="#TotalDissolvedSolids">
+        <rdfs:subClassOf rdf:resource="&state;#DissolvedSolid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#TotalSuspendedSolids -->
+
+    <owl:Class rdf:about="#TotalSuspendedSolids">
+        <rdfs:subClassOf rdf:resource="&state;#SuspendedSolid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#Wastewater -->
+
+    <owl:Class rdf:about="#Wastewater">
+        <rdfs:subClassOf rdf:resource="#Effluent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#WaterMixture -->
+
+    <owl:Class rdf:about="#WaterMixture">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&comp;#H2O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#WaterPollution -->
+
+    <owl:Class rdf:about="#WaterPollution">
+        <rdfs:subClassOf rdf:resource="&planet;#Pollution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="&planet;#Hydrosphere"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydroComposition.owl#WaterQuality -->
+
+    <owl:Class rdf:about="#WaterQuality">
+        <rdfs:subClassOf rdf:resource="&planet;#Pollution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&comp;#H2O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

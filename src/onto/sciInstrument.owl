@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY thermo "http://sweet.jpl.nasa.gov/2.0/physThermo.owl" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY physThermo "http://sweet.jpl.nasa.gov/2.0/physThermo.owl#" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY instr "http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl" >
+    <!ENTITY sciInstrument "http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#" >
+    <!ENTITY infra "http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl" >
+    <!ENTITY humanInfrastructure "http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&instr;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:humanInfrastructure="&infra;#"
+     xmlns:infra="http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl"
+     xmlns:sciInstrument="&instr;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:thermo="http://sweet.jpl.nasa.gov/2.0/physThermo.owl"
+     xmlns:instr="http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl"
+     xmlns:physThermo="&thermo;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:phys2="&phys;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physThermo.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProperty -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Equipment -->
+
+    <owl:Class rdf:about="&infra;#Equipment"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Facility -->
+
+    <owl:Class rdf:about="&infra;#Facility"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physThermo.owl#Temperature -->
+
+    <owl:Class rdf:about="&thermo;#Temperature"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Active -->
+
+    <owl:Class rdf:about="#Active">
+        <rdfs:subClassOf rdf:resource="#RetrievalApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#AerialPhotography -->
+
+    <owl:Class rdf:about="#AerialPhotography">
+        <rdfs:subClassOf rdf:resource="#Photography"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Buoy -->
+
+    <owl:Class rdf:about="#Buoy">
+        <rdfs:subClassOf rdf:resource="#Instrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#DopplerRadar -->
+
+    <owl:Class rdf:about="#DopplerRadar">
+        <rdfs:subClassOf rdf:resource="#Radar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Imaging -->
+
+    <owl:Class rdf:about="#Imaging">
+        <rdfs:subClassOf rdf:resource="&res;#ResearchExploration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#InSitu -->
+
+    <owl:Class rdf:about="#InSitu">
+        <rdfs:subClassOf rdf:resource="#RetrievalApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Instrument -->
+
+    <owl:Class rdf:about="#Instrument">
+        <rdfs:subClassOf rdf:resource="&infra;#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#LIDAR -->
+
+    <owl:Class rdf:about="#LIDAR">
+        <rdfs:subClassOf rdf:resource="#Instrument"/>
+        <rdfs:comment
+            >LIDAR (Light Detection and Ranging) is an optical remote sensing technology that measures properties of scattered light to find range and/or other information of a distant target. The prevalent method to determine distance to an object or surface is to use laser pulses. Like the similar radar technology, which uses radio waves instead of light, the range to an object is determined by measuring the time delay between transmission of a pulse and detection of the reflected signal. LIDAR technology has application in archaeology, geography, geology, geomorphology, seismology, remote sensing and atmospheric physics.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Magnetogram -->
+
+    <owl:Class rdf:about="#Magnetogram">
+        <rdfs:subClassOf rdf:resource="#Imaging"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#MeteorologicalFacility -->
+
+    <owl:Class rdf:about="#MeteorologicalFacility">
+        <rdfs:subClassOf rdf:resource="&infra;#Facility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Meteostation -->
+
+    <owl:Class rdf:about="#Meteostation">
+        <rdfs:subClassOf rdf:resource="#MeteorologicalFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Monitoring -->
+
+    <owl:Class rdf:about="#Monitoring">
+        <rdfs:subClassOf rdf:resource="&res;#ResearchExploration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Optics -->
+
+    <owl:Class rdf:about="#Optics">
+        <rdfs:subClassOf rdf:resource="&res;#ResearchExploration"/>
+        <rdfs:comment
+            >Optics is a branch of physics that describes the behavior and properties of light and the interaction of light with matter. Optics explains optical phenomena</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Passive -->
+
+    <owl:Class rdf:about="#Passive">
+        <rdfs:subClassOf rdf:resource="#RetrievalApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Photography -->
+
+    <owl:Class rdf:about="#Photography">
+        <rdfs:subClassOf rdf:resource="&res;#ResearchExploration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Radar -->
+
+    <owl:Class rdf:about="#Radar">
+        <rdfs:subClassOf rdf:resource="#Instrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#RemoteSensing -->
+
+    <owl:Class rdf:about="#RemoteSensing">
+        <rdfs:subClassOf rdf:resource="&res;#ResearchExploration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#RetrievalApproach -->
+
+    <owl:Class rdf:about="#RetrievalApproach">
+        <rdfs:subClassOf rdf:resource="&res;#ResearchExploration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Sensor -->
+
+    <owl:Class rdf:about="#Sensor">
+        <rdfs:subClassOf rdf:resource="#Instrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Telethermometer -->
+
+    <owl:Class rdf:about="#Telethermometer">
+        <rdfs:subClassOf rdf:resource="#Instrument"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&thermo;#Temperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A temperature-measuring system in which the thermally sensitive element is located at a distance from the indicating element.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciInstrument.owl#Tomography -->
+
+    <owl:Class rdf:about="#Tomography">
+        <rdfs:subClassOf rdf:resource="&res;#ResearchExploration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#ResearchExploration -->
+
+    <owl:Class rdf:about="&res;#ResearchExploration"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

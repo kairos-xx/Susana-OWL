@@ -1,0 +1,611 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY sys "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY chemState "http://sweet.jpl.nasa.gov/2.0/chemState.owl#" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY proc "http://sweet.jpl.nasa.gov/2.0/chemProcess.owl" >
+    <!ENTITY chemProcess "http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&proc;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/chemProcess.owl"
+     xmlns:sciSystem="&sys;#"
+     xmlns:sys="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:chemProcess="&proc;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chemState="&state;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:proc="http://sweet.jpl.nasa.gov/2.0/chemProcess.owl"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#hasChemicalProcess -->
+
+    <owl:ObjectProperty rdf:about="#hasChemicalProcess">
+        <owl:equivalentProperty rdf:resource="&sci;#hasProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#from -->
+
+    <owl:ObjectProperty rdf:about="&sys;#from"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#to -->
+
+    <owl:ObjectProperty rdf:about="&sys;#to"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#hasProcess -->
+
+    <owl:ObjectProperty rdf:about="&sci;#hasProcess"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Adsorption -->
+
+    <owl:Class rdf:about="#Adsorption">
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Aeration -->
+
+    <owl:Class rdf:about="#Aeration">
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Boil -->
+
+    <owl:Class rdf:about="#Boil">
+        <owl:equivalentClass rdf:resource="#Boiling"/>
+        <rdfs:subClassOf rdf:resource="#Vaporization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Boiling -->
+
+    <owl:Class rdf:about="#Boiling"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Burn -->
+
+    <owl:Class rdf:about="#Burn">
+        <owl:equivalentClass rdf:resource="#Burning"/>
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Burning -->
+
+    <owl:Class rdf:about="#Burning"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#ChemicalProcess -->
+
+    <owl:Class rdf:about="#ChemicalProcess">
+        <rdfs:subClassOf rdf:resource="&sci;#Process"/>
+        <rdfs:comment xml:lang="en"
+            >A chemical process is a method or means of somehow changing one or more chemicals or chemical compounds.  [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Condensation -->
+
+    <owl:Class rdf:about="#Condensation">
+        <owl:equivalentClass rdf:resource="#Condense"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Condense -->
+
+    <owl:Class rdf:about="#Condense">
+        <rdfs:subClassOf rdf:resource="#StateChange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#to"/>
+                <owl:allValuesFrom rdf:resource="&state;#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#from"/>
+                <owl:allValuesFrom rdf:resource="&state;#Gas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Corrode -->
+
+    <owl:Class rdf:about="#Corrode">
+        <owl:equivalentClass rdf:resource="#Corrosion"/>
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Corrosion -->
+
+    <owl:Class rdf:about="#Corrosion"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Deposition -->
+
+    <owl:Class rdf:about="#Deposition">
+        <rdfs:subClassOf rdf:resource="#StateChange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#from"/>
+                <owl:allValuesFrom rdf:resource="&state;#Gas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#to"/>
+                <owl:allValuesFrom rdf:resource="&state;#Solid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Desalinization -->
+
+    <owl:Class rdf:about="#Desalinization">
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Dilute -->
+
+    <owl:Class rdf:about="#Dilute">
+        <owl:equivalentClass rdf:resource="#Dilution"/>
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Dilution -->
+
+    <owl:Class rdf:about="#Dilution"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Dissolution -->
+
+    <owl:Class rdf:about="#Dissolution">
+        <owl:equivalentClass rdf:resource="#Dissolve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Dissolve -->
+
+    <owl:Class rdf:about="#Dissolve">
+        <owl:equivalentClass rdf:resource="#Solvation"/>
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+        <rdfs:comment xml:lang="en"
+            >Dissolution or solvation is the process of dissolving a solid substance into a solvent to yield a solution. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Evaporate -->
+
+    <owl:Class rdf:about="#Evaporate">
+        <owl:equivalentClass rdf:resource="#Evaporation"/>
+        <rdfs:subClassOf rdf:resource="#Vaporize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Evaporation -->
+
+    <owl:Class rdf:about="#Evaporation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Fixation -->
+
+    <owl:Class rdf:about="#Fixation">
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Flare -->
+
+    <owl:Class rdf:about="#Flare">
+        <owl:equivalentClass rdf:resource="#Flaring"/>
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Flaring -->
+
+    <owl:Class rdf:about="#Flaring"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Freeze -->
+
+    <owl:Class rdf:about="#Freeze">
+        <owl:equivalentClass rdf:resource="#Freezing"/>
+        <rdfs:subClassOf rdf:resource="#StateChange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#to"/>
+                <owl:allValuesFrom rdf:resource="&state;#Solid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#from"/>
+                <owl:allValuesFrom rdf:resource="&state;#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The phase transition of a substance passing from the liquid to the solid state; solidification; the opposite of fusion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Freezing -->
+
+    <owl:Class rdf:about="#Freezing"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Leach -->
+
+    <owl:Class rdf:about="#Leach">
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Melt -->
+
+    <owl:Class rdf:about="#Melt">
+        <owl:equivalentClass rdf:resource="#Melting"/>
+        <rdfs:subClassOf rdf:resource="#StateChange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#from"/>
+                <owl:allValuesFrom rdf:resource="&state;#Solid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#to"/>
+                <owl:allValuesFrom rdf:resource="&state;#Solid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Melting -->
+
+    <owl:Class rdf:about="#Melting"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Mix -->
+
+    <owl:Class rdf:about="#Mix">
+        <owl:equivalentClass rdf:resource="#Mixing"/>
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Mixing -->
+
+    <owl:Class rdf:about="#Mixing"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Nucleation -->
+
+    <owl:Class rdf:about="#Nucleation">
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Oxidation -->
+
+    <owl:Class rdf:about="#Oxidation">
+        <owl:equivalentClass rdf:resource="#Oxidize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Oxidize -->
+
+    <owl:Class rdf:about="#Oxidize">
+        <rdfs:subClassOf rdf:resource="#Reaction"/>
+        <rdfs:comment xml:lang="en"
+            >Reaction of a substance with oxygen or incorporation of oxygen into a molecule.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Photodecomposition -->
+
+    <owl:Class rdf:about="#Photodecomposition">
+        <owl:equivalentClass rdf:resource="#Photolysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Photodissociation -->
+
+    <owl:Class rdf:about="#Photodissociation">
+        <owl:equivalentClass rdf:resource="#Photolysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Photolysis -->
+
+    <owl:Class rdf:about="#Photolysis">
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+        <rdfs:comment xml:lang="en"
+            >Photodissociation, photolysis, or photodecomposition is a chemical reaction in which a chemical compound is broken down by photons. It is defined as the interaction of one or more photons with one target molecule. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#RadioactiveDecay -->
+
+    <owl:Class rdf:about="#RadioactiveDecay">
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Radioactivity -->
+
+    <owl:Class rdf:about="#Radioactivity">
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Reaction -->
+
+    <owl:Class rdf:about="#Reaction">
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Reduce -->
+
+    <owl:Class rdf:about="#Reduce">
+        <owl:equivalentClass rdf:resource="#Reduction"/>
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Reduction -->
+
+    <owl:Class rdf:about="#Reduction"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Solidify -->
+
+    <owl:Class rdf:about="#Solidify">
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Solvation -->
+
+    <owl:Class rdf:about="#Solvation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#StateChange -->
+
+    <owl:Class rdf:about="#StateChange">
+        <rdfs:label>State Change</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+        <rdfs:subClassOf rdf:resource="&sys;#Change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#from"/>
+                <owl:allValuesFrom rdf:resource="&state;#StateOfMatter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#to"/>
+                <owl:allValuesFrom rdf:resource="&state;#StateOfMatter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >change of state by state variable change</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Sublimation -->
+
+    <owl:Class rdf:about="#Sublimation">
+        <rdfs:subClassOf rdf:resource="#StateChange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#from"/>
+                <owl:allValuesFrom rdf:resource="&state;#Solid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#to"/>
+                <owl:allValuesFrom rdf:resource="&state;#Gas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Thaw -->
+
+    <owl:Class rdf:about="#Thaw">
+        <owl:equivalentClass rdf:resource="#Thawing"/>
+        <rdfs:subClassOf rdf:resource="#Melt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Thawing -->
+
+    <owl:Class rdf:about="#Thawing"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Titration -->
+
+    <owl:Class rdf:about="#Titration">
+        <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Vaporization -->
+
+    <owl:Class rdf:about="#Vaporization">
+        <owl:equivalentClass rdf:resource="#Vaporize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#Vaporize -->
+
+    <owl:Class rdf:about="#Vaporize">
+        <rdfs:subClassOf rdf:resource="#StateChange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#to"/>
+                <owl:allValuesFrom rdf:resource="&state;#Gas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#from"/>
+                <owl:allValuesFrom rdf:resource="&state;#Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The physical process by which a liquid is transformed to the gaseous state; the opposite of condensation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Gas -->
+
+    <owl:Class rdf:about="&state;#Gas"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Liquid -->
+
+    <owl:Class rdf:about="&state;#Liquid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Solid -->
+
+    <owl:Class rdf:about="&state;#Solid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#StateOfMatter -->
+
+    <owl:Class rdf:about="&state;#StateOfMatter"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Change -->
+
+    <owl:Class rdf:about="&sys;#Change"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Process -->
+
+    <owl:Class rdf:about="&sci;#Process"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

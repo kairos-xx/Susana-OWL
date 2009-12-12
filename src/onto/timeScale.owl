@@ -1,0 +1,591 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY time "http://sweet.jpl.nasa.gov/2.0/time.owl#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY scale "http://sweet.jpl.nasa.gov/2.0/timeScale.owl#" >
+    <!ENTITY timeScale5 "http://sweet.jpl.nasa.gov/2.0/timeScale.owl#6" >
+    <!ENTITY timeScale2 "http://sweet.jpl.nasa.gov/2.0/timeScale.owl#5" >
+    <!ENTITY timeScale6 "http://sweet.jpl.nasa.gov/2.0/timeScale.owl#3" >
+    <!ENTITY timeScale4 "http://sweet.jpl.nasa.gov/2.0/timeScale.owl#2" >
+    <!ENTITY timeScale "http://sweet.jpl.nasa.gov/2.0/timeScale.owl#1" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY timeScale3 "http://sweet.jpl.nasa.gov/2.0/timeScale.owl#10" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/timeScale.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/timeScale.owl"
+     xmlns:timeScale4="&scale;2"
+     xmlns:scale="http://sweet.jpl.nasa.gov/2.0/timeScale.owl#"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#"
+     xmlns:timeScale3="&scale;10"
+     xmlns:timeScale2="&scale;5"
+     xmlns:timeScale="&scale;1"
+     xmlns:timeScale6="&scale;3"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#"
+     xmlns:timeScale5="&scale;6"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://sweet.jpl.nasa.gov/2.0/time.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/time.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#subsetOf -->
+
+    <owl:ObjectProperty rdf:about="&math;subsetOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;hasUnit"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hasDuration -->
+
+    <owl:ObjectProperty rdf:about="&time;hasDuration"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#hasTemporalScale -->
+
+    <owl:ObjectProperty rdf:about="#hasTemporalScale">
+        <rdfs:range rdf:resource="#TemporalScale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#hasNumericValue -->
+
+    <owl:DatatypeProperty rdf:about="&math;hasNumericValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Scale -->
+
+    <owl:Class rdf:about="&res;Scale"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#Duration -->
+
+    <owl:Class rdf:about="&time;Duration"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#TimePeriod -->
+
+    <owl:Class rdf:about="&time;TimePeriod"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Age -->
+
+    <owl:Class rdf:about="#Age">
+        <rdfs:subClassOf rdf:resource="#GeologicTimeUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;subsetOf"/>
+                <owl:someValuesFrom rdf:resource="#Epoch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Epochs are divided into ages [millions of years] [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Annual -->
+
+    <owl:Class rdf:about="#Annual">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hasDuration"/>
+                <owl:hasValue rdf:resource="#1year"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#BiWeekly -->
+
+    <owl:Class rdf:about="#BiWeekly">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hasDuration"/>
+                <owl:hasValue rdf:resource="#2week"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Biannual -->
+
+    <owl:Class rdf:about="#Biannual">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hasDuration"/>
+                <owl:hasValue rdf:resource="#2year"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Decadal -->
+
+    <owl:Class rdf:about="#Decadal">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hasDuration"/>
+                <owl:hasValue rdf:resource="#10year"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Diurnal -->
+
+    <owl:Class rdf:about="#Diurnal">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hasDuration"/>
+                <owl:hasValue rdf:resource="#1day"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Eon -->
+
+    <owl:Class rdf:about="#Eon">
+        <rdfs:subClassOf rdf:resource="#GeologicTimeUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;subsetOf"/>
+                <owl:someValuesFrom rdf:resource="#Supereon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Supereons are divided into eons.  [billions of years] [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Epoch -->
+
+    <owl:Class rdf:about="#Epoch">
+        <rdfs:subClassOf rdf:resource="#GeologicTimeUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;subsetOf"/>
+                <owl:someValuesFrom rdf:resource="#Period"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Periods are divided into epochs [tens of millions of years] [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Era -->
+
+    <owl:Class rdf:about="#Era">
+        <rdfs:subClassOf rdf:resource="#GeologicTimeUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;subsetOf"/>
+                <owl:someValuesFrom rdf:resource="#Eon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Eons are divided into eras [several hundred million years] [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Frequency -->
+
+    <owl:Class rdf:about="#Frequency">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#GeologicTimeUnit -->
+
+    <owl:Class rdf:about="#GeologicTimeUnit">
+        <rdfs:subClassOf rdf:resource="&time;TimePeriod"/>
+        <rdfs:comment xml:lang="en"
+            >The subdivisions of geologic time. The table of geologic time spans are dates and nomenclature defined by the International Commission on Stratigraphy. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#HighFrequency -->
+
+    <owl:Class rdf:about="#HighFrequency">
+        <rdfs:subClassOf rdf:resource="#Frequency"/>
+        <owl:disjointWith rdf:resource="#LowFrequency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Hourly -->
+
+    <owl:Class rdf:about="#Hourly">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hasDuration"/>
+                <owl:hasValue rdf:resource="#1hour"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Instantaneous -->
+
+    <owl:Class rdf:about="#Instantaneous">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#LowFrequency -->
+
+    <owl:Class rdf:about="#LowFrequency">
+        <rdfs:subClassOf rdf:resource="#Frequency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Monthly -->
+
+    <owl:Class rdf:about="#Monthly">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hasDuration"/>
+                <owl:hasValue rdf:resource="#1month"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Pentad -->
+
+    <owl:Class rdf:about="#Pentad">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hasDuration"/>
+                <owl:hasValue rdf:resource="#5day"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Period -->
+
+    <owl:Class rdf:about="#Period">
+        <rdfs:subClassOf rdf:resource="#GeologicTimeUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&math;subsetOf"/>
+                <owl:someValuesFrom rdf:resource="#Era"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Eras are divided into periods. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Rapid -->
+
+    <owl:Class rdf:about="#Rapid">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Seasonal -->
+
+    <owl:Class rdf:about="#Seasonal">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hasDuration"/>
+                <owl:hasValue rdf:resource="#3month"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#SemiAnnual -->
+
+    <owl:Class rdf:about="#SemiAnnual">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hasDuration"/>
+                <owl:hasValue rdf:resource="#6month"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Supereon -->
+
+    <owl:Class rdf:about="#Supereon">
+        <rdfs:subClassOf rdf:resource="#GeologicTimeUnit"/>
+        <rdfs:comment xml:lang="en"
+            >The largest defined unit of time is the supereon, composed of eons.] [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#TemporalScale -->
+
+    <owl:Class rdf:about="#TemporalScale">
+        <rdfs:subClassOf rdf:resource="&res;Scale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Weekly -->
+
+    <owl:Class rdf:about="#Weekly">
+        <rdfs:subClassOf rdf:resource="#TemporalScale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&time;hasDuration"/>
+                <owl:hasValue rdf:resource="#1week"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#day -->
+
+    <owl:Thing rdf:about="&time;day"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#hour -->
+
+    <owl:Thing rdf:about="&time;hour"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#month -->
+
+    <owl:Thing rdf:about="&time;month"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#week -->
+
+    <owl:Thing rdf:about="&time;week"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/time.owl#year -->
+
+    <owl:Thing rdf:about="&time;year"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#10year -->
+
+    <time:Duration rdf:about="#10year">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">10</math:hasNumericValue>
+        <units:hasUnit rdf:resource="&time;year"/>
+    </time:Duration>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#1day -->
+
+    <time:Duration rdf:about="#1day">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">1</math:hasNumericValue>
+        <units:hasUnit rdf:resource="&time;day"/>
+    </time:Duration>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#1hour -->
+
+    <time:Duration rdf:about="#1hour">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">1</math:hasNumericValue>
+        <units:hasUnit rdf:resource="&time;hour"/>
+    </time:Duration>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#1month -->
+
+    <owl:Thing rdf:about="#1month">
+        <rdf:type rdf:resource="&time;Duration"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">1</math:hasNumericValue>
+        <units:hasUnit rdf:resource="&time;month"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#1week -->
+
+    <owl:Thing rdf:about="#1week">
+        <rdf:type rdf:resource="&time;Duration"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">1</math:hasNumericValue>
+        <units:hasUnit rdf:resource="&time;week"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#1year -->
+
+    <owl:Thing rdf:about="#1year">
+        <rdf:type rdf:resource="&time;Duration"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">1</math:hasNumericValue>
+        <units:hasUnit rdf:resource="&time;year"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#2week -->
+
+    <owl:Thing rdf:about="#2week">
+        <rdf:type rdf:resource="&time;Duration"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">2</math:hasNumericValue>
+        <units:hasUnit rdf:resource="&time;week"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#2year -->
+
+    <time:Duration rdf:about="#2year">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">2</math:hasNumericValue>
+        <units:hasUnit rdf:resource="&time;year"/>
+    </time:Duration>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#3month -->
+
+    <owl:Thing rdf:about="#3month">
+        <rdf:type rdf:resource="&time;Duration"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">3</math:hasNumericValue>
+        <units:hasUnit rdf:resource="&time;month"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#5day -->
+
+    <owl:Thing rdf:about="#5day">
+        <rdf:type rdf:resource="&time;Duration"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">5</math:hasNumericValue>
+        <units:hasUnit rdf:resource="&time;day"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#6month -->
+
+    <owl:Thing rdf:about="#6month">
+        <rdf:type rdf:resource="&time;Duration"/>
+        <math:hasNumericValue rdf:datatype="&xsd;double">6</math:hasNumericValue>
+        <units:hasUnit rdf:resource="&time;month"/>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

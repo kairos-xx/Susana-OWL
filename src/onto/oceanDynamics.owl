@@ -1,0 +1,449 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY astro "http://sweet.jpl.nasa.gov/2.0/astro.owl" >
+    <!ENTITY ocean "http://sweet.jpl.nasa.gov/2.0/ocean.owl" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY ocean2 "http://sweet.jpl.nasa.gov/2.0/ocean.owl#" >
+    <!ENTITY astro2 "http://sweet.jpl.nasa.gov/2.0/astro.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY scale "http://sweet.jpl.nasa.gov/2.0/spaceScale.owl" >
+    <!ENTITY spaceScale "http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#" >
+    <!ENTITY sed "http://sweet.jpl.nasa.gov/2.0/geogSediment.owl" >
+    <!ENTITY dyn "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl" >
+    <!ENTITY fwave "http://sweet.jpl.nasa.gov/2.0/physFluidWave.owl" >
+    <!ENTITY odyn "http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl" >
+    <!ENTITY physDynamics "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#" >
+    <!ENTITY geogSediment "http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#" >
+    <!ENTITY oceanDynamics "http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#" >
+    <!ENTITY physFluidWave "http://sweet.jpl.nasa.gov/2.0/physFluidWave.owl#" >
+    <!ENTITY quake "http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl" >
+    <!ENTITY geolEarthquake "http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#" >
+    <!ENTITY fluid "http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl" >
+    <!ENTITY physFluidDynamics "http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&odyn;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl"
+     xmlns:scale="http://sweet.jpl.nasa.gov/2.0/spaceScale.owl"
+     xmlns:geogSediment="&sed;#"
+     xmlns:fwave="http://sweet.jpl.nasa.gov/2.0/physFluidWave.owl"
+     xmlns:physFluidDynamics="&fluid;#"
+     xmlns:spaceScale="&scale;#"
+     xmlns:ocean="http://sweet.jpl.nasa.gov/2.0/ocean.owl"
+     xmlns:dyn="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:fluid="http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl"
+     xmlns:phys2="&phys;#"
+     xmlns:physFluidWave="&fwave;#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:ocean2="&ocean;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:physDynamics="&dyn;#"
+     xmlns:chem2="&chem;#"
+     xmlns:geolEarthquake="&quake;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:odyn="http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl"
+     xmlns:astro="http://sweet.jpl.nasa.gov/2.0/astro.owl"
+     xmlns:sed="http://sweet.jpl.nasa.gov/2.0/geogSediment.owl"
+     xmlns:oceanDynamics="&odyn;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:quake="http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:astro2="&astro;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astro.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geogSediment.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/ocean.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physFluidWave.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceScale.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasSubstance -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasSubstance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#hasSpatialScale -->
+
+    <owl:ObjectProperty rdf:about="&scale;#hasSpatialScale"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#Tide -->
+
+    <owl:Class rdf:about="&astro;#Tide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geogSediment.owl#Sediment -->
+
+    <owl:Class rdf:about="&sed;#Sediment"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolEarthquake.owl#SeismicWave -->
+
+    <owl:Class rdf:about="&quake;#SeismicWave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/ocean.owl#OceanPhenomena -->
+
+    <owl:Class rdf:about="&ocean;#OceanPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#Bioturbation -->
+
+    <owl:Class rdf:about="#Bioturbation">
+        <rdfs:subClassOf rdf:resource="&dyn;#Mixing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&sed;#Sediment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >In oceanography and limnology, bioturbation is the displacement and mixing of sediment particles by benthic fauna (animals) or flora (plants). The mediators of bioturbation are typically annelid worms (e.g. polychaetes, oligochaetes), bivalves (e.g. mussels, clams), gastropods, holothurians, or any other infaunal or epifaunal organisms. Faunal activities, such as burrowing, ingestion and defecation of sediment grains, construction and maintenance of galleries, and infilling of abandoned dwellings, displace sediment grains and mix the sediment matrix. In soil science, bioturbation is the physical rearrangement of the soil profile by soil life.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#Downwelling -->
+
+    <owl:Class rdf:about="#Downwelling">
+        <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#Gyre -->
+
+    <owl:Class rdf:about="#Gyre">
+        <rdfs:subClassOf rdf:resource="#OceanCurrent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#HighTide -->
+
+    <owl:Class rdf:about="#HighTide">
+        <rdfs:subClassOf rdf:resource="#OceanTide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#KamchatkaCurrent -->
+
+    <owl:Class rdf:about="#KamchatkaCurrent">
+        <rdfs:subClassOf rdf:resource="#OceanCurrent"/>
+        <rdfs:comment xml:lang="en"
+            >The western part of the subpolar gyre in the deep (western) part of the Bering Sea.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#LangmuirCirculation -->
+
+    <owl:Class rdf:about="#LangmuirCirculation">
+        <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+        <rdfs:comment xml:lang="en"
+            >Roll circulations approximately aligned with the surface stress vector that frequently occur in the upper boundary layer of oceans or lakes. Although similar in form to atmospheric longitudinal roll vortices, Langmuir circulations are thought to be driven by nonlinear interactions between the surface gravity wave field and the larger-scale turbulent motions within the mixed layer. They are sometimes called windrows because they form lines of surface debris or bubbles in their surface convergence zones. Their spatial scale is related to the depth of the mixed layer and their characteristic velocity is on the order of 8u*, where u* is the friction velocity in water. As a result of this scaling, Langmuir circulations generally require surface winds of at least 8 m s-1 in order to form. See coherent structures, longitudinal rolls.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#LittoralDrift -->
+
+    <owl:Class rdf:about="#LittoralDrift">
+        <owl:equivalentClass rdf:resource="#LongshoreDrift"/>
+        <rdfs:subClassOf rdf:resource="&ocean;#OceanPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#LongshoreCurrent -->
+
+    <owl:Class rdf:about="#LongshoreCurrent">
+        <rdfs:subClassOf rdf:resource="#OceanCurrent"/>
+        <rdfs:comment xml:lang="en"
+            >(Also called littoral current.) The resultant current produced by waves being deflected at an angle by the shore. In this case the current runs roughly parallel to the shoreline. The longshore current is capable of carrying a certain amount of material as long as its velocity remains fairly constant; however, any obstruction, such as a submarine rock ridge or a land point cutting across the path of the current, will cause loss of velocity and consequent loss of carrying power.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#LongshoreDrift -->
+
+    <owl:Class rdf:about="#LongshoreDrift"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#LoopCurrent -->
+
+    <owl:Class rdf:about="#LoopCurrent">
+        <rdfs:subClassOf rdf:resource="#OceanCurrent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#LowTide -->
+
+    <owl:Class rdf:about="#LowTide">
+        <rdfs:subClassOf rdf:resource="#OceanTide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#MesoscaleEddy -->
+
+    <owl:Class rdf:about="#MesoscaleEddy">
+        <owl:equivalentClass rdf:resource="#ModeEddy"/>
+        <rdfs:subClassOf rdf:resource="&fluid;#Eddy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&scale;#hasSpatialScale"/>
+                <owl:allValuesFrom rdf:resource="&scale;#Mesoscale"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >In oceanography, densely packed, irregularly oval- shaped high and low pressure centers roughly 400 km (240 miles) in diameter in which current intensities are typically tenfold greater than the local means.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#ModeEddy -->
+
+    <owl:Class rdf:about="#ModeEddy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#OceanCirculation -->
+
+    <owl:Class rdf:about="#OceanCirculation">
+        <rdfs:subClassOf rdf:resource="&ocean;#OceanPhenomena"/>
+        <rdfs:subClassOf rdf:resource="&fluid;#Circulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#OceanConveyorBelt -->
+
+    <owl:Class rdf:about="#OceanConveyorBelt">
+        <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+        <rdfs:comment xml:lang="en"
+            >The global recirculation of water masses that determines today&#39;s climate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#OceanCurrent -->
+
+    <owl:Class rdf:about="#OceanCurrent">
+        <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#OceanMixing -->
+
+    <owl:Class rdf:about="#OceanMixing">
+        <rdfs:subClassOf rdf:resource="&ocean;#OceanPhenomena"/>
+        <rdfs:subClassOf rdf:resource="&dyn;#Mixing"/>
+        <rdfs:comment xml:lang="en"
+            >Any process or series of processes by which parcels of ocean water with different properties are brought into intimate small-scale contact, so that molecular diffusion erases the differences between them.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#OceanTide -->
+
+    <owl:Class rdf:about="#OceanTide">
+        <rdfs:subClassOf rdf:resource="&astro;#Tide"/>
+        <rdfs:subClassOf rdf:resource="&ocean;#OceanPhenomena"/>
+        <rdfs:comment
+            >The periodic rising and falling of the earth&#39;s oceans and atmosphere.
+    It results from the tide-producing forces of the moon and sun acting upon the rotating earth. This disturbance actually propagates as a wave through the atmosphere and along the surface of the waters of the earth. Atmospheric tides are always so designated, whereas the term &#8220;tide&#8220; alone commonly implies the oceanic variety. Sometimes, the consequent horizontal movement of water along the coastlines is also called &#8220;tide,&#8221; but it is preferable to designate the latter as tidal current, reserving the name tide for the vertical wavelike movement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#StormSurge -->
+
+    <owl:Class rdf:about="#StormSurge">
+        <rdfs:subClassOf rdf:resource="&ocean;#OceanPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#SurfBeat -->
+
+    <owl:Class rdf:about="#SurfBeat">
+        <rdfs:subClassOf rdf:resource="&ocean;#OceanPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#Swell -->
+
+    <owl:Class rdf:about="#Swell">
+        <rdfs:subClassOf rdf:resource="&ocean;#OceanPhenomena"/>
+        <rdfs:subClassOf rdf:resource="&fwave;#GravityWave"/>
+        <rdfs:comment xml:lang="en"
+            >Surface gravity waves on the ocean that are not growing or being sustained any longer by the wind.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#ThermohalineCirculation -->
+
+    <owl:Class rdf:about="#ThermohalineCirculation">
+        <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#TidalCurrent -->
+
+    <owl:Class rdf:about="#TidalCurrent">
+        <rdfs:subClassOf rdf:resource="#OceanCurrent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#OceanTide"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#TidalWave -->
+
+    <owl:Class rdf:about="#TidalWave">
+        <owl:equivalentClass rdf:resource="#Tsunami"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#Tsunami -->
+
+    <owl:Class rdf:about="#Tsunami">
+        <rdfs:subClassOf rdf:resource="&quake;#SeismicWave"/>
+        <rdfs:subClassOf rdf:resource="&ocean;#OceanPhenomena"/>
+        <rdfs:comment xml:lang="en"
+            >Waves generated by seismic activity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#Upwelling -->
+
+    <owl:Class rdf:about="#Upwelling">
+        <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+        <rdfs:comment xml:lang="en"
+            >An ascending motion of subsurface water by which water from deeper layers is brought into the surface layer and is removed from the area of upwelling by divergent horizontal flow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#WindDrivenCirculation -->
+
+    <owl:Class rdf:about="#WindDrivenCirculation">
+        <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/oceanDynamics.owl#YellowSeaWarmCurrent -->
+
+    <owl:Class rdf:about="#YellowSeaWarmCurrent">
+        <rdfs:subClassOf rdf:resource="#OceanCurrent"/>
+        <rdfs:comment xml:lang="en"
+            >A surface current flowing northward along the central axis of the Yellow Sea.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Mixing -->
+
+    <owl:Class rdf:about="&dyn;#Mixing"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Circulation -->
+
+    <owl:Class rdf:about="&fluid;#Circulation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Eddy -->
+
+    <owl:Class rdf:about="&fluid;#Eddy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidWave.owl#GravityWave -->
+
+    <owl:Class rdf:about="&fwave;#GravityWave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#Mesoscale -->
+
+    <owl:Class rdf:about="&scale;#Mesoscale"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

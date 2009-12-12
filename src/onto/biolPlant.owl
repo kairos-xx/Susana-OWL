@@ -1,0 +1,429 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY biol "http://sweet.jpl.nasa.gov/2.0/biol.owl" >
+    <!ENTITY biol2 "http://sweet.jpl.nasa.gov/2.0/biol.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY biolPlant "http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#" >
+    <!ENTITY organic "http://sweet.jpl.nasa.gov/2.0/chemCompoundOrganic.owl" >
+    <!ENTITY chemCompoundOrganic "http://sweet.jpl.nasa.gov/2.0/chemCompoundOrganic.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/biolPlant.owl"
+     xmlns:chemCompoundOrganic="&organic;#"
+     xmlns:biol="http://sweet.jpl.nasa.gov/2.0/biol.owl"
+     xmlns:biol2="&biol;#"
+     xmlns:biolPlant="http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:organic="http://sweet.jpl.nasa.gov/2.0/chemCompoundOrganic.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biol.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemCompoundOrganic.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#hasVegetation -->
+
+    <owl:ObjectProperty rdf:about="#hasVegetation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#partOf -->
+
+    <owl:ObjectProperty rdf:about="&sci;#partOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#LivingEntity -->
+
+    <owl:Class rdf:about="&biol;#LivingEntity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Organism -->
+
+    <owl:Class rdf:about="&biol;#Organism"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Canopy -->
+
+    <owl:Class rdf:about="#Canopy">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Chlorophyll -->
+
+    <owl:Class rdf:about="#Chlorophyll">
+        <rdfs:subClassOf rdf:resource="&biol;#LivingEntity"/>
+        <rdfs:comment xml:lang="en"
+            >Chlorophyll is a green pigment found in most plants, algae, and cyanobacteria. Chlorophyll absorbs light most strongly in the blue and red but poorly in the green portions of the electromagnetic spectrum, hence the green color of chlorophyll-containing tissues like plant leaves.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#ChlorophyllA -->
+
+    <owl:Class rdf:about="#ChlorophyllA">
+        <rdfs:subClassOf rdf:resource="#Chlorophyll"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Conifer -->
+
+    <owl:Class rdf:about="#Conifer">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Crown -->
+
+    <owl:Class rdf:about="#Crown">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#DeciduousVegetation -->
+
+    <owl:Class rdf:about="#DeciduousVegetation">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#DominantSpecies -->
+
+    <owl:Class rdf:about="#DominantSpecies">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#EvergreenVegetation -->
+
+    <owl:Class rdf:about="#EvergreenVegetation">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#ExoticVegetation -->
+
+    <owl:Class rdf:about="#ExoticVegetation">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Fern -->
+
+    <owl:Class rdf:about="#Fern">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Flora -->
+
+    <owl:Class rdf:about="#Flora">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#FloweringPlant -->
+
+    <owl:Class rdf:about="#FloweringPlant">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Fruit -->
+
+    <owl:Class rdf:about="#Fruit">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+        <rdfs:comment
+            >In botany, a fruit is the ripened ovary&#8212;together with seeds&#8212;of a flowering plant. In many species, the fruit incorporates the ripened ovary and surrounding tissues. Fruits are the means by which flowering plants disseminate seeds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Fungi -->
+
+    <owl:Class rdf:about="#Fungi">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#FungiTaxonomy -->
+
+    <owl:Class rdf:about="#FungiTaxonomy">
+        <rdfs:subClassOf rdf:resource="#Fungi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Gelbstoff -->
+
+    <owl:Class rdf:about="#Gelbstoff">
+        <rdfs:subClassOf rdf:resource="&organic;#OrganicSubstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Grass -->
+
+    <owl:Class rdf:about="#Grass">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#IndigenousVegetation -->
+
+    <owl:Class rdf:about="#IndigenousVegetation">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Leaf -->
+
+    <owl:Class rdf:about="#Leaf">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Lichen -->
+
+    <owl:Class rdf:about="#Lichen">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Litter -->
+
+    <owl:Class rdf:about="#Litter">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Liverwort -->
+
+    <owl:Class rdf:about="#Liverwort">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Macroalgae -->
+
+    <owl:Class rdf:about="#Macroalgae">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Macrophyte -->
+
+    <owl:Class rdf:about="#Macrophyte">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Mangrove -->
+
+    <owl:Class rdf:about="#Mangrove">
+        <rdfs:subClassOf rdf:resource="#Tree"/>
+        <rdfs:comment xml:lang="en"
+            >Mangroves (generally) are trees and shrubs that grow in saline coastal habitats in the tropics and subtropics. The word is used in at least three senses, (1) most broadly to refer to the habitat and entire plant assemblage or mangal, for which the terms mangrove swamp and mangrove forest are also used, (2) to refer to all trees and large shrubs in the mangal, and (3) narrowly to refer to the mangrove family of plants, the Rhizophoraceae, or even more specifically just to mangrove trees of the genus Rhizophora. Mangals are found in depositional coastal environments where fine sediments, often with high organic content, collect in areas protected from high energy wave action.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#MarinePlant -->
+
+    <owl:Class rdf:about="#MarinePlant">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Moss -->
+
+    <owl:Class rdf:about="#Moss">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Mushroom -->
+
+    <owl:Class rdf:about="#Mushroom">
+        <rdfs:subClassOf rdf:resource="#FungiTaxonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Paleovegetation -->
+
+    <owl:Class rdf:about="#Paleovegetation">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Pheophytin -->
+
+    <owl:Class rdf:about="#Pheophytin">
+        <rdfs:subClassOf rdf:resource="#Chlorophyll"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Plant -->
+
+    <owl:Class rdf:about="#Plant">
+        <rdfs:subClassOf rdf:resource="&biol;#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Pollen -->
+
+    <owl:Class rdf:about="#Pollen">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Root -->
+
+    <owl:Class rdf:about="#Root">
+        <rdfs:subClassOf rdf:resource="&biol;#LivingEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#partOf"/>
+                <owl:allValuesFrom rdf:resource="#Plant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >n vascular plants, the root is the organ of a plant body that typically lies below the surface of the soil (compare with stem). However, this is not always the case, since a root can also be aerial (that is, growing above the ground) or aerating (that is, growing up above the ground or especially above water). On the other hand, a stem normally occurring below ground is not exceptional either (see rhizome). So, it is better to define root as a part of a plant body that bears no leaves, and therefore also lacks nodes. There are also important internal structural differences between stems and roots. The two major functions of roots are 1.) absorption of water and inorganic nutrients and 2.) anchoring the plant body to the ground. Roots also function in cytokinin synthesis, which supplies some of shoot needs. They often function in storage of food. The roots of most vascular plant species enter into symbiosis with certain fungi to form mycorrhizas, and a large range of other organisms including bacteria also closely associate with roots.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Scrub -->
+
+    <owl:Class rdf:about="#Scrub">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Tree -->
+
+    <owl:Class rdf:about="#Tree">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#TreeRing -->
+
+    <owl:Class rdf:about="#TreeRing">
+        <rdfs:subClassOf rdf:resource="&biol;#LivingEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#partOf"/>
+                <owl:allValuesFrom rdf:resource="#Tree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#Vegetation -->
+
+    <owl:Class rdf:about="#Vegetation">
+        <rdfs:subClassOf rdf:resource="#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#VegetationCover -->
+
+    <owl:Class rdf:about="#VegetationCover">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolPlant.owl#VegetationSpecies -->
+
+    <owl:Class rdf:about="#VegetationSpecies">
+        <rdfs:subClassOf rdf:resource="#Vegetation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompoundOrganic.owl#OrganicSubstance -->
+
+    <owl:Class rdf:about="&organic;#OrganicSubstance"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

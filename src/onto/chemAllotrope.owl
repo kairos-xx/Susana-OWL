@@ -1,0 +1,742 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY elem "http://sweet.jpl.nasa.gov/2.0/chemElement.owl#" >
+    <!ENTITY allo "http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl" >
+    <!ENTITY chemAllotrope "http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&allo;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl"
+     xmlns:elem="http://sweet.jpl.nasa.gov/2.0/chemElement.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:allo="http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chemAllotrope="&allo;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemElement.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#hasElement -->
+
+    <owl:ObjectProperty rdf:about="&elem;hasElement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasAtoms -->
+
+    <owl:DatatypeProperty rdf:about="&chem;hasAtoms"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Chemical -->
+
+    <owl:Class rdf:about="&chem;Chemical"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Allotrope -->
+
+    <owl:Class rdf:about="#Allotrope">
+        <rdfs:subClassOf rdf:resource="&chem;Chemical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Br2 -->
+
+    <owl:Class rdf:about="#Br2">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;Br"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#C10 -->
+
+    <owl:Class rdf:about="#C10">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">10</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#C12 -->
+
+    <owl:Class rdf:about="#C12">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">12</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#C2 -->
+
+    <owl:Class rdf:about="#C2">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#C3 -->
+
+    <owl:Class rdf:about="#C3">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#C5 -->
+
+    <owl:Class rdf:about="#C5">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">5</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#C6 -->
+
+    <owl:Class rdf:about="#C6">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">6</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#C7 -->
+
+    <owl:Class rdf:about="#C7">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#C8 -->
+
+    <owl:Class rdf:about="#C8">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">8</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Cl2 -->
+
+    <owl:Class rdf:about="#Cl2">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;Cl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Cl4 -->
+
+    <owl:Class rdf:about="#Cl4">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;Cl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">4</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Cx -->
+
+    <owl:Class rdf:about="#Cx">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#F2 -->
+
+    <owl:Class rdf:about="#F2">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#F3 -->
+
+    <owl:Class rdf:about="#F3">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#F4 -->
+
+    <owl:Class rdf:about="#F4">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">4</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Fe2 -->
+
+    <owl:Class rdf:about="#Fe2">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;Fe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Fe3 -->
+
+    <owl:Class rdf:about="#Fe3">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;Fe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#H10 -->
+
+    <owl:Class rdf:about="#H10">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">10</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#H16 -->
+
+    <owl:Class rdf:about="#H16">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">16</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#H2 -->
+
+    <owl:Class rdf:about="#H2">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#H3 -->
+
+    <owl:Class rdf:about="#H3">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#H4 -->
+
+    <owl:Class rdf:about="#H4">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">4</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#H6 -->
+
+    <owl:Class rdf:about="#H6">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">6</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#H8 -->
+
+    <owl:Class rdf:about="#H8">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">8</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;H"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#N2 -->
+
+    <owl:Class rdf:about="#N2">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#O2 -->
+
+    <owl:Class rdf:about="#O2">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#O3 -->
+
+    <owl:Class rdf:about="#O3">
+        <owl:equivalentClass rdf:resource="#Ozone"/>
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A nearly colorless gas, it is a very strong absorber of ultraviolet radiation, and the presence of the ozone layer in the upper atmosphere provides an ozone shield that prevents dangerous radiation from reaching the earth&#39;s surface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#O4 -->
+
+    <owl:Class rdf:about="#O4">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">4</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#O5 -->
+
+    <owl:Class rdf:about="#O5">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;hasAtoms"/>
+                <owl:hasValue rdf:datatype="&xsd;integer">5</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Ox -->
+
+    <owl:Class rdf:about="#Ox">
+        <rdfs:subClassOf rdf:resource="#Allotrope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elem;hasElement"/>
+                <owl:allValuesFrom rdf:resource="&elem;O"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#Ozone -->
+
+    <owl:Class rdf:about="#Ozone"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Br -->
+
+    <owl:Class rdf:about="&elem;Br"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#C -->
+
+    <owl:Class rdf:about="&elem;C"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Cl -->
+
+    <owl:Class rdf:about="&elem;Cl"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#F -->
+
+    <owl:Class rdf:about="&elem;F"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#Fe -->
+
+    <owl:Class rdf:about="&elem;Fe"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#H -->
+
+    <owl:Class rdf:about="&elem;H"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#N -->
+
+    <owl:Class rdf:about="&elem;N"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#O -->
+
+    <owl:Class rdf:about="&elem;O"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

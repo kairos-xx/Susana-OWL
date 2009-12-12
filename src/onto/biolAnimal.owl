@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY biol "http://sweet.jpl.nasa.gov/2.0/biol.owl" >
+    <!ENTITY biol2 "http://sweet.jpl.nasa.gov/2.0/biol.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY biolAnimal "http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl"
+     xmlns:biol="http://sweet.jpl.nasa.gov/2.0/biol.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:biol2="&biol;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:biolAnimal="http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biol.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biol.owl#Organism -->
+
+    <owl:Class rdf:about="&biol;#Organism"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#AcornWorm -->
+
+    <owl:Class rdf:about="#AcornWorm">
+        <rdfs:subClassOf rdf:resource="#Invertebrate"/>
+        <rdfs:comment
+            >The Acorn worms or Enteropneusta are a hemichordate class of invertebrates. Acorn worms are classified in the phylum Hemichordata, closely related to the chordates. There are about 70 species of acorn worm in the world, the main species for research being Saccoglossus kowaleski. All species are infaunal benthos that either may be deposit feeders or suspension feeders. Some of these worms may grow to be very long; one particular species may reach a length of 2.5 meters (almost eight feet), although most acorn worms are much, much smaller.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Amphibian -->
+
+    <owl:Class rdf:about="#Amphibian">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Anemone -->
+
+    <owl:Class rdf:about="#Anemone">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Animal -->
+
+    <owl:Class rdf:about="#Animal">
+        <rdfs:subClassOf rdf:resource="&biol;#Organism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Arachnid -->
+
+    <owl:Class rdf:about="#Arachnid">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Arthropod -->
+
+    <owl:Class rdf:about="#Arthropod">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Bee -->
+
+    <owl:Class rdf:about="#Bee">
+        <rdfs:subClassOf rdf:resource="#Insect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Bird -->
+
+    <owl:Class rdf:about="#Bird">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Centipede -->
+
+    <owl:Class rdf:about="#Centipede">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Coral -->
+
+    <owl:Class rdf:about="#Coral">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Cow -->
+
+    <owl:Class rdf:about="#Cow">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Crustacean -->
+
+    <owl:Class rdf:about="#Crustacean">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Dairy -->
+
+    <owl:Class rdf:about="#Dairy">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Echinoderm -->
+
+    <owl:Class rdf:about="#Echinoderm">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#ExoticSpecies -->
+
+    <owl:Class rdf:about="#ExoticSpecies">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Fauna -->
+
+    <owl:Class rdf:about="#Fauna">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Fish -->
+
+    <owl:Class rdf:about="#Fish">
+        <rdfs:subClassOf rdf:resource="#MarineAnimal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Flatworm -->
+
+    <owl:Class rdf:about="#Flatworm">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Human -->
+
+    <owl:Class rdf:about="#Human">
+        <rdfs:subClassOf rdf:resource="#Mammal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#IndigenousSpecies -->
+
+    <owl:Class rdf:about="#IndigenousSpecies">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Insect -->
+
+    <owl:Class rdf:about="#Insect">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Invertebrate -->
+
+    <owl:Class rdf:about="#Invertebrate">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Jellyfish -->
+
+    <owl:Class rdf:about="#Jellyfish">
+        <rdfs:subClassOf rdf:resource="#MarineAnimal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Mammal -->
+
+    <owl:Class rdf:about="#Mammal">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#MarineAnimal -->
+
+    <owl:Class rdf:about="#MarineAnimal">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#MarineBird -->
+
+    <owl:Class rdf:about="#MarineBird">
+        <rdfs:subClassOf rdf:resource="#MarineAnimal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#MarineInvertebrate -->
+
+    <owl:Class rdf:about="#MarineInvertebrate">
+        <rdfs:subClassOf rdf:resource="#MarineAnimal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#MarineMammal -->
+
+    <owl:Class rdf:about="#MarineMammal">
+        <rdfs:subClassOf rdf:resource="#MarineAnimal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Mesozooplankton -->
+
+    <owl:Class rdf:about="#Mesozooplankton">
+        <rdfs:subClassOf rdf:resource="#Zooplankton"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Microzooplankton -->
+
+    <owl:Class rdf:about="#Microzooplankton">
+        <rdfs:subClassOf rdf:resource="#Zooplankton"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Millipede -->
+
+    <owl:Class rdf:about="#Millipede">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Mollusk -->
+
+    <owl:Class rdf:about="#Mollusk">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Poultry -->
+
+    <owl:Class rdf:about="#Poultry">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Reptile -->
+
+    <owl:Class rdf:about="#Reptile">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Roundworm -->
+
+    <owl:Class rdf:about="#Roundworm">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#SegmentedWorm -->
+
+    <owl:Class rdf:about="#SegmentedWorm">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Silkworm -->
+
+    <owl:Class rdf:about="#Silkworm">
+        <rdfs:subClassOf rdf:resource="#Invertebrate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Sponge -->
+
+    <owl:Class rdf:about="#Sponge">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Vertebrate -->
+
+    <owl:Class rdf:about="#Vertebrate">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolAnimal.owl#Zooplankton -->
+
+    <owl:Class rdf:about="#Zooplankton">
+        <rdfs:subClassOf rdf:resource="#Animal"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

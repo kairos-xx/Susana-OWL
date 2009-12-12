@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY math2 "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl" >
+    <!ENTITY sciUnits "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY waves "http://sweet.jpl.nasa.gov/2.0/physWaves.owl" >
+    <!ENTITY physWaves "http://sweet.jpl.nasa.gov/2.0/physWaves.owl#" >
+    <!ENTITY part "http://sweet.jpl.nasa.gov/2.0/physParticle.owl" >
+    <!ENTITY radiation "http://sweet.jpl.nasa.gov/2.0/physRadiation.owl" >
+    <!ENTITY trans "http://sweet.jpl.nasa.gov/2.0/physTransport.owl" >
+    <!ENTITY physParticle "http://sweet.jpl.nasa.gov/2.0/physParticle.owl#" >
+    <!ENTITY dir "http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl" >
+    <!ENTITY physTransport "http://sweet.jpl.nasa.gov/2.0/physTransport.owl#" >
+    <!ENTITY physRadiation "http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#" >
+    <!ENTITY spaceDirection "http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&radiation;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/physRadiation.owl"
+     xmlns:radiation="http://sweet.jpl.nasa.gov/2.0/physRadiation.owl"
+     xmlns:physTransport="&trans;#"
+     xmlns:physWaves="&waves;#"
+     xmlns:waves="http://sweet.jpl.nasa.gov/2.0/physWaves.owl"
+     xmlns:spaceDirection="&dir;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:math2="&math;#"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:trans="http://sweet.jpl.nasa.gov/2.0/physTransport.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:physParticle="&part;#"
+     xmlns:dir="http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl"
+     xmlns:phys2="&phys;#"
+     xmlns:physRadiation="&radiation;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:part="http://sweet.jpl.nasa.gov/2.0/physParticle.owl"
+     xmlns:sciUnits="&units;#"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physParticle.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physTransport.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physWaves.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProcess -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProperty -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasDefaultUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;#hasDefaultUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Ratio -->
+
+    <owl:Class rdf:about="&math;#Ratio"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Energy -->
+
+    <owl:Class rdf:about="&phys;#Energy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalProcess -->
+
+    <owl:Class rdf:about="&phys;#PhysicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalProperty -->
+
+    <owl:Class rdf:about="&phys;#PhysicalProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physParticle.owl#Particle -->
+
+    <owl:Class rdf:about="&part;#Particle"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#Bioluminescence -->
+
+    <owl:Class rdf:about="#Bioluminescence">
+        <rdfs:subClassOf rdf:resource="#Luminescence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#Brightness -->
+
+    <owl:Class rdf:about="#Brightness">
+        <rdfs:subClassOf rdf:resource="#ElectromagneticRadiationProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#candela_perMeterSquared"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#Color -->
+
+    <owl:Class rdf:about="#Color">
+        <rdfs:subClassOf rdf:resource="#ElectromagneticSpectrum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#DepolarizationRatio -->
+
+    <owl:Class rdf:about="#DepolarizationRatio">
+        <rdfs:subClassOf rdf:resource="&math;#Ratio"/>
+        <rdfs:comment xml:lang="en"
+            >In Raman spectroscopy, the depolarization ratio is the intensity ratio between the perpendicular component and the parallel component of the Raman scattered light.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#ElectromagneticRadiation -->
+
+    <owl:Class rdf:about="#ElectromagneticRadiation">
+        <owl:equivalentClass rdf:resource="#ElectromagneticWave"/>
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#ElectromagneticRadiationProperty -->
+
+    <owl:Class rdf:about="#ElectromagneticRadiationProperty">
+        <owl:equivalentClass rdf:resource="#ElectromagneticRadiationQuantity"/>
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="#RadiativeTransfer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#ElectromagneticRadiationQuantity -->
+
+    <owl:Class rdf:about="#ElectromagneticRadiationQuantity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#ElectromagneticSpectrum -->
+
+    <owl:Class rdf:about="#ElectromagneticSpectrum">
+        <rdfs:subClassOf rdf:resource="&sci;#IntervalQuantity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="#ElectromagneticRadiation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The electromagnetic (EM) spectrum is the range of all possible electromagnetic radiation. The electromagnetic spectrum (usually just spectrum) of an object is the characteristic distribution of electromagnetic radiation from that object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#ElectromagneticWave -->
+
+    <owl:Class rdf:about="#ElectromagneticWave">
+        <rdfs:subClassOf rdf:resource="&part;#Particle"/>
+        <rdfs:subClassOf rdf:resource="&waves;#Wave"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#Emissivity -->
+
+    <owl:Class rdf:about="#Emissivity">
+        <rdfs:subClassOf rdf:resource="#ElectromagneticRadiationProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#dimensionlessUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#Fluorescence -->
+
+    <owl:Class rdf:about="#Fluorescence">
+        <rdfs:subClassOf rdf:resource="#Luminescence"/>
+        <rdfs:comment xml:lang="en"
+            >Fluorescence is a luminescence that is mostly found as an optical phenomenon in cold bodies, in which the molecular absorption of a photon triggers the emission of another photon with a longer wavelength. The energy difference between the absorbed and emitted photons ends up as molecular vibrations or heat. Usually the absorbed photon is in the ultraviolet range, and the emitted light is in the visible range, but this depends on the absorbance curve and Stokes shift of the particular fluorophore. Fluorescence is named after the mineral fluorite, composed of calcium fluoride, which often exhibits this phenomenon.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#Irradiance -->
+
+    <owl:Class rdf:about="#Irradiance">
+        <rdfs:subClassOf rdf:resource="#ElectromagneticRadiationProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#watt_perMeterSquared"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#LineEmission -->
+
+    <owl:Class rdf:about="#LineEmission">
+        <rdfs:subClassOf rdf:resource="&waves;#Emission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#LineOfSightPropagation -->
+
+    <owl:Class rdf:about="#LineOfSightPropagation">
+        <rdfs:subClassOf rdf:resource="&waves;#WavePropagation"/>
+        <rdfs:comment xml:lang="en"
+            >Line-of-sight propagation refers to electromagnetic radiation or electromagnetic waves travelling in a straight line. The rays or waves are deviated or reflected by obstructions and cannot travel over the horizon or behind obstacles. Beyond that, material disperses the rays respectively the energy of the waves.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#Luminescence -->
+
+    <owl:Class rdf:about="#Luminescence">
+        <rdfs:subClassOf rdf:resource="#Radiation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#Photolysis -->
+
+    <owl:Class rdf:about="#Photolysis">
+        <rdfs:subClassOf rdf:resource="#RadiativeTransfer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="&waves;#Absorption"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The process by which a chemical species undergoes a chemical change as the result of the absorption of a photon of light energy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#Radiance -->
+
+    <owl:Class rdf:about="#Radiance">
+        <rdfs:subClassOf rdf:resource="#ElectromagneticRadiationProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="#RadiantEnergy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#watt_perMeterSquared_perSteradian"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A radiometric term for the rate at which radiant energy in a set of directions confined to a unit solid angle around a particular direction is transferred across unit area of a surface (real or imaginary) projected onto this direction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#RadiantEnergy -->
+
+    <owl:Class rdf:about="#RadiantEnergy">
+        <rdfs:subClassOf rdf:resource="&phys;#Energy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="#Radiation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Infrequently, any energy propagated by a physical quantity governed by a wave equation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#RadiantFlux -->
+
+    <owl:Class rdf:about="#RadiantFlux">
+        <rdfs:subClassOf rdf:resource="&trans;#Flux"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:someValuesFrom rdf:resource="#Radiance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Radiant energy per unit time passing some specified area from one side.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#Radiation -->
+
+    <owl:Class rdf:about="#Radiation">
+        <rdfs:label>Radiation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RadiativeTransfer"/>
+        <rdfs:comment
+            >radiative process</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#RadiationBalanceQuantity -->
+
+    <owl:Class rdf:about="#RadiationBalanceQuantity">
+        <rdfs:subClassOf rdf:resource="#ElectromagneticRadiationProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#RadiativeFlux -->
+
+    <owl:Class rdf:about="#RadiativeFlux">
+        <rdfs:subClassOf rdf:resource="&trans;#Flux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#RadiativeForcing -->
+
+    <owl:Class rdf:about="#RadiativeForcing">
+        <rdfs:subClassOf rdf:resource="#RadiantFlux"/>
+        <rdfs:subClassOf rdf:resource="#RadiationBalanceQuantity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#watt_perMeterSquared"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >In radiation, the net flux of radiation into or out of a system.  As a consequence of radiative forcing there must be some change to the nonradiative energy states of the system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#RadiativeTransfer -->
+
+    <owl:Class rdf:about="#RadiativeTransfer">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#SpectralRadiance -->
+
+    <owl:Class rdf:about="#SpectralRadiance">
+        <rdfs:subClassOf rdf:resource="#Radiance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&waves;#Wavelength"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The radiance per unit wavelength or wavenumber interval.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physRadiation.owl#ViewingGeometry -->
+
+    <owl:Class rdf:about="#ViewingGeometry">
+        <rdfs:subClassOf rdf:resource="&dir;#Direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physTransport.owl#Flux -->
+
+    <owl:Class rdf:about="&trans;#Flux"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physWaves.owl#Absorption -->
+
+    <owl:Class rdf:about="&waves;#Absorption"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physWaves.owl#Emission -->
+
+    <owl:Class rdf:about="&waves;#Emission"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physWaves.owl#Wave -->
+
+    <owl:Class rdf:about="&waves;#Wave"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physWaves.owl#WavePropagation -->
+
+    <owl:Class rdf:about="&waves;#WavePropagation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physWaves.owl#Wavelength -->
+
+    <owl:Class rdf:about="&waves;#Wavelength"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Direction -->
+
+    <owl:Class rdf:about="&dir;#Direction"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#IntervalQuantity -->
+
+    <owl:Class rdf:about="&sci;#IntervalQuantity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#candela_perMeterSquared -->
+
+    <owl:Thing rdf:about="&units;#candela_perMeterSquared"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#dimensionlessUnit -->
+
+    <owl:Thing rdf:about="&units;#dimensionlessUnit"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#watt_perMeterSquared -->
+
+    <owl:Thing rdf:about="&units;#watt_perMeterSquared"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#watt_perMeterSquared_perSteradian -->
+
+    <owl:Thing rdf:about="&units;#watt_perMeterSquared_perSteradian"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

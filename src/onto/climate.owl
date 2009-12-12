@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY astro "http://sweet.jpl.nasa.gov/2.0/astro.owl" >
+    <!ENTITY ocean "http://sweet.jpl.nasa.gov/2.0/ocean.owl" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY ocean2 "http://sweet.jpl.nasa.gov/2.0/ocean.owl#" >
+    <!ENTITY astro2 "http://sweet.jpl.nasa.gov/2.0/astro.owl#" >
+    <!ENTITY climate "http://sweet.jpl.nasa.gov/2.0/climate.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY tscale "http://sweet.jpl.nasa.gov/2.0/timeScale.owl" >
+    <!ENTITY system "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY timeScale "http://sweet.jpl.nasa.gov/2.0/timeScale.owl#" >
+    <!ENTITY scale "http://sweet.jpl.nasa.gov/2.0/spaceScale.owl" >
+    <!ENTITY spaceScale "http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY plant "http://sweet.jpl.nasa.gov/2.0/biolProcess.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY biolProcess "http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY spec "http://sweet.jpl.nasa.gov/2.0/physSpectralRange.owl" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/climate.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/climate.owl"
+     xmlns:spec="http://sweet.jpl.nasa.gov/2.0/physSpectralRange.owl"
+     xmlns:plant="http://sweet.jpl.nasa.gov/2.0/biolProcess.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:scale="http://sweet.jpl.nasa.gov/2.0/spaceScale.owl"
+     xmlns:biolProcess="&plant;#"
+     xmlns:spaceScale="&scale;#"
+     xmlns:timeScale="&tscale;#"
+     xmlns:ocean="http://sweet.jpl.nasa.gov/2.0/ocean.owl"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:phys2="&phys;#"
+     xmlns:ocean2="&ocean;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:tscale="http://sweet.jpl.nasa.gov/2.0/timeScale.owl"
+     xmlns:climate="http://sweet.jpl.nasa.gov/2.0/climate.owl#"
+     xmlns:top="&sci;#"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:system="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:astro="http://sweet.jpl.nasa.gov/2.0/astro.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:astro2="&astro;#"
+     xmlns:astroPlanet="&planet;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astro.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biolProcess.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/ocean.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physSpectralRange.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceScale.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/timeScale.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasForce -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasForce"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProperty -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#measureOf -->
+
+    <owl:ObjectProperty rdf:about="&res;#measureOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#hasSpatialScale -->
+
+    <owl:ObjectProperty rdf:about="&scale;#hasSpatialScale"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#hasTemporalScale -->
+
+    <owl:ObjectProperty rdf:about="&tscale;#hasTemporalScale"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#hasPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&sci;#hasPhenomena"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astro.owl#GlobalOscillation -->
+
+    <owl:Class rdf:about="&astro;#GlobalOscillation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Ocean -->
+
+    <owl:Class rdf:about="&planet;#Ocean"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetaryPhenomena -->
+
+    <owl:Class rdf:about="&planet;#PlanetaryPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetaryScience -->
+
+    <owl:Class rdf:about="&planet;#PlanetaryScience"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Evapotranspiration -->
+
+    <owl:Class rdf:about="&plant;#Evapotranspiration"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#AntarcticOscillation -->
+
+    <owl:Class rdf:about="#AntarcticOscillation">
+        <rdfs:subClassOf rdf:resource="&astro;#GlobalOscillation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#ArcticOscillation -->
+
+    <owl:Class rdf:about="#ArcticOscillation">
+        <rdfs:subClassOf rdf:resource="&astro;#GlobalOscillation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#Climate -->
+
+    <owl:Class rdf:about="#Climate">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryPhenomena"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasForce"/>
+                <owl:someValuesFrom rdf:resource="&phys;#FarFieldForce"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#ClimateAnomaly -->
+
+    <owl:Class rdf:about="#ClimateAnomaly">
+        <rdfs:subClassOf rdf:resource="#ClimateChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#ClimateChange -->
+
+    <owl:Class rdf:about="#ClimateChange">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#ClimateIndicator -->
+
+    <owl:Class rdf:about="#ClimateIndicator">
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#measureOf"/>
+                <owl:allValuesFrom rdf:resource="#Climate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#ClimatePhenomena -->
+
+    <owl:Class rdf:about="#ClimatePhenomena">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#Climatology -->
+
+    <owl:Class rdf:about="#Climatology">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryScience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#CommonSenseClimateIndex -->
+
+    <owl:Class rdf:about="#CommonSenseClimateIndex">
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+        <rdfs:comment
+            >The Common Sense Climate Index is a simple measure of the degree (if any) to which practical climate change is occurring. The index is a composite of several everyday climate indicators. It is expected to have positive values when warming occurs and negative values for cooling. If the Index reaches and consistently maintains a value of 1 or more, the climate change should be noticeable to most people who have lived at that location for a few decades.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#Desertification -->
+
+    <owl:Class rdf:about="#Desertification">
+        <rdfs:subClassOf rdf:resource="#ClimateChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#Drought -->
+
+    <owl:Class rdf:about="#Drought">
+        <rdfs:subClassOf rdf:resource="#ClimateAnomaly"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#DrySeason -->
+
+    <owl:Class rdf:about="#DrySeason">
+        <rdfs:subClassOf rdf:resource="#ClimatePhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#ENSO -->
+
+    <owl:Class rdf:about="#ENSO">
+        <owl:equivalentClass rdf:resource="#ElNino"/>
+        <owl:equivalentClass rdf:resource="#SouthernOscillation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#ElNino -->
+
+    <owl:Class rdf:about="#ElNino">
+        <owl:equivalentClass rdf:resource="#ElNinoSouthernOscillation"/>
+        <rdfs:subClassOf rdf:resource="&astro;#GlobalOscillation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&ocean;#SeaSurfaceTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A significant increase in sea surface temperature over the eastern and central equatorial Pacific that occurs at irregular intervals, generally ranging between two and seven years.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#ElNinoSouthernOscillation -->
+
+    <owl:Class rdf:about="#ElNinoSouthernOscillation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#GlobalClimate -->
+
+    <owl:Class rdf:about="#GlobalClimate">
+        <rdfs:subClassOf rdf:resource="#Climate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#GlobalWarming -->
+
+    <owl:Class rdf:about="#GlobalWarming">
+        <rdfs:subClassOf rdf:resource="#ClimateChange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sci;#hasPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#GreenhouseEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#GreenhouseEffect -->
+
+    <owl:Class rdf:about="#GreenhouseEffect">
+        <rdfs:subClassOf rdf:resource="#ClimateChange"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#LaNina -->
+
+    <owl:Class rdf:about="#LaNina">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryPhenomena"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="&planet;#Ocean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&ocean;#SeaSurfaceTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The most common of several names given toa significant decrease in sea surface temperature (&quot;cold events&quot;) in the central and eastern equatorial Pacific.  La Nina is the counterpart to the El Nino &quot;warm event,&quot; and its spatial and temporal evolution in the equatorial Pacific is, to a considerable extent, the mirror image of El Nino, although La Nina events tend to be somewhat less regular in their behavior and duration.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#LocalClimate -->
+
+    <owl:Class rdf:about="#LocalClimate">
+        <rdfs:subClassOf rdf:resource="#Climate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#MaddenJulianOscillation -->
+
+    <owl:Class rdf:about="#MaddenJulianOscillation">
+        <rdfs:subClassOf rdf:resource="&astro;#GlobalOscillation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&tscale;#hasTemporalScale"/>
+                <owl:someValuesFrom rdf:resource="&tscale;#Decadal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#Mesoclimate -->
+
+    <owl:Class rdf:about="#Mesoclimate">
+        <rdfs:subClassOf rdf:resource="#Climate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&scale;#hasSpatialScale"/>
+                <owl:allValuesFrom rdf:resource="&scale;#Mesoscale"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The climate of a natural region of small extent, for example, valley, forest, plantation, and park. Because of subtle differences in elevation and exposure, the climate may not be representative of the general climate of the region.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#Microclimate -->
+
+    <owl:Class rdf:about="#Microclimate">
+        <rdfs:subClassOf rdf:resource="#Climate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#MoistureClimate -->
+
+    <owl:Class rdf:about="#MoistureClimate">
+        <rdfs:subClassOf rdf:resource="#Climate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#NorthAtlanticOscillationIndex -->
+
+    <owl:Class rdf:about="#NorthAtlanticOscillationIndex">
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#NorthPacificOscillationIndex -->
+
+    <owl:Class rdf:about="#NorthPacificOscillationIndex">
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#PDO -->
+
+    <owl:Class rdf:about="#PDO">
+        <owl:equivalentClass rdf:resource="#PacificDecadalOscillation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#PacificDecadalOscillation -->
+
+    <owl:Class rdf:about="#PacificDecadalOscillation">
+        <rdfs:subClassOf rdf:resource="&astro;#GlobalOscillation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#PacificNorthAmericanPattern -->
+
+    <owl:Class rdf:about="#PacificNorthAmericanPattern">
+        <rdfs:subClassOf rdf:resource="&astro;#GlobalOscillation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#Paleoclimate -->
+
+    <owl:Class rdf:about="#Paleoclimate">
+        <rdfs:subClassOf rdf:resource="#Climate"/>
+        <rdfs:comment xml:lang="en"
+            >Climate for periods prior to the development of measuring instruments, including historic and geologic time, for which only proxy climate records are available.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#Paleoclimatology -->
+
+    <owl:Class rdf:about="#Paleoclimatology">
+        <rdfs:subClassOf rdf:resource="#Climatology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#PalmerDroughtSeverityIndex -->
+
+    <owl:Class rdf:about="#PalmerDroughtSeverityIndex">
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#measureOf"/>
+                <owl:allValuesFrom rdf:resource="#Drought"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#Phenology -->
+
+    <owl:Class rdf:about="#Phenology">
+        <rdfs:subClassOf rdf:resource="#Climatology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#PotentialEvapotranspiration -->
+
+    <owl:Class rdf:about="#PotentialEvapotranspiration">
+        <rdfs:subClassOf rdf:resource="&plant;#Evapotranspiration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#QuasiBiennialOscillation -->
+
+    <owl:Class rdf:about="#QuasiBiennialOscillation">
+        <rdfs:subClassOf rdf:resource="&astro;#GlobalOscillation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&tscale;#hasTemporalScale"/>
+                <owl:someValuesFrom rdf:resource="&tscale;#Biannual"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#RegionalClimate -->
+
+    <owl:Class rdf:about="#RegionalClimate">
+        <rdfs:subClassOf rdf:resource="#Climate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#SouthernOscillation -->
+
+    <owl:Class rdf:about="#SouthernOscillation">
+        <rdfs:subClassOf rdf:resource="&astro;#GlobalOscillation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#Teleconnection -->
+
+    <owl:Class rdf:about="#Teleconnection">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#ThermalClimate -->
+
+    <owl:Class rdf:about="#ThermalClimate">
+        <rdfs:subClassOf rdf:resource="#Climate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/ocean.owl#SeaSurfaceTemperature -->
+
+    <owl:Class rdf:about="&ocean;#SeaSurfaceTemperature"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#FarFieldForce -->
+
+    <owl:Class rdf:about="&phys;#FarFieldForce"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Index -->
+
+    <owl:Class rdf:about="&res;#Index"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceScale.owl#Mesoscale -->
+
+    <owl:Class rdf:about="&scale;#Mesoscale"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Biannual -->
+
+    <owl:Class rdf:about="&tscale;#Biannual"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/timeScale.owl#Decadal -->
+
+    <owl:Class rdf:about="&tscale;#Decadal"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

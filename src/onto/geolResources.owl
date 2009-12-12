@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY geol "http://sweet.jpl.nasa.gov/2.0/geol.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY geol2 "http://sweet.jpl.nasa.gov/2.0/geol.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY biolpr "http://sweet.jpl.nasa.gov/2.0/biolProcess.owl" >
+    <!ENTITY comp "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl" >
+    <!ENTITY biolProcess "http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/geolResources.owl" >
+    <!ENTITY petr "http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl" >
+    <!ENTITY chemCompound "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#" >
+    <!ENTITY geolResources "http://sweet.jpl.nasa.gov/2.0/geolResources.owl#" >
+    <!ENTITY geolPetrology "http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&res;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/geolResources.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/geolResources.owl"
+     xmlns:geol2="&geol;#"
+     xmlns:comp="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"
+     xmlns:biolProcess="&biolpr;#"
+     xmlns:geolPetrology="&petr;#"
+     xmlns:geolResources="&res;#"
+     xmlns:geol="http://sweet.jpl.nasa.gov/2.0/geol.owl"
+     xmlns:chemCompound="&comp;#"
+     xmlns:petr="http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:biolpr="http://sweet.jpl.nasa.gov/2.0/biolProcess.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chem2="&chem;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/biolProcess.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geol.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/biolProcess.owl#Decomposition -->
+
+    <owl:Class rdf:about="&biolpr;#Decomposition"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Mixture -->
+
+    <owl:Class rdf:about="&chem;#Mixture"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#SubstanceForm -->
+
+    <owl:Class rdf:about="&chem;#SubstanceForm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Clathrate -->
+
+    <owl:Class rdf:about="&comp;#Clathrate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#Compound -->
+
+    <owl:Class rdf:about="&comp;#Compound"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geol.owl#GeologicProvince -->
+
+    <owl:Class rdf:about="&geol;#GeologicProvince"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolPetrology.owl#Rock -->
+
+    <owl:Class rdf:about="&petr;#Rock"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Coal -->
+
+    <owl:Class rdf:about="#Coal">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+        <rdfs:subClassOf rdf:resource="&petr;#Rock"/>
+        <rdfs:subClassOf rdf:resource="#FossilFuel"/>
+        <rdfs:comment xml:lang="en"
+            >Coal is a readily combustible black or brownish-black sedimentary rock. The harder forms, such as anthracite coal, can be regarded as metamorphic rock because of later exposure to elevated temperature and pressure. It is composed primarily of carbon along with variable quantities of other elements, chiefly sulfur, hydrogen, oxygen and nitrogen. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#CoralDeposit -->
+
+    <owl:Class rdf:about="#CoralDeposit">
+        <rdfs:subClassOf rdf:resource="#Deposit"/>
+        <rdfs:subClassOf rdf:resource="#NaturalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Deposit -->
+
+    <owl:Class rdf:about="#Deposit">
+        <rdfs:subClassOf rdf:resource="&chem;#SubstanceForm"/>
+        <rdfs:comment xml:lang="en"
+            >Deposition is the geological process by which material is added to a landform or land mass. Fluids such as wind and water, as well as sediment gravity flows, transport previously eroded sediment, which, at the loss of enough kinetic energy in the fluid, is deposited, building up layers of sediment. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Fossil -->
+
+    <owl:Class rdf:about="#Fossil">
+        <rdfs:subClassOf rdf:resource="&biolpr;#Decomposition"/>
+        <rdfs:subClassOf rdf:resource="&chem;#SubstanceForm"/>
+        <rdfs:comment xml:lang="en"
+            >Fossils  are the preserved remains or traces of animals, plants, and other organisms from the remote past. Fossils vary in size from microscopic, such as single bacterial cells [2] only one micrometer in diameter, to gigantic (macroscopic), such as dinosaurs and trees many meters long and weighing many tons. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#FossilFuel -->
+
+    <owl:Class rdf:about="#FossilFuel">
+        <rdfs:subClassOf rdf:resource="&chem;#Mixture"/>
+        <rdfs:subClassOf rdf:resource="#NaturalResource"/>
+        <rdfs:comment xml:lang="en"
+            >Fossil fuels or mineral fuels are fuels formed by the natural resources such as anaerobic decomposition of buried dead organisms that lived up to 300 million years ago. These fuels contain high percentage of carbon and hydrocarbons. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#GasHydrate -->
+
+    <owl:Class rdf:about="#GasHydrate">
+        <rdfs:subClassOf rdf:resource="&comp;#Clathrate"/>
+        <rdfs:subClassOf rdf:resource="#NaturalResource"/>
+        <rdfs:comment xml:lang="en"
+            >An example of a clathrate is clathrate hydrate, a special type of gas hydrate in which a lattice of water molecules encloses molecules of a trapped gas.  [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Glass -->
+
+    <owl:Class rdf:about="#Glass">
+        <rdfs:subClassOf rdf:resource="&chem;#SubstanceForm"/>
+        <owl:disjointWith rdf:resource="#Mineral"/>
+        <rdfs:comment xml:lang="en"
+            >In the scientific sense the term glass is often extended to all amorphous solids (and melts that easily form amorphous solids), including plastics, resins, or other silica-free amorphous solids. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Hematite -->
+
+    <owl:Class rdf:about="#Hematite">
+        <rdfs:subClassOf rdf:resource="#Mineral"/>
+        <rdfs:subClassOf rdf:resource="#NaturalResource"/>
+        <rdfs:comment xml:lang="en"
+            >Hematite, also spelled as h&#230;matite, is the mineral form of Iron(III) oxide (Fe2O3), one of several iron oxides. Hematite crystallizes in the rhombohedral system, and it has the same crystal structure as ilmenite and as corundum. Hematite is a mineral, colored black to steel or silver-gray, brown to reddish brown, or red. It is mined as the main ore of iron [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Macrofossil -->
+
+    <owl:Class rdf:about="#Macrofossil">
+        <rdfs:subClassOf rdf:resource="#Fossil"/>
+        <rdfs:comment xml:lang="en"
+            >Macrofossils are preserved organic remains large enough to be visible without a microscope. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Magnetite -->
+
+    <owl:Class rdf:about="#Magnetite">
+        <rdfs:subClassOf rdf:resource="#Mineral"/>
+        <rdfs:comment xml:lang="en"
+            >Magnetite is a ferrimagnetic mineral with chemical formula Fe3O4, one of several iron oxides and a member of the spinel group. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Microfossil -->
+
+    <owl:Class rdf:about="#Microfossil">
+        <rdfs:subClassOf rdf:resource="#Fossil"/>
+        <rdfs:comment xml:lang="en"
+            >Fossils which are of microscopic size such as bacteria. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Mineral -->
+
+    <owl:Class rdf:about="#Mineral">
+        <rdfs:subClassOf rdf:resource="&comp;#Compound"/>
+        <rdfs:comment xml:lang="en"
+            >A mineral is a naturally occurring solid formed through geological processes that has a characteristic chemical composition, a highly ordered atomic structure, and specific physical properties [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Mineraloid -->
+
+    <owl:Class rdf:about="#Mineraloid">
+        <rdfs:subClassOf rdf:resource="#Mineral"/>
+        <rdfs:comment xml:lang="en"
+            >A mineraloid is a mineral-like substance that does not demonstrate crystallinity. Mineraloids possess chemical compositions that vary beyond the generally accepted ranges for specific minerals. For example, obsidian is an amorphous glass and not a crystal. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#NaturalGas -->
+
+    <owl:Class rdf:about="#NaturalGas">
+        <rdfs:subClassOf rdf:resource="#FossilFuel"/>
+        <rdfs:comment xml:lang="en"
+            >Natural gas is a gas consisting primarily of methane. It is found associated with fossil fuels, in coal beds, as methane clathrates, and is created by methanogenic organisms in marshes, bogs, and landfills. It is an important fuel source, a major feedstock for fertilizers, and a potent greenhouse gas. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#NaturalResource -->
+
+    <owl:Class rdf:about="#NaturalResource">
+        <rdfs:subClassOf rdf:resource="&geol;#GeologicProvince"/>
+        <rdfs:comment xml:lang="en"
+            >Natural resources (economically referred to as land or raw materials) are naturally forming substances that are considered valuable in their relatively unmodified (natural) form.  [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#NonmetallicMineral -->
+
+    <owl:Class rdf:about="#NonmetallicMineral">
+        <rdfs:subClassOf rdf:resource="#Mineral"/>
+        <rdfs:comment xml:lang="en"
+            >The majority of minerals are non-metallic, i.e., they are not elemental minerals which are of metal elements or alloys of metals. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Oil -->
+
+    <owl:Class rdf:about="#Oil">
+        <rdfs:subClassOf rdf:resource="#FossilFuel"/>
+        <rdfs:comment xml:lang="en"
+            >An oil is a substance that is in a viscous liquid state (&quot;oily&quot;) at ambient temperatures or slightly warmer, and is both hydrophobic (immiscible with water) and lipophilic (miscible with other oils, literally). This general definition includes compound classes with otherwise unrelated chemical structures, properties, and uses, including vegetable oils, petrochemical oils, and volatile essential oils. Oil is a nonpolar substance. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/geolResources.owl#Petroleum -->
+
+    <owl:Class rdf:about="#Petroleum">
+        <rdfs:subClassOf rdf:resource="#FossilFuel"/>
+        <rdfs:comment xml:lang="en"
+            >Petroleum  or crude oil is a naturally occurring, flammable liquid found in rock formations in the Earth consisting of a complex mixture of hydrocarbons of various molecular weights, plus other organic compounds. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

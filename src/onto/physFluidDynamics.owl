@@ -1,0 +1,982 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl" >
+    <!ENTITY phys "http://sweet.jpl.nasa.gov/2.0/phys.owl" >
+    <!ENTITY math2 "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY phys2 "http://sweet.jpl.nasa.gov/2.0/phys.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY static "http://sweet.jpl.nasa.gov/2.0/physFluid.owl" >
+    <!ENTITY sciUnits "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY system "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY physFluid "http://sweet.jpl.nasa.gov/2.0/physFluid.owl#" >
+    <!ENTITY vect "http://sweet.jpl.nasa.gov/2.0/mathVector.owl" >
+    <!ENTITY chemState "http://sweet.jpl.nasa.gov/2.0/chemState.owl#" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY mathVector "http://sweet.jpl.nasa.gov/2.0/mathVector.owl#" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY dynam "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl" >
+    <!ENTITY physDynamics "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#" >
+    <!ENTITY fluid "http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl" >
+    <!ENTITY physFluidDynamics "http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&fluid;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl"
+     xmlns:vect="http://sweet.jpl.nasa.gov/2.0/mathVector.owl"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:physFluidDynamics="&fluid;#"
+     xmlns:physFluid="&static;#"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:fluid="http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl"
+     xmlns:phys2="&phys;#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:mathVector="&vect;#"
+     xmlns:sciUnits="&units;#"
+     xmlns:dynam="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"
+     xmlns:physDynamics="&dynam;#"
+     xmlns:sciSystem="&system;#"
+     xmlns:static="http://sweet.jpl.nasa.gov/2.0/physFluid.owl"
+     xmlns:phys="http://sweet.jpl.nasa.gov/2.0/phys.owl"
+     xmlns:math2="&math;#"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl"
+     xmlns:system="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:chemState="&state;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/mathVector.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/phys.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physFluid.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#hasStateOfMatter -->
+
+    <owl:ObjectProperty rdf:about="&state;#hasStateOfMatter"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalPhenomena -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProcess -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#hasPhysicalProperty -->
+
+    <owl:ObjectProperty rdf:about="&phys;#hasPhysicalProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#measureOf -->
+
+    <owl:ObjectProperty rdf:about="&res;#measureOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#approximates -->
+
+    <owl:ObjectProperty rdf:about="&system;#approximates"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="&system;#hasComponent"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasDefaultUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;#hasDefaultUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Fluid -->
+
+    <owl:Class rdf:about="&state;#Fluid"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Ratio -->
+
+    <owl:Class rdf:about="&math;#Ratio"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathVector.owl#Convergence -->
+
+    <owl:Class rdf:about="&vect;#Convergence"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathVector.owl#Divergence -->
+
+    <owl:Class rdf:about="&vect;#Divergence"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathVector.owl#PotentialVorticity -->
+
+    <owl:Class rdf:about="&vect;#PotentialVorticity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathVector.owl#Streamfunction -->
+
+    <owl:Class rdf:about="&vect;#Streamfunction"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/mathVector.owl#Vorticity -->
+
+    <owl:Class rdf:about="&vect;#Vorticity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Density -->
+
+    <owl:Class rdf:about="&phys;#Density"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Energy -->
+
+    <owl:Class rdf:about="&phys;#Energy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalLaw -->
+
+    <owl:Class rdf:about="&phys;#PhysicalLaw"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalPhenomena -->
+
+    <owl:Class rdf:about="&phys;#PhysicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#PhysicalProperty -->
+
+    <owl:Class rdf:about="&phys;#PhysicalProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/phys.owl#Pressure -->
+
+    <owl:Class rdf:about="&phys;#Pressure"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Motion -->
+
+    <owl:Class rdf:about="&dynam;#Motion"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Shear -->
+
+    <owl:Class rdf:about="&dynam;#Shear"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Velocity -->
+
+    <owl:Class rdf:about="&dynam;#Velocity"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#Baroclinic -->
+
+    <owl:Class rdf:about="&static;#Baroclinic"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#Barotropic -->
+
+    <owl:Class rdf:about="&static;#Barotropic"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#FluidProperty -->
+
+    <owl:Class rdf:about="&static;#FluidProperty"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluid.owl#FluidState -->
+
+    <owl:Class rdf:about="&static;#FluidState"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#AbsoluteVorticity -->
+
+    <owl:Class rdf:about="#AbsoluteVorticity">
+        <rdfs:label
+            >Absolute Vorticity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vect;#Vorticity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Ageostrophic -->
+
+    <owl:Class rdf:about="#Ageostrophic">
+        <rdfs:subClassOf rdf:resource="&static;#FluidState"/>
+        <owl:disjointWith rdf:resource="#Geostrophic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#BaroclinicCirculation -->
+
+    <owl:Class rdf:about="#BaroclinicCirculation">
+        <rdfs:subClassOf rdf:resource="#Circulation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&system;#hasComponent"/>
+                <owl:allValuesFrom rdf:resource="&static;#Baroclinic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#BaroclinicInstability -->
+
+    <owl:Class rdf:about="#BaroclinicInstability">
+        <rdfs:subClassOf rdf:resource="&system;#Instability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:someValuesFrom rdf:resource="&static;#Baroclinic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&dynam;#Shear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A hydrodynamic instability arising from the existence of a meridional temperature gradient (and hence vertical shear of the mean flow and a thermal wind) in an atmosphere in quasigeostrophic equilibrium and possessing static stability.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#BarotropicCirculation -->
+
+    <owl:Class rdf:about="#BarotropicCirculation">
+        <rdfs:subClassOf rdf:resource="#Circulation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&system;#hasComponent"/>
+                <owl:allValuesFrom rdf:resource="&static;#Barotropic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#BarotropicDisturbance -->
+
+    <owl:Class rdf:about="#BarotropicDisturbance">
+        <rdfs:subClassOf rdf:resource="&system;#Disturbance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:someValuesFrom rdf:resource="&static;#Barotropic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A wave disturbance in a two-dimensional flow, the driving mechanism for which lies in the variation of vorticity of the basic current and/or in the variation of the vorticity of the earth about the local vertical.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#BarotropicStreamfunction -->
+
+    <owl:Class rdf:about="#BarotropicStreamfunction">
+        <rdfs:subClassOf rdf:resource="&vect;#Streamfunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&system;#hasComponent"/>
+                <owl:allValuesFrom rdf:resource="&static;#Barotropic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#BernoulliTheorem -->
+
+    <owl:Class rdf:about="#BernoulliTheorem">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalLaw"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&phys;#Energy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="&dynam;#Motion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >As originally formulated, a statement of the conservation of energy (per unit mass) for an inviscid fluid in steady motion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#BoussinesqApproximation -->
+
+    <owl:Class rdf:about="#BoussinesqApproximation">
+        <rdfs:subClassOf rdf:resource="&res;#PhysicalApproximation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&phys;#Density"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="&dynam;#Motion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >An approximation to the dynamical equations of motion whereby density is assumed to be constant except in the buoyancy term of the vertical velocity equation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#BulkRichardsonNumber -->
+
+    <owl:Class rdf:about="#BulkRichardsonNumber">
+        <rdfs:subClassOf rdf:resource="#RichardsonNumber"/>
+        <rdfs:comment xml:lang="en"
+            >An approximation to the gradient Richardson number formed by approximating local gradients by finite difference across layers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Circulation -->
+
+    <owl:Class rdf:about="#Circulation">
+        <rdfs:subClassOf rdf:resource="#Flow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#CirculationIndex -->
+
+    <owl:Class rdf:about="#CirculationIndex">
+        <rdfs:subClassOf rdf:resource="&res;#Index"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Confluence -->
+
+    <owl:Class rdf:about="#Confluence">
+        <rdfs:subClassOf rdf:resource="&static;#FluidProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:someValuesFrom rdf:resource="&vect;#Convergence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The rate at which adjacent flow is converging along an axis oriented normal to the flow at the point in question.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#CriticalRichardsonNumber -->
+
+    <owl:Class rdf:about="#CriticalRichardsonNumber">
+        <rdfs:subClassOf rdf:resource="#RichardsonNumber"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Diffluence -->
+
+    <owl:Class rdf:about="#Diffluence">
+        <rdfs:subClassOf rdf:resource="&static;#FluidProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:someValuesFrom rdf:resource="&vect;#Divergence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The rate at which adjacent flow diverges along an axis oriented normal to the flow at the point in question; the opposite of confluence.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#DragCoefficient -->
+
+    <owl:Class rdf:about="#DragCoefficient">
+        <rdfs:subClassOf rdf:resource="&static;#FluidProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#dimensionlessUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Eddy -->
+
+    <owl:Class rdf:about="#Eddy">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalPhenomena"/>
+        <rdfs:comment
+            >In fluid dynamics, an eddy is the swirling of a fluid and the reverse current created when the fluid flows past an obstacle. The moving fluid creates a space devoid of downstream-flowing water on the downstream side of the object. Fluid behind the obstacle flows into the void creating a swirl of fluid on each edge of the obstacle, followed by a short reverse flow of fluid behind the obstacle flowing upstream, toward the back of the obstacle. This phenomenon is most visible behind large emergent rocks in swift-flowing rivers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Ekman -->
+
+    <owl:Class rdf:about="#Ekman">
+        <rdfs:subClassOf rdf:resource="&static;#FluidState"/>
+        <rdfs:comment xml:lang="en"
+            >Motions describing an equlibrium between pressure gradient force, Coriolis force and the turbulent dragi force.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Enstrophy -->
+
+    <owl:Class rdf:about="#Enstrophy">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#ErtelPotentialVorticity -->
+
+    <owl:Class rdf:about="#ErtelPotentialVorticity">
+        <rdfs:subClassOf rdf:resource="&vect;#PotentialVorticity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#perKilogram_meterSquared_perSecond_kelvin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Eulerian -->
+
+    <owl:Class rdf:about="#Eulerian">
+        <rdfs:subClassOf rdf:resource="&res;#Model"/>
+        <owl:disjointWith rdf:resource="#Lagrangian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Flow -->
+
+    <owl:Class rdf:about="#Flow">
+        <rdfs:subClassOf rdf:resource="&dynam;#Motion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Fluid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#FroudeNumber -->
+
+    <owl:Class rdf:about="#FroudeNumber">
+        <rdfs:subClassOf rdf:resource="&math;#Ratio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Geostrophic -->
+
+    <owl:Class rdf:about="#Geostrophic">
+        <rdfs:subClassOf rdf:resource="&static;#FluidState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#GradientRichardsonNumber -->
+
+    <owl:Class rdf:about="#GradientRichardsonNumber">
+        <rdfs:subClassOf rdf:resource="#RichardsonNumber"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Jet -->
+
+    <owl:Class rdf:about="#Jet">
+        <rdfs:subClassOf rdf:resource="#Flow"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="&phys;#Pressure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#KelvinHelmholtzInstability -->
+
+    <owl:Class rdf:about="#KelvinHelmholtzInstability">
+        <rdfs:subClassOf rdf:resource="&system;#Instability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&phys;#Density"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&dynam;#Velocity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Fluid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >An instability of the basic flow of an incompressible inviscid fluid in two parallel infinite streams of different velocities and densities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Lagrangian -->
+
+    <owl:Class rdf:about="#Lagrangian">
+        <rdfs:subClassOf rdf:resource="&res;#Model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#LaminarBoundaryLayer -->
+
+    <owl:Class rdf:about="#LaminarBoundaryLayer">
+        <rdfs:subClassOf rdf:resource="&phys;#PhysicalPhenomena"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProcess"/>
+                <owl:allValuesFrom rdf:resource="#LaminarFlow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >An interfacial region in which flow is smooth and nonturbulent. Above a surface, a laminar layer will develop and fluid velocity will increase with distance from the surface, but not indefinitely. At some point, flow will become turbulent, with the laminar sublayer separating the turbulent layer from the surface. In the real world, most laminar boundary layers are extremely thin (order of 1 mm), but can be of biological importance, for example, next to plant leaves or as invertebrate refuges in streams.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#LaminarFlow -->
+
+    <owl:Class rdf:about="#LaminarFlow">
+        <rdfs:subClassOf rdf:resource="#Flow"/>
+        <rdfs:comment xml:lang="en"
+            >(Also called sheet flow, streamline flow.) A flow regime in which fluid motion is smooth and orderly, and in which adjacent layers or laminas slip past each other with little mixing between them. Exchange of material across laminar layers occurs by molecular diffusion, a process about 106 times less effective than turbulence. Laminar flow can be easily predicted as velocity increases at a steady rate from a boundary. This contrasts with the chaotic and random nature of turbulent flow. Laminar flow is not a common occurrence in the statically neutral and unstable atmosphere and is confined to a very thin layer (1 mm) adjacent to very smooth surfaces such as snow and ice. However, in strongly statically stable regions such as the the nocturnal boundary layer, the Richardson number can be large enough that turbulence is suppressed, and the flow is laminar over a layer many tens of meters thick.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#LaminarSublayer -->
+
+    <owl:Class rdf:about="#LaminarSublayer">
+        <rdfs:subClassOf rdf:resource="#LaminarBoundaryLayer"/>
+        <rdfs:comment xml:lang="en"
+            >A layer in which the fluid undergoes smooth, nonturbulent flow. It is found between any surface and a turbulent layer above. See laminar boundary layer, laminar flow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#LargeReynoldsNumberFlow -->
+
+    <owl:Class rdf:about="#LargeReynoldsNumberFlow">
+        <rdfs:subClassOf rdf:resource="#Flow"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="#ReynoldsNumber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Fluid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The behavior of a fluid with a Reynolds number typically greater than 104 to 106, which usually occurs within the atmosphere. The main property of such flows is a constant friction stress within the surface layer that depends only on relative roughness but not on the Reynolds number itself. Thus, molecular viscosity and qualities occurring in flow descriptions that are dependent on the Reynolds number may be totally ignored.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#MechanicalTurbulence -->
+
+    <owl:Class rdf:about="#MechanicalTurbulence">
+        <rdfs:subClassOf rdf:resource="#Turbulence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&dynam;#Shear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Turbulence produced by shear flow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#MeridionalOvertuningStreamfunction -->
+
+    <owl:Class rdf:about="#MeridionalOvertuningStreamfunction">
+        <rdfs:subClassOf rdf:resource="&vect;#Streamfunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Overturning -->
+
+    <owl:Class rdf:about="#Overturning">
+        <rdfs:subClassOf rdf:resource="#Circulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#PointVortex -->
+
+    <owl:Class rdf:about="#PointVortex">
+        <rdfs:subClassOf rdf:resource="#Vortex"/>
+        <rdfs:comment xml:lang="en"
+            >A straight line vortex, the flow of which can be modeled in two dimensions, with a point concentration of vorticity surrounded by irrotational flow.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#PotentialVorticity -->
+
+    <owl:Class rdf:about="#PotentialVorticity">
+        <rdfs:subClassOf rdf:resource="&vect;#PotentialVorticity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#QuasiGeostrophic -->
+
+    <owl:Class rdf:about="#QuasiGeostrophic">
+        <rdfs:subClassOf rdf:resource="&static;#FluidState"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&system;#approximates"/>
+                <owl:allValuesFrom rdf:resource="#Geostrophic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:someValuesFrom rdf:resource="#RossbyNumber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >A system or flow that evolves slowly in time compared to the rotation period of the earth, has a length scale of the deformation radius or larger, and undergoes only limited vertical excursions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Recirculation -->
+
+    <owl:Class rdf:about="#Recirculation">
+        <rdfs:subClassOf rdf:resource="#Circulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#RelativeVorticity -->
+
+    <owl:Class rdf:about="#RelativeVorticity">
+        <rdfs:subClassOf rdf:resource="&vect;#Vorticity"/>
+        <rdfs:comment xml:lang="en"
+            >The vorticity as measured in a system of coordinates fixed on the earth&#39;s surface.  Usually, only the vertical component of the vorticity is meant.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#ReynoldsNumber -->
+
+    <owl:Class rdf:about="#ReynoldsNumber">
+        <rdfs:subClassOf rdf:resource="&static;#FluidProperty"/>
+        <rdfs:comment xml:lang="en"
+            >The dimensionless ratio of the inertial force (&#8764;U2/L) to the viscous force (&#8764; &#957;U/L2) in the Navier&#8211;Stokes equations, where U is a characteristic velocity, L is a characteristic length, and &#957; is the kinematic viscosity of the fluid; thus, Re=ULv. The Reynolds number is of great importance in the theory of hydrodynamic stability and the origin of turbulence. The inertia force generates vortex stretching and nonlinear interactions and hence creates randomness. Turbulence occurs when the inertia term dominates the viscous term, that is, when the Reynolds number is large. For many engineering flows, turbulence occurs when Re &gt; Rec, where the critical Reynolds number is roughly Rec = 2100.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#RichardsonNumber -->
+
+    <owl:Class rdf:about="#RichardsonNumber">
+        <rdfs:subClassOf rdf:resource="&math;#Ratio"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&res;#measureOf"/>
+                <owl:allValuesFrom rdf:resource="#Turbulence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#RigidLidApproximation -->
+
+    <owl:Class rdf:about="#RigidLidApproximation">
+        <rdfs:subClassOf rdf:resource="&res;#PhysicalApproximation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#RossbyNumber -->
+
+    <owl:Class rdf:about="#RossbyNumber">
+        <rdfs:subClassOf rdf:resource="&math;#Ratio"/>
+        <rdfs:comment xml:lang="en"
+            >A dimensionless number relating the ratio of inertial to Coriolis forces for a given flow of a rotating fluid.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#StationaryEddy -->
+
+    <owl:Class rdf:about="#StationaryEddy">
+        <rdfs:subClassOf rdf:resource="#Eddy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:allValuesFrom rdf:resource="&state;#Fluid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >In studies of the general circulation, the eddies are the departures of a field from the zonal mean of that field; the stationary eddies are the time-averaged, or time-invariant, component of the eddy field.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#StokesLaw -->
+
+    <owl:Class rdf:about="#StokesLaw">
+        <rdfs:subClassOf rdf:resource="&res;#PhysicalApproximation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Turbulence -->
+
+    <owl:Class rdf:about="#Turbulence">
+        <owl:equivalentClass rdf:resource="#Turbulent"/>
+        <rdfs:subClassOf rdf:resource="&static;#FluidState"/>
+        <rdfs:subClassOf rdf:resource="&system;#Fluctuation"/>
+        <rdfs:comment xml:lang="en"
+            >Irregular fluctuations occurring in fluid motions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Turbulent -->
+
+    <owl:Class rdf:about="#Turbulent"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#ViscousFlow -->
+
+    <owl:Class rdf:about="#ViscousFlow">
+        <rdfs:subClassOf rdf:resource="#Flow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Vortex -->
+
+    <owl:Class rdf:about="#Vortex">
+        <rdfs:subClassOf rdf:resource="#Flow"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalProperty"/>
+                <owl:allValuesFrom rdf:resource="&vect;#Vorticity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >More often the term refers to a flow with closed streamlines or to the idealized case in which all vorticity is concentrated in a vortex filament.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#Wake -->
+
+    <owl:Class rdf:about="#Wake">
+        <rdfs:subClassOf rdf:resource="#Turbulence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#Turbulence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The region of turbulence immediately to the rear of a solid body in motion relative to a fluid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physFluidDynamics.owl#ZombieTurbulence -->
+
+    <owl:Class rdf:about="#ZombieTurbulence">
+        <rdfs:subClassOf rdf:resource="&system;#Perturbation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&phys;#hasPhysicalPhenomena"/>
+                <owl:allValuesFrom rdf:resource="#Turbulence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The turbulent perturbations of temperature remaining in a stable boundary layer after all turbulent motions have died out.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Index -->
+
+    <owl:Class rdf:about="&res;#Index"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Model -->
+
+    <owl:Class rdf:about="&res;#Model"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#PhysicalApproximation -->
+
+    <owl:Class rdf:about="&res;#PhysicalApproximation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Disturbance -->
+
+    <owl:Class rdf:about="&system;#Disturbance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Fluctuation -->
+
+    <owl:Class rdf:about="&system;#Fluctuation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Instability -->
+
+    <owl:Class rdf:about="&system;#Instability"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Perturbation -->
+
+    <owl:Class rdf:about="&system;#Perturbation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#dimensionlessUnit -->
+
+    <owl:Thing rdf:about="&units;#dimensionlessUnit"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#perKilogram_meterSquared_perSecond_kelvin -->
+
+    <owl:Thing rdf:about="&units;#perKilogram_meterSquared_perSecond_kelvin"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY space2 "http://sweet.jpl.nasa.gov/2.0/space.owl#" >
+    <!ENTITY wind "http://sweet.jpl.nasa.gov/2.0/atmoWind.owl" >
+    <!ENTITY atmoWind "http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY dynam "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+    <!ENTITY physDynamics "http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#" >
+    <!ENTITY humanAviation "http://sweet.jpl.nasa.gov/2.0/humanAviation.owl#" >
+    <!ENTITY dir "http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl" >
+    <!ENTITY spaceDirection "http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#" >
+    <!ENTITY infra "http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl" >
+    <!ENTITY humanInfrastructure "http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://sweet.jpl.nasa.gov/2.0/humanAviation.owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/humanAviation.owl"
+     xmlns:wind="http://sweet.jpl.nasa.gov/2.0/atmoWind.owl"
+     xmlns:humanInfrastructure="&infra;#"
+     xmlns:space2="&space;#"
+     xmlns:infra="http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl"
+     xmlns:spaceDirection="&dir;#"
+     xmlns:atmoWind="&wind;#"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:humanAviation="http://sweet.jpl.nasa.gov/2.0/humanAviation.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:dir="http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:astroPlanet="&planet;#"
+     xmlns:dynam="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"
+     xmlns:physDynamics="&dynam;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmoWind.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physDynamics.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#hasInfrastructure -->
+
+    <owl:ObjectProperty rdf:about="&infra;#hasInfrastructure"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Atmosphere -->
+
+    <owl:Class rdf:about="&planet;#Atmosphere"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmoWind.owl#Wind -->
+
+    <owl:Class rdf:about="&wind;#Wind"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAviation.owl#Aircraft -->
+
+    <owl:Class rdf:about="#Aircraft">
+        <rdfs:subClassOf rdf:resource="&infra;#Infrastructure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="&planet;#Atmosphere"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >An aircraft is a vehicle which is able to fly through the air (or through any other atmosphere). All the human activity which surrounds aircraft is called aviation. (Most rocket vehicles are not aircraft because they are not supported by the surrounding air).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAviation.owl#AircraftAttitude -->
+
+    <owl:Class rdf:about="#AircraftAttitude">
+        <rdfs:subClassOf rdf:resource="&dir;#Orientation"/>
+        <rdfs:comment
+            >Aircraft attitude refers to two closely related aspects of an aircraft in flight. In the simplest use it is the orientation of an aircraft with respect to the horizon. This is a function of two angles: pitch and roll. The pitch angle specifies the orientation of the aircraft&#39;s longitudinal axis, that is, whether the nose is pointing upwards, is level to the horizon, or is pointing downwards. The roll angle specifies whether the aircraft is banked left or right, or whether its wings are parallel to the horizon. The pilot adjusts the controls (the stick or the yoke) to adjust the aircraft attitude in order to keep the aircraft on course or turn or change altitude. Aircraft attitude is used to describe the more complex relation of an aircraft to its surroundings, particularly airflow and gravity. This takes into account the settings of other flight control surfaces such as the rudder, engine power, flaps or slats and also airflow. Thus an aircraft can be described as being in a climb attitude or a spin attitude, which implies more than simply nose up or nose down</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAviation.owl#Airspeed -->
+
+    <owl:Class rdf:about="#Airspeed">
+        <rdfs:subClassOf rdf:resource="&dynam;#Speed"/>
+        <rdfs:comment
+            >Airspeed is the speed of an aircraft relative to the air. There are several different measures of airspeed: indicated airspeed, calibrated airspeed, equivalent airspeed and true airspeed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAviation.owl#FlightLevel -->
+
+    <owl:Class rdf:about="#FlightLevel">
+        <rdfs:subClassOf rdf:resource="&space;#Altitude"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&infra;#hasInfrastructure"/>
+                <owl:allValuesFrom rdf:resource="#Aircraft"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >In aviation, a Flight Level (FL) is a standard nominal altitude of an aircraft, referenced to a world-wide fixed pressure datum of 1013.25 hPa or the equivalent setting, 29.921 inHg (the average sea-level pressure). It is not necessarily the same as the aircraft&#39;s true altitude above mean sea level.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAviation.owl#GroundSpeed -->
+
+    <owl:Class rdf:about="#GroundSpeed">
+        <rdfs:subClassOf rdf:resource="&dynam;#Speed"/>
+        <rdfs:comment
+            >Ground speed is the speed of an aircraft relative to the ground. It is the sum of the aircraft&#39;s true airspeed and the current wind and weather conditions; a headwind subtracts from the ground speed, while a tailwind adds to it. Winds at other angles to the heading will have components of either headwind or tailwind as well as a crosswind component.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanAviation.owl#Tailwind -->
+
+    <owl:Class rdf:about="#Tailwind">
+        <rdfs:subClassOf rdf:resource="&wind;#Wind"/>
+        <rdfs:comment xml:lang="en"
+            >A wind that assists the intended progress of an exposed, moving object, for example, rendering an airborne object&#39;s groundspeed greater than its airspeed; the opposite of a headwind.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/humanInfrastructure.owl#Infrastructure -->
+
+    <owl:Class rdf:about="&infra;#Infrastructure"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physDynamics.owl#Speed -->
+
+    <owl:Class rdf:about="&dynam;#Speed"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Altitude -->
+
+    <owl:Class rdf:about="&space;#Altitude"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceDirection.owl#Orientation -->
+
+    <owl:Class rdf:about="&dir;#Orientation"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

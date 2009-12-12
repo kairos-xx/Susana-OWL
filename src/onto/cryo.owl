@@ -1,0 +1,543 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY atmo "http://sweet.jpl.nasa.gov/2.0/atmo.owl" >
+    <!ENTITY cryo "http://sweet.jpl.nasa.gov/2.0/cryo.owl" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY cryo2 "http://sweet.jpl.nasa.gov/2.0/cryo.owl#" >
+    <!ENTITY hydr "http://sweet.jpl.nasa.gov/2.0/hydro.owl" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY atmo2 "http://sweet.jpl.nasa.gov/2.0/atmo.owl#" >
+    <!ENTITY space2 "http://sweet.jpl.nasa.gov/2.0/space.owl#" >
+    <!ENTITY hydro "http://sweet.jpl.nasa.gov/2.0/hydro.owl#" >
+    <!ENTITY clim "http://sweet.jpl.nasa.gov/2.0/climate.owl" >
+    <!ENTITY climate "http://sweet.jpl.nasa.gov/2.0/climate.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY solid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY sys "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY physSolid "http://sweet.jpl.nasa.gov/2.0/physSolid.owl#" >
+    <!ENTITY chemState "http://sweet.jpl.nasa.gov/2.0/chemState.owl#" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY res "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl" >
+    <!ENTITY planet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl" >
+    <!ENTITY sciResearch "http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#" >
+    <!ENTITY astroPlanet "http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&cryo;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/cryo.owl"
+     xmlns:atmo2="&atmo;#"
+     xmlns:res="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"
+     xmlns:atmo="http://sweet.jpl.nasa.gov/2.0/atmo.owl"
+     xmlns:sys="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:cryo="http://sweet.jpl.nasa.gov/2.0/cryo.owl"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:hydro="&hydr;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:planet="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:hydr="http://sweet.jpl.nasa.gov/2.0/hydro.owl"
+     xmlns:climate="&clim;#"
+     xmlns:chem2="&chem;#"
+     xmlns:physSolid="&solid;#"
+     xmlns:space2="&space;#"
+     xmlns:sciSystem="&sys;#"
+     xmlns:cryo2="&cryo;#"
+     xmlns:solid="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"
+     xmlns:chemState="&state;#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sciResearch="&res;#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:astroPlanet="&planet;#"
+     xmlns:clim="http://sweet.jpl.nasa.gov/2.0/climate.owl">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/atmo.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/climate.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/hydro.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physSolid.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciResearch.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/space.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#hasPlanetaryRealm -->
+
+    <owl:ObjectProperty rdf:about="&planet;#hasPlanetaryRealm"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasSubstance -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasSubstance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#hasStateOfMatter -->
+
+    <owl:ObjectProperty rdf:about="&state;#hasStateOfMatter"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#inside -->
+
+    <owl:ObjectProperty rdf:about="&space;#inside"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#Land -->
+
+    <owl:Class rdf:about="&planet;#Land"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/astroPlanet.owl#PlanetaryBoundary -->
+
+    <owl:Class rdf:about="&planet;#PlanetaryBoundary"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/atmo.owl#MeteorologicalPhenomena -->
+
+    <owl:Class rdf:about="&atmo;#MeteorologicalPhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#Frozen -->
+
+    <owl:Class rdf:about="&state;#Frozen"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/climate.owl#ClimatePhenomena -->
+
+    <owl:Class rdf:about="&clim;#ClimatePhenomena"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#AlpineTundra -->
+
+    <owl:Class rdf:about="#AlpineTundra">
+        <rdfs:subClassOf rdf:resource="#Tundra"/>
+        <rdfs:comment xml:lang="en"
+            >Alpine tundra is an ecozone that does not contain trees because it has high altitude. Alpine tundra occurs at high enough altitude at any latitude on Earth. Alpine tundra also lacks trees, but the lower part does not have permafrost, and alpine soils are generally better drained than permafrost soils. Alpine tundra transitions to subalpine forests below the tree line; stunted forests occurring at the forest-tundra ecotone are known as Krummholz. Alpine tundra occurs in an alpine zone</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#AntarcticTundra -->
+
+    <owl:Class rdf:about="#AntarcticTundra">
+        <rdfs:subClassOf rdf:resource="#Tundra"/>
+        <rdfs:comment xml:lang="en"
+            >Antarctic tundra occurs on Antarctica and on several Antarctic and subantarctic islands, including South Georgia and the South Sandwich Islands and the Kerguelen Islands. Antarctica is mostly too cold and dry to support vegetation, and most of the continent is covered by ice fields. However, some portions of the continent, particularly the Antarctic Peninsula, have areas of rocky soil that support plant life. The flora presently consists of around 300-400 lichens, 100 mosses, 25 liverworts, and around 700 terrestrial and aquatic algae species, which live on the areas of exposed rock and soil around the shore of the continent. Antarctica&#39;s two flowering plant species, the Antarctic hair grass (Deschampsia Antarctica) and Antarctic pearlwort (Colobanthus quitensis), are found on the northern and western parts of the Antarctic Peninsula. In contrast with the Arctic tundra, the Antarctic tundra lacks a large mammal fauna, mostly due to its physical isolation from the other continents. Sea mammals and sea birds, including seals and penguins, inhabit areas near the shore, and some small mammals, like rabbits and cats, have been introduced by humans to some of the subantarctic islands.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#ArcticTundra -->
+
+    <owl:Class rdf:about="#ArcticTundra">
+        <rdfs:subClassOf rdf:resource="#Tundra"/>
+        <rdfs:comment xml:lang="en"
+            >Arctic tundra occurs in the far Northern Hemisphere, north of the taiga belt. The word tundra usually refers only to the areas where the subsoil is permafrost, or permanently frozen soil. (It may also refer to the treeless plain in general, so that northern S&#225;pmi would be included.) Permafrost tundra includes vast areas of northern Russia and Canada.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#Avalanche -->
+
+    <owl:Class rdf:about="#Avalanche">
+        <owl:equivalentClass rdf:resource="#Snowslide"/>
+        <rdfs:subClassOf rdf:resource="&atmo;#MeteorologicalPhenomena"/>
+        <rdfs:subClassOf rdf:resource="&sys;#Collapse"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&hydr;#Snow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A mass of snow (perhaps containing ice and rocks) moving rapidly down a steep mountain slope. Avalanches may be characterized as loose and turbulent, or slab; either type may be dry or wet according to the nature of the snow forming it, although dry snow usually forms loose avalanches and wet snow forms slabs. A large avalanche sweeps a current of air along with and in front of it as an avalanche wind, which supplements its already tremendous destructive force.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#BasalStress -->
+
+    <owl:Class rdf:about="#BasalStress">
+        <rdfs:subClassOf rdf:resource="&solid;#Stress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#DepthHoar -->
+
+    <owl:Class rdf:about="#DepthHoar">
+        <rdfs:subClassOf rdf:resource="&solid;#Crystal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:someValuesFrom rdf:resource="&hydr;#Snow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Depth hoares are large crystals occurring at the base of a snowpack that form due to the fact that a snow crystal can grow over time as moisture freezes onto the crystal from vapor that is rising in the snowpack.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#Firn -->
+
+    <owl:Class rdf:about="#Firn">
+        <rdfs:subClassOf rdf:resource="&hydr;#Ice"/>
+        <rdfs:subClassOf rdf:resource="&hydr;#Snow"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:allValuesFrom rdf:resource="#Glacier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Firn is partially-compacted n&#233;v&#233;, a type of snow that has been left over from past seasons and has been recrystallized into a substance denser than n&#233;v&#233;. It is ice that is at an intermediate stage between snow and glacial ice. Firn has the appearance of wet sugar, but has a hardness that makes it extremely resistant to shovelling. It generally has a density greater than 550 kg/m&#179; and is often found underneath the snow that accumulates at the head of a glacier.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#FrozenGround -->
+
+    <owl:Class rdf:about="#FrozenGround">
+        <rdfs:subClassOf rdf:resource="&planet;#Land"/>
+        <rdfs:subClassOf rdf:resource="&clim;#ClimatePhenomena"/>
+        <rdfs:subClassOf rdf:resource="&hydr;#Ice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&state;#hasStateOfMatter"/>
+                <owl:someValuesFrom rdf:resource="&state;#Frozen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Soil within which the moisture has predominantly changed to ice, the unfrozen portion being in vapor phase. Ice within the soil bonds (adfreezes) adjacent soil particles and renders frozen ground very hard. Permanently frozen ground is called permafrost. Dry frozen ground is relatively loose and crumbly because of the lack of bonding ice. Frozen ground is sometimes inadvisedly called frost or ground frost.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#Glaciation -->
+
+    <owl:Class rdf:about="#Glaciation">
+        <rdfs:subClassOf rdf:resource="&clim;#ClimatePhenomena"/>
+        <owl:disjointWith rdf:resource="#GlacierRetreat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#Glacier -->
+
+    <owl:Class rdf:about="#Glacier">
+        <rdfs:subClassOf rdf:resource="&hydr;#Ice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:someValuesFrom rdf:resource="&hydr;#Ice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#GlacierRetreat -->
+
+    <owl:Class rdf:about="#GlacierRetreat">
+        <rdfs:subClassOf rdf:resource="&clim;#ClimatePhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#GranularIce -->
+
+    <owl:Class rdf:about="#GranularIce">
+        <rdfs:subClassOf rdf:resource="&hydr;#Ice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#HoarCrystal -->
+
+    <owl:Class rdf:about="#HoarCrystal">
+        <rdfs:subClassOf rdf:resource="&solid;#Crystal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#IceBase -->
+
+    <owl:Class rdf:about="#IceBase">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryBoundary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#IceCore -->
+
+    <owl:Class rdf:about="#IceCore">
+        <rdfs:subClassOf rdf:resource="&res;#Sample"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&space;#inside"/>
+                <owl:someValuesFrom rdf:resource="&hydr;#Ice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#IceCrystal -->
+
+    <owl:Class rdf:about="#IceCrystal">
+        <owl:equivalentClass rdf:resource="#IceParticle"/>
+        <rdfs:subClassOf rdf:resource="&hydr;#Ice"/>
+        <rdfs:subClassOf rdf:resource="&solid;#Crystal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#IceParticle -->
+
+    <owl:Class rdf:about="#IceParticle"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#IceSheet -->
+
+    <owl:Class rdf:about="#IceSheet">
+        <rdfs:subClassOf rdf:resource="#Glacier"/>
+        <rdfs:comment
+            >An ice sheet is a mass of glacier ice that covers surrounding terrain and is greater than 50,000 square km (19,305 square mile).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#IceShelf -->
+
+    <owl:Class rdf:about="#IceShelf">
+        <rdfs:subClassOf rdf:resource="&hydr;#Ice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#IceSnowInterface -->
+
+    <owl:Class rdf:about="#IceSnowInterface">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryBoundary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#IceStream -->
+
+    <owl:Class rdf:about="#IceStream">
+        <rdfs:subClassOf rdf:resource="&hydr;#Ice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#IceSurface -->
+
+    <owl:Class rdf:about="#IceSurface">
+        <rdfs:subClassOf rdf:resource="&planet;#PlanetaryBoundary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#Icing -->
+
+    <owl:Class rdf:about="#Icing">
+        <rdfs:subClassOf rdf:resource="&atmo;#MeteorologicalPhenomena"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#LandIce -->
+
+    <owl:Class rdf:about="#LandIce">
+        <rdfs:subClassOf rdf:resource="&hydr;#Ice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&planet;#hasPlanetaryRealm"/>
+                <owl:someValuesFrom rdf:resource="&planet;#Land"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#Periglaciation -->
+
+    <owl:Class rdf:about="#Periglaciation">
+        <rdfs:subClassOf rdf:resource="#Glaciation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#Rime -->
+
+    <owl:Class rdf:about="#Rime">
+        <rdfs:subClassOf rdf:resource="&hydr;#Ice"/>
+        <rdfs:comment xml:lang="en"
+            >A white or milky and opaque granular deposit of ice formed by the rapid freezing of supercooled water drops as they impinge upon an exposed object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#SnowCover -->
+
+    <owl:Class rdf:about="#SnowCover">
+        <rdfs:subClassOf rdf:resource="&space;#Depth"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:allValuesFrom rdf:resource="&hydr;#Snow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >The depth of snow that has fallen.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#SnowFacies -->
+
+    <owl:Class rdf:about="#SnowFacies">
+        <rdfs:subClassOf rdf:resource="&solid;#Crystal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#SnowGrain -->
+
+    <owl:Class rdf:about="#SnowGrain">
+        <rdfs:subClassOf rdf:resource="&hydr;#Snow"/>
+        <rdfs:subClassOf rdf:resource="&solid;#Grain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#Snowslide -->
+
+    <owl:Class rdf:about="#Snowslide"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#Thermokarsta -->
+
+    <owl:Class rdf:about="#Thermokarsta">
+        <rdfs:subClassOf rdf:resource="&planet;#Land"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/cryo.owl#Tundra -->
+
+    <owl:Class rdf:about="#Tundra">
+        <rdfs:subClassOf rdf:resource="&planet;#Land"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasSubstance"/>
+                <owl:someValuesFrom rdf:resource="#FrozenGround"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >In physical geography, tundra is an area where the tree growth is hindered by low temperatures and short growing seasons. There are two types of tundra: Arctic tundra (which also occurs in Antarctica), and alpine tundra. In tundra, the vegetation is composed of dwarf shrubs, sedges and grasses, mosses, and lichens. Scattered trees grow in some tundra. The ecotone (or ecological boundary region) between the tundra and the forest is known as the tree line or timberline.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#Ice -->
+
+    <owl:Class rdf:about="&hydr;#Ice"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/hydro.owl#Snow -->
+
+    <owl:Class rdf:about="&hydr;#Snow"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSolid.owl#Crystal -->
+
+    <owl:Class rdf:about="&solid;#Crystal"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSolid.owl#Grain -->
+
+    <owl:Class rdf:about="&solid;#Grain"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/physSolid.owl#Stress -->
+
+    <owl:Class rdf:about="&solid;#Stress"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciResearch.owl#Sample -->
+
+    <owl:Class rdf:about="&res;#Sample"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#Collapse -->
+
+    <owl:Class rdf:about="&sys;#Collapse"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Depth -->
+
+    <owl:Class rdf:about="&space;#Depth"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

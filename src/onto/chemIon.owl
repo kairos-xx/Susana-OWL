@@ -1,0 +1,497 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY chem "http://sweet.jpl.nasa.gov/2.0/chem.owl" >
+    <!ENTITY chem2 "http://sweet.jpl.nasa.gov/2.0/chem.owl#" >
+    <!ENTITY ion "http://sweet.jpl.nasa.gov/2.0/chemIon.owl" >
+    <!ENTITY chemIon "http://sweet.jpl.nasa.gov/2.0/chemIon.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY state "http://sweet.jpl.nasa.gov/2.0/chemState.owl" >
+    <!ENTITY sys "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl" >
+    <!ENTITY chemState "http://sweet.jpl.nasa.gov/2.0/chemState.owl#" >
+    <!ENTITY sciSystem "http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#" >
+    <!ENTITY proc "http://sweet.jpl.nasa.gov/2.0/chemProcess.owl" >
+    <!ENTITY elem "http://sweet.jpl.nasa.gov/2.0/chemElement.owl" >
+    <!ENTITY comp "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl" >
+    <!ENTITY chemElement "http://sweet.jpl.nasa.gov/2.0/chemElement.owl#" >
+    <!ENTITY chemProcess "http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#" >
+    <!ENTITY part "http://sweet.jpl.nasa.gov/2.0/physParticle.owl" >
+    <!ENTITY allo "http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl" >
+    <!ENTITY chemCompound "http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#" >
+    <!ENTITY chemAllotrope "http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&ion;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/chemIon.owl"
+     xmlns:ion="http://sweet.jpl.nasa.gov/2.0/chemIon.owl"
+     xmlns:comp="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"
+     xmlns:sciSystem="&sys;#"
+     xmlns:allo="http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl"
+     xmlns:sys="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"
+     xmlns:chemIon="&ion;#"
+     xmlns:state="http://sweet.jpl.nasa.gov/2.0/chemState.owl"
+     xmlns:chemProcess="&proc;#"
+     xmlns:chemCompound="&comp;#"
+     xmlns:elem="http://sweet.jpl.nasa.gov/2.0/chemElement.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:chemState="&state;#"
+     xmlns:chemElement="&elem;#"
+     xmlns:chem="http://sweet.jpl.nasa.gov/2.0/chem.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chemAllotrope="&allo;#"
+     xmlns:part="http://sweet.jpl.nasa.gov/2.0/physParticle.owl"
+     xmlns:proc="http://sweet.jpl.nasa.gov/2.0/chemProcess.owl"
+     xmlns:chem2="&chem;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chem.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemCompound.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemElement.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemProcess.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/chemState.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/physParticle.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciSystem.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasChemical_1 -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasChemical_1"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#hasChemical_2 -->
+
+    <owl:ObjectProperty rdf:about="&chem;#hasChemical_2"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#from -->
+
+    <owl:ObjectProperty rdf:about="&sys;#from"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciSystem.owl#to -->
+
+    <owl:ObjectProperty rdf:about="&sys;#to"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#hasCharge -->
+
+    <owl:DatatypeProperty rdf:about="#hasCharge">
+        <rdfs:domain rdf:resource="&chem;#Chemical"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Chemical -->
+
+    <owl:Class rdf:about="&chem;#Chemical"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chem.owl#Substance -->
+
+    <owl:Class rdf:about="&chem;#Substance"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#H4 -->
+
+    <owl:Class rdf:about="&allo;#H4"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#O2 -->
+
+    <owl:Class rdf:about="&allo;#O2"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemAllotrope.owl#O3 -->
+
+    <owl:Class rdf:about="&allo;#O3"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemCompound.owl#InorganicCompound -->
+
+    <owl:Class rdf:about="&comp;#InorganicCompound"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#N -->
+
+    <owl:Class rdf:about="&elem;#N"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemElement.owl#O -->
+
+    <owl:Class rdf:about="&elem;#O"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Ammonium -->
+
+    <owl:Class rdf:about="#Ammonium">
+        <owl:equivalentClass rdf:resource="#NH4plus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Anion -->
+
+    <owl:Class rdf:about="#Anion">
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+        <rdfs:comment xml:lang="en"
+            >An anion is an ion that has more electrons than protons such that the atom or molecule is negatively charged. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Cation -->
+
+    <owl:Class rdf:about="#Cation">
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+        <rdfs:comment xml:lang="en"
+            >An cation is an ion that has more protons than electrons such that the atom or molecule is positively charged. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Charge -->
+
+    <owl:Class rdf:about="#Charge">
+        <rdfs:subClassOf rdf:resource="&state;#ChemicalState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Deionization -->
+
+    <owl:Class rdf:about="#Deionization">
+        <owl:equivalentClass rdf:resource="#Deionize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Deionize -->
+
+    <owl:Class rdf:about="#Deionize">
+        <rdfs:subClassOf rdf:resource="&proc;#StateChange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#to"/>
+                <owl:allValuesFrom rdf:resource="#NeutralSubstance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#from"/>
+                <owl:allValuesFrom rdf:resource="#IonizedSubstance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#H4plus -->
+
+    <owl:Class rdf:about="#H4plus">
+        <rdfs:subClassOf rdf:resource="&allo;#H4"/>
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCharge"/>
+                <owl:hasValue rdf:datatype="&xsd;double">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#HeavyIon -->
+
+    <owl:Class rdf:about="#HeavyIon">
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Ion -->
+
+    <owl:Class rdf:about="#Ion">
+        <rdfs:subClassOf rdf:resource="&chem;#Substance"/>
+        <rdfs:comment xml:lang="en"
+            >An ion is an atom or molecule where the total number of electrons is not equal to the total number of protons, giving it a net positive or negative electrical charge. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Ionization -->
+
+    <owl:Class rdf:about="#Ionization">
+        <owl:equivalentClass rdf:resource="#Ionize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Ionize -->
+
+    <owl:Class rdf:about="#Ionize">
+        <rdfs:subClassOf rdf:resource="&proc;#StateChange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sys;#to"/>
+                <owl:allValuesFrom rdf:resource="#IonizedSubstance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en"
+            >Ionization is the physical process of converting an atom or molecule into an ion by changing the difference between the number of protons and electrons. This process works slightly differently depending on whether an ion with a positive or a negative electric charge is being produced. A positive electric charge is produced when an electron bond to an atom or molecule absorbs enough energy from an external source to escape from the electric potential barrier that originally confined it, where the amount of energy required is called the Ionization potential. A negative electric charge is produced when a free electron collides with an atom and is subsequently caught inside the electric potential barrier, releasing any excess energy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Ionized -->
+
+    <owl:Class rdf:about="#Ionized">
+        <rdfs:subClassOf rdf:resource="&state;#ChemicalState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#IonizedSubstance -->
+
+    <owl:Class rdf:about="#IonizedSubstance">
+        <rdfs:subClassOf rdf:resource="&chem;#Substance"/>
+        <owl:disjointWith rdf:resource="#NeutralSubstance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#NH4plus -->
+
+    <owl:Class rdf:about="#NH4plus">
+        <rdfs:subClassOf rdf:resource="&comp;#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="#H4plus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#NO2minus -->
+
+    <owl:Class rdf:about="#NO2minus">
+        <owl:equivalentClass rdf:resource="#Nitrite"/>
+        <rdfs:subClassOf rdf:resource="&comp;#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="#O2minus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#NO3minus -->
+
+    <owl:Class rdf:about="#NO3minus">
+        <owl:equivalentClass rdf:resource="#Nitrate"/>
+        <rdfs:subClassOf rdf:resource="&comp;#InorganicCompound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_1"/>
+                <owl:allValuesFrom rdf:resource="&elem;#N"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&chem;#hasChemical_2"/>
+                <owl:allValuesFrom rdf:resource="#O3minus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#NeutralSubstance -->
+
+    <owl:Class rdf:about="#NeutralSubstance">
+        <rdfs:subClassOf rdf:resource="&chem;#Substance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCharge"/>
+                <owl:hasValue rdf:datatype="&xsd;double">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Neutralization -->
+
+    <owl:Class rdf:about="#Neutralization">
+        <rdfs:subClassOf rdf:resource="&proc;#ChemicalProcess"/>
+        <rdfs:comment xml:lang="en"
+            >In chemistry, neutralization is a chemical reaction (also called a water forming reaction since a water molecule is formed during the process) in which an acid and a base or alkali (soluble base) react to produce salt and water (H2O). During the process, hydrogen ions H+ (a bare proton) from the acid (proton donor) or a hydronium ion H3O+ and hydroxide ions OH_ or oxide ions O2_ from the base (proton acceptor) react together to form a water molecule H2O. [Wikipedia]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Nitrate -->
+
+    <owl:Class rdf:about="#Nitrate"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Nitrite -->
+
+    <owl:Class rdf:about="#Nitrite"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#O2minus -->
+
+    <owl:Class rdf:about="#O2minus">
+        <rdfs:subClassOf rdf:resource="&allo;#O2"/>
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCharge"/>
+                <owl:hasValue rdf:datatype="&xsd;double">-1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#O3minus -->
+
+    <owl:Class rdf:about="#O3minus">
+        <rdfs:subClassOf rdf:resource="&allo;#O3"/>
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCharge"/>
+                <owl:hasValue rdf:datatype="&xsd;double">-1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Ominus -->
+
+    <owl:Class rdf:about="#Ominus">
+        <rdfs:subClassOf rdf:resource="&elem;#O"/>
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCharge"/>
+                <owl:hasValue rdf:datatype="&xsd;double">-1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemIon.owl#Oplus -->
+
+    <owl:Class rdf:about="#Oplus">
+        <rdfs:subClassOf rdf:resource="&elem;#O"/>
+        <rdfs:subClassOf rdf:resource="#Ion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCharge"/>
+                <owl:hasValue rdf:datatype="&xsd;double">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#ChemicalProcess -->
+
+    <owl:Class rdf:about="&proc;#ChemicalProcess"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemProcess.owl#StateChange -->
+
+    <owl:Class rdf:about="&proc;#StateChange"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/chemState.owl#ChemicalState -->
+
+    <owl:Class rdf:about="&state;#ChemicalState"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

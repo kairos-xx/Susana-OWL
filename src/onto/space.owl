@@ -1,0 +1,805 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY sci "http://sweet.jpl.nasa.gov/2.0/top.owl" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY math "http://sweet.jpl.nasa.gov/2.0/math.owl" >
+    <!ENTITY top "http://sweet.jpl.nasa.gov/2.0/top.owl#" >
+    <!ENTITY math2 "http://sweet.jpl.nasa.gov/2.0/math.owl#" >
+    <!ENTITY space "http://sweet.jpl.nasa.gov/2.0/space.owl" >
+    <!ENTITY space2 "http://sweet.jpl.nasa.gov/2.0/space.owl#" >
+    <!ENTITY units "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl" >
+    <!ENTITY units2 "http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY geom "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl" >
+    <!ENTITY spaceObject "http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&space;#"
+     xml:base="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:space2="&space;#"
+     xmlns:geom="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"
+     xmlns:space="http://sweet.jpl.nasa.gov/2.0/space.owl"
+     xmlns:math2="&math;#"
+     xmlns:units="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"
+     xmlns:spaceObject="&geom;#"
+     xmlns:math="http://sweet.jpl.nasa.gov/2.0/math.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sci="http://sweet.jpl.nasa.gov/2.0/top.owl"
+     xmlns:units2="&units;#"
+     xmlns:top="&sci;#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>2.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/math.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/sciUnits.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/spaceObject.owl"/>
+        <owl:imports rdf:resource="http://sweet.jpl.nasa.gov/2.0/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#greaterThan -->
+
+    <owl:ObjectProperty rdf:about="&math;#greaterThan"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#hasDefaultUnit -->
+
+    <owl:ObjectProperty rdf:about="&units;#hasDefaultUnit"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#adjacentTo -->
+
+    <owl:ObjectProperty rdf:about="#adjacentTo"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#contains -->
+
+    <owl:ObjectProperty rdf:about="#contains"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#exterior -->
+
+    <owl:ObjectProperty rdf:about="#exterior"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasArea -->
+
+    <owl:ObjectProperty rdf:about="#hasArea">
+        <rdfs:range rdf:resource="#Area"/>
+        <rdfs:domain rdf:resource="&geom;#GeometricalObject_2D"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasCommon2DBorderWith -->
+
+    <owl:ObjectProperty rdf:about="#hasCommon2DBorderWith"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasHeight -->
+
+    <owl:ObjectProperty rdf:about="#hasHeight">
+        <rdfs:range rdf:resource="#Length"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasLength -->
+
+    <owl:ObjectProperty rdf:about="#hasLength">
+        <rdfs:range rdf:resource="#Length"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="#hasLocation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasLowerBoundary -->
+
+    <owl:ObjectProperty rdf:about="#hasLowerBoundary">
+        <rdfs:subPropertyOf rdf:resource="&geom;#hasBoundary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasOuterBoundary -->
+
+    <owl:ObjectProperty rdf:about="#hasOuterBoundary">
+        <rdfs:subPropertyOf rdf:resource="&geom;#hasBoundary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasSpatialExtent -->
+
+    <owl:ObjectProperty rdf:about="#hasSpatialExtent">
+        <rdfs:range rdf:resource="#SpatialExtent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasUpperBoundary -->
+
+    <owl:ObjectProperty rdf:about="#hasUpperBoundary">
+        <rdfs:subPropertyOf rdf:resource="&geom;#hasBoundary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasVolume -->
+
+    <owl:ObjectProperty rdf:about="#hasVolume">
+        <rdfs:range rdf:resource="#Volume"/>
+        <rdfs:domain rdf:resource="&geom;#GeometricalObject_3D"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#hasWidth -->
+
+    <owl:ObjectProperty rdf:about="#hasWidth">
+        <rdfs:range rdf:resource="#Length"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#inside -->
+
+    <owl:ObjectProperty rdf:about="#inside">
+        <rdfs:subPropertyOf rdf:resource="&math;#greaterThan"/>
+        <rdfs:domain rdf:resource="&geom;#GeometricalObject"/>
+        <rdfs:range rdf:resource="&geom;#GeometricalObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#interior -->
+
+    <owl:ObjectProperty rdf:about="#interior"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#isAdjacentTo -->
+
+    <owl:ObjectProperty rdf:about="#isAdjacentTo"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#isBoundaryOf -->
+
+    <owl:ObjectProperty rdf:about="#isBoundaryOf"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#isLayerLowerBoundaryOf -->
+
+    <owl:ObjectProperty rdf:about="#isLayerLowerBoundaryOf">
+        <rdfs:subPropertyOf rdf:resource="#isBoundaryOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#isLayerUpperBoundaryOf -->
+
+    <owl:ObjectProperty rdf:about="#isLayerUpperBoundaryOf">
+        <rdfs:subPropertyOf rdf:resource="#isBoundaryOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#outside -->
+
+    <owl:ObjectProperty rdf:about="#outside"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#surroundedBy -->
+
+    <owl:ObjectProperty rdf:about="#surroundedBy"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#upperPartOf -->
+
+    <owl:ObjectProperty rdf:about="#upperPartOf">
+        <rdfs:subPropertyOf rdf:resource="&sci;#partOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#hasBoundary -->
+
+    <owl:ObjectProperty rdf:about="&geom;#hasBoundary"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#partOf -->
+
+    <owl:ObjectProperty rdf:about="&sci;#partOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Relation -->
+
+    <owl:Class rdf:about="&math;#Relation"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Subset -->
+
+    <owl:Class rdf:about="&math;#Subset"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/math.owl#Superset -->
+
+    <owl:Class rdf:about="&math;#Superset"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#ActualElevation -->
+
+    <owl:Class rdf:about="#ActualElevation">
+        <rdfs:subClassOf rdf:resource="#Elevation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Altitude -->
+
+    <owl:Class rdf:about="#Altitude">
+        <rdfs:label>Altitude</rdfs:label>
+        <owl:equivalentClass rdf:resource="#Elevation"/>
+        <rdfs:subClassOf rdf:resource="#Height"/>
+        <rdfs:comment
+            >The vertical distance above mean sea level of the ground at the meteorological station.</rdfs:comment>
+        <rdfs:comment
+            >A measure (or condition) of height, especially of great height, as a mountain top or aircraft flight level.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Area -->
+
+    <owl:Class rdf:about="#Area">
+        <rdfs:subClassOf rdf:resource="#SpatialMeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#meterSquared"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#AspectRatio -->
+
+    <owl:Class rdf:about="#AspectRatio">
+        <rdfs:subClassOf rdf:resource="#Shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#BoundingBox -->
+
+    <owl:Class rdf:about="#BoundingBox">
+        <rdfs:subClassOf rdf:resource="#SpatialSuperset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Ceiling -->
+
+    <owl:Class rdf:about="#Ceiling">
+        <rdfs:subClassOf rdf:resource="#VerticalExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Crest -->
+
+    <owl:Class rdf:about="#Crest">
+        <rdfs:subClassOf rdf:resource="#Height"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Depression -->
+
+    <owl:Class rdf:about="#Depression">
+        <rdfs:subClassOf rdf:resource="#Projection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Depth -->
+
+    <owl:Class rdf:about="#Depth">
+        <rdfs:subClassOf rdf:resource="#VerticalExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Displace -->
+
+    <owl:Class rdf:about="#Displace">
+        <owl:equivalentClass rdf:resource="#Displaced"/>
+        <owl:equivalentClass rdf:resource="#Displacement"/>
+        <rdfs:subClassOf rdf:resource="#SpatialRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Displaced -->
+
+    <owl:Class rdf:about="#Displaced"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Displacement -->
+
+    <owl:Class rdf:about="#Displacement"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Distance -->
+
+    <owl:Class rdf:about="#Distance">
+        <rdfs:subClassOf rdf:resource="#SpatialExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#DynamicTopography -->
+
+    <owl:Class rdf:about="#DynamicTopography">
+        <rdfs:subClassOf rdf:resource="#Topography"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Elevation -->
+
+    <owl:Class rdf:about="#Elevation">
+        <rdfs:subClassOf rdf:resource="#Height"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Expand -->
+
+    <owl:Class rdf:about="#Expand">
+        <owl:equivalentClass rdf:resource="#Expansion"/>
+        <rdfs:subClassOf rdf:resource="#SpatialSuperset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Expansion -->
+
+    <owl:Class rdf:about="#Expansion"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Extend -->
+
+    <owl:Class rdf:about="#Extend">
+        <owl:equivalentClass rdf:resource="#Extension"/>
+        <rdfs:subClassOf rdf:resource="#SpatialSuperset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Extension -->
+
+    <owl:Class rdf:about="#Extension"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Freeboard -->
+
+    <owl:Class rdf:about="#Freeboard">
+        <rdfs:subClassOf rdf:resource="#Height"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Height -->
+
+    <owl:Class rdf:about="#Height">
+        <rdfs:subClassOf rdf:resource="#VerticalExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Inclined -->
+
+    <owl:Class rdf:about="#Inclined">
+        <rdfs:subClassOf rdf:resource="#SpatialRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Inside -->
+
+    <owl:Class rdf:about="#Inside">
+        <rdfs:subClassOf rdf:resource="#SpatialRelation"/>
+        <owl:disjointWith rdf:resource="#Outside"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Length -->
+
+    <owl:Class rdf:about="#Length">
+        <rdfs:subClassOf rdf:resource="#SpatialExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Level -->
+
+    <owl:Class rdf:about="#Level">
+        <rdfs:subClassOf rdf:resource="&sci;#Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#LinearExtent -->
+
+    <owl:Class rdf:about="#LinearExtent">
+        <rdfs:subClassOf rdf:resource="#SpatialMeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#meter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Location -->
+
+    <owl:Class rdf:about="#Location">
+        <owl:equivalentClass rdf:resource="#Position"/>
+        <rdfs:subClassOf rdf:resource="#SpatialProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Outside -->
+
+    <owl:Class rdf:about="#Outside">
+        <rdfs:subClassOf rdf:resource="#SpatialRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Position -->
+
+    <owl:Class rdf:about="#Position"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Projection -->
+
+    <owl:Class rdf:about="#Projection">
+        <rdfs:subClassOf rdf:resource="#SpatialSubset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Range -->
+
+    <owl:Class rdf:about="#Range">
+        <rdfs:subClassOf rdf:resource="#Distance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Relief -->
+
+    <owl:Class rdf:about="#Relief">
+        <rdfs:subClassOf rdf:resource="#Projection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Ridge -->
+
+    <owl:Class rdf:about="#Ridge">
+        <rdfs:subClassOf rdf:resource="#Projection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Shadow -->
+
+    <owl:Class rdf:about="#Shadow">
+        <rdfs:subClassOf rdf:resource="#Projection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Shape -->
+
+    <owl:Class rdf:about="#Shape">
+        <rdfs:subClassOf rdf:resource="#SpatialMeasure"/>
+        <rdfs:comment xml:lang="en"
+            >Description of the form of an object</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Shorten -->
+
+    <owl:Class rdf:about="#Shorten">
+        <rdfs:subClassOf rdf:resource="#SpatialSubset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Side -->
+
+    <owl:Class rdf:about="#Side">
+        <rdfs:subClassOf rdf:resource="#Projection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Slope -->
+
+    <owl:Class rdf:about="#Slope">
+        <rdfs:subClassOf rdf:resource="#Projection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Space -->
+
+    <owl:Class rdf:about="#Space">
+        <rdfs:subClassOf rdf:resource="&sci;#Quantity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#meter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#SpatialExtent -->
+
+    <owl:Class rdf:about="#SpatialExtent">
+        <rdfs:subClassOf rdf:resource="#LinearExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#SpatialMeasure -->
+
+    <owl:Class rdf:about="#SpatialMeasure">
+        <rdfs:subClassOf rdf:resource="&sci;#Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#SpatialProperty -->
+
+    <owl:Class rdf:about="#SpatialProperty">
+        <rdfs:subClassOf rdf:resource="&sci;#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#SpatialRelation -->
+
+    <owl:Class rdf:about="#SpatialRelation">
+        <rdfs:subClassOf rdf:resource="&math;#Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#SpatialSubset -->
+
+    <owl:Class rdf:about="#SpatialSubset">
+        <rdfs:subClassOf rdf:resource="&math;#Subset"/>
+        <rdfs:subClassOf rdf:resource="#SpatialRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#SpatialSuperset -->
+
+    <owl:Class rdf:about="#SpatialSuperset">
+        <rdfs:subClassOf rdf:resource="&math;#Superset"/>
+        <rdfs:subClassOf rdf:resource="#SpatialRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Thickness -->
+
+    <owl:Class rdf:about="#Thickness">
+        <rdfs:subClassOf rdf:resource="#SpatialExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#TopographicProminence -->
+
+    <owl:Class rdf:about="#TopographicProminence">
+        <rdfs:subClassOf rdf:resource="#Topography"/>
+        <rdfs:comment
+            >In topography, prominence, also known as autonomous height, relative height or shoulder drop (in America) or prime factor (in Europe), is a concept used in the categorization of hills and mountains, also known as peaks. It is a measure of the independent stature of a summit.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Topography -->
+
+    <owl:Class rdf:about="#Topography">
+        <rdfs:subClassOf rdf:resource="#Height"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Trough -->
+
+    <owl:Class rdf:about="#Trough">
+        <rdfs:subClassOf rdf:resource="#Projection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#UpperLevel -->
+
+    <owl:Class rdf:about="#UpperLevel">
+        <rdfs:subClassOf rdf:resource="#Level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#VerticalExtent -->
+
+    <owl:Class rdf:about="#VerticalExtent">
+        <rdfs:subClassOf rdf:resource="#SpatialExtent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Volume -->
+
+    <owl:Class rdf:about="#Volume">
+        <rdfs:subClassOf rdf:resource="#SpatialMeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&units;#hasDefaultUnit"/>
+                <owl:hasValue rdf:resource="&units;#meterCubed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/space.owl#Zone -->
+
+    <owl:Class rdf:about="#Zone">
+        <owl:equivalentClass rdf:resource="&geom;#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#GeometricalObject -->
+
+    <owl:Class rdf:about="&geom;#GeometricalObject"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#GeometricalObject_2D -->
+
+    <owl:Class rdf:about="&geom;#GeometricalObject_2D"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#GeometricalObject_3D -->
+
+    <owl:Class rdf:about="&geom;#GeometricalObject_3D"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/spaceObject.owl#Region -->
+
+    <owl:Class rdf:about="&geom;#Region"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Property -->
+
+    <owl:Class rdf:about="&sci;#Property"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/top.owl#Quantity -->
+
+    <owl:Class rdf:about="&sci;#Quantity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#meter -->
+
+    <owl:Thing rdf:about="&units;#meter"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#meterCubed -->
+
+    <owl:Thing rdf:about="&units;#meterCubed"/>
+    
+
+
+    <!-- http://sweet.jpl.nasa.gov/2.0/sciUnits.owl#meterSquared -->
+
+    <owl:Thing rdf:about="&units;#meterSquared"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
