@@ -15,8 +15,10 @@ import prefuse.controls.DragControl;
 import prefuse.controls.PanControl;
 import prefuse.controls.ZoomControl;
 import prefuse.data.Graph;
+import prefuse.data.Tree;
 import prefuse.data.io.DataIOException;
 import prefuse.data.io.GraphMLReader;
+import prefuse.data.io.TreeMLReader;
 import prefuse.render.DefaultRendererFactory;
 import prefuse.render.LabelRenderer;
 import prefuse.util.ColorLib;
@@ -32,7 +34,7 @@ public class Example {
         // found at the root of the java classpath
         Graph graph = null;
         try {
-            graph = new GraphMLReader().readGraph("/sweetAll.xml");
+            graph = new TreeMLReader().readGraph(Example.class.getResourceAsStream("/sweetAll.xml"));
         } catch ( DataIOException e ) {
             e.printStackTrace();
             System.err.println("Error loading graph. Exiting...");
