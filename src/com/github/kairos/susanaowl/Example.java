@@ -1,5 +1,4 @@
 package com.github.kairos.susanaowl;
-
 import javax.swing.JFrame;
 
 import prefuse.Constants;
@@ -15,10 +14,8 @@ import prefuse.controls.DragControl;
 import prefuse.controls.PanControl;
 import prefuse.controls.ZoomControl;
 import prefuse.data.Graph;
-import prefuse.data.Tree;
 import prefuse.data.io.DataIOException;
 import prefuse.data.io.GraphMLReader;
-import prefuse.data.io.TreeMLReader;
 import prefuse.render.DefaultRendererFactory;
 import prefuse.render.LabelRenderer;
 import prefuse.util.ColorLib;
@@ -34,7 +31,7 @@ public class Example {
         // found at the root of the java classpath
         Graph graph = null;
         try {
-            graph = new TreeMLReader().readGraph(Example.class.getResourceAsStream("/sweetAll.xml"));
+            graph = new GraphMLReader().readGraph("/sweetAll.xml");
         } catch ( DataIOException e ) {
             e.printStackTrace();
             System.err.println("Error loading graph. Exiting...");
@@ -70,7 +67,7 @@ public class Example {
             ColorLib.rgb(255,180,180), ColorLib.rgb(190,190,255)
         };
         // map nominal data values to colors using our provided palette
-        DataColorAction fill = new DataColorAction("graph.nodes", "gender",
+        DataColorAction fill = new DataColorAction("graph.nodes", "type",
                 Constants.NOMINAL, VisualItem.FILLCOLOR, palette);
         // use black for node text
         ColorAction text = new ColorAction("graph.nodes",
